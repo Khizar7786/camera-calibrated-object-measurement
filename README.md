@@ -1,6 +1,6 @@
 # Measure It
 
-Camera-calibrated calculator segmentation and metric measurement assessment, on branch `dev-test01`. The planning documents and fixed split membership were committed before implementation. **Camera calibration and joint image/mask correction are implemented. The user approved all 72 corrected images and 100 instances on 2026-11-05; model training and millimetre measurement are pending.**
+Camera-calibrated calculator segmentation and metric measurement assessment, on branch `dev-test01`. The planning documents and fixed split membership were committed before implementation. **Calibration, reviewed joint image/mask correction and CUDA model fine-tuning are complete. The declared 15-epoch run stopped after 8 epochs under its original validation-plateau rule, selecting epoch 2. Test evaluation, image-to-millimetre inference, physical measurement validation and public weight publication remain pending.**
 
 ## Setup
 
@@ -8,8 +8,12 @@ Recorded calibration environment: Python 3.11.0, OpenCV 4.10.0, NumPy 2.3.1 and 
 
 ```powershell
 py -3.11 -m venv .venv
+.venv\Scripts\python.exe -m pip install --upgrade pip
 .venv\Scripts\python.exe -m pip install -r requirements.txt
+.venv\Scripts\python.exe -m pip install -r requirements-training.txt
 ```
+
+The separate [training requirements](requirements-training.txt) pin **PyTorch 2.7.1+cu126** and **Torchvision 0.22.1+cu126** from the CUDA 12.6 wheel index. Upgrading pip before that install resolves the old installer's wheel-metadata problem recorded in [setup notes](models/setup_notes.json). CUDA availability was verified on the NVIDIA GeForce RTX 3050 Ti Laptop GPU with **4 GiB** memory. The calibration/preprocessing dependencies remain in [requirements.txt](requirements.txt).
 
 The commands below call the project environment's Python explicitly; activation is optional. The original recorded calibration run used `C:\Python311\python.exe`, with one OpenCV thread and seed 42. [Hardware metadata](calibration/results/hardware.json): Intel Core i7-12650H, 16,831,713,280 bytes reported physical RAM, Intel UHD Graphics and NVIDIA RTX 3050 Ti Laptop GPU; calibration uses the CPU. No runtime benchmark is claimed.
 
@@ -101,9 +105,44 @@ The user confirmed that all reviewed items passed. Current [run.json](dataset/co
 
 The recorded setup uses one approximately 75 x 160 mm calculator and a paper-square reference reported as 50 x 50 mm, to be physically confirmed before measurement. Object photographs are user-provided phone captures, annotated through Roboflow's tool and exported as COCO segmentation. The corrected annotations have passed user review; no Roboflow model is used.
 
-The supplied export has **72 images: 50 train / 15 validation / 7 test**. Exact membership is frozen in [dataset/splits](dataset/splits/README.md) and retained in the corrected dataset. There are 73 raw object photographs; the extra capture remains unassigned. Preserve the test split and all derivatives from training, tuning and checkpoint selection. The corrected dataset is user-approved and has not yet been used for model fitting. `.gitattributes` preserves exact bytes of the source export and reviewed artifacts so their integrity hashes survive checkout on other platforms.
+The supplied export has **72 images: 50 train / 15 validation / 7 test**. Exact membership is frozen in [dataset/splits](dataset/splits/README.md) and retained in the corrected dataset. There are 73 raw object photographs; the extra capture remains unassigned. Preserve the test split and all derivatives from training, tuning and checkpoint selection. Model fitting uses the approved training split, with validation used for checkpoint selection. `.gitattributes` preserves exact bytes of the source export and reviewed artifacts so their integrity hashes survive checkout on other platforms.
 
 The three assessment documents are [Plan](docs/Plan.md), [Objectives](docs/Objectives.md) and [Definition of Done](docs/Definition_of_Done.md). They distinguish measured evidence from work still pending.
+
+## Segmentation training
+
+The completed run was started with:
+
+```powershell
+.venv\Scripts\python.exe -m models.train --config models/training_config.json --output models/runs/initial_15_epochs
+```
+
+This directory already contains run evidence. Reproduction requires a fresh output path, such as `models/runs/reproduction_01`. [Training usage](models/README.md) documents the two-class Mask R-CNN, original **15-epoch** budget, aspect-preserving **512/960** sizing, batch **1**, workers **0**, seed **42**, fixed thresholds and validation-only AP selection. Training constructs only 50 training and 15 validation images; test data is not loaded.
+
+The [actual smoke check](models/runs/initial_15_epochs/smoke.json) passed a forward/backward update on the 23-instance training image and a validation forward. Peak CUDA allocation was **891,221,504 bytes**, with **1,482,686,464 bytes** reserved. Smoke weights were discarded before real training.
+
+The [finished run](models/runs/initial_15_epochs/run.json) records **8 completed epochs and 400 real optimizer updates**. Its original 15-epoch budget ended with `validation_plateau_early_stop`: the minimum of 8 epochs was reached after 6 epochs without AP improvement exceeding 0.001 following epoch 2. No out-of-memory configuration changes were needed. The declared scheduler changed learning rate from **0.0025 to 0.00025 after epoch 5**. Training-loop wall time was **309.344 seconds**, excluding setup, downloads and smoke; this single recorded duration is not a runtime benchmark. Epoch GPU peaks were **1,072,794,112 bytes allocated** and **1,245,708,288 bytes reserved**.
+
+[Epoch 2 was selected](models/runs/initial_15_epochs/selection.json) by validation segmentation AP, retaining the earliest maximum. Its [raw validation outputs](models/runs/initial_15_epochs/validation/epoch_02/metrics.json) cover **15 validation images / 18 ground-truth instances**:
+
+| Validation metric | Selected-epoch result |
+| --- | ---: |
+| Segmentation mAP@0.50:0.95 | 0.8316831683168316 |
+| Segmentation mAP@0.50 | 0.8316831683168316 |
+| Precision at score >=0.5 and mask IoU >=0.5 | 1.0 |
+| Recall at the same operating point | 0.8333333333333334 |
+| Mean ground-truth mask IoU, unmatched GT zero | 0.8070517357958565 |
+| True positives / false positives / false negatives | 15 / 0 / 3 |
+
+The selected local checkpoint, `models/runs/initial_15_epochs/checkpoint_best.pt`, is **176,220,108 bytes**. Its SHA-256 is:
+
+```text
+f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39
+```
+
+[Checkpoint verification](models/runs/initial_15_epochs/verification.json) passed an offline strict CPU reload with both heads configured for two classes, found 400 finite-loss optimizer steps, matched runtime source hashes, and rechecked 227 approved training/validation artifacts and the frozen lists. This integrity check performed no inference or test evaluation. Checkpoint binaries remain local and ignored by Git; an accessible public download is still pending.
+
+Raw [console output](models/runs/initial_15_epochs/console.txt), [epoch records](models/runs/initial_15_epochs/epochs.jsonl), per-epoch validation outputs and the run's environment/configuration snapshots are preserved. ROIAlign backward reported a CUDA nondeterminism warning in [warnings.txt](models/runs/initial_15_epochs/warnings.txt). Seeds and deterministic settings were requested, but identical results across repeated runs are not guaranteed. These scores describe the validation split used for selection. Test evaluation and independent millimetre measurement accuracy remain pending.
 
 ## Verification
 
@@ -111,6 +150,6 @@ The three assessment documents are [Plan](docs/Plan.md), [Objectives](docs/Objec
 .venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-On 2026-11-05 the isolated project `.venv` was created with system site-packages disabled. The dependencies now include pinned `pycocotools==2.0.10` for mask handling. All **42 tests pass inside the environment**. The saved calibration fit retains its original interpreter provenance.
+On 2026-11-05 the isolated project `.venv` was created with system site-packages disabled. The dependencies include pinned `pycocotools==2.0.10` and the recorded CUDA PyTorch/Torchvision builds. All **72 tests pass inside the actual project environment**. The saved calibration fit retains its original interpreter provenance.
 
-Tests cover known synthetic camera recovery, the 20-view gate, per-corner RMS, unreadable views, stale-output protection, parameter validation, full-frame identity, mask topology, source crop/rotation recovery, exact nearest-neighbour reconstruction, synthetic image/mask alignment, immutable sources/splits and unsafe-geometry refusal.
+Tests cover calibration, image/mask geometry, source/split integrity, approval checks, joint training augmentation, model/head reconstruction, synthetic validation metrics, empty detections and test-split refusal in the training loader. The CUDA smoke separately exercises the actual GPU forward/backward path.

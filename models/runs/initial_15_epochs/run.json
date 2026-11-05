@@ -1,0 +1,88 @@
+{
+  "status": "training_finished",
+  "started_at_utc": "2026-11-05T09:52:33.604125+00:00",
+  "command": [
+    "C:\\Users\\mkhiz\\OneDrive\\Desktop\\Measure it\\.venv\\Scripts\\python.exe",
+    "-m",
+    "models.train",
+    "--config",
+    "models\\training_config.json",
+    "--output",
+    "models\\runs\\initial_15_epochs"
+  ],
+  "epochs_requested": 15,
+  "completed_epochs": 8,
+  "seed": 42,
+  "test_data_used": false,
+  "selection_split": "valid",
+  "output": "models\\runs\\initial_15_epochs",
+  "best_epoch": 2,
+  "best_validation_metric": 0.8316831683168316,
+  "checkpoint_sha256": "f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39",
+  "checkpoint": "models\\runs\\initial_15_epochs\\checkpoint_best.pt",
+  "last_epoch": {
+    "epoch": 8,
+    "learning_rate": 0.00025,
+    "mean_training_losses": {
+      "loss_classifier": 0.023873880421742797,
+      "loss_box_reg": 0.016185492742806673,
+      "loss_mask": 0.057208081781864165,
+      "loss_objectness": 0.005006187877152115,
+      "loss_rpn_box_reg": 0.13995178380697326,
+      "loss_total": 0.24222542852163315,
+      "gradient_norm_before_clip": 1.8839068138599395,
+      "amp_scale": 1024.0
+    },
+    "validation": {
+      "segmentation_mAP_0.50_0.95": 0.8316831683168316,
+      "segmentation_mAP_0.50": 0.8316831683168316,
+      "precision_at_0.5": 1.0,
+      "recall_at_0.5": 0.8333333333333334,
+      "mean_gt_mask_iou": 0.810552583162215,
+      "images": 15,
+      "gt_instances": 18,
+      "predictions": 31,
+      "true_positives": 15,
+      "false_positives": 0,
+      "false_negatives": 3,
+      "noncrowd_gt_instances": 18,
+      "operating_point_predictions": 15,
+      "ignored_crowd_predictions": 0,
+      "ap_has_non_crowd_ground_truth": true,
+      "coco_stats": [
+        0.8316831683168316,
+        0.8316831683168316,
+        0.8316831683168316,
+        0.0,
+        -1.0,
+        1.0,
+        0.8333333333333334,
+        0.8333333333333334,
+        0.8333333333333334,
+        0.0,
+        -1.0,
+        1.0
+      ],
+      "coco_eval_stdout": "creating index...\nindex created!\nLoading and preparing results...\nDONE (t=0.00s)\ncreating index...\nindex created!\nRunning per image evaluation...\nEvaluate annotation type *segm*\nDONE (t=0.01s).\nAccumulating evaluation results...\nDONE (t=0.00s).\n Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.832\n Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.832\n Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.832\n Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000\n Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000\n Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 1.000\n Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.833\n Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.833\n Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.833\n Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000\n Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000\n Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 1.000\n",
+      "thresholds": {
+        "mask_probability": 0.5,
+        "score": 0.5,
+        "mask_iou": 0.5
+      },
+      "metric_definitions": {
+        "AP": "Official COCO segmentation AP; all model-returned predictions, 100 max detections/image, loader target pixel coordinates.",
+        "precision_recall": "Per-image/category descending-score one-to-one best remaining GT matching at mask IoU >= 0.5; score >= 0.5. Crowd-only matches ignored.",
+        "mean_gt_mask_iou": "Separate per-image/category descending-score one-to-one best remaining non-crowd GT matching for any positive IoU; score >= 0.5. Sum matched IoUs divided by every non-crowd GT instance, unmatched GT zero.",
+        "unavailable_AP": "COCO -1 for absent ground truth is retained in raw stats; reported AP is 0 with availability flag false."
+      },
+      "mixed_precision": true,
+      "scope": "Only the provided loader tensors; no dataset source files accessed."
+    },
+    "elapsed_seconds": 52.51500000001397,
+    "cuda_peak_allocated_bytes": 1063876096,
+    "cuda_peak_reserved_bytes": 1245708288
+  },
+  "elapsed_training_seconds": 309.34399999998277,
+  "stop_reason": "validation_plateau_early_stop",
+  "completed_at_utc": "2026-11-05T09:57:58.888082+00:00"
+}

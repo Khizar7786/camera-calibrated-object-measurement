@@ -1,0 +1,45 @@
+{
+  "segmentation_mAP_0.50_0.95": 0.8213861386138614,
+  "segmentation_mAP_0.50": 0.8316831683168316,
+  "precision_at_0.5": 1.0,
+  "recall_at_0.5": 0.8333333333333334,
+  "mean_gt_mask_iou": 0.7985004057427724,
+  "images": 15,
+  "gt_instances": 18,
+  "predictions": 17,
+  "true_positives": 15,
+  "false_positives": 0,
+  "false_negatives": 3,
+  "noncrowd_gt_instances": 18,
+  "operating_point_predictions": 15,
+  "ignored_crowd_predictions": 0,
+  "ap_has_non_crowd_ground_truth": true,
+  "coco_stats": [
+    0.8213861386138614,
+    0.8316831683168316,
+    0.8316831683168316,
+    0.0,
+    -1.0,
+    0.9877887788778879,
+    0.8277777777777778,
+    0.8277777777777778,
+    0.8277777777777778,
+    0.0,
+    -1.0,
+    0.9933333333333334
+  ],
+  "coco_eval_stdout": "creating index...\nindex created!\nLoading and preparing results...\nDONE (t=0.00s)\ncreating index...\nindex created!\nRunning per image evaluation...\nEvaluate annotation type *segm*\nDONE (t=0.02s).\nAccumulating evaluation results...\nDONE (t=0.01s).\n Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.821\n Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.832\n Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.832\n Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000\n Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000\n Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.988\n Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.828\n Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.828\n Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.828\n Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000\n Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000\n Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.993\n",
+  "thresholds": {
+    "mask_probability": 0.5,
+    "score": 0.5,
+    "mask_iou": 0.5
+  },
+  "metric_definitions": {
+    "AP": "Official COCO segmentation AP; all model-returned predictions, 100 max detections/image, loader target pixel coordinates.",
+    "precision_recall": "Per-image/category descending-score one-to-one best remaining GT matching at mask IoU >= 0.5; score >= 0.5. Crowd-only matches ignored.",
+    "mean_gt_mask_iou": "Separate per-image/category descending-score one-to-one best remaining non-crowd GT matching for any positive IoU; score >= 0.5. Sum matched IoUs divided by every non-crowd GT instance, unmatched GT zero.",
+    "unavailable_AP": "COCO -1 for absent ground truth is retained in raw stats; reported AP is 0 with availability flag false."
+  },
+  "mixed_precision": true,
+  "scope": "Only the provided loader tensors; no dataset source files accessed."
+}

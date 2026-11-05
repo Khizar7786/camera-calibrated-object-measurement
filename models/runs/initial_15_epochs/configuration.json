@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "seed": 42,
+  "data_root": "dataset",
+  "class_names": [
+    "background",
+    "calculator"
+  ],
+  "model": {
+    "architecture": "maskrcnn_resnet50_fpn",
+    "num_classes": 2,
+    "trainable_backbone_layers": 3,
+    "min_size": 512,
+    "max_size": 960,
+    "rpn_pre_nms_top_n_train": 1000,
+    "rpn_post_nms_top_n_train": 500,
+    "rpn_pre_nms_top_n_test": 1000,
+    "rpn_post_nms_top_n_test": 300,
+    "box_batch_size_per_image": 256,
+    "box_detections_per_img": 100,
+    "box_score_thresh": 0.05,
+    "box_nms_thresh": 0.5
+  },
+  "training": {
+    "epochs": 15,
+    "batch_size": 1,
+    "num_workers": 0,
+    "optimizer": "SGD",
+    "learning_rate": 0.0025,
+    "momentum": 0.9,
+    "weight_decay": 0.0005,
+    "scheduler_step_size": 5,
+    "scheduler_gamma": 0.1,
+    "horizontal_flip_probability": 0.5,
+    "mixed_precision": true,
+    "initial_amp_scale": 1024.0,
+    "gradient_clip_norm": 5.0,
+    "cpu_threads": 4,
+    "maximum_wall_minutes": 45,
+    "early_stopping_patience": 6,
+    "early_stopping_minimum_epochs": 8,
+    "minimum_validation_improvement": 0.001
+  },
+  "validation": {
+    "every_epochs": 1,
+    "selection_metric": "segmentation_mAP_0.50_0.95",
+    "selection_direction": "maximize",
+    "mask_threshold": 0.5,
+    "precision_recall_score_threshold": 0.5,
+    "precision_recall_mask_iou_threshold": 0.5,
+    "thresholds_source": "Fixed before training; no threshold tuning is scheduled"
+  },
+  "budget": {
+    "initial_epochs": 15,
+    "declared_before_smoke_or_training": true,
+    "extension_policy": "No automatic extension. Any extension must be recorded with validation-only evidence and remaining time, never test results.",
+    "memory_failure_policy": "Preserve the failed smoke record, lower the short-side/long-side target or train fewer backbone layers, record the reason, and rerun smoke before real training.",
+    "test_policy": "No test dataset/list/images/annotations are loaded by training, augmentation, validation or checkpoint selection.",
+    "pretrained_weights": "Torchvision COCO Mask R-CNN ResNet50-FPN; both prediction heads replaced for background plus calculator"
+  }
+}

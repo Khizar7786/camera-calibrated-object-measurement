@@ -1,0 +1,20 @@
+{
+  "checkpoint": "models\\runs\\initial_15_epochs\\checkpoint_best.pt",
+  "sha256": "f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39",
+  "epoch": 2,
+  "selection_metric": "segmentation_mAP_0.50_0.95",
+  "value": 0.8316831683168316,
+  "selection_split": "valid",
+  "validation_images": 15,
+  "tie_breaker": "Earliest epoch retained when validation AP ties",
+  "command": [
+    "C:\\Users\\mkhiz\\OneDrive\\Desktop\\Measure it\\.venv\\Scripts\\python.exe",
+    "-m",
+    "models.train",
+    "--config",
+    "models\\training_config.json",
+    "--output",
+    "models\\runs\\initial_15_epochs"
+  ],
+  "test_data_used": false
+}

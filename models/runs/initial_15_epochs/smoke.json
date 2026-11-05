@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "training_image": {
+    "split": "train",
+    "image_id": 43,
+    "file_name": "IMG_20261104_200604_jpg.rf.e47a4ff7bb828e3c29b23aac23bc8822.jpg",
+    "image_path": "C:\\Users\\mkhiz\\OneDrive\\Desktop\\Measure it\\dataset\\corrected\\train\\IMG_20261104_200604_jpg.rf.e47a4ff7bb828e3c29b23aac23bc8822.jpg",
+    "annotation_path": "C:\\Users\\mkhiz\\OneDrive\\Desktop\\Measure it\\dataset\\corrected\\train\\_annotations.coco.json",
+    "annotation_ids": [
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66
+    ],
+    "instance_count": 23,
+    "original_size": [
+      2296,
+      4080
+    ],
+    "resized_size": [
+      512,
+      910
+    ],
+    "resize": "uniform scale bounded by min/max, dimensions rounded; no stretch",
+    "image_interpolation": "INTER_AREA downsample / INTER_LINEAR upsample",
+    "mask_interpolation": "INTER_NEAREST_EXACT",
+    "horizontal_flip_probability": 0.0
+  },
+  "validation_image": {
+    "split": "valid",
+    "image_id": 0,
+    "file_name": "IMG_20261104_200504_jpg.rf.4dd7ac6199c1fbc90b9cc35a396788ac.jpg",
+    "image_path": "C:\\Users\\mkhiz\\OneDrive\\Desktop\\Measure it\\dataset\\corrected\\valid\\IMG_20261104_200504_jpg.rf.4dd7ac6199c1fbc90b9cc35a396788ac.jpg",
+    "annotation_path": "C:\\Users\\mkhiz\\OneDrive\\Desktop\\Measure it\\dataset\\corrected\\valid\\_annotations.coco.json",
+    "annotation_ids": [
+      1
+    ],
+    "instance_count": 1,
+    "original_size": [
+      2296,
+      4080
+    ],
+    "resized_size": [
+      512,
+      910
+    ],
+    "resize": "uniform scale bounded by min/max, dimensions rounded; no stretch",
+    "image_interpolation": "INTER_AREA downsample / INTER_LINEAR upsample",
+    "mask_interpolation": "INTER_NEAREST_EXACT",
+    "horizontal_flip_probability": 0.0
+  },
+  "train_losses": {
+    "loss_classifier": 0.6290345191955566,
+    "loss_box_reg": 0.45830798149108887,
+    "loss_mask": 2.050981044769287,
+    "loss_objectness": 9.428556442260742,
+    "loss_rpn_box_reg": 2.887709856033325,
+    "loss_total": 15.45458984375,
+    "gradient_norm_before_clip": 135.3837432861328,
+    "amp_scale": 1024.0
+  },
+  "actual_smoke_augmentation": false,
+  "validation_detections": 100,
+  "note": "This is a finite forward/backward and validation smoke check, not an accuracy result. Smoke weights are discarded before the real run.",
+  "cuda_peak_allocated_bytes": 891221504,
+  "cuda_peak_reserved_bytes": 1482686464
+}

@@ -11,3 +11,6 @@ dataset/test/** -text whitespace=cr-at-eol,-blank-at-eof
 dataset/corrected/** -text whitespace=cr-at-eol,-blank-at-eof
 calibration/results/** -text whitespace=cr-at-eol,-blank-at-eof
 preprocessing/geometry.json -text whitespace=cr-at-eol,-blank-at-eof
+models/*.py -text
+models/*.json -text whitespace=cr-at-eol,-blank-at-eof
+models/runs/** -text whitespace=cr-at-eol,-blank-at-eof

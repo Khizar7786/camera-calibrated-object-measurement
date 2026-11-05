@@ -1,0 +1,77 @@
+{
+  "architecture": "maskrcnn_resnet50_fpn",
+  "num_classes": 2,
+  "trainable_backbone_layers": 3,
+  "pretrained_weights": "MaskRCNN_ResNet50_FPN_Weights.COCO_V1",
+  "total_parameters": 43922395,
+  "trainable_parameters": 43699995,
+  "box_classes": 2,
+  "box_regression_outputs": 8,
+  "mask_classes": 2,
+  "backbone_layers": {
+    "conv1": {
+      "total_parameters": 9408,
+      "trainable_parameters": 0,
+      "trainable": false
+    },
+    "bn1": {
+      "total_parameters": 0,
+      "trainable_parameters": 0,
+      "trainable": false
+    },
+    "layer1": {
+      "total_parameters": 212992,
+      "trainable_parameters": 0,
+      "trainable": false
+    },
+    "layer2": {
+      "total_parameters": 1212416,
+      "trainable_parameters": 1212416,
+      "trainable": true
+    },
+    "layer3": {
+      "total_parameters": 7077888,
+      "trainable_parameters": 7077888,
+      "trainable": true
+    },
+    "layer4": {
+      "total_parameters": 14942208,
+      "trainable_parameters": 14942208,
+      "trainable": true
+    }
+  },
+  "fpn": {
+    "total_parameters": 3344384,
+    "trainable_parameters": 3344384
+  },
+  "frozen_batch_norm_layers": 53,
+  "frozen_batch_norm_eps": [
+    0.0
+  ],
+  "input_transform": {
+    "min_size": [
+      512
+    ],
+    "max_size": 960,
+    "image_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "image_std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "proposal_limits": {
+    "train_pre_nms": 1000,
+    "train_post_nms": 500,
+    "test_pre_nms": 1000,
+    "test_post_nms": 300
+  },
+  "box_batch_size_per_image": 256,
+  "box_detections_per_image": 100,
+  "box_score_threshold": 0.05,
+  "box_nms_threshold": 0.5
+}

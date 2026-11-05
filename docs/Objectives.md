@@ -1,6 +1,6 @@
 # Measure It - Objectives
 
-**Status:** portrait camera calibration measured and joint dataset correction generated on 2026-11-05. The user approved all 72 corrected images and 100 instances on 2026-11-05; segmentation training and millimetre measurement remain unrun. Original objective targets are unchanged.
+**Status:** portrait camera calibration measured and joint dataset correction generated on 2026-11-05. The user approved all 72 corrected images and 100 instances on 2026-11-05; Mask R-CNN fine-tuning completed with validation-only checkpoint selection; test evaluation and millimetre measurement remain unrun. Original objective targets are unchanged.
 
 **Branch:** `dev-test01`. **Units:** millimetres for physical dimensions; pixels for reprojection error.
 
@@ -22,9 +22,9 @@
 | Split policy | Preserve existing export membership: **50 train / 15 validation / 7 test = 72 images**, approximately 70/20/10. Exact dataset-relative paths are frozen in `dataset/splits/train.txt`, `valid.txt` and `test.txt`; see the split README for conventions and integrity checks. Commit these lists before code; do not reshuffle. |
 | Original/export inventory | All 72 exports map uniquely to raw originals by capture filename. `dataset/Raw/` contains **73** photos; `IMG_20261104_200608.jpg` is unassigned and excluded from the frozen splits. Do not silently introduce it into training or evaluation. |
 | Model | Pretrained Torchvision Mask R-CNN ResNet50-FPN, fine-tuned on the calculator class. |
-| Reproducibility | Seed 42; exact package versions, training configuration, checkpoint choice, checkpoint SHA-256 and commands must be recorded when implemented. |
+| Reproducibility | Seed 42; exact CUDA environment, full configuration, source/data hashes, command, 400 update logs, eight epoch/validation records and selected-checkpoint SHA-256 are saved in `models/runs/initial_15_epochs/`. |
 | Calibration machine | Intel Core i7-12650H; 16,831,713,280 bytes reported physical RAM (about 15.68 GiB); Intel UHD Graphics and NVIDIA GeForce RTX 3050 Ti Laptop GPU; Microsoft Windows 11 Home, build 10.0.26300. Calibration uses the CPU with one OpenCV thread. Exact CIM output: `calibration/results/hardware.json`. Future training hardware must be recorded if different. |
-| Calibration software | Original fit: system Python **3.11.0**, OpenCV **4.10.0** (`opencv-python==4.10.0.84`), NumPy **2.3.1**, Pillow **11.2.1**, seed **42**. Versions are pinned in `requirements.txt`; raw fit environment is in `calibration/results/run.json`. An isolated project `.venv` was subsequently created with the same pinned versions; all **17 tests passed** inside it and dependency checks passed. Ongoing commands use that environment explicitly. |
+| Calibration software | Original fit: system Python **3.11.0**, OpenCV **4.10.0** (`opencv-python==4.10.0.84`), NumPy **2.3.1**, Pillow **11.2.1**, seed **42**. Versions are pinned in `requirements.txt`; raw fit environment is in `calibration/results/run.json`. An isolated project `.venv` was subsequently created with the same pinned versions; the full project now has **72 passing tests** inside it and dependency checks passed. Ongoing commands use that environment explicitly. |
 
 ### Dataset correction and review before training
 
@@ -137,7 +137,45 @@ Visually inspected full-frame comparison previews: [first](../calibration/result
 
 ## 4. Other required evaluation evidence
 
-### Segmentation model
+### Recorded fine-tuning and validation - 2026-11-05
+
+Command from the repository root:
+
+```powershell
+.venv\Scripts\python.exe -m models.train --config models/training_config.json --output models/runs/initial_15_epochs
+```
+
+Torchvision Mask R-CNN ResNet50-FPN starts from official COCO pretrained weights; both box and mask prediction heads are replaced for background `0` and calculator `1`. Only the approved frozen **50 train / 15 validation** images are loaded, with **75 / 18 instances**. Training-only horizontal flipping jointly transforms images and masks. The loader preserves aspect ratio, uniformly resizes the current full-frame images to **512 x 910**, uses exact nearest-neighbour masks, and recomputes boxes/areas. Batch size is **1** and Windows loader workers **0**. No test loader, image, annotation or split list is used in training, augmentation, threshold decisions or checkpoint selection.
+
+The initial **15-epoch** budget, SGD learning rate **0.0025**, last **three** trainable backbone stages, mixed precision, seed **42** for Python/NumPy/PyTorch, fixed thresholds and validation plateau rule were recorded before GPU smoke. The smoke exercised the **23-instance** training image plus one validation forward: finite losses/backward/update and validation outputs passed; peak allocated memory was **891,221,504 bytes**, reserved **1,482,686,464 bytes**. Diagnostic weights were discarded and all seeds/model/optimizer state reset before fitting.
+
+Actual training completed **8 epochs / 400 optimizer updates** in **309.344 seconds** of training-loop wall time. The predeclared rule stopped after six epochs without validation AP improvement greater than 0.001, at the minimum eight completed epochs. This is an evidence-based early stop within the 15-epoch initial budget. There was no out-of-memory adaptation or model/resolution/backbone change. The predeclared StepLR changed learning rate from **0.0025 to 0.00025 after epoch 5**, recorded in [configuration_changes.jsonl](../models/runs/initial_15_epochs/configuration_changes.jsonl). This elapsed training time is an observed run cost, not the omitted runtime benchmark.
+
+**Selected checkpoint: epoch 2**, the earliest highest validation COCO mask AP50:95. Later equal scores retain that checkpoint under the declared tie rule. These results use all **15 validation images / 18 labelled instances**, in resized loader coordinates:
+
+| Validation metric | Selected epoch 2 result |
+| --- | ---: |
+| Segmentation mAP@0.5:0.95 | **0.831683** |
+| Segmentation mAP@0.5 | **0.831683** |
+| Precision, score >=0.5 and mask IoU >=0.5 | **1.000000** (15 TP, 0 FP) |
+| Recall at that operating point | **0.833333** (3 FN) |
+| Mean ground-truth mask IoU, unmatched GT zero | **0.807052** across all 18 GT instances |
+
+Mask probability, operating score and matching IoU are fixed at **0.5**; the model returns predictions from score **0.05** with box NMS **0.5**. AP uses the official COCO evaluator over all returned predictions; operating metrics use score-ordered one-to-one matching. Mean GT IoU uses its documented separate positive-overlap matching and includes unmatched GT as zero. These are checkpoint-selection validation results, not held-out test results or millimetre-accuracy evidence. All user-accepted instances are retained.
+
+Selected local checkpoint: `models/runs/initial_15_epochs/checkpoint_best.pt` (**176,220,108 bytes**). SHA-256:
+
+```text
+f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39
+```
+
+[verification.json](../models/runs/initial_15_epochs/verification.json) confirms the hash, offline CPU reconstruction with strict state loading and both two-class heads, 400 finite update records, unchanged runtime source hashes, and **227** unchanged approved train/validation artifact hashes plus frozen lists. Binary checkpoints are local/ignored; an accessible reviewer download is still pending.
+
+Actual environment: isolated Python **3.11.0**, PyTorch **2.7.1+cu126**, Torchvision **0.22.1+cu126**, CUDA build **12.6**, NVIDIA RTX **3050 Ti Laptop GPU** with **4,294,443,008 bytes** reported GPU memory. Machine/OS/RAM are the calibration machine recorded above. [environment.json](../models/runs/initial_15_epochs/environment.json) and [requirements.freeze.txt](../models/runs/initial_15_epochs/requirements.freeze.txt) preserve exact installed versions; [pip_freeze_raw.txt](../models/runs/initial_15_epochs/pip_freeze_raw.txt) preserves pip's local-wheel provenance. CUDA NMS/backward checks and all **72 tests** passed. PyTorch reports that CUDA ROIAlign backward lacks a deterministic implementation; [warnings.txt](../models/runs/initial_15_epochs/warnings.txt) preserves the actual warning. Seeded settings do not imply bitwise repeatability across runs/hardware.
+
+Evidence: [saved configuration](../models/runs/initial_15_epochs/configuration.json), [command](../models/runs/initial_15_epochs/command.txt), [run status](../models/runs/initial_15_epochs/run.json), [train/validation data manifest](../models/runs/initial_15_epochs/data_manifest.json), [actual model/head summary](../models/runs/initial_15_epochs/model_summary.json), [smoke](../models/runs/initial_15_epochs/smoke.json), [console](../models/runs/initial_15_epochs/console.txt), [step losses](../models/runs/initial_15_epochs/steps.jsonl), [epoch losses/results](../models/runs/initial_15_epochs/epochs.jsonl), [selection and hash](../models/runs/initial_15_epochs/selection.json), selected [COCO output](../models/runs/initial_15_epochs/validation/epoch_02/coco_eval.txt) and [metrics/definitions](../models/runs/initial_15_epochs/validation/epoch_02/metrics.json). [Setup notes](../models/setup_notes.json) retain the pip metadata failure, pip upgrade and SHA-verified resumed CUDA download; no setup success was represented as training success.
+
+### Segmentation model - held-out test evaluation still pending
 
 Freeze the checkpoint, preprocessing and model operating cutoffs using validation only. Evaluate the committed test split without retuning. Report:
 
