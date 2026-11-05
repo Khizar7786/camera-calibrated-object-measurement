@@ -1,0 +1,62 @@
+Board: 9 x 7 inner corners; measured squares 20 mm
+Geometry: 2296 x 4080 stored pixels; no EXIF rotation, crop, resize or mixed-orientation fit
+Inputs: 30; required usable views: 20
+REJECTED_GEOMETRY: IMG_20261104_194233.jpg.jpeg: stored size 4080 x 2296 differs from required 2296 x 4080
+REJECTED_GEOMETRY: IMG_20261104_194236.jpg.jpeg: stored size 4080 x 2296 differs from required 2296 x 4080
+USABLE: IMG_20261104_194240.jpg.jpeg: complete grid refined at full resolution
+USABLE: IMG_20261104_194244.jpg.jpeg: complete grid refined at full resolution
+USABLE: IMG_20261104_194249.jpg.jpeg: complete grid refined at full resolution
+USABLE: IMG_20261104_194254.jpg.jpeg: complete grid refined at full resolution
+USABLE: IMG_20261104_194258.jpg.jpeg: complete grid refined at full resolution
+REJECTED_GEOMETRY: IMG_20261104_194301.jpg.jpeg: stored size 4080 x 2296 differs from required 2296 x 4080
+REJECTED_GEOMETRY: IMG_20261104_194303.jpg.jpeg: stored size 4080 x 2296 differs from required 2296 x 4080
+REJECTED_GEOMETRY: IMG_20261104_194306.jpg.jpeg: stored size 4080 x 2296 differs from required 2296 x 4080
+USABLE: IMG_20261104_194325.jpg.jpeg: complete grid refined at full resolution
+USABLE: IMG_20261104_194328.jpg.jpeg: complete grid refined at full resolution
+USABLE: IMG_20261104_194330.jpg.jpeg: complete grid refined at full resolution
+USABLE: IMG_20261104_194339.jpg.jpeg: complete grid refined at full resolution
+USABLE: IMG_20261104_194342.jpg.jpeg: complete grid refined at full resolution
+USABLE: IMG_20261104_194344.jpg.jpeg: complete grid refined at full resolution
+USABLE: IMG_20261104_194346.jpg.jpeg: complete grid refined at full resolution
+USABLE: IMG_20261104_194348.jpg.jpeg: complete grid refined at full resolution
+USABLE: IMG_20261104_194350.jpg.jpeg: complete grid refined at full resolution
+USABLE: IMG_20261104_194352.jpg.jpeg: complete grid refined at full resolution
+USABLE: IMG_20261104_194354.jpg.jpeg: complete grid refined at full resolution
+USABLE: IMG_20261104_194357.jpg.jpeg: complete grid refined at full resolution
+USABLE: IMG_20261104_194359.jpg.jpeg: complete grid refined at full resolution
+USABLE: IMG_20261104_194401.jpg.jpeg: complete grid refined at full resolution
+USABLE: IMG_20261104_194404.jpg.jpeg: complete grid refined at full resolution
+USABLE: IMG_20261104_194406.jpg.jpeg: complete grid refined at full resolution
+REJECTED_GEOMETRY: IMG_20261104_194409.jpg.jpeg: stored size 4080 x 2296 differs from required 2296 x 4080
+REJECTED_GEOMETRY: IMG_20261104_194411.jpg.jpeg: stored size 4080 x 2296 differs from required 2296 x 4080
+REJECTED_GEOMETRY: IMG_20261104_194414.jpg.jpeg: stored size 4080 x 2296 differs from required 2296 x 4080
+REJECTED_GEOMETRY: IMG_20261104_194606.jpg.jpeg: stored size 4080 x 2296 differs from required 2296 x 4080
+Detection summary: 21 usable / 30 input; 9 rejected/failed
+RMS_PX: IMG_20261104_194240.jpg.jpeg: 1.179019365
+RMS_PX: IMG_20261104_194244.jpg.jpeg: 1.062140759
+RMS_PX: IMG_20261104_194249.jpg.jpeg: 0.986644191
+RMS_PX: IMG_20261104_194254.jpg.jpeg: 1.166659121
+RMS_PX: IMG_20261104_194258.jpg.jpeg: 0.550134538
+RMS_PX: IMG_20261104_194325.jpg.jpeg: 0.813655343
+RMS_PX: IMG_20261104_194328.jpg.jpeg: 0.980454933
+RMS_PX: IMG_20261104_194330.jpg.jpeg: 0.920371207
+RMS_PX: IMG_20261104_194339.jpg.jpeg: 1.414178343
+RMS_PX: IMG_20261104_194342.jpg.jpeg: 1.029802726
+RMS_PX: IMG_20261104_194344.jpg.jpeg: 1.114584408
+RMS_PX: IMG_20261104_194346.jpg.jpeg: 0.530165702
+RMS_PX: IMG_20261104_194348.jpg.jpeg: 0.464852213
+RMS_PX: IMG_20261104_194350.jpg.jpeg: 0.550103835
+RMS_PX: IMG_20261104_194352.jpg.jpeg: 0.757187367
+RMS_PX: IMG_20261104_194354.jpg.jpeg: 0.777067305
+RMS_PX: IMG_20261104_194357.jpg.jpeg: 0.852713428
+RMS_PX: IMG_20261104_194359.jpg.jpeg: 0.661035718
+RMS_PX: IMG_20261104_194401.jpg.jpeg: 0.919445761
+RMS_PX: IMG_20261104_194404.jpg.jpeg: 1.035720444
+RMS_PX: IMG_20261104_194406.jpg.jpeg: 0.857156656
+GLOBAL_RMS_PX: 0.918653470; independently recomputed: 0.918652935
+PER_VIEW_RMS_PX: median 0.919445761; worst 1.414178343
+CAMERA_MATRIX: [[3354.623257092122, 0.0, 1158.996287939729], [0.0, 3361.9256037826312, 2051.3406751521297], [0.0, 0.0, 1.0]]
+DISTORTION_COEFFICIENTS [k1,k2,p1,p2,k3]: [0.1551227326283479, -0.8987862566946367, 0.0008208370032662884, 0.0016183628347922765, 2.216512702550443]
+MO-2 (RMS <= 1.0 px, >=20 usable views): MET
+Millimetre accuracy: NOT EVALUATED. Reprojection RMS alone does not establish it.
+Saved parameters, per-view outcomes, raw fit and before/after evidence under calibration\results

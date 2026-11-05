@@ -26,3 +26,5 @@
 **Decision record (initial).** Choose Mask R-CNN for instance masks, detection scores and direct instance-metric evaluation. Reject U-Net/ResNet18, which needs instance extraction/scoring. Expected cost: higher memory demand and potentially slower training/inference. Comparative performance is unmeasured; update this record if the decision changes.
 
 **2026-11-05, before implementation.** Corrected the reference, existing-label workflow and assumed 70-image count after checking the supplied files.
+
+**2026-11-05, calibration stage.** Chose the 2296 x 4080 portrait profile: 21 compatible views, with 9 landscape views explicitly rejected. Board confirmed as 9 x 7 inner corners and user-measured 20 mm squares; focus/zoom lock user-confirmed. Keep the initial targets; resolve landscape/export geometry before dataset correction. No automatic rotation or intrinsic rescaling is permitted by the current shared routine.

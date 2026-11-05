@@ -1,0 +1,13 @@
+{
+  "inner_corners": [9, 7],
+  "square_size_mm": 20.0,
+  "square_size_source": "User measured 2 cm x 2 cm, confirmed 2026-11-05",
+  "corner_count_source": "Whole-board inspection: 10 x 8 squares, 9 x 7 inner corners; printed footer agrees",
+  "image_size": [2296, 4080],
+  "minimum_views": 20,
+  "detection_max_dimension": 1600,
+  "camera": "Redmi Note 12 (EXIF Xiaomi 23021RAAEG)",
+  "focus_and_zoom_locked": true,
+  "capture_settings_source": "User confirmed focus and zoom locked throughout calibration and calculator captures, 2026-11-05",
+  "board_flatness_and_rigid_backing": "Not verified from photographs; possible paper curvature remains a limitation"
+}
