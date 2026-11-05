@@ -1,0 +1,5 @@
+* text=auto
+.gitattributes text eol=lf
+*.md text eol=lf
+dataset/splits/*.txt text eol=lf
+dataset/*/_annotations.coco.json -text
