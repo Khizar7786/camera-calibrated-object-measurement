@@ -1,6 +1,6 @@
 # Measure It
 
-Camera-calibrated calculator segmentation and metric measurement assessment, on branch `dev-test01`. The planning documents and fixed split membership were committed before implementation. **Calibration, reviewed joint image/mask correction and CUDA model fine-tuning are complete. The declared 15-epoch run stopped after 8 epochs under its original validation-plateau rule, selecting epoch 2. Test evaluation, image-to-millimetre inference, physical measurement validation and public weight publication remain pending.**
+Camera-calibrated calculator segmentation and metric measurement assessment, on branch `dev-test01`. The planning documents and fixed split membership were committed before implementation. **Calibration, reviewed joint image/mask correction and CUDA model fine-tuning are complete. The declared 15-epoch run stopped after 8 epochs under its original validation-plateau rule, selecting epoch 2. Frozen seven-image test evaluation is complete; image-to-millimetre inference, physical measurement validation and public weight publication remain pending.**
 
 ## Setup
 
@@ -142,7 +142,17 @@ f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39
 
 [Checkpoint verification](models/runs/initial_15_epochs/verification.json) passed an offline strict CPU reload with both heads configured for two classes, found 400 finite-loss optimizer steps, matched runtime source hashes, and rechecked 227 approved training/validation artifacts and the frozen lists. This integrity check performed no inference or test evaluation. Checkpoint binaries remain local and ignored by Git; an accessible public download is still pending.
 
-Raw [console output](models/runs/initial_15_epochs/console.txt), [epoch records](models/runs/initial_15_epochs/epochs.jsonl), per-epoch validation outputs and the run's environment/configuration snapshots are preserved. ROIAlign backward reported a CUDA nondeterminism warning in [warnings.txt](models/runs/initial_15_epochs/warnings.txt). Seeds and deterministic settings were requested, but identical results across repeated runs are not guaranteed. These scores describe the validation split used for selection. Test evaluation and independent millimetre measurement accuracy remain pending.
+Raw [console output](models/runs/initial_15_epochs/console.txt), [epoch records](models/runs/initial_15_epochs/epochs.jsonl), per-epoch validation outputs and the run's environment/configuration snapshots are preserved. ROIAlign backward reported a CUDA nondeterminism warning in [warnings.txt](models/runs/initial_15_epochs/warnings.txt). Seeds and deterministic settings were requested, but identical results across repeated runs are not guaranteed. These scores describe the validation split used for selection. The frozen test evaluation is recorded below; independent millimetre measurement accuracy remains pending.
+
+## Frozen held-out mask evaluation
+
+```powershell
+.venv\Scripts\python.exe -m models.evaluate_test --output models/evaluations/frozen_test_01
+```
+
+The [saved test report](models/evaluations/README.md) evaluates exactly the seven committed test images with the frozen epoch-2 checkpoint. Mean GT mask IoU is **0.967517224**; official COCO segmentation **AP50=1.0, AP50:95=1.0**; operating **precision=1.0, recall=1.0** (7 TP, 0 FP, 0 FN). Operating score and mask probability are 0.5; precision/recall require one-to-one mask IoU >=0.5. Mean IoU divides matched-mask IoUs by every GT instance, with unmatched GT zero. AP retains every returned scored mask at the original 0.05 model floor, without the measurement gate. Geometry stays aspect-preserving 512/960 (512 x 910 here).
+
+The report includes the command, checkpoint/split hashes, configuration, all seven filenames, per-image results, raw scored masks, GT masks and COCO output. Saved-prediction COCO replay and independent mask IoU calculations passed. No settings or checkpoint were changed using test scores. This small split does not establish millimetre accuracy or performance on other calculators. Reproduction requires a fresh output directory.
 
 ## Verification
 
@@ -150,6 +160,6 @@ Raw [console output](models/runs/initial_15_epochs/console.txt), [epoch records]
 .venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-On 2026-11-05 the isolated project `.venv` was created with system site-packages disabled. The dependencies include pinned `pycocotools==2.0.10` and the recorded CUDA PyTorch/Torchvision builds. All **72 tests pass inside the actual project environment**. The saved calibration fit retains its original interpreter provenance.
+On 2026-11-05 the isolated project `.venv` was created with system site-packages disabled. The dependencies include pinned `pycocotools==2.0.10` and the recorded CUDA PyTorch/Torchvision builds. All **76 tests pass inside the actual project environment**. The saved calibration fit retains its original interpreter provenance.
 
 Tests cover calibration, image/mask geometry, source/split integrity, approval checks, joint training augmentation, model/head reconstruction, synthetic validation metrics, empty detections and test-split refusal in the training loader. The CUDA smoke separately exercises the actual GPU forward/backward path.

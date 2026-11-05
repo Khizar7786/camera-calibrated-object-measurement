@@ -1,0 +1,1 @@
+"C:\Users\mkhiz\OneDrive\Desktop\Measure it\.venv\Scripts\python.exe" -m models.evaluate_test --selection models\runs\initial_15_epochs\selection.json --output models\evaluations\frozen_test_01 --device cuda

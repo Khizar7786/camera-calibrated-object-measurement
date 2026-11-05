@@ -1,6 +1,6 @@
 # Measure It - Objectives
 
-**Status:** portrait camera calibration measured and joint dataset correction generated on 2026-11-05. The user approved all 72 corrected images and 100 instances on 2026-11-05; Mask R-CNN fine-tuning completed with validation-only checkpoint selection; test evaluation and millimetre measurement remain unrun. Original objective targets are unchanged.
+**Status:** portrait camera calibration measured and joint dataset correction generated on 2026-11-05. The user approved all 72 corrected images and 100 instances on 2026-11-05; Mask R-CNN fine-tuning completed with validation-only checkpoint selection; the frozen seven-image mask evaluation is complete; millimetre measurement remains unrun. Original objective targets are unchanged.
 
 **Branch:** `dev-test01`. **Units:** millimetres for physical dimensions; pixels for reprojection error.
 
@@ -24,7 +24,7 @@
 | Model | Pretrained Torchvision Mask R-CNN ResNet50-FPN, fine-tuned on the calculator class. |
 | Reproducibility | Seed 42; exact CUDA environment, full configuration, source/data hashes, command, 400 update logs, eight epoch/validation records and selected-checkpoint SHA-256 are saved in `models/runs/initial_15_epochs/`. |
 | Calibration machine | Intel Core i7-12650H; 16,831,713,280 bytes reported physical RAM (about 15.68 GiB); Intel UHD Graphics and NVIDIA GeForce RTX 3050 Ti Laptop GPU; Microsoft Windows 11 Home, build 10.0.26300. Calibration uses the CPU with one OpenCV thread. Exact CIM output: `calibration/results/hardware.json`. Future training hardware must be recorded if different. |
-| Calibration software | Original fit: system Python **3.11.0**, OpenCV **4.10.0** (`opencv-python==4.10.0.84`), NumPy **2.3.1**, Pillow **11.2.1**, seed **42**. Versions are pinned in `requirements.txt`; raw fit environment is in `calibration/results/run.json`. An isolated project `.venv` was subsequently created with the same pinned versions; the full project now has **72 passing tests** inside it and dependency checks passed. Ongoing commands use that environment explicitly. |
+| Calibration software | Original fit: system Python **3.11.0**, OpenCV **4.10.0** (`opencv-python==4.10.0.84`), NumPy **2.3.1**, Pillow **11.2.1**, seed **42**. Versions are pinned in `requirements.txt`; raw fit environment is in `calibration/results/run.json`. An isolated project `.venv` was subsequently created with the same pinned versions; the full project now has **76 passing tests** inside it and dependency checks passed. Ongoing commands use that environment explicitly. |
 
 ### Dataset correction and review before training
 
@@ -175,19 +175,31 @@ Actual environment: isolated Python **3.11.0**, PyTorch **2.7.1+cu126**, Torchvi
 
 Evidence: [saved configuration](../models/runs/initial_15_epochs/configuration.json), [command](../models/runs/initial_15_epochs/command.txt), [run status](../models/runs/initial_15_epochs/run.json), [train/validation data manifest](../models/runs/initial_15_epochs/data_manifest.json), [actual model/head summary](../models/runs/initial_15_epochs/model_summary.json), [smoke](../models/runs/initial_15_epochs/smoke.json), [console](../models/runs/initial_15_epochs/console.txt), [step losses](../models/runs/initial_15_epochs/steps.jsonl), [epoch losses/results](../models/runs/initial_15_epochs/epochs.jsonl), [selection and hash](../models/runs/initial_15_epochs/selection.json), selected [COCO output](../models/runs/initial_15_epochs/validation/epoch_02/coco_eval.txt) and [metrics/definitions](../models/runs/initial_15_epochs/validation/epoch_02/metrics.json). [Setup notes](../models/setup_notes.json) retain the pip metadata failure, pip upgrade and SHA-verified resumed CUDA download; no setup success was represented as training success.
 
-### Segmentation model - held-out test evaluation still pending
+### Segmentation model - frozen held-out test, 2026-11-05
 
-Freeze the checkpoint, preprocessing and model operating cutoffs using validation only. Evaluate the committed test split without retuning. Report:
+Exactly **7 committed test images / 7 GT instances** were evaluated with the original validation-selected **epoch-2** checkpoint. No test-driven training, augmentation, threshold/resolution changes or checkpoint reselection occurred. Full [test report](../models/evaluations/README.md).
 
-| Metric | Result |
-| --- | --- |
-| Mask IoU, with aggregation defined and unmatched ground truth counted as zero | Not run |
-| Segmentation mAP@0.5 | Not run |
-| Segmentation mAP@0.5:0.95 | Not run |
-| Precision at a declared score cutoff and mask IoU >=0.5 | Not run |
-| Recall at the same operating point | Not run |
+```powershell
+.venv\Scripts\python.exe -m models.evaluate_test --output models/evaluations/frozen_test_01
+```
 
-Use a standard COCO-compatible segmentation evaluator for AP. Save raw output, actual test-image count, configuration, checkpoint hash and exact command. Detection confidence must not be presented as guaranteed dimensional accuracy.
+| Mask metric | Test result |
+| --- | ---: |
+| Mean ground-truth mask IoU, unmatched GT zero | **0.967517224** |
+| Segmentation mAP@0.5 | **1.000000** |
+| Segmentation mAP@0.5:0.95 | **1.000000** |
+| Precision, score >=0.5 and mask IoU >=0.5 | **1.000000** (7 TP, 0 FP) |
+| Recall at the same operating point | **1.000000** (0 FN) |
+
+AP uses official `pycocotools==2.0.10` COCOeval with `iouType="segm"`, standard 101 recall points, mask IoU 0.50:0.05:0.95 and maxDets 100. All returned scored masks are retained at the frozen model floor **0.05** with NMS **0.5**. No measurement/operating gate filters AP. Actual output contains seven predictions, none below score 0.5. Predicted mask probability threshold is **0.5**. Operating precision/recall use score >=0.5 and descending-score per-image/category one-to-one matching to remaining GT at **mask IoU >=0.5**.
+
+Mean GT mask IoU separately matches score >=0.5 predictions one-to-one to remaining same-class GT for any positive mask overlap, sums their IoUs and divides by **all seven non-crowd GT instances**, with unmatched GT zero. All seven GT matched here. Per-image IoU ranges from **0.958935345 to 0.974587348**. Inputs/GT masks use the unchanged aspect-preserving 512/960 transform, becoming **512 x 910** with exact nearest-neighbour masks and no augmentation. These are resized-coordinate mask metrics; no box AP or confidence average is substituted.
+
+Checkpoint SHA-256: `f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39`. Frozen `dataset/splits/test.txt` SHA-256: `542bf7ec62522c86877d99707d6111e98dd516c4ff10f342d054ac77f34a8da1`. [Manifest](../models/evaluations/frozen_test_01/data_manifest.json) binds all seven filenames/image bytes, annotations, approved metadata and split bytes to committed Git objects at `659f022b80ce6e25f41747262bd2290d51228c76`. No frozen source/run artifact was changed.
+
+Evidence: [full configuration](../models/evaluations/frozen_test_01/configuration.json), [exact command](../models/evaluations/frozen_test_01/command.txt), [environment/versions](../models/evaluations/frozen_test_01/environment.json), [metrics](../models/evaluations/frozen_test_01/metrics.json), [raw COCO output](../models/evaluations/frozen_test_01/coco_eval.txt), [scored RLE predictions](../models/evaluations/frozen_test_01/predictions.json), [evaluated GT masks](../models/evaluations/frozen_test_01/ground_truth.json), [COCO parameters](../models/evaluations/frozen_test_01/coco_parameters.json), [raw COCO arrays](../models/evaluations/frozen_test_01/coco_arrays.npz), [per-image results](../models/evaluations/frozen_test_01/per_image.json), [verification](../models/evaluations/frozen_test_01/verification.json) and [artifact hashes](../models/evaluations/frozen_test_01/artifact_sha256.json). Saved-prediction replay reproduces both mask AP scores; independent binary-mask intersection/union reproduces mean IoU. All **76 tests** passed, including low-score AP retention and zero IoU for a missed GT at the operating point.
+
+This is a small seven-image evaluation of one physical calculator, not evidence of generalization to other calculator products or millimetre accuracy. The original MO-1 target remains **Not run**.
 
 ### Raw versus undistorted measurement
 

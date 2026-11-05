@@ -1,0 +1,19 @@
+{
+  "coco_arrays.npz": "dbb286fd29a64f8db560963a049a0ec5dd7aca22eac16a7cc1154191d37cf6fa",
+  "coco_eval.txt": "9c82c4a326381bf33d657895a6df22191323957931ae36595c27689988ee377f",
+  "coco_parameters.json": "8c33bbfc9f34a262c7e6c84ea026fc3ffc96308c626e4fee238c693b2f731e0d",
+  "coco_replay.txt": "98b5a2a1a53b8298ad5026edf9680fc654a9d46f6dd95957f366683e1c80645b",
+  "command.txt": "2cc82cacf5a967ad0bc4d64de4505d7d1061c214332f84cbed0a32192fe72d01",
+  "configuration.json": "6a4c0d3908ca39f934b4d3c63ea56aad74b991fd6dea26608522bee8b3d0a6f3",
+  "console.txt": "c5e4a9e26b7832831a727eaaf41acc906a52c5f11c68cc887f8c055af84040a4",
+  "data_manifest.json": "9ce96b85465ba18ce3cce074db7ceddc88c21d2c701df54628709fca3db6e3ad",
+  "environment.json": "3498289a6051c55d38f986da98397348eb185032540a685ec6f29eaa5d43e26e",
+  "ground_truth.json": "99cd79516a03fc86daf54b44eff0c738ccc6541348bb749a9f3b6f1932c43720",
+  "metrics.json": "421c46647d77f2e5ae269c92f1b83a0f53b175e52c3431adffef93fec14722ee",
+  "model_summary.json": "52abcc9da08e054a58c2e1953b6217c7157c213c83e5c148bd7577eaa255ff66",
+  "per_image.json": "2dfafbb6ba5e1ecfcb66864f9752645a5d75f3556d0fe9177c38b22405ae133e",
+  "predictions.json": "231b84e213d864e53ba6ff08be7c04921ce3363870141da883ff5ed6fe68e5dc",
+  "run.json": "ab7abf4abb7bad14942e3c8021dd67443c7a539e73a437dc34ff6c728ef32926",
+  "source_hashes.json": "3b5ba03318fe9facb50db5f433e3b3e7e70c5304bb979cd603984064585ba4c8",
+  "verification.json": "e218a977117d7774f8d5b012053c541f38bf76abcef5109de0ddc4ca56e147d2"
+}

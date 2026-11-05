@@ -1,6 +1,6 @@
 # Calculator segmentation training
 
-**Status:** CUDA fine-tuning [finished](runs/initial_15_epochs/run.json) after **8 epochs / 400 real optimizer updates**, using the original plateau rule within the declared 15-epoch budget. **Epoch 2** was selected by validation AP. Test evaluation, image-to-millimetre inference, physical measurement validation and public weight publication remain pending.
+**Status:** CUDA fine-tuning [finished](runs/initial_15_epochs/run.json) after **8 epochs / 400 real optimizer updates**, using the original plateau rule within the declared 15-epoch budget. **Epoch 2** was selected by validation AP. Frozen seven-image test evaluation is complete; image-to-millimetre inference, physical measurement validation and public weight publication remain pending.
 
 Run commands from the repository root using the project `.venv`. Training requires CUDA-enabled PyTorch and a matching Torchvision installation; exact installed versions and GPU details are recorded in each run. The CLI stops with a recorded failure if CUDA is unavailable. Dependency setup history is preserved in [setup_notes.json](setup_notes.json).
 
@@ -113,3 +113,7 @@ f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39
 [Verification](runs/initial_15_epochs/verification.json) passed an offline `weights_only=True` CPU reload and strict state-dict match, with two-class box/mask heads and configuration/source hashes matching the run. It also checked all 400 step losses were finite and rechecked 227 approved training/validation artifacts and unchanged frozen lists. No inference or test evaluation was performed by that integrity check. The selected binary remains local at `models/runs/initial_15_epochs/checkpoint_best.pt`; its public download is still pending.
 
 These results are validation evidence used for checkpoint selection. Test metrics and independent millimetre measurements have not been run. Preserve setup notes and failed-attempt evidence when reporting time spent. The recording must stay within five minutes and explain the code and results actually available, including inference, measurement or other assessment stages that were not reached.
+
+## Frozen held-out test result
+
+The [seven-image evaluation report](evaluations/README.md) records mean GT mask IoU **0.967517224**, mask AP50/AP50:95 **1.0/1.0**, precision/recall **1.0/1.0** (7 TP, 0 FP, 0 FN), with the same epoch-2 checkpoint and frozen settings. All 76 tests pass. Its separate explicit test loader leaves the training class's held-out rejection intact. No test-driven settings change or checkpoint selection occurred. See the report for the command, hashes, configuration, aggregation/matching definitions and raw scored-mask COCO evidence.
