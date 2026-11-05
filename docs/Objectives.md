@@ -1,6 +1,6 @@
 # Measure It - Objectives
 
-**Status:** portrait camera calibration measured and joint dataset correction generated on 2026-11-05. The user approved all 72 corrected images and 100 instances on 2026-11-05; Mask R-CNN fine-tuning completed with validation-only checkpoint selection; the frozen seven-image mask evaluation is complete; millimetre measurement remains unrun. Original objective targets are unchanged.
+**Status:** portrait camera calibration measured and joint dataset correction generated on 2026-11-05. The user approved all 72 corrected images and 100 instances on 2026-11-05; Mask R-CNN fine-tuning completed with validation-only checkpoint selection; the frozen seven-image mask evaluation is complete; the one-image measurement CLI is implemented; one real referenced-photo execution is recorded; physical accuracy validation remains unrun. Original objective targets are unchanged.
 
 **Branch:** `dev-test01`. **Units:** millimetres for physical dimensions; pixels for reprojection error.
 
@@ -10,7 +10,7 @@
 | --- | --- |
 | Object | One rigid calculator, chosen for its clear outer outline and repeatable handling; measure its complete outer body, excluding shadows, hands, individual buttons and the display. |
 | Preliminary hand measurements | Width **75 mm**, height **160 mm**, reported using a ruler. Width means the shorter side and height the longer side, regardless of image rotation. Confirm readings for the accuracy experiment. |
-| Reference | A **flat square cut out of paper**, reported size **50 x 50 mm**. This is an unmarked square, not an ArUco marker. Measure its actual cut edges and keep the same reference throughout evaluation. |
+| Reference | A **flat unmarked paper square, 50 x 50 mm**, with both outer edges measured using a millimetre ruler and explicitly confirmed by the user on 2026-11-05. Keep this same reference throughout evaluation; its plane must match the measured outline. |
 | Ground-truth instrument | Ruler marked in millimetres. Reading uncertainty must be acknowledged; no sub-millimetre accuracy claim is planned. |
 | Camera | **Redmi Note 12**. |
 | Verified image geometry | Raw object captures: **49 landscape 4080 x 2296** and **24 portrait 2296 x 4080**; calibration captures: **9 landscape 4080 x 2296** and **21 portrait 2296 x 4080**. All 72 exported object images are **432 x 432**. Export metadata reports auto-orientation and stretch resizing; source-to-export geometry must be resolved before calibration is applied to exported labels. |
@@ -24,7 +24,7 @@
 | Model | Pretrained Torchvision Mask R-CNN ResNet50-FPN, fine-tuned on the calculator class. |
 | Reproducibility | Seed 42; exact CUDA environment, full configuration, source/data hashes, command, 400 update logs, eight epoch/validation records and selected-checkpoint SHA-256 are saved in `models/runs/initial_15_epochs/`. |
 | Calibration machine | Intel Core i7-12650H; 16,831,713,280 bytes reported physical RAM (about 15.68 GiB); Intel UHD Graphics and NVIDIA GeForce RTX 3050 Ti Laptop GPU; Microsoft Windows 11 Home, build 10.0.26300. Calibration uses the CPU with one OpenCV thread. Exact CIM output: `calibration/results/hardware.json`. Future training hardware must be recorded if different. |
-| Calibration software | Original fit: system Python **3.11.0**, OpenCV **4.10.0** (`opencv-python==4.10.0.84`), NumPy **2.3.1**, Pillow **11.2.1**, seed **42**. Versions are pinned in `requirements.txt`; raw fit environment is in `calibration/results/run.json`. An isolated project `.venv` was subsequently created with the same pinned versions; the full project now has **76 passing tests** inside it and dependency checks passed. Ongoing commands use that environment explicitly. |
+| Calibration software | Original fit: system Python **3.11.0**, OpenCV **4.10.0** (`opencv-python==4.10.0.84`), NumPy **2.3.1**, Pillow **11.2.1**, seed **42**. Versions are pinned in `requirements.txt`; raw fit environment is in `calibration/results/run.json`. An isolated project `.venv` was subsequently created with the same pinned versions; the full project now has **88 passing tests** inside it and dependency checks passed. Ongoing commands use that environment explicitly. |
 
 ### Dataset correction and review before training
 
@@ -38,7 +38,7 @@ Evidence: [processing run and per-instance mapping](../dataset/corrected/run.jso
 
 **All 72 images passed manual review by user confirmation on 2026-11-05.** Four images retain multiple Calculator instances: training captures `200604` (23) and `200521` (4), validation `200536` (3) and `200523` (2). Their flags are retained as accepted by the user in [manual_review.csv](../dataset/corrected/manual_review.csv); all 100 instances remain, with no label/pixel edits requested. [review_approval.json](../dataset/corrected/review_approval.json) records the user attestation, timestamp and reviewed-artifact hashes. Current run metadata sets `manual_review_complete=true` and `ready_for_training=true`; [processing_run.json](../dataset/corrected/processing_run.json) preserves the original pre-review processing state. Restoring a 432 x 432 raster cannot recover lost boundary precision. User acceptance does not establish trained-model performance or millimetre accuracy.
 
-**Planning alignment, 2026-11-05:** the Plan now records the paper-square reference, joint correction of existing annotations and verified 50/15/7 split. The reference's reported 50 x 50 mm dimensions still need confirmation. Filename lists accompany this initial planning snapshot before implementation code. This inventory check is preparation, not evidence of calibrated images, reviewed masks or training results.
+**Planning alignment, 2026-11-05:** the Plan now records the paper-square reference, joint correction of existing annotations and verified 50/15/7 split. The reference's 50 x 50 mm outer edges were subsequently confirmed by the user using a millimetre ruler; see the inference-stage record below. Filename lists accompany this initial planning snapshot before implementation code. This inventory check is preparation, not evidence of calibrated images, reviewed masks or training results.
 
 ## 2. MO-1 - Measurement accuracy
 
@@ -200,6 +200,24 @@ Checkpoint SHA-256: `f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a00
 Evidence: [full configuration](../models/evaluations/frozen_test_01/configuration.json), [exact command](../models/evaluations/frozen_test_01/command.txt), [environment/versions](../models/evaluations/frozen_test_01/environment.json), [metrics](../models/evaluations/frozen_test_01/metrics.json), [raw COCO output](../models/evaluations/frozen_test_01/coco_eval.txt), [scored RLE predictions](../models/evaluations/frozen_test_01/predictions.json), [evaluated GT masks](../models/evaluations/frozen_test_01/ground_truth.json), [COCO parameters](../models/evaluations/frozen_test_01/coco_parameters.json), [raw COCO arrays](../models/evaluations/frozen_test_01/coco_arrays.npz), [per-image results](../models/evaluations/frozen_test_01/per_image.json), [verification](../models/evaluations/frozen_test_01/verification.json) and [artifact hashes](../models/evaluations/frozen_test_01/artifact_sha256.json). Saved-prediction replay reproduces both mask AP scores; independent binary-mask intersection/union reproduces mean IoU. All **76 tests** passed, including low-score AP retention and zero IoU for a missed GT at the operating point.
 
 This is a small seven-image evaluation of one physical calculator, not evidence of generalization to other calculator products or millimetre accuracy. The original MO-1 target remains **Not run**.
+
+### One-image measurement implementation - 2026-11-05
+
+```powershell
+.venv\Scripts\python.exe -m inference.measure path/to/new_original.jpg --output inference/runs/my_photo
+```
+
+[Configuration](../inference/config.json) records the user's ruler-measured **50 x 50 mm unmarked paper square**, the frozen epoch-2 checkpoint/hash and the exact saved training configuration. Normal inference always applies the existing strict full-frame undistorter after explicit camera-frame normalization. The predicted mask is restored into that corrected frame; the paper's outer corners are detected, ordered and refined there. In [measure_mask_contour_mm](../measurement/planar.py#L11), the actual mask contour is projected through the reference homography **before** fitting a metric oriented rectangle. Width is the shorter side and height the longer. No model box dimensions are used.
+
+The [CLI report](../inference/README.md) defines coordinates, fixed detector checks, outputs and scene conditions. JSON records width/height, detection confidence, physical reference/corners, checkpoint/configuration/calibration IDs and failure reason. `object_not_found` and `reference_not_found` return null object dimensions with a saved corrected-frame overlay when geometry is valid. Wrong image geometry is refused; no normal raw/bypass mode exists. A plain square detector cannot prove semantic identity or physical coplanarity; ambiguity is refused. Paper/calculator-plane offset and thickness remain limitations.
+
+[Verification](../inference/verification.json): **87 tests pass**, including known 75 x 160 mm projective contour recovery, rotated/plain-square detection, preview restoration, mask-versus-box geometry and synthetic success. Real frozen-network checks save object-not-found (local output: `inference/runs/object_missing_verified/result.json`) on an explicitly synthetic empty input and reference-not-found (local output: `inference/runs/reference_missing_verified/result.json`) on the unassigned original capture outside all frozen splits. The latter detects the calculator at score **0.996219933** and correctly supplies no dimensions. Full corrected overlays are saved. These are implementation/failure demonstrations, not physical accuracy measurements. The initial implementation had no real referenced photo; the subsequent supplied-photo result is recorded below. The ten-placement MO-1 experiment remains **Not run**.
+
+### First real referenced-photo execution - 2026-11-05
+
+The supplied desktop `calc.jpg.jpeg` initially failed paper detection. Inspection found a visible paper square but no closed Canny paper contour against the wood-grain background. Bright-region proposals were added while retaining all existing reference-acceptance checks, and overlapping proposals are ranked by photometric quality rather than area alone. The same-image rerun (local output: `inference/runs/my_photo_retry/result.json`) succeeds with **80.466370 mm width / 170.600113 mm height**, score **0.995487988**, and mandatory undistortion. Overlay (local output: `inference/runs/my_photo_retry/overlay.jpg`), geometry (local output: `inference/runs/my_photo_retry/geometry.json`), verification (local output: `inference/runs/my_photo_retry/verification.json`) and hashes are retained. The original failed result is preserved. All **88 tests pass**; checkpoint/calibration/segmentation thresholds remain unchanged, and no held-out test photo was used for this fix.
+
+This records execution success on one supplied scene. Paper/calculator-outline coplanarity is not verified, and the ten-placement ruler experiment remains **Not run**. MO-1 is not marked met from these dimensions.
 
 ### Raw versus undistorted measurement
 

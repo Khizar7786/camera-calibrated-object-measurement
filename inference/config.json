@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "calibration": "calibration/results/camera.json",
+  "checkpoint": "models/runs/initial_15_epochs/checkpoint_best.pt",
+  "checkpoint_sha256": "f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39",
+  "training_configuration": "models/runs/initial_15_epochs/configuration.json",
+  "training_configuration_sha256": "608889254f59b167ea258d83290e648d106cfb60b58fd495b2b98a7fd963040d",
+  "camera": {
+    "expected_exif_model": "23021RAAEG",
+    "frame_rotations_cw": {"2296x4080": 0, "4080x2296": 90},
+    "rotation_source": "User confirmed 90 degrees clockwise landscape-to-calibrated-portrait mapping on 2026-11-05",
+    "capture_condition": "Same Redmi Note 12 lens, locked focus/zoom, uncropped original stored pixels; same-size crop/changed focus cannot be proven from shape alone"
+  },
+  "reference": {
+    "type": "paper_square",
+    "width_mm": 50.0,
+    "height_mm": 50.0,
+    "physically_measured": true,
+    "measurement_source": "User confirmed 50 x 50 mm outer edges measured with a millimetre ruler on 2026-11-05",
+    "edge_definition": "Actual outer boundary of the flat unmarked paper square",
+    "plane_assumption": "Paper square and measured calculator outline must be in the same plane",
+    "detection": {
+      "max_detection_dimension": 1600,
+      "canny_low": 50,
+      "canny_high": 150,
+      "region_thresholds": [140, 160, 180, 200, 220, 240],
+      "polygon_epsilon_fraction": 0.02,
+      "min_area_fraction": 0.0005,
+      "max_area_fraction": 0.2,
+      "max_side_ratio": 1.5,
+      "max_angle_cosine": 0.35,
+      "min_inside_gray": 140,
+      "max_inside_gray_std": 30,
+      "min_inside_outside_contrast": 15
+    }
+  }
+}

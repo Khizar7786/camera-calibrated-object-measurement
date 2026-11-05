@@ -1,6 +1,6 @@
 # Measure It
 
-Camera-calibrated calculator segmentation and metric measurement assessment, on branch `dev-test01`. The planning documents and fixed split membership were committed before implementation. **Calibration, reviewed joint image/mask correction and CUDA model fine-tuning are complete. The declared 15-epoch run stopped after 8 epochs under its original validation-plateau rule, selecting epoch 2. Frozen seven-image test evaluation is complete; image-to-millimetre inference, physical measurement validation and public weight publication remain pending.**
+Camera-calibrated calculator segmentation and metric measurement assessment, on branch `dev-test01`. The planning documents and fixed split membership were committed before implementation. **Calibration, reviewed joint image/mask correction and CUDA model fine-tuning are complete. The declared 15-epoch run stopped after 8 epochs under its original validation-plateau rule, selecting epoch 2. Frozen seven-image test evaluation is complete; the one-image measurement CLI is implemented; physical accuracy validation and public weight publication remain pending.**
 
 ## Setup
 
@@ -68,7 +68,7 @@ corrected_mask = mapper.apply(raw_mask, interpolation=cv2.INTER_NEAREST)
 
 Coordinates are stored pixels with a top-left origin, x right and y down. EXIF rotation is disabled; EXIF orientation other than 1 is rejected. Resolution must match exactly. The output retains the same image size and matrix (`P=K`), with no cropping, resizing, optimal-ROI selection or automatic rotation. Missing source pixels are zero-filled and must not be treated as valid measurements. Masks must already align with the original stored image; using a stretched export mask directly is invalid.
 
-An array's shape cannot reveal a same-size crop/rotation or altered focus/zoom. Those capture conditions remain the caller's responsibility. Dataset preprocessing now calls this module after explicit geometry normalization; the inference pipeline is not yet implemented.
+An array's shape cannot reveal a same-size crop/rotation or altered focus/zoom. Those capture conditions remain the caller's responsibility. Dataset preprocessing now calls this module after explicit geometry normalization; normal inference now uses this same module through the [one-image CLI](inference/README.md).
 
 ## Joint dataset correction
 
@@ -103,7 +103,7 @@ The user confirmed that all reviewed items passed. Current [run.json](dataset/co
 
 ## Dataset and project documents
 
-The recorded setup uses one approximately 75 x 160 mm calculator and a paper-square reference reported as 50 x 50 mm, to be physically confirmed before measurement. Object photographs are user-provided phone captures, annotated through Roboflow's tool and exported as COCO segmentation. The corrected annotations have passed user review; no Roboflow model is used.
+The recorded setup uses one approximately 75 x 160 mm calculator and a flat unmarked paper-square reference confirmed as 50 x 50 mm using a millimetre ruler. Object photographs are user-provided phone captures, annotated through Roboflow's tool and exported as COCO segmentation. The corrected annotations have passed user review; no Roboflow model is used.
 
 The supplied export has **72 images: 50 train / 15 validation / 7 test**. Exact membership is frozen in [dataset/splits](dataset/splits/README.md) and retained in the corrected dataset. There are 73 raw object photographs; the extra capture remains unassigned. Preserve the test split and all derivatives from training, tuning and checkpoint selection. Model fitting uses the approved training split, with validation used for checkpoint selection. `.gitattributes` preserves exact bytes of the source export and reviewed artifacts so their integrity hashes survive checkout on other platforms.
 
@@ -154,12 +154,24 @@ The [saved test report](models/evaluations/README.md) evaluates exactly the seve
 
 The report includes the command, checkpoint/split hashes, configuration, all seven filenames, per-image results, raw scored masks, GT masks and COCO output. Saved-prediction COCO replay and independent mask IoU calculations passed. No settings or checkpoint were changed using test scores. This small split does not establish millimetre accuracy or performance on other calculators. Reproduction requires a fresh output directory.
 
+## One-image measurement CLI
+
+Inference runtime photos and diagnostic outputs are local and ignored by Git. This repository publishes the implementation, synthetic test fixtures and verification summaries; paths labelled local output require running the CLI on your input.
+
+```powershell
+.venv\Scripts\python.exe -m inference.measure path/to/new_original.jpg --output inference/runs/my_photo
+```
+
+The [CLI configuration and output guide](inference/README.md) uses your ruler-measured **50 x 50 mm unmarked paper square**. It validates the original frame, always applies saved calibration/shared undistortion, loads the frozen calculator checkpoint, detects/refines the paper's outer corners, transforms the actual predicted mask contour to millimetres and fits an oriented rectangle **there**. Width is the shorter side; height the longer. Outputs include a full corrected-frame overlay, mask, geometry and JSON with status, dimensions, confidence, reference, checkpoint/configuration IDs and failure reason. Missing object/reference returns null dimensions. An ambiguous square is refused.
+
+The single conversion is [measure_mask_contour_mm](measurement/planar.py#L11). [Verification](inference/verification.json) records 87 passing tests, known synthetic perspective recovery and both real-network failure cases. The original-photo overlay (local output: `inference/runs/reference_missing_verified/preview.jpg`) shows calculator segmentation with a missing-reference refusal. The first supplied real photo now completes (local output: `inference/runs/my_photo_retry/result.json`) at **80.47 x 170.60 mm** after a wood-grain detector fix; the overlay (local output: `inference/runs/my_photo_retry/preview.jpg`) shows its paper boundary and calculator mask. Coplanarity verification and the independent ruler accuracy experiment remain pending. Segmentation scores and synthetic geometry do not establish mm accuracy.
+
 ## Verification
 
 ```powershell
 .venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-On 2026-11-05 the isolated project `.venv` was created with system site-packages disabled. The dependencies include pinned `pycocotools==2.0.10` and the recorded CUDA PyTorch/Torchvision builds. All **76 tests pass inside the actual project environment**. The saved calibration fit retains its original interpreter provenance.
+On 2026-11-05 the isolated project `.venv` was created with system site-packages disabled. The dependencies include pinned `pycocotools==2.0.10` and the recorded CUDA PyTorch/Torchvision builds. All **88 tests pass inside the actual project environment**. The saved calibration fit retains its original interpreter provenance.
 
 Tests cover calibration, image/mask geometry, source/split integrity, approval checks, joint training augmentation, model/head reconstruction, synthetic validation metrics, empty detections and test-split refusal in the training loader. The CUDA smoke separately exercises the actual GPU forward/backward path.

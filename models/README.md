@@ -1,6 +1,6 @@
 # Calculator segmentation training
 
-**Status:** CUDA fine-tuning [finished](runs/initial_15_epochs/run.json) after **8 epochs / 400 real optimizer updates**, using the original plateau rule within the declared 15-epoch budget. **Epoch 2** was selected by validation AP. Frozen seven-image test evaluation is complete; image-to-millimetre inference, physical measurement validation and public weight publication remain pending.
+**Status:** CUDA fine-tuning [finished](runs/initial_15_epochs/run.json) after **8 epochs / 400 real optimizer updates**, using the original plateau rule within the declared 15-epoch budget. **Epoch 2** was selected by validation AP. Frozen seven-image test evaluation is complete; the [one-image measurement CLI](../inference/README.md) is implemented; physical accuracy validation and public weight publication remain pending.
 
 Run commands from the repository root using the project `.venv`. Training requires CUDA-enabled PyTorch and a matching Torchvision installation; exact installed versions and GPU details are recorded in each run. The CLI stops with a recorded failure if CUDA is unavailable. Dependency setup history is preserved in [setup_notes.json](setup_notes.json).
 

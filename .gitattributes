@@ -15,3 +15,8 @@ models/*.py -text
 models/*.json -text whitespace=cr-at-eol,-blank-at-eof
 models/runs/** -text whitespace=cr-at-eol,-blank-at-eof
 models/evaluations/** -text whitespace=cr-at-eol,-blank-at-eof
+inference/*.py -text
+inference/*.json -text whitespace=cr-at-eol,-blank-at-eof
+inference/runs/** -text whitespace=cr-at-eol,-blank-at-eof
+measurement/*.py -text
+measurement/*.json -text whitespace=cr-at-eol,-blank-at-eof

@@ -1,12 +1,12 @@
 # Measure It - Definition of Done
 
-**Status:** portrait calibration measured, joint image/mask correction generated, and all 72 images passed user review. Mask R-CNN fine-tuning and validation-only checkpoint selection are complete. Frozen seven-image mask evaluation is complete. Inference and physical accuracy evaluation remain pending; only evidence-backed completed items are checked.
+**Status:** portrait calibration measured, joint image/mask correction generated, and all 72 images passed user review. Mask R-CNN fine-tuning and validation-only checkpoint selection are complete. Frozen seven-image mask evaluation is complete. The one-image CLI and failure paths are implemented; physical accuracy evaluation remains pending; only evidence-backed completed items are checked.
 
 **Branch:** `dev-test01`. **Experimental scope:** assessment items 1-6, with the decision record retained inside `Plan.md`.
 
 Tick an item only when its evidence exists. Replace **Pending** with an actual result, saved artifact path, command output or commit/link. Leave unfinished work unchecked and explain why. A missed objective must be reported honestly; it does not justify changing the original target.
 
-**Recorded setup:** Redmi Note 12; originals include both 4080 x 2296 and 2296 x 4080 orientations; exported dataset images are stretched to 432 x 432. Calibration accepts only the 2296 x 4080 profile. Focus/zoom lock and 90-degree clockwise landscape normalization were user-confirmed. Explicit export recovery, joint image/mask correction and user review are complete; board-flatness limitations remain recorded. Calculator approximately 75 mm wide and 160 mm high; paper-square reference reported as 50 x 50 mm; ground truth measured with a millimetre-marked ruler. Reference dimensions remain pending.
+**Recorded setup:** Redmi Note 12; originals include both 4080 x 2296 and 2296 x 4080 orientations; exported dataset images are stretched to 432 x 432. Calibration accepts only the 2296 x 4080 profile. Focus/zoom lock and 90-degree clockwise landscape normalization were user-confirmed. Explicit export recovery, joint image/mask correction and user review are complete; board-flatness limitations remain recorded. Calculator approximately 75 mm wide and 160 mm high; flat unmarked paper square confirmed as 50 x 50 mm using a millimetre ruler; its plane must match the measured outline. Physical plane alignment and the accuracy experiment remain unverified.
 
 ## 1. Planning and Git - before code
 
@@ -41,11 +41,11 @@ Tick an item only when its evidence exists. Replace **Pending** with an actual r
 
 ## 5. One-command measurement
 
-- [ ] One documented command accepts a new original camera photograph, loads calibration/weights, undistorts it and segments the calculator. **Evidence: Pending.**
-- [ ] The actual reference edges are measured and its four corners detected in the measurement image. The paper is flat on rigid support, and its plane matches the measured calculator outline; thickness/plane limitations are documented. **Evidence: Pending.**
-- [ ] The mask contour and reference corners use the same image coordinates. Conversion produces width as the shorter metric side and height as the longer; the actual conversion file/function/line can be identified. **Evidence: Pending.**
-- [ ] The command saves a mask overlay and machine-readable width/height in mm, detection confidence and status. Confidence is described as a model score, not a guarantee of dimensional accuracy. **Evidence: Pending.**
-- [ ] Object-not-found and reference-not-found cases are demonstrated with explicit failure reasons and no invented dimensions. **Evidence: Pending.**
+- [x] One documented command accepts an original camera photograph, validates geometry, loads calibration/weights, always undistorts and segments the calculator. **Evidence:** [CLI](../inference/README.md), [implementation](../inference/measure.py) and real-network original-photo run (local output: `inference/runs/reference_missing_verified/result.json`); saved full-frame mask/overlay. That capture has no reference, so no measurement is claimed.
+- [ ] The actual reference edges are measured and its four corners detected in a real measurement image, with physical coplanarity verified. **Evidence:** user confirmed 50 x 50 mm outer edges using a millimetre ruler; [configuration](../inference/config.json) records this. Plain-square detection passes synthetic checks. The supplied-photo rerun (local output: `inference/runs/my_photo_retry/result.json`) detects its four outer corners. Physical rigid support/plane alignment and thickness validation remain pending.
+- [x] Mask contour and reference corners share the corrected full frame. **Evidence:** [measure_mask_contour_mm](../measurement/planar.py#L11) transforms the actual contour to mm before rectangle fitting; shorter side is width and longer side height. [Known projective/synthetic pipeline tests](../tests/test_measurement.py) pass. Physical accuracy remains separate.
+- [x] The command implements corrected-frame overlay and JSON with metric dimensions on success, confidence, status, reference and IDs/reason; failure dimensions are null. **Evidence:** [output contract](../inference/README.md), [synthetic success test](../tests/test_measurement.py), real-network failure JSON/overlay (local output: `inference/runs/reference_missing_verified/result.json`). The supplied real-photo execution (local output: `inference/runs/my_photo_retry/result.json`) reports 80.466370 x 170.600113 mm; physical accuracy/coplanarity are unverified. Confidence is a detection score.
+- [x] Explicit missing-object/reference paths have no numeric object dimensions. **Evidence:** real frozen network returns object_not_found (local output: `inference/runs/object_missing_verified/result.json`) on a synthetic empty scene and reference_not_found (local output: `inference/runs/reference_missing_verified/result.json`) on the unassigned original. Both save corrected-frame overlays and null width/height. [Verification](../inference/verification.json) records input provenance and 87 passing tests.
 
 ## 6. Accuracy and raw/corrected comparison
 
@@ -84,7 +84,7 @@ Tick an item only when its evidence exists. Replace **Pending** with an actual r
 
 | Field | Initial status |
 | --- | --- |
-| Implemented stages and evidence | Portrait calibration/shared undistortion; joint correction of 72 images/100 masks; all 72 images passed user review with hash-bound approval. Mask R-CNN fine-tuned for 8 epochs, selected epoch 2 by validation AP50:95 0.831683; see sections 2-4. Frozen test mask evaluation complete: IoU 0.967517224, AP50/AP50:95 1.0/1.0, precision/recall 1.0/1.0 on seven images. Measurement/inference and submission work remain pending. |
+| Implemented stages and evidence | Portrait calibration/shared undistortion; joint correction of 72 images/100 masks; all 72 images passed user review with hash-bound approval. Mask R-CNN fine-tuned for 8 epochs, selected epoch 2 by validation AP50:95 0.831683; see sections 2-4. Frozen test mask evaluation complete: IoU 0.967517224, AP50/AP50:95 1.0/1.0, precision/recall 1.0/1.0 on seven images. One-image CLI/contour-to-mm conversion and explicit failure paths implemented; one referenced-photo execution succeeded; physical accuracy and submission work remain pending. |
 | MO-1 measurement accuracy verdict | Not run |
 | MO-2 calibration-quality verdict | Met: RMS 0.918653470 px, 21 usable views, 2296 x 4080 portrait profile only; no mm-accuracy inference. |
 | Additional unfinished work and reasons | Pending |

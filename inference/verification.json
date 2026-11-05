@@ -1,0 +1,22 @@
+{
+  "verified_at_utc": "2026-11-05T11:09:41.667568+00:00",
+  "tests_passed": 88,
+  "test_duration_seconds": 6.511,
+  "test_command": ".venv\\Scripts\\python.exe -m unittest discover -s tests -v",
+  "reference_type": "paper_square",
+  "reference_width_mm": 50.0,
+  "reference_height_mm": 50.0,
+  "initial_implementation_verification": "verification_initial.json",
+  "current_real_scene_run": "runs/my_photo_retry/result.json",
+  "current_verification": "runs/my_photo_retry/verification.json",
+  "current_real_scene_status": "success",
+  "width_mm": 80.46636962890625,
+  "height_mm": 170.60011291503906,
+  "physical_accuracy_validation": "not_run",
+  "coplanarity_verified": false,
+  "negative_detector_replay_on_saved_corrected_frames": {
+    "object_missing_verified": "not_found; zero paper candidates",
+    "reference_missing_verified": "not_found; zero paper candidates"
+  },
+  "historical_failure_runs": "Earlier complete-CLI failure runs retain their original source hashes and results; current detector replay is separately stated above."
+}
