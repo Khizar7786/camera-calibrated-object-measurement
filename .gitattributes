@@ -3,3 +3,11 @@
 *.md text eol=lf
 dataset/splits/*.txt text eol=lf
 dataset/*/_annotations.coco.json -text
+dataset/README.roboflow.txt -text whitespace=cr-at-eol,-blank-at-eof
+dataset/Raw/** -text
+dataset/train/** -text whitespace=cr-at-eol,-blank-at-eof
+dataset/valid/** -text whitespace=cr-at-eol,-blank-at-eof
+dataset/test/** -text whitespace=cr-at-eol,-blank-at-eof
+dataset/corrected/** -text whitespace=cr-at-eol,-blank-at-eof
+calibration/results/** -text whitespace=cr-at-eol,-blank-at-eof
+preprocessing/geometry.json -text whitespace=cr-at-eol,-blank-at-eof

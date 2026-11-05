@@ -1,12 +1,12 @@
 # Measure It - Definition of Done
 
-**Status:** portrait calibration implemented and measured; only evidence-backed completed items are checked. Remaining pipeline stages are pending.
+**Status:** portrait calibration measured, joint image/mask correction generated, and all 72 images passed user review. Training, inference and physical accuracy evaluation remain pending; only evidence-backed completed items are checked.
 
 **Branch:** `dev-test01`. **Experimental scope:** assessment items 1-6, with the decision record retained inside `Plan.md`.
 
 Tick an item only when its evidence exists. Replace **Pending** with an actual result, saved artifact path, command output or commit/link. Leave unfinished work unchecked and explain why. A missed objective must be reported honestly; it does not justify changing the original target.
 
-**Recorded setup:** Redmi Note 12; originals include both 4080 x 2296 and 2296 x 4080 orientations; exported dataset images are stretched to 432 x 432. Calibration accepts only the 2296 x 4080 profile. Focus and zoom lock were user-confirmed; other geometry and board-flatness limitations remain recorded. Calculator approximately 75 mm wide and 160 mm high; flat paper-square reference reported as 50 x 50 mm; ground truth measured with a millimetre-marked ruler. Reference dimensions and image/mask correction remain pending.
+**Recorded setup:** Redmi Note 12; originals include both 4080 x 2296 and 2296 x 4080 orientations; exported dataset images are stretched to 432 x 432. Calibration accepts only the 2296 x 4080 profile. Focus/zoom lock and 90-degree clockwise landscape normalization were user-confirmed. Explicit export recovery, joint image/mask correction and user review are complete; board-flatness limitations remain recorded. Calculator approximately 75 mm wide and 160 mm high; paper-square reference reported as 50 x 50 mm; ground truth measured with a millimetre-marked ruler. Reference dimensions remain pending.
 
 ## 1. Planning and Git - before code
 
@@ -18,18 +18,19 @@ Tick an item only when its evidence exists. Replace **Pending** with an actual r
 ## 2. Camera calibration
 
 - [x] At least 20 usable original checkerboard views are included. Actual inner-corner grid and measured square size, captured/usable counts, and exclusions are recorded. **Evidence:** [board settings](../calibration/board.json), [30-view outcome table](../calibration/results/views.csv): 9 x 7 inner corners, user-measured 20 mm squares, 21 usable portrait views, 9 landscape geometry rejections; no error-based removals.
-- [ ] Camera lens/focus/zoom/resolution consistency and image orientation are verified between calibration and object captures. Any export resize/crop/rotation is accounted for in calibration and annotation coordinates. **Partial evidence:** focus/zoom user-confirmed; EXIF camera/focal-length/orientation matches. The current fit is portrait-only; landscape and 432 x 432 export geometry remain unresolved and are rejected.
+- [x] Supported camera/export geometry is explicitly recorded and verified before applying calibration. **Evidence:** focus/zoom user-confirmed; EXIF camera/focal-length/orientation matches; [geometry settings](../preprocessing/geometry.json) record full-frame export stretch and user-confirmed 90-degree clockwise landscape normalization. [Processing evidence](../dataset/corrected/run.json) verifies all 72 raw/export pairs; every shared-undistorter input is 2296 x 4080. Unconfigured/mismatched geometry is refused.
 - [x] OpenCV calibration saves the camera matrix, distortion coefficients, calibration image size, board settings, global RMS and per-view reprojection errors. **Evidence:** [camera parameters](../calibration/results/camera.json), [raw fit](../calibration/results/raw_calibration.npz), [raw console](../calibration/results/console.txt) and [run metadata](../calibration/results/run.json).
 - [x] Saved parameters load in one reusable full-frame undistortion module; before/after examples have been inspected. **Evidence:** [shared module](../calibration/camera.py), [comparison](../calibration/results/before_after/IMG_20261104_194240.jpg.comparison.jpg) and [contract tests](../tests/test_camera.py). Output size and K are retained, geometry/EXIF mismatches rejected, nearest-neighbour mapping available for masks. Black borders remain explicit; no mm-accuracy claim is made.
-- [ ] Dataset preparation and normal inference call this same shared module on geometry-verified inputs. **Evidence: Pending - those pipeline stages are not yet implemented.**
+- [ ] Dataset preparation and normal inference call this same shared module on geometry-verified inputs. **Partial evidence:** [dataset preparation](../preprocessing/prepare_dataset.py) now calls it on geometry-verified images and masks. Normal inference is not yet implemented.
 - [x] MO-2 is evaluated against RMS <=1.0 pixel with >=20 usable views. **Evidence:** [Objectives](Objectives.md): **0.918653470 px**, **21 usable views**, target **met as an in-sample fit metric only**. Board flatness and independent physical accuracy remain unverified.
 
 ## 3. Dataset and segmentation masks
 
-- [ ] At least 70 object photographs are my own captures; originals, downloaded COCO annotations, actual image counts and source-to-processed filename mapping are available. **Evidence: Pending.**
-- [ ] Existing annotations on raw photographs are decoded and corrected with the same undistortion mapping as the images. Categorical masks use nearest-neighbour resampling; corrected image/mask overlays are manually reviewed and repaired where necessary. **Evidence: Pending.**
-- [ ] Reviewed masks consistently cover the calculator's complete outer body, excluding shadows, hands and background. Image/mask dimensions, class labels, nonempty masks and annotation-to-image matching are checked. **Evidence: Pending.**
-- [ ] Frozen split membership survives export, conversion and undistortion. Test images and their augmented/duplicate derivatives are excluded from training, tuning and checkpoint selection. **Evidence: Pending.**
+- [x] At least 70 user-provided object photographs, original COCO annotations, actual counts and a source-to-processed filename mapping are available. **Evidence:** [run mapping](../dataset/corrected/run.json): 72 corrected images from 72 originals, 100 instances; [154-file source snapshot](../dataset/corrected/source_snapshot.json) verifies original preservation. The extra raw capture remains unassigned.
+- [x] Existing annotations are decoded and jointly corrected with their images using explicit export/camera transforms and the same lens-undistortion map. Categorical masks use nearest-neighbour resampling. Segmentation RLE, bbox and pixel area are regenerated. **Evidence:** [preprocessing code](../preprocessing/prepare_dataset.py), corrected [train](../dataset/corrected/train/_annotations.coco.json), [validation](../dataset/corrected/valid/_annotations.coco.json), [test](../dataset/corrected/test/_annotations.coco.json) and saved per-instance mask PNGs. All 100 RLE/PNG masks and fresh geometry values match.
+- [x] Corrected overlays are manually reviewed and accepted. **Evidence:** the user explicitly confirmed all reviewed items passed on 2026-11-05; all 72 entries in the [review gallery](../dataset/corrected/review.html) and [review queue](../dataset/corrected/manual_review.csv) are passed. [Approval record](../dataset/corrected/review_approval.json) binds that attestation to artifact hashes. Four multi-instance flags were accepted by the user; no label edits or automatic deletions were requested.
+- [x] Semantic boundary and instance acceptance is recorded from user review; automated dimensions, binary-mask, nonempty-instance and annotation-reference checks pass. **Evidence:** [user approval](../dataset/corrected/review_approval.json), 72 passed review entries and 100 retained instances. This records user acceptance, not an independent model-performance or physical-accuracy claim.
+- [x] Frozen membership survives export, conversion and undistortion without mixing test derivatives into other splits. **Evidence:** copied [train](../dataset/corrected/splits/train.txt), [validation](../dataset/corrected/splits/valid.txt), [test](../dataset/corrected/splits/test.txt) lists are byte-identical to the originals; all IDs/membership remain 50/15/7. No training, tuning or checkpoint selection has occurred.
 
 ## 4. Model training and evaluation
 
@@ -83,7 +84,7 @@ Tick an item only when its evidence exists. Replace **Pending** with an actual r
 
 | Field | Initial status |
 | --- | --- |
-| Implemented stages and evidence | Portrait calibration and shared undistortion: camera.json, views.csv, raw_calibration.npz, before/after previews and tests; see section 2. Later stages pending. |
+| Implemented stages and evidence | Portrait calibration/shared undistortion; joint correction of 72 images/100 masks; all 72 images passed user review with hash-bound approval. See sections 2-3; model training and later stages pending. |
 | MO-1 measurement accuracy verdict | Not run |
 | MO-2 calibration-quality verdict | Met: RMS 0.918653470 px, 21 usable views, 2296 x 4080 portrait profile only; no mm-accuracy inference. |
 | Additional unfinished work and reasons | Pending |
