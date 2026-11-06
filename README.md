@@ -1,6 +1,6 @@
 # Measure It
 
-Camera-calibrated calculator segmentation and metric measurement assessment, on branch `dev-test01`. The planning documents and fixed split membership were committed before implementation. **Calibration, reviewed joint image/mask correction and CUDA model fine-tuning are complete. The declared 15-epoch run stopped after 8 epochs under its original validation-plateau rule, selecting epoch 2. Frozen seven-image test evaluation is complete; the one-image measurement CLI is implemented; physical accuracy validation and public weight publication remain pending.**
+Camera-calibrated calculator segmentation and metric measurement assessment, on branch `dev-test01`. The planning documents and fixed split membership were committed before implementation. **Calibration, reviewed joint image/mask correction and CUDA model fine-tuning are complete. The declared 15-epoch run stopped after 8 epochs under its original validation-plateau rule, selecting epoch 2. Frozen seven-image test evaluation is complete; the one-image measurement CLI is implemented; selected weights are publicly downloadable. Physical accuracy validation remains unrun.** Review [pull request #1](https://github.com/Khizar7786/camera-calibrated-object-measurement/pull/1) for the implementation and remaining scope.
 
 ## Setup
 
@@ -16,6 +16,19 @@ py -3.11 -m venv .venv
 The separate [training requirements](requirements-training.txt) pin **PyTorch 2.7.1+cu126** and **Torchvision 0.22.1+cu126** from the CUDA 12.6 wheel index. Upgrading pip before that install resolves the old installer's wheel-metadata problem recorded in [setup notes](models/setup_notes.json). CUDA availability was verified on the NVIDIA GeForce RTX 3050 Ti Laptop GPU with **4 GiB** memory. The calibration/preprocessing dependencies remain in [requirements.txt](requirements.txt).
 
 The commands below call the project environment's Python explicitly; activation is optional. The original recorded calibration run used `C:\Python311\python.exe`, with one OpenCV thread and seed 42. [Hardware metadata](calibration/results/hardware.json): Intel Core i7-12650H, 16,831,713,280 bytes reported physical RAM, Intel UHD Graphics and NVIDIA RTX 3050 Ti Laptop GPU; calibration uses the CPU. No runtime benchmark is claimed.
+
+## Download the selected checkpoint
+
+The public [calculator-maskrcnn-v1 release](https://github.com/Khizar7786/camera-calibrated-object-measurement/releases/tag/calculator-maskrcnn-v1) provides the frozen epoch-2 checkpoint and its SHA-256 file. From the repository root, download to the path used by the saved inference configuration:
+
+```powershell
+Invoke-WebRequest -Uri "https://github.com/Khizar7786/camera-calibrated-object-measurement/releases/download/calculator-maskrcnn-v1/checkpoint_best.pt" -OutFile "models/runs/initial_15_epochs/checkpoint_best.pt"
+Invoke-WebRequest -Uri "https://github.com/Khizar7786/camera-calibrated-object-measurement/releases/download/calculator-maskrcnn-v1/checkpoint_best.sha256" -OutFile "models/runs/initial_15_epochs/checkpoint_best.sha256"
+$expectedCheckpointHash = "f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39"
+if ((Get-FileHash -Algorithm SHA256 "models/runs/initial_15_epochs/checkpoint_best.pt").Hash.ToLowerInvariant() -ne $expectedCheckpointHash) { throw "Checkpoint SHA-256 mismatch" }
+```
+
+The checkpoint is **176,220,108 bytes**. Anonymous download access and GitHub's matching SHA-256 digest were verified on 2026-11-06. No retraining is needed to run the frozen evaluation or CLI. Binary weights remain outside Git history.
 
 ## Camera calibration
 
@@ -140,7 +153,7 @@ The selected local checkpoint, `models/runs/initial_15_epochs/checkpoint_best.pt
 f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39
 ```
 
-[Checkpoint verification](models/runs/initial_15_epochs/verification.json) passed an offline strict CPU reload with both heads configured for two classes, found 400 finite-loss optimizer steps, matched runtime source hashes, and rechecked 227 approved training/validation artifacts and the frozen lists. This integrity check performed no inference or test evaluation. Checkpoint binaries remain local and ignored by Git; an accessible public download is still pending.
+[Checkpoint verification](models/runs/initial_15_epochs/verification.json) passed an offline strict CPU reload with both heads configured for two classes, found 400 finite-loss optimizer steps, matched runtime source hashes, and rechecked 227 approved training/validation artifacts and the frozen lists. This integrity check performed no inference or test evaluation. The selected binary is available in the public [model release](https://github.com/Khizar7786/camera-calibrated-object-measurement/releases/tag/calculator-maskrcnn-v1); binary checkpoints remain ignored by Git.
 
 Raw [console output](models/runs/initial_15_epochs/console.txt), [epoch records](models/runs/initial_15_epochs/epochs.jsonl), per-epoch validation outputs and the run's environment/configuration snapshots are preserved. ROIAlign backward reported a CUDA nondeterminism warning in [warnings.txt](models/runs/initial_15_epochs/warnings.txt). Seeds and deterministic settings were requested, but identical results across repeated runs are not guaranteed. These scores describe the validation split used for selection. The frozen test evaluation is recorded below; independent millimetre measurement accuracy remains pending.
 
@@ -164,7 +177,7 @@ Inference runtime photos and diagnostic outputs are local and ignored by Git. Th
 
 The [CLI configuration and output guide](inference/README.md) uses your ruler-measured **50 x 50 mm unmarked paper square**. It validates the original frame, always applies saved calibration/shared undistortion, loads the frozen calculator checkpoint, detects/refines the paper's outer corners, transforms the actual predicted mask contour to millimetres and fits an oriented rectangle **there**. Width is the shorter side; height the longer. Outputs include a full corrected-frame overlay, mask, geometry and JSON with status, dimensions, confidence, reference, checkpoint/configuration IDs and failure reason. Missing object/reference returns null dimensions. An ambiguous square is refused.
 
-The single conversion is [measure_mask_contour_mm](measurement/planar.py#L11). [Verification](inference/verification.json) records 87 passing tests, known synthetic perspective recovery and both real-network failure cases. The original-photo overlay (local output: `inference/runs/reference_missing_verified/preview.jpg`) shows calculator segmentation with a missing-reference refusal. The first supplied real photo now completes (local output: `inference/runs/my_photo_retry/result.json`) at **80.47 x 170.60 mm** after a wood-grain detector fix; the overlay (local output: `inference/runs/my_photo_retry/preview.jpg`) shows its paper boundary and calculator mask. Coplanarity verification and the independent ruler accuracy experiment remain pending. Segmentation scores and synthetic geometry do not establish mm accuracy.
+The single conversion is [measure_mask_contour_mm](measurement/planar.py#L11). [Current verification](inference/verification.json) records 88 passing tests and the supplied-photo success; [initial verification](inference/verification_initial.json) records the earlier synthetic geometry and real-network failure checks. The original-photo overlay (local output: `inference/runs/reference_missing_verified/preview.jpg`) shows calculator segmentation with a missing-reference refusal. The first supplied real photo now completes (local output: `inference/runs/my_photo_retry/result.json`) at **80.47 x 170.60 mm** after a wood-grain detector fix; the overlay (local output: `inference/runs/my_photo_retry/preview.jpg`) shows its paper boundary and calculator mask. Coplanarity verification and the independent ruler accuracy experiment remain pending. Segmentation scores and synthetic geometry do not establish mm accuracy.
 
 ## Verification
 
@@ -175,3 +188,9 @@ The single conversion is [measure_mask_contour_mm](measurement/planar.py#L11). [
 On 2026-11-05 the isolated project `.venv` was created with system site-packages disabled. The dependencies include pinned `pycocotools==2.0.10` and the recorded CUDA PyTorch/Torchvision builds. All **88 tests pass inside the actual project environment**. The saved calibration fit retains its original interpreter provenance.
 
 Tests cover calibration, image/mask geometry, source/split integrity, approval checks, joint training augmentation, model/head reconstruction, synthetic validation metrics, empty detections and test-split refusal in the training loader. The CUDA smoke separately exercises the actual GPU forward/backward path.
+
+## Handover and unfinished evidence
+
+[PR #1](https://github.com/Khizar7786/camera-calibrated-object-measurement/pull/1) proposes `dev-test01` into `main`, starting from the original planning commit. The [completion checklist](docs/Definition_of_Done.md) records remaining work: ten separate ruler-measured accuracy placements, the paired raw-versus-corrected error comparison, verified coplanarity/thickness effects, and fresh-clone dependency installation/full reproduction. The separate runtime, breaking-condition and trust/refusal-cost studies were deliberately omitted under the agreed time limit. No measured physical accuracy or undistortion benefit is claimed.
+
+The author will add the Loom URL directly to the assessment submission email. Its duration/content and submission timing were not verified here; the assessment requires a recording of five minutes or less. This repository is an honest partial submission with implemented stages and missing experimental evidence identified.

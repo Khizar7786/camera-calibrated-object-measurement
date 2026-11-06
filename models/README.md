@@ -1,6 +1,6 @@
 # Calculator segmentation training
 
-**Status:** CUDA fine-tuning [finished](runs/initial_15_epochs/run.json) after **8 epochs / 400 real optimizer updates**, using the original plateau rule within the declared 15-epoch budget. **Epoch 2** was selected by validation AP. Frozen seven-image test evaluation is complete; the [one-image measurement CLI](../inference/README.md) is implemented; physical accuracy validation and public weight publication remain pending.
+**Status:** CUDA fine-tuning [finished](runs/initial_15_epochs/run.json) after **8 epochs / 400 real optimizer updates**, using the original plateau rule within the declared 15-epoch budget. **Epoch 2** was selected by validation AP. Frozen seven-image test evaluation is complete; the [one-image measurement CLI](../inference/README.md) is implemented; selected weights are available in the public [model release](https://github.com/Khizar7786/camera-calibrated-object-measurement/releases/tag/calculator-maskrcnn-v1). Physical accuracy validation remains unrun.
 
 Run commands from the repository root using the project `.venv`. Training requires CUDA-enabled PyTorch and a matching Torchvision installation; exact installed versions and GPU details are recorded in each run. The CLI stops with a recorded failure if CUDA is unavailable. Dependency setup history is preserved in [setup_notes.json](setup_notes.json).
 
@@ -87,7 +87,7 @@ Each fresh run directory records:
 - `validation/epoch_XX/metrics.json`, `predictions.json` and `coco_eval.txt`: per-epoch metric definitions, compressed-mask predictions and captured official COCO output.
 - `selection.json`, `checkpoint_best.sha256` and `run.json`: selected epoch, validation score, checkpoint hash, completion/failure status and actual stop reason.
 
-The local binary files `checkpoint_best.pt` and `last_training_state.pt` are ignored by Git, as is the official-weight cache under `models/pretrained/`. The best checkpoint contains the model state, class/model/training configuration, epoch and validation-selection evidence. The last state additionally preserves optimizer, scheduler and scaler state; the CLI does not currently expose a resume command. Before submission, publish the selected weights through an accessible download or release asset and record their actual SHA-256 in the root README. Their local presence alone is not reviewer access.
+The local binary files `checkpoint_best.pt` and `last_training_state.pt` are ignored by Git, as is the official-weight cache under `models/pretrained/`. The best checkpoint contains the model state, class/model/training configuration, epoch and validation-selection evidence. The last state additionally preserves optimizer, scheduler and scaler state; the CLI does not currently expose a resume command. The selected checkpoint and checksum are published in the [calculator-maskrcnn-v1 release](https://github.com/Khizar7786/camera-calibrated-object-measurement/releases/tag/calculator-maskrcnn-v1). Follow the [root README download and hash-check commands](../README.md#download-the-selected-checkpoint); the last optimizer/training state remains local.
 
 ## Current result record
 
@@ -99,7 +99,7 @@ The local binary files `checkpoint_best.pt` and `last_training_state.pt` are ign
 | Validation mAP@0.50:0.95 / mAP@0.50 | **0.8316831683168316 / 0.8316831683168316**, over 15 validation images and 18 instances. |
 | Validation precision / recall | **1.0 / 0.8333333333333334** at fixed score/mask IoU thresholds 0.5; **15 TP / 0 FP / 3 FN**. |
 | Validation mean GT mask IoU | **0.8070517357958565**, including zero for unmatched GT. [Selected-epoch raw metrics](runs/initial_15_epochs/validation/epoch_02/metrics.json). |
-| Selected checkpoint | **176,220,108 bytes**, local and ignored by Git; public download **pending**. Hash below. |
+| Selected checkpoint | **176,220,108 bytes**, ignored by Git and available in the public [model release](https://github.com/Khizar7786/camera-calibrated-object-measurement/releases/tag/calculator-maskrcnn-v1). Hash below. |
 | Independent millimetre measurement accuracy | Pending |
 
 The training-loop elapsed time was **309.344 seconds**, excluding setup/downloads/smoke. Epoch peaks were **1,072,794,112 bytes allocated** and **1,245,708,288 bytes reserved**. No out-of-memory configuration changes were needed. The original StepLR schedule changed learning rate from **0.0025 to 0.00025 after epoch 5**; see the [epoch records](runs/initial_15_epochs/epochs.jsonl). The single run duration is recorded provenance, not a repeated runtime benchmark.
@@ -110,9 +110,9 @@ Selected `checkpoint_best.pt` SHA-256:
 f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39
 ```
 
-[Verification](runs/initial_15_epochs/verification.json) passed an offline `weights_only=True` CPU reload and strict state-dict match, with two-class box/mask heads and configuration/source hashes matching the run. It also checked all 400 step losses were finite and rechecked 227 approved training/validation artifacts and unchanged frozen lists. No inference or test evaluation was performed by that integrity check. The selected binary remains local at `models/runs/initial_15_epochs/checkpoint_best.pt`; its public download is still pending.
+[Verification](runs/initial_15_epochs/verification.json) passed an offline `weights_only=True` CPU reload and strict state-dict match, with two-class box/mask heads and configuration/source hashes matching the run. It also checked all 400 step losses were finite and rechecked 227 approved training/validation artifacts and unchanged frozen lists. No inference or test evaluation was performed by that integrity check. Download the selected binary from the [model release](https://github.com/Khizar7786/camera-calibrated-object-measurement/releases/tag/calculator-maskrcnn-v1) to `models/runs/initial_15_epochs/checkpoint_best.pt`. Anonymous download access and the matching GitHub SHA-256 were verified on 2026-11-06.
 
-These results are validation evidence used for checkpoint selection. Test metrics and independent millimetre measurements have not been run. Preserve setup notes and failed-attempt evidence when reporting time spent. The recording must stay within five minutes and explain the code and results actually available, including inference, measurement or other assessment stages that were not reached.
+These results are validation evidence used for checkpoint selection. Frozen test metrics are recorded below; independent millimetre accuracy measurements have not been run. Preserve setup notes and failed-attempt evidence when reporting time spent. The recording must stay within five minutes and explain the code and results actually available, including assessment stages that were not reached. The author will supply the Loom link in the submission email; its duration/content have not been reviewed here.
 
 ## Frozen held-out test result
 
