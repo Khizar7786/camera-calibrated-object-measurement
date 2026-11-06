@@ -1,6 +1,6 @@
 # Calculator segmentation training
 
-**Status:** CUDA fine-tuning [finished](runs/initial_15_epochs/run.json) after **8 epochs / 400 real optimizer updates**, using the original plateau rule within the declared 15-epoch budget. **Epoch 2** was selected by validation AP. Frozen seven-image test evaluation is complete; the [one-image measurement CLI](../inference/README.md) is implemented; selected weights are available in the public [model release](https://github.com/Khizar7786/camera-calibrated-object-measurement/releases/tag/calculator-maskrcnn-v1). Physical accuracy validation remains unrun.
+**Status:** CUDA fine-tuning [finished](runs/initial_15_epochs/run.json) after **8 epochs / 400 real optimizer updates**, using the original plateau rule within the declared 15-epoch budget. **Epoch 2** was selected by validation AP. Frozen seven-image test evaluation is complete; the [one-image measurement CLI](../inference/README.md) is implemented; selected weights are available in the public [model release](https://github.com/Khizar7786/camera-calibrated-object-measurement/releases/tag/calculator-maskrcnn-v1). The supplied placement experiment now reports physical errors and MO-1 not met; see the [measurement report](../measurement/placements_10/README.md).
 
 Run commands from the repository root using the project `.venv`. Training requires CUDA-enabled PyTorch and a matching Torchvision installation; exact installed versions and GPU details are recorded in each run. The CLI stops with a recorded failure if CUDA is unavailable. Dependency setup history is preserved in [setup_notes.json](setup_notes.json).
 
@@ -75,7 +75,7 @@ Full-resolution corrected images and masks share the calibrated portrait frame. 
 | Mean ground-truth mask IoU | Separate score-ordered one-to-one matching for any positive overlap at score **>=0.5**; unmatched ground truth contributes zero |
 | Checkpoint selection | Highest validation `segmentation_mAP_0.50_0.95`; the earliest epoch wins an exact tie |
 
-Validation runs after every epoch. Each strict increase in selection AP saves the best checkpoint; the separate plateau rule uses the predeclared 0.001 significance threshold. There is no operating-threshold search. Validation scores select the checkpoint and must be reported as validation evidence. Independent measurement accuracy remains pending.
+Validation runs after every epoch. Each strict increase in selection AP saves the best checkpoint; the separate plateau rule uses the predeclared 0.001 significance threshold. There is no operating-threshold search. Validation scores select the checkpoint and must be reported as validation evidence. The later [placement experiment](../measurement/placements_10/README.md) reports MO-1 not met without changing these training/validation settings.
 
 ## Saved evidence and weights
 
@@ -100,7 +100,7 @@ The local binary files `checkpoint_best.pt` and `last_training_state.pt` are ign
 | Validation precision / recall | **1.0 / 0.8333333333333334** at fixed score/mask IoU thresholds 0.5; **15 TP / 0 FP / 3 FN**. |
 | Validation mean GT mask IoU | **0.8070517357958565**, including zero for unmatched GT. [Selected-epoch raw metrics](runs/initial_15_epochs/validation/epoch_02/metrics.json). |
 | Selected checkpoint | **176,220,108 bytes**, ignored by Git and available in the public [model release](https://github.com/Khizar7786/camera-calibrated-object-measurement/releases/tag/calculator-maskrcnn-v1). Hash below. |
-| Independent millimetre measurement accuracy | Pending |
+| Millimetre measurement experiment | [Supplied-set report](../measurement/placements_10/README.md): 9 accepted / 1 refused; width/height MAE 11.843224 / 10.962348 mm; MO-1 not met. Nine scenes new plus reused demo. |
 
 The training-loop elapsed time was **309.344 seconds**, excluding setup/downloads/smoke. Epoch peaks were **1,072,794,112 bytes allocated** and **1,245,708,288 bytes reserved**. No out-of-memory configuration changes were needed. The original StepLR schedule changed learning rate from **0.0025 to 0.00025 after epoch 5**; see the [epoch records](runs/initial_15_epochs/epochs.jsonl). The single run duration is recorded provenance, not a repeated runtime benchmark.
 
@@ -112,7 +112,7 @@ f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39
 
 [Verification](runs/initial_15_epochs/verification.json) passed an offline `weights_only=True` CPU reload and strict state-dict match, with two-class box/mask heads and configuration/source hashes matching the run. It also checked all 400 step losses were finite and rechecked 227 approved training/validation artifacts and unchanged frozen lists. No inference or test evaluation was performed by that integrity check. Download the selected binary from the [model release](https://github.com/Khizar7786/camera-calibrated-object-measurement/releases/tag/calculator-maskrcnn-v1) to `models/runs/initial_15_epochs/checkpoint_best.pt`. Anonymous download access and the matching GitHub SHA-256 were verified on 2026-11-06.
 
-These results are validation evidence used for checkpoint selection. Frozen test metrics are recorded below; independent millimetre accuracy measurements have not been run. Preserve setup notes and failed-attempt evidence when reporting time spent. The recording must stay within five minutes and explain the code and results actually available, including assessment stages that were not reached. The author will supply the Loom link in the submission email; its duration/content have not been reviewed here.
+These results are validation evidence used for checkpoint selection. Frozen test metrics are recorded below; the subsequent [placement experiment](../measurement/placements_10/README.md) reports physical errors and MO-1 not met. The raw/corrected comparison remains Not run. Preserve setup notes and failed-attempt evidence when reporting time spent. The recording must stay within five minutes and explain the code and results actually available, including assessment stages that were not reached. The author will supply the Loom link in the submission email; its duration/content have not been reviewed here.
 
 ## Frozen held-out test result
 

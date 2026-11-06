@@ -1,0 +1,66 @@
+{
+  "scope": "Repeatability of one physical calculator across photographed placements; not product generalization",
+  "supplied_scene_count": 10,
+  "accepted_count": 9,
+  "refused_count": 1,
+  "coverage": 0.9,
+  "error_denominator": "Accepted dimensions only, separately for width and height; refusals are missing, not zero",
+  "dimensions": {
+    "width": {
+      "accepted_dimension_count": 9,
+      "mae_mm": 11.843223571777344,
+      "median_absolute_error_mm": 13.243667602539062,
+      "worst_absolute_error_mm": 17.836929321289062,
+      "mean_percentage_error": 16.918890816824778,
+      "median_percentage_error": 18.919525146484375,
+      "worst_percentage_error": 25.481327601841517
+    },
+    "height": {
+      "accepted_dimension_count": 9,
+      "mae_mm": 10.962348090277779,
+      "median_absolute_error_mm": 10.600112915039062,
+      "worst_absolute_error_mm": 18.858840942382812,
+      "mean_percentage_error": 6.851467556423611,
+      "median_percentage_error": 6.625070571899414,
+      "worst_percentage_error": 11.786775588989258
+    }
+  },
+  "new_scenes_only": {
+    "scene_count": 9,
+    "accepted_count": 8,
+    "refused_count": 1,
+    "dimensions": {
+      "width": {
+        "accepted_dimension_count": 8,
+        "mae_mm": 12.01533031463623,
+        "median_absolute_error_mm": 14.03200912475586,
+        "worst_absolute_error_mm": 17.836929321289062,
+        "mean_percentage_error": 17.164757592337473,
+        "median_percentage_error": 20.0457273210798,
+        "worst_percentage_error": 25.481327601841517
+      },
+      "height": {
+        "accepted_dimension_count": 8,
+        "mae_mm": 11.007627487182617,
+        "median_absolute_error_mm": 10.691154479980469,
+        "worst_absolute_error_mm": 18.858840942382812,
+        "mean_percentage_error": 6.879767179489136,
+        "median_percentage_error": 6.681971549987793,
+        "worst_percentage_error": 11.786775588989258
+      }
+    }
+  },
+  "mo1": {
+    "targets": {
+      "width_mae_mm_max": 3,
+      "height_mae_mm_max": 3,
+      "worst_dimension_error_mm_max": 8,
+      "required_new_valid_placements": 10
+    },
+    "all_supplied_scenes_measured": false,
+    "accepted_only_numeric_targets_met": false,
+    "ten_new_valid_placements_available": false,
+    "full_pass": false,
+    "verdict": "not_met"
+  }
+}

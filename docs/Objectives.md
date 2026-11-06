@@ -1,6 +1,6 @@
 # Measure It - Objectives
 
-**Status:** portrait camera calibration measured and joint dataset correction generated on 2026-11-05. The user approved all 72 corrected images and 100 instances on 2026-11-05; Mask R-CNN fine-tuning completed with validation-only checkpoint selection; the frozen seven-image mask evaluation is complete; the one-image measurement CLI is implemented; one real referenced-photo execution is recorded; physical accuracy validation remains unrun. Original objective targets are unchanged.
+**Status:** portrait camera calibration measured and joint dataset correction generated on 2026-11-05. The user approved all 72 corrected images and 100 instances on 2026-11-05; Mask R-CNN fine-tuning completed with validation-only checkpoint selection; the frozen seven-image mask evaluation is complete; the one-image measurement CLI is implemented; one real referenced-photo execution is recorded; the supplied ten-scene accuracy experiment is complete with 9 accepted / 1 refused and MO-1 not met. The supplied set includes nine new scenes and one reused demo. Original objective targets are unchanged.
 
 **Branch:** `dev-test01`. **Units:** millimetres for physical dimensions; pixels for reprojection error.
 
@@ -9,7 +9,7 @@
 | Field | Recorded setup |
 | --- | --- |
 | Object | One rigid calculator, chosen for its clear outer outline and repeatable handling; measure its complete outer body, excluding shadows, hands, individual buttons and the display. |
-| Preliminary hand measurements | Width **75 mm**, height **160 mm**, reported using a ruler. Width means the shorter side and height the longer side, regardless of image rotation. Confirm readings for the accuracy experiment. |
+| Confirmed hand measurements | User corrected the earlier preliminary 75 mm width to **70 mm**, with height **160 mm**, before this experiment made predictions on 2026-11-06. The user confirmed these ruler readings apply to all ten placements; one rigid calculator, no invented variation. Width means shorter side; height longer side. |
 | Reference | A **flat unmarked paper square, 50 x 50 mm**, with both outer edges measured using a millimetre ruler and explicitly confirmed by the user on 2026-11-05. Keep this same reference throughout evaluation; its plane must match the measured outline. |
 | Ground-truth instrument | Ruler marked in millimetres. Reading uncertainty must be acknowledged; no sub-millimetre accuracy claim is planned. |
 | Camera | **Redmi Note 12**. |
@@ -49,8 +49,8 @@ Evidence: [processing run and per-instance mapping](../dataset/corrected/run.jso
 | Target | Corrected width MAE **<=3 mm** and corrected height MAE **<=3 mm**; worst individual dimensional error **<=8 mm**. All 10 placements must return valid measurements for a complete pass. |
 | Conditions | Same camera geometry as calibration; calculator and reference fully visible; nearly overhead view; adequate light and sharp boundaries. Mount the paper reference flat on a rigid support without changing its dimensions. Its plane must match the outline being measured; support its height if needed. Calculator thickness remains a limitation. |
 | Not included | Thickness measurement, unseen calculator models, arbitrary camera settings, and precision manufacturing inspection. Missing measurements are reported explicitly. |
-| Why this target | A few millimetres is a useful external-size estimate for a 75 x 160 mm calculator while remaining meaningfully stricter than a rough visual estimate. The ruler's uncertainty limits the strength of the accuracy claim. |
-| Result and evidence | **Not run.** Add the actual command, input IDs, hand readings, raw outputs, errors and met/missed verdict after evaluation. |
+| Why this target | The original target used the preliminary approximate 75 x 160 mm calculator estimate; the later ruler correction is 70 x 160 mm and the target is unchanged. A few millimetres remains meaningfully stricter than a rough visual estimate. The ruler's uncertainty limits the strength of the accuracy claim. |
+| Result and evidence | **Not met.** Frozen corrected pipeline: 9 accepted / 1 refused; accepted-only width MAE **11.843224 mm**, height MAE **10.962348 mm**; worst width/height error **17.836929 / 18.858841 mm**. The supplied set has nine new scenes plus the earlier demo, so ten genuinely new placements are not available. Full table and evidence below. |
 
 For each accepted dimension:
 
@@ -61,6 +61,48 @@ For each accepted dimension:
 Compute width and height MAE separately. Report mean percentage error, median and worst absolute/percentage errors for both dimensions, plus accepted and failed counts. Do not treat a failed measurement as zero error or hide it by removing the image. If fewer than 10 valid measurements are available, report accepted-only statistics with their denominator and mark the complete target unmet or not reached.
 
 The experiment repeats **one physical calculator across different placements**. It does not establish accuracy across different calculator products. Record actual hand readings for each placement; do not invent variation in the size of a rigid object.
+
+### Supplied placement experiment - 2026-11-06
+
+The first four stages were working before the experiment: saved calibration, approved jointly corrected labels, a frozen trained/evaluated checkpoint and the one-image measurement CLI. The existing 88 tests passed; the five new coverage/error regressions brought the suite to **93 passing tests** before the batch. See the [experiment report](../measurement/placements_10/README.md), [manifest](../measurement/placements_10/manifest.json), [pre-recorded hand readings](../measurement/placements_10/hand_readings.csv) and [verification](../measurement/placements_10/verification.json).
+
+The user confirmed **70 x 160 mm calculator dimensions**, measured with a millimetre ruler, for every placement, and **50 x 50 mm paper edges**. The 70 mm correction replaced the earlier 75 mm estimate **before any prediction/comparison in this batch**. Locked focus/zoom and matching reference/outline plane were user-confirmed; paper flatness, support height and thickness effects are not independently verified. All ten original files are preserved byte-for-byte under `measurement/placements_10/inputs/`; no content hash overlaps the 217 checked original/export/corrected dataset files. Frozen train/validation/test membership remains 50/15/7.
+
+**Scope/freshness:** one physical calculator across ten supplied photographed placements. Nine captures are new; `calc.jpg.jpeg` (case_01) is the earlier demo used during paper-detector debugging. It is included transparently, not called a new blind scene. These observations do not establish generalization across calculator products or fulfill the ten genuinely new scenes requirement.
+
+```powershell
+.venv\Scripts\python.exe -m measurement.evaluate_placements --manifest measurement/placements_10/manifest.json --output measurement/placements_10/results --device cuda
+```
+
+The wrapper invokes the unchanged normal `inference.measure` CLI for every image, using mandatory full-frame undistortion, checkpoint SHA-256 `f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39`, inference-config SHA-256 `42429a62c08f51e8b7c856565fa932c5c9781c0464c35cc79fe30f00e5217d9a`, frozen score/mask thresholds 0.5 and aspect-preserving 512/960 geometry. [Exact commands](../measurement/placements_10/results/commands.txt), [raw JSON/CSV](../measurement/placements_10/results/per_instance.csv), [full summary](../measurement/placements_10/results/summary.json) and [all overlay previews](../measurement/placements_10/overlay_contact_sheet.jpg) are saved. No model, calibration, threshold or reference-setting changes were made using these results.
+
+W/H below mean shorter/longer side. Values are rounded for display; the CSV retains full precision. Accepted/refused means the frozen command's status, not proof of accuracy. A refused dimension/error is missing, never zero.
+
+| Image ID / input | Hand W / H (mm) | Predicted W / H (mm) | Absolute W / H error (mm) | W / H error (%) | Confidence | Accepted/refused | Reason / overlay |
+| --- | ---: | ---: | ---: | ---: | ---: | --- | --- |
+| [case_01 (reused demo)](../measurement/placements_10/results/../inputs/calc.jpg.jpeg) | 70 / 160 | 80.466 / 170.600 | 10.466 / 10.600 | 14.952 / 6.625 | 0.995488 | Accepted (success) | None; [overlay](../measurement/placements_10/results/cases/case_01/overlay.jpg) |
+| [case_02](../measurement/placements_10/results/../inputs/IMG_20261106_155037.jpg.jpeg) | 70 / 160 | 85.474 / 173.548 | 15.474 / 13.548 | 22.105 / 8.467 | 0.996183 | Accepted (success) | None; [overlay](../measurement/placements_10/results/cases/case_02/overlay.jpg) |
+| [case_03](../measurement/placements_10/results/../inputs/IMG_20261106_155047.jpg.jpeg) | 70 / 160 | 73.780 / 162.841 | 3.780 / 2.841 | 5.400 / 1.776 | 0.994135 | Accepted (success) | None; [overlay](../measurement/placements_10/results/cases/case_03/overlay.jpg) |
+| [case_04](../measurement/placements_10/results/../inputs/IMG_20261106_155109.jpg.jpeg) | 70 / 160 | 83.244 / 169.978 | 13.244 / 9.978 | 18.920 / 6.236 | 0.996307 | Accepted (success) | None; [overlay](../measurement/placements_10/results/cases/case_04/overlay.jpg) |
+| [case_05](../measurement/placements_10/results/../inputs/IMG_20261106_155117.jpg.jpeg) | 70 / 160 | 86.165 / 176.596 | 16.165 / 16.596 | 23.093 / 10.372 | 0.996455 | Accepted (success) | None; [overlay](../measurement/placements_10/results/cases/case_05/overlay.jpg) |
+| [case_06](../measurement/placements_10/results/../inputs/IMG_20261106_155128.jpg.jpeg) | 70 / 160 | 87.837 / 178.859 | 17.837 / 18.859 | 25.481 / 11.787 | 0.991796 | Accepted (success) | None; [overlay](../measurement/placements_10/results/cases/case_06/overlay.jpg) |
+| [case_07](../measurement/placements_10/results/../inputs/IMG_20261106_155143.jpg.jpeg) | 70 / 160 | missing | missing | missing | 0.993914 | Refused (reference_not_found) | No isolated bright unmarked square boundary passed the configured checks; [overlay](../measurement/placements_10/results/cases/case_07/overlay.jpg) |
+| [case_08](../measurement/placements_10/results/../inputs/IMG_20261106_155147.jpg.jpeg) | 70 / 160 | 84.820 / 171.404 | 14.820 / 11.404 | 21.172 / 7.128 | 0.996336 | Accepted (success) | None; [overlay](../measurement/placements_10/results/cases/case_08/overlay.jpg) |
+| [case_09](../measurement/placements_10/results/../inputs/IMG_20261106_155827.jpg.jpeg) | 70 / 160 | 75.220 / 168.353 | 5.220 / 8.353 | 7.457 / 5.221 | 0.995801 | Accepted (success) | None; [overlay](../measurement/placements_10/results/cases/case_09/overlay.jpg) |
+| [case_10](../measurement/placements_10/results/../inputs/IMG_20261106_155829.jpg.jpeg) | 70 / 160 | 79.583 / 166.482 | 9.583 / 6.482 | 13.690 / 4.051 | 0.994820 | Accepted (success) | None; [overlay](../measurement/placements_10/results/cases/case_10/overlay.jpg) |
+
+| Accepted-only statistic (n=9 per dimension) | Width | Height |
+| --- | ---: | ---: |
+| MAE (mm) | 11.843224 | 10.962348 |
+| Mean percentage error (%) | 16.918891 | 6.851468 |
+| Median absolute error (mm) | 13.243668 | 10.600113 |
+| Median percentage error (%) | 18.919525 | 6.625071 |
+| Worst absolute error (mm) | 17.836929 | 18.858841 |
+| Worst percentage error (%) | 25.481328 | 11.786776 |
+
+**Coverage: 9 accepted / 1 refused / 10 supplied (90%).** Every statistic above has denominator **9 accepted width values or 9 accepted height values**. Case_07 (`IMG_20261106_155143.jpg.jpeg`) was refused with `reference_not_found`, because no isolated bright unmarked square boundary passed the configured checks; calculator confidence was 0.993914. Its numeric dimensions remain null and its CSV errors are blank. The nine genuinely new scenes contain **8 accepted / 1 refused**; their supplementary accepted-only MAE is **12.015330 mm width / 11.007627 mm height**, denominator 8 per dimension.
+
+**MO-1 verdict: Not met.** Both MAEs exceed 3 mm, worst dimensional errors exceed 8 mm, one supplied scene lacks a measurement, and only nine scenes are genuinely new. All nine accepted outputs overestimate both confirmed ruler dimensions. Confidence does not establish scale accuracy. Possible mask-boundary, reference-scale/corner and physical-plane/flatness effects are not isolated by this experiment. No settings were changed to improve these figures. The paired raw-versus-undistorted comparison remains **Not run**.
 
 ## 3. MO-2 - Calibration fit quality
 
@@ -133,7 +175,7 @@ Evidence: [all input outcomes/source hashes](../calibration/results/views.csv), 
 
 Visually inspected full-frame comparison previews: [first](../calibration/results/before_after/IMG_20261104_194240.jpg.comparison.jpg), [middle](../calibration/results/before_after/IMG_20261104_194344.jpg.comparison.jpg), [last](../calibration/results/before_after/IMG_20261104_194406.jpg.comparison.jpg). The adjacent `.before.jpg` and `.after.jpg` files retain 2296 x 4080 dimensions; the comparison panels and corner overlays are scaled only for display. Black borders are retained, not cropped or treated as measurements.
 
-**Interpretation and limits.** MO-2 is met for this in-sample portrait fit. The board appears mostly central and flatness/rigid backing are not independently verified; paper curvature and extrapolation toward frame edges may bias fitted distortion. Focus/zoom lock is user-confirmed, not established by EXIF. Dataset preprocessing now explicitly resolves export geometry and the user-confirmed landscape-to-portrait rotation before invoking the unchanged strict undistorter; applying these intrinsics directly to an incompatible array remains invalid. **MO-1 millimetre accuracy remains Not run** and requires independent ruler-based measurements; reprojection error alone does not establish it.
+**Interpretation and limits.** MO-2 is met for this in-sample portrait fit. The board appears mostly central and flatness/rigid backing are not independently verified; paper curvature and extrapolation toward frame edges may bias fitted distortion. Focus/zoom lock is user-confirmed, not established by EXIF. Dataset preprocessing now explicitly resolves export geometry and the user-confirmed landscape-to-portrait rotation before invoking the unchanged strict undistorter; applying these intrinsics directly to an incompatible array remains invalid. **MO-1 is not met in the subsequent supplied-placement experiment** above; reprojection error alone does not establish physical accuracy.
 
 ## 4. Other required evaluation evidence
 
@@ -199,7 +241,7 @@ Checkpoint SHA-256: `f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a00
 
 Evidence: [full configuration](../models/evaluations/frozen_test_01/configuration.json), [exact command](../models/evaluations/frozen_test_01/command.txt), [environment/versions](../models/evaluations/frozen_test_01/environment.json), [metrics](../models/evaluations/frozen_test_01/metrics.json), [raw COCO output](../models/evaluations/frozen_test_01/coco_eval.txt), [scored RLE predictions](../models/evaluations/frozen_test_01/predictions.json), [evaluated GT masks](../models/evaluations/frozen_test_01/ground_truth.json), [COCO parameters](../models/evaluations/frozen_test_01/coco_parameters.json), [raw COCO arrays](../models/evaluations/frozen_test_01/coco_arrays.npz), [per-image results](../models/evaluations/frozen_test_01/per_image.json), [verification](../models/evaluations/frozen_test_01/verification.json) and [artifact hashes](../models/evaluations/frozen_test_01/artifact_sha256.json). Saved-prediction replay reproduces both mask AP scores; independent binary-mask intersection/union reproduces mean IoU. All **76 tests** passed, including low-score AP retention and zero IoU for a missed GT at the operating point.
 
-This is a small seven-image evaluation of one physical calculator, not evidence of generalization to other calculator products or millimetre accuracy. The original MO-1 target remains **Not run**.
+This is a small seven-image evaluation of one physical calculator, not evidence of generalization to other calculator products or millimetre accuracy. The subsequent supplied-placement experiment above reports MO-1 **Not met**; test mask AP does not establish physical accuracy.
 
 ### One-image measurement implementation - 2026-11-05
 
@@ -211,13 +253,13 @@ This is a small seven-image evaluation of one physical calculator, not evidence 
 
 The [CLI report](../inference/README.md) defines coordinates, fixed detector checks, outputs and scene conditions. JSON records width/height, detection confidence, physical reference/corners, checkpoint/configuration/calibration IDs and failure reason. `object_not_found` and `reference_not_found` return null object dimensions with a saved corrected-frame overlay when geometry is valid. Wrong image geometry is refused; no normal raw/bypass mode exists. A plain square detector cannot prove semantic identity or physical coplanarity; ambiguity is refused. Paper/calculator-plane offset and thickness remain limitations.
 
-[Verification](../inference/verification.json): **87 tests pass**, including known 75 x 160 mm projective contour recovery, rotated/plain-square detection, preview restoration, mask-versus-box geometry and synthetic success. Real frozen-network checks save object-not-found (local output: `inference/runs/object_missing_verified/result.json`) on an explicitly synthetic empty input and reference-not-found (local output: `inference/runs/reference_missing_verified/result.json`) on the unassigned original capture outside all frozen splits. The latter detects the calculator at score **0.996219933** and correctly supplies no dimensions. Full corrected overlays are saved. These are implementation/failure demonstrations, not physical accuracy measurements. The initial implementation had no real referenced photo; the subsequent supplied-photo result is recorded below. The ten-placement MO-1 experiment remains **Not run**.
+[Verification](../inference/verification.json): **87 tests pass**, including known 75 x 160 mm projective contour recovery, rotated/plain-square detection, preview restoration, mask-versus-box geometry and synthetic success. Real frozen-network checks save object-not-found (local output: `inference/runs/object_missing_verified/result.json`) on an explicitly synthetic empty input and reference-not-found (local output: `inference/runs/reference_missing_verified/result.json`) on the unassigned original capture outside all frozen splits. The latter detects the calculator at score **0.996219933** and correctly supplies no dimensions. Full corrected overlays are saved. These are implementation/failure demonstrations, not physical accuracy measurements. The initial implementation had no real referenced photo; the subsequent supplied-photo result is recorded below. At that implementation stage MO-1 had not run; the later supplied-placement experiment above now reports **Not met**.
 
 ### First real referenced-photo execution - 2026-11-05
 
 The supplied desktop `calc.jpg.jpeg` initially failed paper detection. Inspection found a visible paper square but no closed Canny paper contour against the wood-grain background. Bright-region proposals were added while retaining all existing reference-acceptance checks, and overlapping proposals are ranked by photometric quality rather than area alone. The same-image rerun (local output: `inference/runs/my_photo_retry/result.json`) succeeds with **80.466370 mm width / 170.600113 mm height**, score **0.995487988**, and mandatory undistortion. Overlay (local output: `inference/runs/my_photo_retry/overlay.jpg`), geometry (local output: `inference/runs/my_photo_retry/geometry.json`), verification (local output: `inference/runs/my_photo_retry/verification.json`) and hashes are retained. The original failed result is preserved. All **88 tests pass**; checkpoint/calibration/segmentation thresholds remain unchanged, and no held-out test photo was used for this fix.
 
-This records execution success on one supplied scene. Paper/calculator-outline coplanarity is not verified, and the ten-placement ruler experiment remains **Not run**. MO-1 is not marked met from these dimensions.
+This records execution success on one supplied scene. Paper/calculator-outline coplanarity is not verified, and the placement experiment had not run at that stage. Its subsequent results above report MO-1 **Not met**; one-photo execution success does not establish accuracy.
 
 ### Raw versus undistorted measurement
 

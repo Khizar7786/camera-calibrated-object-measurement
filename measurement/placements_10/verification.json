@@ -1,0 +1,100 @@
+{
+  "verified_at_utc": "2026-11-06T11:13:46.602923+00:00",
+  "tests_passed": 93,
+  "test_command": ".venv\\Scripts\\python.exe -m unittest discover -s tests -v",
+  "clean_test_log": "verification_tests.txt",
+  "preflight_log_note": "Original preflight captured successful tests via PowerShell stderr formatting; it is preserved unchanged after manifest freeze. This separate post-run test log captures the native subprocess stream directly.",
+  "cases_verified": [
+    {
+      "image_id": "case_01",
+      "status": "success",
+      "input_sha256_verified": true,
+      "full_frame_outputs_verified": true,
+      "hand_record_predates_inference": true
+    },
+    {
+      "image_id": "case_02",
+      "status": "success",
+      "input_sha256_verified": true,
+      "full_frame_outputs_verified": true,
+      "hand_record_predates_inference": true
+    },
+    {
+      "image_id": "case_03",
+      "status": "success",
+      "input_sha256_verified": true,
+      "full_frame_outputs_verified": true,
+      "hand_record_predates_inference": true
+    },
+    {
+      "image_id": "case_04",
+      "status": "success",
+      "input_sha256_verified": true,
+      "full_frame_outputs_verified": true,
+      "hand_record_predates_inference": true
+    },
+    {
+      "image_id": "case_05",
+      "status": "success",
+      "input_sha256_verified": true,
+      "full_frame_outputs_verified": true,
+      "hand_record_predates_inference": true
+    },
+    {
+      "image_id": "case_06",
+      "status": "success",
+      "input_sha256_verified": true,
+      "full_frame_outputs_verified": true,
+      "hand_record_predates_inference": true
+    },
+    {
+      "image_id": "case_07",
+      "status": "reference_not_found",
+      "input_sha256_verified": true,
+      "full_frame_outputs_verified": true,
+      "hand_record_predates_inference": true
+    },
+    {
+      "image_id": "case_08",
+      "status": "success",
+      "input_sha256_verified": true,
+      "full_frame_outputs_verified": true,
+      "hand_record_predates_inference": true
+    },
+    {
+      "image_id": "case_09",
+      "status": "success",
+      "input_sha256_verified": true,
+      "full_frame_outputs_verified": true,
+      "hand_record_predates_inference": true
+    },
+    {
+      "image_id": "case_10",
+      "status": "success",
+      "input_sha256_verified": true,
+      "full_frame_outputs_verified": true,
+      "hand_record_predates_inference": true
+    }
+  ],
+  "accepted_count": 9,
+  "refused_count": 1,
+  "refused_case": "case_07",
+  "decimal_error_calculations_and_independent_statistics_match": true,
+  "all_frozen_sources_configuration_splits_unchanged": true,
+  "all_original_source_copies_byte_identical": true,
+  "all_recorded_result_artifact_hashes_verified": true,
+  "effective_configuration_sha256": "60a5672a97877469f7ecf172adfeb6f7967245e813d5979b08c8f7471dedd9c5",
+  "checkpoint_sha256": "f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39",
+  "hand_width_mm": 70,
+  "hand_height_mm": 160,
+  "source_commit": "0480595bc87ef04bd8db33c798fd7ff9e549e510",
+  "physical_capture_conditions": "User-confirmed; not independently established from photos",
+  "new_scenes": 9,
+  "reused_demo": "case_01",
+  "agent_overlay_inspection": {
+    "all_ten_corrected_overlays_inspected": true,
+    "accepted_reference_boundaries": "Nine detected outlines visually align with the supplied paper squares at review scale; no independent corner/plane ground truth",
+    "refused_scene": "case_07 shows the paper, but no candidate passed the frozen reference checks; refusal retained, no retuning",
+    "measurement_accuracy_verdict": "MO-1 not met; all nine accepted predictions overestimate both user-measured dimensions"
+  }
+}

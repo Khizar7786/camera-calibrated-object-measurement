@@ -20,3 +20,7 @@ inference/*.json -text whitespace=cr-at-eol,-blank-at-eof
 inference/runs/** -text whitespace=cr-at-eol,-blank-at-eof
 measurement/*.py -text
 measurement/*.json -text whitespace=cr-at-eol,-blank-at-eof
+measurement/placements_10/** -text whitespace=cr-at-eol,-blank-at-eof
+# Preserve the frozen raw PowerShell stderr stream, including its whitespace.
+measurement/placements_10/preflight_tests.txt -text -whitespace
+tests/test_measurement_evaluation.py -text

@@ -1,0 +1,207 @@
+.venv\Scripts\python.exe : test_board_measurement_and_minimum_are_required 
+(test_calibrate.CalibrationTests.test_board_measurement_and_minimum_are_required) ... ok
+At line:42 char:1
++ .venv\Scripts\python.exe -m unittest discover -s tests -v *> measurem ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_board_meas...equired) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_final_evidence_write_failure_does_not_publish_camera 
+(test_calibrate.CalibrationTests.test_final_evidence_write_failure_does_not_publish_camera) ... ok
+test_nineteen_successes_and_wrong_orientation_refuse_fit 
+(test_calibrate.CalibrationTests.test_nineteen_successes_and_wrong_orientation_refuse_fit) ... ok
+test_nonempty_output_is_not_overwritten_with_stale_fit 
+(test_calibrate.CalibrationTests.test_nonempty_output_is_not_overwritten_with_stale_fit) ... ok
+test_rms_is_per_corner_euclidean_error_not_norm_divided_by_count 
+(test_calibrate.CalibrationTests.test_rms_is_per_corner_euclidean_error_not_norm_divided_by_count) ... ok
+test_successful_fit_recovers_known_intrinsics_and_saves_raw_evidence 
+(test_calibrate.CalibrationTests.test_successful_fit_recovers_known_intrinsics_and_saves_raw_evidence) ... ok
+test_unreadable_view_is_reported_and_does_not_abort_inventory 
+(test_calibrate.CalibrationTests.test_unreadable_view_is_reported_and_does_not_abort_inventory) ... ok
+test_exif_rotation_is_rejected_before_decode (test_camera.CameraTests.test_exif_rotation_is_rejected_before_decode) 
+... ok
+test_image_reader_preserves_stored_dimensions_and_bgr_order 
+(test_camera.CameraTests.test_image_reader_preserves_stored_dimensions_and_bgr_order) ... ok
+test_load_accepts_declared_full_frame_schema (test_camera.CameraTests.test_load_accepts_declared_full_frame_schema) 
+... ok
+test_load_rejects_unsupported_or_incomplete_geometry_contracts 
+(test_camera.CameraTests.test_load_rejects_unsupported_or_incomplete_geometry_contracts) ... ok
+test_nearest_neighbour_does_not_invent_mask_labels 
+(test_camera.CameraTests.test_nearest_neighbour_does_not_invent_mask_labels) ... ok
+test_nonfinite_or_nonphysical_parameters_are_rejected 
+(test_camera.CameraTests.test_nonfinite_or_nonphysical_parameters_are_rejected) ... ok
+test_reversed_orientation_and_resized_images_are_rejected 
+(test_camera.CameraTests.test_reversed_orientation_and_resized_images_are_rejected) ... ok
+test_unreadable_input_is_reported_as_calibration_error 
+(test_camera.CameraTests.test_unreadable_input_is_reported_as_calibration_error) ... ok
+test_unsupported_interpolation_and_mask_dtypes_are_rejected 
+(test_camera.CameraTests.test_unsupported_interpolation_and_mask_dtypes_are_rejected) ... ok
+test_zero_distortion_keeps_every_pixel_and_full_frame 
+(test_camera.CameraTests.test_zero_distortion_keeps_every_pixel_and_full_frame) ... ok
+test_bbox_and_area_are_recomputed_from_actual_pixels 
+(test_coco_masks.CocoMaskTests.test_bbox_and_area_are_recomputed_from_actual_pixels) ... ok
+test_compressed_rle_roundtrip_preserves_holes_and_disconnected_pieces 
+(test_coco_masks.CocoMaskTests.test_compressed_rle_roundtrip_preserves_holes_and_disconnected_pieces) ... 
+C:\Users\mkhiz\OneDrive\Desktop\Measure it\.venv\Lib\site-packages\pycocotools\mask.py:91: DeprecationWarning: 
+__array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' 
+and 'copy' keyword arguments. To learn more, see the migration guide 
+https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  return _mask.decode([rleObjs])[:,:,0]
+ok
+test_empty_and_full_frame_masks_have_exact_geometry 
+(test_coco_masks.CocoMaskTests.test_empty_and_full_frame_masks_have_exact_geometry) ... ok
+test_invalid_or_excessive_dimensions_are_rejected_before_allocation 
+(test_coco_masks.CocoMaskTests.test_invalid_or_excessive_dimensions_are_rejected_before_allocation) ... ok
+test_invalid_polygon_shapes_and_coordinates_are_rejected 
+(test_coco_masks.CocoMaskTests.test_invalid_polygon_shapes_and_coordinates_are_rejected) ... ok
+test_nonbinary_or_noninteger_instances_are_not_silently_converted 
+(test_coco_masks.CocoMaskTests.test_nonbinary_or_noninteger_instances_are_not_silently_converted) ... ok
+test_official_random_masks_validate_and_roundtrip 
+(test_coco_masks.CocoMaskTests.test_official_random_masks_validate_and_roundtrip) ... ok
+test_polygon_parts_are_unioned_with_official_rasterization 
+(test_coco_masks.CocoMaskTests.test_polygon_parts_are_unioned_with_official_rasterization) ... ok
+test_rle_mismatched_dimensions_and_invalid_counts_are_rejected 
+(test_coco_masks.CocoMaskTests.test_rle_mismatched_dimensions_and_invalid_counts_are_rejected) ... ok
+test_uncompressed_rle_uses_fortran_pixel_order 
+(test_coco_masks.CocoMaskTests.test_uncompressed_rle_uses_fortran_pixel_order) ... ok
+test_bad_sizes_masks_and_verification_thresholds_are_rejected 
+(test_geometry.GeometryTests.test_bad_sizes_masks_and_verification_thresholds_are_rejected) ... ok
+test_crop_and_export_rotation_are_reversed_before_camera_rotation 
+(test_geometry.GeometryTests.test_crop_and_export_rotation_are_reversed_before_camera_rotation) ... ok
+test_declared_clockwise_camera_rotation_is_shared_by_image_and_mask 
+(test_geometry.GeometryTests.test_declared_clockwise_camera_rotation_is_shared_by_image_and_mask) ... ok
+test_missing_camera_rule_and_invalid_geometry_are_rejected 
+(test_geometry.GeometryTests.test_missing_camera_rule_and_invalid_geometry_are_rejected) ... ok
+test_noninteger_mask_scale_uses_exact_nearest_pixel_centres 
+(test_geometry.GeometryTests.test_noninteger_mask_scale_uses_exact_nearest_pixel_centres) ... ok
+test_per_source_export_override_merges_without_mutating_settings 
+(test_geometry.GeometryTests.test_per_source_export_override_merges_without_mutating_settings) ... ok
+test_untextured_image_cannot_verify_provenance 
+(test_geometry.GeometryTests.test_untextured_image_cannot_verify_provenance) ... ok
+test_verification_checks_declared_geometry_without_searching_rotations 
+(test_geometry.GeometryTests.test_verification_checks_declared_geometry_without_searching_rotations) ... ok
+test_verification_uses_declared_crop_and_export_rotation 
+(test_geometry.GeometryTests.test_verification_uses_declared_crop_and_export_rotation) ... ok
+test_committed_bytes_must_match_git_object 
+(test_held_out_evaluation.HeldOutTests.test_committed_bytes_must_match_git_object) ... ok
+test_exact_seven_list_order_geometry_and_no_other_split_access 
+(test_held_out_evaluation.HeldOutTests.test_exact_seven_list_order_geometry_and_no_other_split_access) ... ok
+test_low_score_mask_stays_in_AP_but_missed_GT_is_zero_at_operating_point 
+(test_held_out_evaluation.HeldOutTests.test_low_score_mask_stays_in_AP_but_missed_GT_is_zero_at_operating_point) ... ok
+test_six_images_or_changed_approved_pixels_are_rejected 
+(test_held_out_evaluation.HeldOutTests.test_six_images_or_changed_approved_pixels_are_rejected) ... ok
+test_bright_region_recovers_paper_when_woodgrain_breaks_edge_contour 
+(test_measurement.MeasurementTests.test_bright_region_recovers_paper_when_woodgrain_breaks_edge_contour) ... ok
+test_invalid_reference_and_degenerate_mask_never_produce_dimensions 
+(test_measurement.MeasurementTests.test_invalid_reference_and_degenerate_mask_never_produce_dimensions) ... ok
+test_missing_and_ambiguous_paper_are_not_found 
+(test_measurement.MeasurementTests.test_missing_and_ambiguous_paper_are_not_found) ... ok
+test_no_raw_bypass_or_unpaired_reference_override 
+(test_measurement.MeasurementTests.test_no_raw_bypass_or_unpaired_reference_override) ... ok
+test_object_not_found_has_null_dimensions_and_saved_overlay 
+(test_measurement.MeasurementTests.test_object_not_found_has_null_dimensions_and_saved_overlay) ... ok
+test_perspective_then_metric_rectangle_recovers_known_rotated_object 
+(test_measurement.MeasurementTests.test_perspective_then_metric_rectangle_recovers_known_rotated_object) ... ok
+test_reference_not_found_has_null_dimensions_and_object_score 
+(test_measurement.MeasurementTests.test_reference_not_found_has_null_dimensions_and_object_score) ... ok
+test_rotated_square_and_corner_order (test_measurement.MeasurementTests.test_rotated_square_and_corner_order) ... ok
+test_success_uses_mask_not_detector_box_and_keeps_corrected_overlay 
+(test_measurement.MeasurementTests.test_success_uses_mask_not_detector_box_and_keeps_corrected_overlay) ... ok
+test_unmarked_square_outer_boundary_refines_after_preview_scaling 
+(test_measurement.MeasurementTests.test_unmarked_square_outer_boundary_refines_after_preview_scaling) ... ok
+test_unmeasured_scale_is_refused (test_measurement.MeasurementTests.test_unmeasured_scale_is_refused) ... ok
+test_wrong_resolution_is_rejected_before_segmentation 
+(test_measurement.MeasurementTests.test_wrong_resolution_is_rejected_before_segmentation) ... ok
+test_all_refused_produces_missing_statistics_not_fake_zero 
+(test_measurement_evaluation.MeasurementEvaluationTests.test_all_refused_produces_missing_statistics_not_fake_zero) 
+... ok
+test_incomplete_or_numeric_refusal_results_cannot_hide_missing_scenes (test_measurement_evaluation.MeasurementEvaluatio
+nTests.test_incomplete_or_numeric_refusal_results_cannot_hide_missing_scenes) ... ok
+test_original_targets_need_full_coverage_and_worst_error 
+(test_measurement_evaluation.MeasurementEvaluationTests.test_original_targets_need_full_coverage_and_worst_error) ... 
+ok
+test_refusal_remains_in_coverage_but_never_becomes_zero_error 
+(test_measurement_evaluation.MeasurementEvaluationTests.test_refusal_remains_in_coverage_but_never_becomes_zero_error) 
+... ok
+test_reused_development_scene_does_not_prove_ten_new_placements (test_measurement_evaluation.MeasurementEvaluationTests
+.test_reused_development_scene_does_not_prove_ten_new_placements) ... ok
+test_joint_correction_preserves_inputs_membership_and_instance_ids 
+(test_prepare_dataset.PreparationTests.test_joint_correction_preserves_inputs_membership_and_instance_ids) ... ok
+test_original_paths_and_existing_outputs_cannot_be_overwritten 
+(test_prepare_dataset.PreparationTests.test_original_paths_and_existing_outputs_cannot_be_overwritten) ... ok
+test_review_gallery_and_csv_record_explicit_user_approval 
+(test_prepare_dataset.PreparationTests.test_review_gallery_and_csv_record_explicit_user_approval) ... ok
+test_source_change_during_run_prevents_final_coco_publication 
+(test_prepare_dataset.PreparationTests.test_source_change_during_run_prevents_final_coco_publication) ... ok
+test_unknown_rotation_blocks_image_and_publishes_only_partial_split 
+(test_prepare_dataset.PreparationTests.test_unknown_rotation_blocks_image_and_publishes_only_partial_split) ... ok
+test_unverified_crop_or_content_is_not_silently_accepted 
+(test_prepare_dataset.PreparationTests.test_unverified_crop_or_content_is_not_silently_accepted) ... ok
+test_aspect_resize_and_torchvision_target_types 
+(test_training_data.TrainingDataTests.test_aspect_resize_and_torchvision_target_types) ... ok
+test_changed_image_and_frozen_membership_are_rejected 
+(test_training_data.TrainingDataTests.test_changed_image_and_frozen_membership_are_rejected) ... ok
+test_empty_masks_and_masks_lost_on_resize_raise_instead_of_disappearing 
+(test_training_data.TrainingDataTests.test_empty_masks_and_masks_lost_on_resize_raise_instead_of_disappearing) ... ok
+test_hashes_are_checked_once_at_construction_not_each_epoch 
+(test_training_data.TrainingDataTests.test_hashes_are_checked_once_at_construction_not_each_epoch) ... ok
+test_one_pixel_wide_instance_gets_positive_exclusive_box 
+(test_training_data.TrainingDataTests.test_one_pixel_wide_instance_gets_positive_exclusive_box) ... ok
+test_parent_category_is_not_used_as_a_foreground_class 
+(test_training_data.TrainingDataTests.test_parent_category_is_not_used_as_a_foreground_class) ... ok
+test_rgb_order_and_joint_horizontal_flip_are_exact 
+(test_training_data.TrainingDataTests.test_rgb_order_and_joint_horizontal_flip_are_exact) ... ok
+test_seeds_and_detection_collation (test_training_data.TrainingDataTests.test_seeds_and_detection_collation) ... ok
+test_test_split_is_rejected_before_any_filesystem_access 
+(test_training_data.TrainingDataTests.test_test_split_is_rejected_before_any_filesystem_access) ... ok
+test_train_and_validation_never_open_test_artifacts 
+(test_training_data.TrainingDataTests.test_train_and_validation_never_open_test_artifacts) ... ok
+test_unapproved_or_stale_approval_refuses_construction 
+(test_training_data.TrainingDataTests.test_unapproved_or_stale_approval_refuses_construction) ... ok
+test_validation_augmentation_is_forbidden 
+(test_training_data.TrainingDataTests.test_validation_augmentation_is_forbidden) ... ok
+test_backbone_freeze_extremes_work_without_pretrained_factory_weights 
+(test_training_model.TrainingModelTests.test_backbone_freeze_extremes_work_without_pretrained_factory_weights) ... ok
+test_both_heads_predict_only_background_and_calculator 
+(test_training_model.TrainingModelTests.test_both_heads_predict_only_background_and_calculator) ... ok
+test_default_freezing_leaves_only_last_three_body_stages_trainable 
+(test_training_model.TrainingModelTests.test_default_freezing_leaves_only_last_three_body_stages_trainable) ... ok
+test_offline_backbone_matches_frozen_batch_norm_checkpoint_structure 
+(test_training_model.TrainingModelTests.test_offline_backbone_matches_frozen_batch_norm_checkpoint_structure) ... ok
+test_prohibited_architectures_and_invalid_model_settings_fail_before_factory 
+(test_training_model.TrainingModelTests.test_prohibited_architectures_and_invalid_model_settings_fail_before_factory) 
+... ok
+test_summary_records_real_heads_freezing_resolution_and_proposal_limits 
+(test_training_model.TrainingModelTests.test_summary_records_real_heads_freezing_resolution_and_proposal_limits) ... ok
+test_missing_cuda_records_failure_without_claiming_training 
+(test_training_run.TrainingRunTests.test_missing_cuda_records_failure_without_claiming_training) ... ok
+test_run_contract_rejects_wrong_classes_seed_or_unsafe_loader 
+(test_training_run.TrainingRunTests.test_run_contract_rejects_wrong_classes_seed_or_unsafe_loader) ... ok
+test_smoke_does_not_advance_training_augmentation 
+(test_training_run.TrainingRunTests.test_smoke_does_not_advance_training_augmentation) ... ok
+test_duplicate_predictions_count_false_positive_without_duplicate_iou_credit (test_training_validation.ValidationTests.
+test_duplicate_predictions_count_false_positive_without_duplicate_iou_credit) ... ok
+test_empty_binary_prediction_is_preserved_as_a_false_positive 
+(test_training_validation.ValidationTests.test_empty_binary_prediction_is_preserved_as_a_false_positive) ... ok
+test_empty_predictions_have_zero_metrics_and_all_ground_truth_unmatched 
+(test_training_validation.ValidationTests.test_empty_predictions_have_zero_metrics_and_all_ground_truth_unmatched) ... 
+ok
+test_low_score_predictions_remain_in_ap_but_not_operating_metrics 
+(test_training_validation.ValidationTests.test_low_score_predictions_remain_in_ap_but_not_operating_metrics) ... ok
+test_nonfinite_scores_duplicate_ids_and_threshold_search_are_rejected 
+(test_training_validation.ValidationTests.test_nonfinite_scores_duplicate_ids_and_threshold_search_are_rejected) ... ok
+test_partial_overlap_receives_iou_credit_even_below_tp_threshold 
+(test_training_validation.ValidationTests.test_partial_overlap_receives_iou_credit_even_below_tp_threshold) ... ok
+test_perfect_mask_has_unit_ap_precision_recall_and_iou_without_file_access 
+(test_training_validation.ValidationTests.test_perfect_mask_has_unit_ap_precision_recall_and_iou_without_file_access) 
+... ok
+test_two_predictions_cannot_credit_the_same_of_two_ground_truth_instances 
+(test_training_validation.ValidationTests.test_two_predictions_cannot_credit_the_same_of_two_ground_truth_instances) 
+... ok
+test_unmatched_ground_truth_contributes_zero_to_mean_iou 
+(test_training_validation.ValidationTests.test_unmatched_ground_truth_contributes_zero_to_mean_iou) ... ok
+
+----------------------------------------------------------------------
+Ran 93 tests in 12.893s
+
+OK
