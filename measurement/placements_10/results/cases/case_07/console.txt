@@ -1,0 +1,1 @@
+{"status": "reference_not_found", "width_mm": null, "height_mm": null, "detection_confidence": 0.9939143061637878, "failure_reason": "No isolated bright unmarked square boundary passed the configured checks"}

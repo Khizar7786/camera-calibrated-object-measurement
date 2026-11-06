@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "status": "success",
+  "width_mm": 73.78025817871094,
+  "height_mm": 162.84121704101562,
+  "detection_confidence": 0.9941347241401672,
+  "confidence_definition": "Calculator detection score; not dimensional accuracy",
+  "failure_reason": null,
+  "reference": {
+    "type": "paper_square",
+    "width_mm": 50.0,
+    "height_mm": 50.0,
+    "physically_measured": true,
+    "measurement_source": "User confirmed 50 x 50 mm outer edges measured with a millimetre ruler on 2026-11-05",
+    "edge_definition": "Actual outer boundary of the flat unmarked paper square",
+    "plane_assumption": "Paper square and measured calculator outline must be in the same plane",
+    "detection": {
+      "max_detection_dimension": 1600,
+      "canny_low": 50,
+      "canny_high": 150,
+      "region_thresholds": [
+        140,
+        160,
+        180,
+        200,
+        220,
+        240
+      ],
+      "polygon_epsilon_fraction": 0.02,
+      "min_area_fraction": 0.0005,
+      "max_area_fraction": 0.2,
+      "max_side_ratio": 1.5,
+      "max_angle_cosine": 0.35,
+      "min_inside_gray": 140,
+      "max_inside_gray_std": 30,
+      "min_inside_outside_contrast": 15
+    },
+    "status": "found",
+    "corners_corrected_px": [
+      [
+        1444.7044677734375,
+        1183.9749755859375
+      ],
+      [
+        2017.5888671875,
+        1334.0308837890625
+      ],
+      [
+        1868.1888427734375,
+        1903.074951171875
+      ],
+      [
+        1289.086669921875,
+        1757.7249755859375
+      ]
+    ],
+    "coordinate_system": "undistorted_full_frame_P_equals_K",
+    "candidate_count": 1,
+    "detection_preview_size": [
+      900,
+      1600
+    ],
+    "generated_contours": {
+      "canny": 6033,
+      "intensity_threshold_140": 5522,
+      "intensity_threshold_160": 4454,
+      "intensity_threshold_180": 2505,
+      "intensity_threshold_200": 229,
+      "intensity_threshold_220": 29,
+      "intensity_threshold_240": 4
+    },
+    "rejected_contour_counts": {
+      "not_convex_quadrilateral": 16596,
+      "area": 2154,
+      "inside_brightness": 2,
+      "side_ratio": 22
+    },
+    "corner_order": "Clockwise TL, TR, BR, BL; cyclic square rotations are equivalent",
+    "corner_refinement": "Full corrected-image cornerSubPix, win=5, iterations=30, epsilon=0.01",
+    "failure_reason": null,
+    "candidate_mean_gray": 204.8574888512994,
+    "candidate_gray_std": 2.4573691937291504,
+    "candidate_inside_outside_contrast": 49.857488851299394,
+    "candidate_generation_method": "intensity_threshold_180",
+    "candidate_photometric_quality": 14.420643575389368
+  },
+  "checkpoint": {
+    "path": "C:\\Users\\mkhiz\\OneDrive\\Desktop\\Measure it\\models\\runs\\initial_15_epochs\\checkpoint_best.pt",
+    "sha256": "f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39",
+    "epoch": 2,
+    "training_configuration_sha256": "608889254f59b167ea258d83290e648d106cfb60b58fd495b2b98a7fd963040d",
+    "classes": [
+      "background",
+      "calculator"
+    ],
+    "versions_at_training": {
+      "torch": "2.7.1+cu126",
+      "torchvision": "0.22.1+cu126"
+    },
+    "loaded": true
+  },
+  "outputs": {
+    "corrected_image": "corrected.jpg",
+    "geometry": "geometry.json",
+    "mask": "mask.png",
+    "overlay": "overlay.jpg"
+  },
+  "input": {
+    "path": "measurement\\placements_10\\inputs\\IMG_20261106_155047.jpg.jpeg",
+    "sha256": "aa18d8343f6c86ca48b00ff51f26d20614f045395ba27f498110c5d0c2d2215a",
+    "stored_size": [
+      2296,
+      4080
+    ],
+    "exif_camera_model": "23021RAAEG",
+    "camera_frame_rotation_cw": 0,
+    "camera_frame_size": [
+      2296,
+      4080
+    ],
+    "capture_condition": "Same Redmi Note 12 lens, locked focus/zoom, uncropped original stored pixels; same-size crop/changed focus cannot be proven from shape alone"
+  },
+  "undistortion_applied": true,
+  "coordinate_system": "undistorted_full_frame_P_equals_K",
+  "started_at_utc": "2026-11-06T11:52:04.975451+00:00",
+  "configuration": {
+    "path": "inference\\config.json",
+    "file_sha256": "42429a62c08f51e8b7c856565fa932c5c9781c0464c35cc79fe30f00e5217d9a",
+    "effective_sha256": "60a5672a97877469f7ecf172adfeb6f7967245e813d5979b08c8f7471dedd9c5"
+  },
+  "calibration": {
+    "path": "C:\\Users\\mkhiz\\OneDrive\\Desktop\\Measure it\\calibration\\results\\camera.json",
+    "sha256": "9ad192f78238887e413df81262b2f276140de9d7c4c5558f1cf4783114cb2b29",
+    "image_size": [
+      2296,
+      4080
+    ]
+  },
+  "model_transform": {
+    "input_size": [
+      512,
+      910
+    ],
+    "corrected_size": [
+      2296,
+      4080
+    ],
+    "aspect_preserving": true,
+    "score_cutoff": 0.5,
+    "mask_probability_threshold": 0.5,
+    "selection": "Highest-score calculator instance at frozen operating cutoff",
+    "mask_restoration": "Threshold at model-input coordinates, then INTER_NEAREST_EXACT to corrected full frame",
+    "selected_output_index": 0
+  },
+  "metric_geometry": {
+    "width_mm": 73.78025817871094,
+    "height_mm": 162.84121704101562,
+    "homography_corrected_pixels_to_mm": [
+      [
+        0.07916975043490738,
+        0.021473154194576138,
+        -139.8005693790951
+      ],
+      [
+        -0.021089838179907054,
+        0.08051691815480415,
+        -64.86143276345862
+      ],
+      [
+        -1.9763519910208134e-05,
+        8.560843594084373e-06,
+        1.0
+      ]
+    ],
+    "reference_corners_mm": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        50.0,
+        0.0
+      ],
+      [
+        50.0,
+        50.0
+      ],
+      [
+        0.0,
+        50.0
+      ]
+    ],
+    "rectangle_mm": [
+      [
+        -100.89160919189453,
+        7.3686370849609375
+      ],
+      [
+        -29.434900283813477,
+        -11.001632690429688
+      ],
+      [
+        11.110313415527344,
+        146.7112274169922
+      ],
+      [
+        -60.346397399902344,
+        165.0814971923828
+      ]
+    ],
+    "rectangle_corrected_px": [
+      [
+        227.19792496649592,
+        956.9282694295935
+      ],
+      [
+        1136.6020505003564,
+        968.5723744149095
+      ],
+      [
+        1113.2981143225643,
+        2924.8186724038137
+      ],
+      [
+        187.29734249162027,
+        2949.0653547966826
+      ]
+    ],
+    "conversion_function": "measurement.planar.measure_mask_contour_mm",
+    "width_definition": "shorter metric rectangle side",
+    "height_definition": "longer metric rectangle side"
+  },
+  "completed_at_utc": "2026-11-06T11:52:14.561017+00:00"
+}

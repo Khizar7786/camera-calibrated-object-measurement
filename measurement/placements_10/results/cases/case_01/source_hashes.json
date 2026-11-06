@@ -1,0 +1,7 @@
+{
+  "calibration\\camera.py": "e9a72a7d537956fe6e2fc73150e168650e070a83af27856bcf5e5ecd06c047a6",
+  "models\\model.py": "19d2a6e3fc2c1b89b288aac57f68a8c147885a9285ac5fcaae2e242f2300738a",
+  "measurement\\planar.py": "44904a8493a72f7dc80856e670c90eaba3fa98752c956a8cc656678624440244",
+  "inference\\measure.py": "514f2c2cbc1fd506461d95f506053302aeae16c31c5c15cbd611c9c16b041b04",
+  "inference\\reference.py": "ceadcf49d11ff1d11bf601f18a46e123a8f975fcd6c98d0140a293f2dcf67b34"
+}

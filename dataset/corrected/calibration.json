@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "model": "opencv_pinhole",
+  "coordinate_system": "stored_pixels_full_frame",
+  "camera_matrix": [
+    [
+      3354.623257092122,
+      0.0,
+      1158.996287939729
+    ],
+    [
+      0.0,
+      3361.9256037826312,
+      2051.3406751521297
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "distortion_coefficients": [
+    0.1551227326283479,
+    -0.8987862566946367,
+    0.0008208370032662884,
+    0.0016183628347922765,
+    2.216512702550443
+  ],
+  "distortion_order": [
+    "k1",
+    "k2",
+    "p1",
+    "p2",
+    "k3"
+  ],
+  "image_size": [
+    2296,
+    4080
+  ],
+  "board": {
+    "inner_corners": [
+      9,
+      7
+    ],
+    "square_size_mm": 20.0,
+    "square_size_source": "User measured 2 cm x 2 cm, confirmed 2026-11-05",
+    "corner_count_source": "Whole-board inspection: 10 x 8 squares, 9 x 7 inner corners; printed footer agrees"
+  },
+  "global_rms_px": 0.9186534696788912,
+  "recomputed_rms_px": 0.9186529346927738,
+  "minimum_views": 20,
+  "usable_views": 21,
+  "input_views": 30,
+  "per_view_errors": [
+    {
+      "filename": "IMG_20261104_194240.jpg.jpeg",
+      "rms_px": 1.1790193648429643
+    },
+    {
+      "filename": "IMG_20261104_194244.jpg.jpeg",
+      "rms_px": 1.062140759453267
+    },
+    {
+      "filename": "IMG_20261104_194249.jpg.jpeg",
+      "rms_px": 0.9866441913682209
+    },
+    {
+      "filename": "IMG_20261104_194254.jpg.jpeg",
+      "rms_px": 1.166659120921048
+    },
+    {
+      "filename": "IMG_20261104_194258.jpg.jpeg",
+      "rms_px": 0.5501345384115119
+    },
+    {
+      "filename": "IMG_20261104_194325.jpg.jpeg",
+      "rms_px": 0.8136553429322162
+    },
+    {
+      "filename": "IMG_20261104_194328.jpg.jpeg",
+      "rms_px": 0.9804549331592524
+    },
+    {
+      "filename": "IMG_20261104_194330.jpg.jpeg",
+      "rms_px": 0.9203712066456418
+    },
+    {
+      "filename": "IMG_20261104_194339.jpg.jpeg",
+      "rms_px": 1.4141783434812458
+    },
+    {
+      "filename": "IMG_20261104_194342.jpg.jpeg",
+      "rms_px": 1.0298027260960974
+    },
+    {
+      "filename": "IMG_20261104_194344.jpg.jpeg",
+      "rms_px": 1.1145844083120002
+    },
+    {
+      "filename": "IMG_20261104_194346.jpg.jpeg",
+      "rms_px": 0.5301657023663835
+    },
+    {
+      "filename": "IMG_20261104_194348.jpg.jpeg",
+      "rms_px": 0.4648522130351745
+    },
+    {
+      "filename": "IMG_20261104_194350.jpg.jpeg",
+      "rms_px": 0.5501038354489182
+    },
+    {
+      "filename": "IMG_20261104_194352.jpg.jpeg",
+      "rms_px": 0.7571873671551909
+    },
+    {
+      "filename": "IMG_20261104_194354.jpg.jpeg",
+      "rms_px": 0.7770673047356043
+    },
+    {
+      "filename": "IMG_20261104_194357.jpg.jpeg",
+      "rms_px": 0.8527134279252583
+    },
+    {
+      "filename": "IMG_20261104_194359.jpg.jpeg",
+      "rms_px": 0.6610357177204361
+    },
+    {
+      "filename": "IMG_20261104_194401.jpg.jpeg",
+      "rms_px": 0.9194457609697397
+    },
+    {
+      "filename": "IMG_20261104_194404.jpg.jpeg",
+      "rms_px": 1.0357204439209675
+    },
+    {
+      "filename": "IMG_20261104_194406.jpg.jpeg",
+      "rms_px": 0.8571566563841635
+    }
+  ],
+  "undistortion": {
+    "output_camera_matrix": "same as camera_matrix (P=K)",
+    "crop": false,
+    "resize": false,
+    "output_image_size": [
+      2296,
+      4080
+    ],
+    "border": "constant zero; invalid pixels are not measurements"
+  },
+  "camera_settings": {
+    "camera": "Redmi Note 12 (EXIF Xiaomi 23021RAAEG)",
+    "focus_and_zoom_locked": true,
+    "capture_settings_source": "User confirmed focus and zoom locked throughout calibration and calculator captures, 2026-11-05",
+    "board_flatness_and_rigid_backing": "Not verified from photographs; possible paper curvature remains a limitation"
+  },
+  "calibration_flags": 0,
+  "seed": 42
+}

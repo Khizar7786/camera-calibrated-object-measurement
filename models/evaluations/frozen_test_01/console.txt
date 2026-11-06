@@ -1,0 +1,33 @@
+FROZEN checkpoint SHA256=f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39; epoch=2; no optimizer or tuning
+TEST image_id=5 input=512x910 instances=1
+TEST image_id=3 input=512x910 instances=1
+TEST image_id=0 input=512x910 instances=1
+TEST image_id=4 input=512x910 instances=1
+TEST image_id=2 input=512x910 instances=1
+TEST image_id=6 input=512x910 instances=1
+TEST image_id=1 input=512x910 instances=1
+creating index...
+index created!
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=0.01s).
+Accumulating evaluation results...
+DONE (t=0.00s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 1.000
+
+TEST COMPLETE images=7 GT=7 mask_IoU=0.967517224 mask_AP50=1.000000000 mask_AP50:95=1.000000000 precision=1.000000000 recall=1.000000000

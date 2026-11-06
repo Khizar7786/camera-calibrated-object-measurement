@@ -1,0 +1,114 @@
+{
+  "recorded_at_utc": "2026-11-05T09:33:50.207469+00:00",
+  "initial_environment": {
+    "project_torch": "not installed",
+    "global_torch": "2.7.1+cpu",
+    "global_torchvision": "0.22.1+cpu",
+    "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU,4GiB"
+  },
+  "initial_training_budget": {
+    "epochs": 15,
+    "batch_size": 1,
+    "short_side": 512,
+    "long_side_cap": 960,
+    "trainable_backbone_layers": 3,
+    "learning_rate": 0.0025,
+    "config_sha256": "edd1e6a0630b7bd2373312797f020635d0a8b66abab9331570c1f570b7166bf2",
+    "config_written_at_utc": "2026-11-05T09:13:45.697098+00:00"
+  },
+  "dependency_events": [
+    {
+      "event": "Initial CUDA pip install failed before training",
+      "reason": "pip22.3 name-normalization failure for typing_extensions; fallback source build could not resolve flit_core from the CUDA-only index"
+    },
+    {
+      "event": "Updated project pip to26.3",
+      "reason": "Resolve modern wheel metadata correctly"
+    },
+    {
+      "event": "Resumed large CUDAwheel in8 verified HTTP ranges",
+      "preserved_bytes": 1198260224,
+      "total_bytes": 2716982502,
+      "expected_sha256": "f3af23387ac106b5b01dbef0eb021883e0c00ff4073477b7ce1cbade5ef5038d"
+    },
+    {
+      "recorded_at_utc": "2026-11-05T09:50:06.144640+00:00",
+      "event": "Official CUDA wheel download completed and SHA-256 verified",
+      "size_bytes": 2716982502,
+      "sha256": "f3af23387ac106b5b01dbef0eb021883e0c00ff4073477b7ce1cbade5ef5038d",
+      "source_url": "https://download-r2.pytorch.org/whl/cu126/torch-2.7.1%2Bcu126-cp311-cp311-win_amd64.whl"
+    }
+  ],
+  "pretrained_weights": {
+    "path": "models/pretrained/hub/checkpoints/maskrcnn_resnet50_fpn_coco-bf2d0c1e.pth",
+    "sha256": "bf2d0c1efbc936eeee2bc95a48e80ebc86b891f61b0106485937fc29f9315fc0"
+  },
+  "cuda_installation_status": "installed_and_GPU_checked",
+  "training_status": "training_finished",
+  "test_data_used": false,
+  "configuration_events": [
+    {
+      "recorded_at_utc": "2026-11-05T09:44:38.939024+00:00",
+      "stage": "before first GPU smoke or training",
+      "field": "training.initial_amp_scale",
+      "value": 1024.0,
+      "reason": "Declare a conservative initial AMP scale on the 4 GiB GPU; fail on nonfinite gradients rather than count a skipped optimizer update as training. No observed overflow is claimed."
+    }
+  ],
+  "current_pre_run_config_sha256": "77f95d3e4e8a9bf63e92a2b8725e74fbe582d6efac726d2ae6cb5e144aa8b010",
+  "cuda_verification": {
+    "checked_at_utc": "2026-11-05T09:52:48.973214+00:00",
+    "torch": "2.7.1+cu126",
+    "torchvision": "0.22.1+cu126",
+    "cuda_build": "12.6",
+    "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+    "CUDA_NMS_result": [
+      0
+    ],
+    "CUDA_backward_gradient": [
+      2.0,
+      2.0,
+      2.0,
+      2.0
+    ],
+    "pip_check": "No broken requirements found"
+  },
+  "unit_verification": {
+    "command": ".venv\\Scripts\\python.exe -m unittest discover -s tests -v",
+    "tests_passed": 72,
+    "duration_seconds": 5.977,
+    "environment": "isolated project .venv with CUDA PyTorch installed",
+    "test_dataset_used": false,
+    "note": "Synthetic fixtures only; the test split isolation checks do not open actual test artifacts."
+  },
+  "training_run": "models\\runs\\initial_15_epochs",
+  "completed_at_utc": "2026-11-05T09:57:58.888082+00:00",
+  "training_outcome": {
+    "initial_epoch_budget": 15,
+    "completed_epochs": 8,
+    "optimizer_updates": 400,
+    "stop_reason": "validation_plateau_early_stop",
+    "elapsed_training_seconds": 309.34399999998277,
+    "selected_epoch": 2,
+    "selection_metric": "segmentation_mAP_0.50_0.95",
+    "validation_value": 0.8316831683168316,
+    "checkpoint_sha256": "f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39",
+    "checkpoint_integrity": "verification.json passed strict offline CPU reload",
+    "memory_adaptations": [],
+    "configuration_changes": [
+      {
+        "epoch_completed": 5,
+        "field": "learning_rate",
+        "before": 0.0025,
+        "after": 0.00025,
+        "reason": "Predeclared StepLR schedule; no test evidence"
+      }
+    ],
+    "test_data_used": false,
+    "limitations": [
+      "CUDA ROIAlign backward is nondeterministic; seed42 is recorded without a bitwise repeatability claim",
+      "Test evaluation and millimetre accuracy experiments have not run",
+      "Selected weights are local and ignored by Git; reviewer download publication is pending"
+    ]
+  }
+}

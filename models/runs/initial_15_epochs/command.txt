@@ -1,0 +1,1 @@
+"C:\Users\mkhiz\OneDrive\Desktop\Measure it\.venv\Scripts\python.exe" -m models.train --config models\training_config.json --output models\runs\initial_15_epochs

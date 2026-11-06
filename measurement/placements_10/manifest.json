@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "declared_before_inference_at_utc": "2026-11-06T11:09:00.005326+00:00",
+  "experiment": "Frozen corrected-image measurement on ten supplied placements of one physical calculator",
+  "scope": "Repeatability of one calculator, not generalization across calculator products",
+  "hand_readings": "hand_readings.csv",
+  "hand_readings_sha256": "b6b7dcfabca9db685a3161a50e1b6eccaa18ba17b9949766d9a4599e184c7b03",
+  "hand_readings_source": "User ruler readings confirmed for all ten placements on 2026-11-06: calculator 7 x 16 cm = 70 x 160 mm; paper 5 x 5 cm = 50 x 50 mm. Same rigid calculator, no invented variation.",
+  "reading_correction": "Initial 7.5 x 16 cm response corrected by user to 7 x 16 cm before any predictions/comparison for this experiment. Earlier 75 mm width remains historical preliminary metadata only.",
+  "capture_conditions": {
+    "focus_zoom_locked_user_confirmed": true,
+    "paper_and_measured_outline_coplanar_user_confirmed": true,
+    "confirmation": "User: yes it was I confirm . Small correction caclulator is 7cm by 16 cm",
+    "independently_verified_physical_coplanarity": false,
+    "reference_width_mm": 50,
+    "reference_height_mm": 50,
+    "thickness_or_paper_flatness_independently_verified": false
+  },
+  "original_files_preserved": true,
+  "split_separation": {
+    "checked_existing_images": 217,
+    "exact_content_overlap": 0,
+    "manifest_hashes_unique": true,
+    "frozen_lists": {
+      "dataset/splits/SHA256SUMS.txt": "59cf57f0d000e3fcad64aaa19652bf583754152fe77c3a083e2a67cfaa64a003",
+      "dataset/splits/test.txt": "542bf7ec62522c86877d99707d6111e98dd516c4ff10f342d054ac77f34a8da1",
+      "dataset/splits/train.txt": "597b9aad54e23703147cd0d2050e4f5d96f14d6f1e52efedba5ce50150133212",
+      "dataset/splits/valid.txt": "f7a9562dc2624c8d7b01ed2ff9ace8f95903b52ebc3b0126b4820e78dd4f4573"
+    },
+    "policy": "No training, augmentation, threshold tuning or checkpoint reselection. Supplied photos only; do not adjust refused scenes or omit them."
+  },
+  "freshness": {
+    "supplied_scenes": 10,
+    "newly_captured_after_frozen_cli": 9,
+    "previous_demo_cases": [
+      "case_01"
+    ],
+    "limitation": "The supplied set contains nine new scenes plus the earlier demo; it does not fulfill the ten genuinely new scenes requirement."
+  },
+  "preconditions": {
+    "existing_project_tests": 88,
+    "test_command": ".venv\\Scripts\\python.exe -m unittest discover -s tests -v",
+    "observed_result": "88 tests passed in 9.348 seconds before experiment preparation",
+    "calibration": "calibration/results/run.json",
+    "reviewed_dataset": "dataset/corrected/review_approval.json",
+    "fine_tuning": "models/runs/initial_15_epochs/run.json",
+    "frozen_test_evaluation": "models/evaluations/frozen_test_01/run.json",
+    "measurement_implementation": "inference/verification.json",
+    "evaluation_tests_passed": 93,
+    "evaluation_test_duration_seconds": 12.893,
+    "evaluation_test_log": "preflight_tests.txt",
+    "evaluation_test_log_sha256": "93c5c9057273db34bd80616101918516830a2ffc492f3dbcd573fb19befb4781"
+  },
+  "frozen": {
+    "source_commit": "0480595bc87ef04bd8db33c798fd7ff9e549e510",
+    "inference_configuration": "inference/config.json",
+    "checkpoint_sha256": "f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39",
+    "files_sha256": {
+      "inference/config.json": "42429a62c08f51e8b7c856565fa932c5c9781c0464c35cc79fe30f00e5217d9a",
+      "inference/measure.py": "514f2c2cbc1fd506461d95f506053302aeae16c31c5c15cbd611c9c16b041b04",
+      "inference/reference.py": "ceadcf49d11ff1d11bf601f18a46e123a8f975fcd6c98d0140a293f2dcf67b34",
+      "calibration/camera.py": "e9a72a7d537956fe6e2fc73150e168650e070a83af27856bcf5e5ecd06c047a6",
+      "calibration/results/camera.json": "9ad192f78238887e413df81262b2f276140de9d7c4c5558f1cf4783114cb2b29",
+      "measurement/planar.py": "44904a8493a72f7dc80856e670c90eaba3fa98752c956a8cc656678624440244",
+      "models/model.py": "19d2a6e3fc2c1b89b288aac57f68a8c147885a9285ac5fcaae2e242f2300738a",
+      "models/data.py": "7bbf736c6dd0fe12e6b9ecdc13f6ef62f26f095eebd06cc207197a679ed42842",
+      "models/train.py": "cca144b46b0492f7d19ac5aa063f7920fd3b718638b00a2bc50525aaf48a704f",
+      "models/runs/initial_15_epochs/configuration.json": "608889254f59b167ea258d83290e648d106cfb60b58fd495b2b98a7fd963040d",
+      "dataset/splits/SHA256SUMS.txt": "59cf57f0d000e3fcad64aaa19652bf583754152fe77c3a083e2a67cfaa64a003",
+      "dataset/splits/test.txt": "542bf7ec62522c86877d99707d6111e98dd516c4ff10f342d054ac77f34a8da1",
+      "dataset/splits/train.txt": "597b9aad54e23703147cd0d2050e4f5d96f14d6f1e52efedba5ce50150133212",
+      "dataset/splits/valid.txt": "f7a9562dc2624c8d7b01ed2ff9ace8f95903b52ebc3b0126b4820e78dd4f4573",
+      "measurement/evaluate_placements.py": "7504cee47773dadd80eae8a39092c4b3b122a005e98a5f719ce9b474af8fc467",
+      "tests/test_measurement_evaluation.py": "bfd7921f68bcbc93b97ffaaf3360883604f61a49b74a8da2e47c27c80367fe98"
+    }
+  },
+  "cases": [
+    {
+      "image_id": "case_01",
+      "filename": "calc.jpg.jpeg",
+      "input": "inputs/calc.jpg.jpeg",
+      "source_path": "dataset/10 test cases/calc.jpg.jpeg",
+      "sha256": "7d1487b6e43d2fedd5fe7782bfeee0fd4c307781adb4f30926b11cadd275b744",
+      "bytes": 5224405,
+      "stored_size": [
+        2296,
+        4080
+      ],
+      "exif": {
+        "Make": "Xiaomi",
+        "Model": "23021RAAEG",
+        "Orientation": "1",
+        "DateTime": "2026:11:05 15:56:20",
+        "DateTimeOriginal": "2026:11:05 15:56:20",
+        "ExposureTime": "0.05",
+        "FNumber": "1.8",
+        "ISOSpeedRatings": "389",
+        "FocalLength": "4.22"
+      },
+      "split_disjoint_verified": true,
+      "previously_used_for_development": true,
+      "prior_use": "Earlier inference demo and wood-grain paper-detector debugging before this batch; not a newly captured blind scene"
+    },
+    {
+      "image_id": "case_02",
+      "filename": "IMG_20261106_155037.jpg.jpeg",
+      "input": "inputs/IMG_20261106_155037.jpg.jpeg",
+      "source_path": "dataset/10 test cases/IMG_20261106_155037.jpg.jpeg",
+      "sha256": "634c15d304cd7d2cb83950eb6eadce73690670106059e51ca5684c37d9339edd",
+      "bytes": 2893832,
+      "stored_size": [
+        2296,
+        4080
+      ],
+      "exif": {
+        "Make": "Xiaomi",
+        "Model": "23021RAAEG",
+        "Orientation": "1",
+        "DateTime": "2026:11:06 15:50:38",
+        "DateTimeOriginal": "2026:11:06 15:50:38",
+        "ExposureTime": "0.05",
+        "FNumber": "1.8",
+        "ISOSpeedRatings": "281",
+        "FocalLength": "4.22"
+      },
+      "split_disjoint_verified": true,
+      "previously_used_for_development": false,
+      "prior_use": null
+    },
+    {
+      "image_id": "case_03",
+      "filename": "IMG_20261106_155047.jpg.jpeg",
+      "input": "inputs/IMG_20261106_155047.jpg.jpeg",
+      "source_path": "dataset/10 test cases/IMG_20261106_155047.jpg.jpeg",
+      "sha256": "aa18d8343f6c86ca48b00ff51f26d20614f045395ba27f498110c5d0c2d2215a",
+      "bytes": 4341457,
+      "stored_size": [
+        2296,
+        4080
+      ],
+      "exif": {
+        "Make": "Xiaomi",
+        "Model": "23021RAAEG",
+        "Orientation": "1",
+        "DateTime": "2026:11:06 15:50:48",
+        "DateTimeOriginal": "2026:11:06 15:50:48",
+        "ExposureTime": "0.05",
+        "FNumber": "1.8",
+        "ISOSpeedRatings": "281",
+        "FocalLength": "4.22"
+      },
+      "split_disjoint_verified": true,
+      "previously_used_for_development": false,
+      "prior_use": null
+    },
+    {
+      "image_id": "case_04",
+      "filename": "IMG_20261106_155109.jpg.jpeg",
+      "input": "inputs/IMG_20261106_155109.jpg.jpeg",
+      "source_path": "dataset/10 test cases/IMG_20261106_155109.jpg.jpeg",
+      "sha256": "4e3340a38afe680d78135a3ddb595802750d60ffee12adac55cac37971b6bc1b",
+      "bytes": 2568488,
+      "stored_size": [
+        2296,
+        4080
+      ],
+      "exif": {
+        "Make": "Xiaomi",
+        "Model": "23021RAAEG",
+        "Orientation": "1",
+        "DateTime": "2026:11:06 15:51:09",
+        "DateTimeOriginal": "2026:11:06 15:51:09",
+        "ExposureTime": "0.05",
+        "FNumber": "1.8",
+        "ISOSpeedRatings": "281",
+        "FocalLength": "4.22"
+      },
+      "split_disjoint_verified": true,
+      "previously_used_for_development": false,
+      "prior_use": null
+    },
+    {
+      "image_id": "case_05",
+      "filename": "IMG_20261106_155117.jpg.jpeg",
+      "input": "inputs/IMG_20261106_155117.jpg.jpeg",
+      "source_path": "dataset/10 test cases/IMG_20261106_155117.jpg.jpeg",
+      "sha256": "ea4083419c6dcda97e109e096450fa6977f29747e4688db106f1e04989550f82",
+      "bytes": 2580051,
+      "stored_size": [
+        2296,
+        4080
+      ],
+      "exif": {
+        "Make": "Xiaomi",
+        "Model": "23021RAAEG",
+        "Orientation": "1",
+        "DateTime": "2026:11:06 15:51:18",
+        "DateTimeOriginal": "2026:11:06 15:51:18",
+        "ExposureTime": "0.05",
+        "FNumber": "1.8",
+        "ISOSpeedRatings": "281",
+        "FocalLength": "4.22"
+      },
+      "split_disjoint_verified": true,
+      "previously_used_for_development": false,
+      "prior_use": null
+    },
+    {
+      "image_id": "case_06",
+      "filename": "IMG_20261106_155128.jpg.jpeg",
+      "input": "inputs/IMG_20261106_155128.jpg.jpeg",
+      "source_path": "dataset/10 test cases/IMG_20261106_155128.jpg.jpeg",
+      "sha256": "a7e75eb4ce0874398725d447012b46c1a2125067a75c9acb632b7e4201ecb6ed",
+      "bytes": 2753135,
+      "stored_size": [
+        2296,
+        4080
+      ],
+      "exif": {
+        "Make": "Xiaomi",
+        "Model": "23021RAAEG",
+        "Orientation": "1",
+        "DateTime": "2026:11:06 15:51:28",
+        "DateTimeOriginal": "2026:11:06 15:51:28",
+        "ExposureTime": "0.05",
+        "FNumber": "1.8",
+        "ISOSpeedRatings": "281",
+        "FocalLength": "4.22"
+      },
+      "split_disjoint_verified": true,
+      "previously_used_for_development": false,
+      "prior_use": null
+    },
+    {
+      "image_id": "case_07",
+      "filename": "IMG_20261106_155143.jpg.jpeg",
+      "input": "inputs/IMG_20261106_155143.jpg.jpeg",
+      "source_path": "dataset/10 test cases/IMG_20261106_155143.jpg.jpeg",
+      "sha256": "5b48fbc1d2e66de7aaf1417dddf6a29bdeaf35c8f317cfee914a10949febd0d0",
+      "bytes": 3429371,
+      "stored_size": [
+        2296,
+        4080
+      ],
+      "exif": {
+        "Make": "Xiaomi",
+        "Model": "23021RAAEG",
+        "Orientation": "1",
+        "DateTime": "2026:11:06 15:51:44",
+        "DateTimeOriginal": "2026:11:06 15:51:44",
+        "ExposureTime": "0.05",
+        "FNumber": "1.8",
+        "ISOSpeedRatings": "419",
+        "FocalLength": "4.22"
+      },
+      "split_disjoint_verified": true,
+      "previously_used_for_development": false,
+      "prior_use": null
+    },
+    {
+      "image_id": "case_08",
+      "filename": "IMG_20261106_155147.jpg.jpeg",
+      "input": "inputs/IMG_20261106_155147.jpg.jpeg",
+      "source_path": "dataset/10 test cases/IMG_20261106_155147.jpg.jpeg",
+      "sha256": "a85836db2febfa87b943ed2dea5913715a6113913dc84cd88a7a5c6f39882354",
+      "bytes": 2738447,
+      "stored_size": [
+        2296,
+        4080
+      ],
+      "exif": {
+        "Make": "Xiaomi",
+        "Model": "23021RAAEG",
+        "Orientation": "1",
+        "DateTime": "2026:11:06 15:51:47",
+        "DateTimeOriginal": "2026:11:06 15:51:47",
+        "ExposureTime": "0.05",
+        "FNumber": "1.8",
+        "ISOSpeedRatings": "400",
+        "FocalLength": "4.22"
+      },
+      "split_disjoint_verified": true,
+      "previously_used_for_development": false,
+      "prior_use": null
+    },
+    {
+      "image_id": "case_09",
+      "filename": "IMG_20261106_155827.jpg.jpeg",
+      "input": "inputs/IMG_20261106_155827.jpg.jpeg",
+      "source_path": "dataset/10 test cases/IMG_20261106_155827.jpg.jpeg",
+      "sha256": "04589b28e4c400efbc011e70310ab24d7106ac575da831cd5430a3b3b309212e",
+      "bytes": 5794473,
+      "stored_size": [
+        2296,
+        4080
+      ],
+      "exif": {
+        "Make": "Xiaomi",
+        "Model": "23021RAAEG",
+        "Orientation": "1",
+        "DateTime": "2026:11:06 15:58:27",
+        "DateTimeOriginal": "2026:11:06 15:58:27",
+        "ExposureTime": "0.041666666666666664",
+        "FNumber": "1.8",
+        "ISOSpeedRatings": "347",
+        "FocalLength": "4.22"
+      },
+      "split_disjoint_verified": true,
+      "previously_used_for_development": false,
+      "prior_use": null
+    },
+    {
+      "image_id": "case_10",
+      "filename": "IMG_20261106_155829.jpg.jpeg",
+      "input": "inputs/IMG_20261106_155829.jpg.jpeg",
+      "source_path": "dataset/10 test cases/IMG_20261106_155829.jpg.jpeg",
+      "sha256": "eff2383a826146a54603b84ccba672a18e76cbc0d1238366bc4ce6a6e5ee6996",
+      "bytes": 5984949,
+      "stored_size": [
+        2296,
+        4080
+      ],
+      "exif": {
+        "Make": "Xiaomi",
+        "Model": "23021RAAEG",
+        "Orientation": "1",
+        "DateTime": "2026:11:06 15:58:30",
+        "DateTimeOriginal": "2026:11:06 15:58:30",
+        "ExposureTime": "0.041666666666666664",
+        "FNumber": "1.8",
+        "ISOSpeedRatings": "369",
+        "FocalLength": "4.22"
+      },
+      "split_disjoint_verified": true,
+      "previously_used_for_development": false,
+      "prior_use": null
+    }
+  ],
+  "finalized_before_first_prediction_at_utc": "2026-11-06T11:09:53.604277+00:00"
+}

@@ -1,0 +1,2343 @@
+{
+  "info": {
+    "year": "2026",
+    "version": "1",
+    "description": "Exported from roboflow.com",
+    "contributor": "",
+    "url": "https://app.roboflow.com/datasets/calc-images/1",
+    "date_created": "2026-11-04T16:50:43+00:00"
+  },
+  "licenses": [
+    {
+      "id": 1,
+      "url": "",
+      "name": "Private"
+    }
+  ],
+  "categories": [
+    {
+      "id": 0,
+      "name": "Calc-images",
+      "supercategory": "none"
+    },
+    {
+      "id": 1,
+      "name": "Calculator",
+      "supercategory": "Calc-images"
+    }
+  ],
+  "images": [
+    {
+      "id": 0,
+      "license": 1,
+      "file_name": "IMG_20261104_200357_jpg.rf.f6157d63aca0b6a220a8fe408f76d159.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200357.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200357_jpg.rf.f6157d63aca0b6a220a8fe408f76d159.jpg",
+        "raw_file": "Raw/IMG_20261104_200357.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 1,
+      "license": 1,
+      "file_name": "IMG_20261104_200705_jpg.rf.0905293d44bea01334fbc51c907980fe.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200705.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200705_jpg.rf.0905293d44bea01334fbc51c907980fe.jpg",
+        "raw_file": "Raw/IMG_20261104_200705.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 2,
+      "license": 1,
+      "file_name": "IMG_20261104_200405_jpg.rf.d9f9b2aa733cb737b73a514ee8db8e63.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200405.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200405_jpg.rf.d9f9b2aa733cb737b73a514ee8db8e63.jpg",
+        "raw_file": "Raw/IMG_20261104_200405.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 3,
+      "license": 1,
+      "file_name": "IMG_20261104_200543_jpg.rf.d837216147b69a6947ebe0a2aa9f2282.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200543.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200543_jpg.rf.d837216147b69a6947ebe0a2aa9f2282.jpg",
+        "raw_file": "Raw/IMG_20261104_200543.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 4,
+      "license": 1,
+      "file_name": "IMG_20261104_200407_jpg.rf.1299c88eed60117da813fdeea2c3eb37.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200407.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200407_jpg.rf.1299c88eed60117da813fdeea2c3eb37.jpg",
+        "raw_file": "Raw/IMG_20261104_200407.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 5,
+      "license": 1,
+      "file_name": "IMG_20261104_200400_jpg.rf.caaf24b845dc37bbbe091d6e3e786995.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200400.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200400_jpg.rf.caaf24b845dc37bbbe091d6e3e786995.jpg",
+        "raw_file": "Raw/IMG_20261104_200400.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 6,
+      "license": 1,
+      "file_name": "IMG_20261104_200518_jpg.rf.d8e11eb72c81cebbb80d83d57aaa026f.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200518.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200518_jpg.rf.d8e11eb72c81cebbb80d83d57aaa026f.jpg",
+        "raw_file": "Raw/IMG_20261104_200518.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 7,
+      "license": 1,
+      "file_name": "IMG_20261104_200613_jpg.rf.5c16de42d3ad9990419094c8caeaa2a2.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200613.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200613_jpg.rf.5c16de42d3ad9990419094c8caeaa2a2.jpg",
+        "raw_file": "Raw/IMG_20261104_200613.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 8,
+      "license": 1,
+      "file_name": "IMG_20261104_200507_jpg.rf.db0d1ab34894eed607e8fb461c1caebb.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200507.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200507_jpg.rf.db0d1ab34894eed607e8fb461c1caebb.jpg",
+        "raw_file": "Raw/IMG_20261104_200507.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 9,
+      "license": 1,
+      "file_name": "IMG_20261104_200550_jpg.rf.1e13a67f818fd8727577c63f4c950530.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200550.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200550_jpg.rf.1e13a67f818fd8727577c63f4c950530.jpg",
+        "raw_file": "Raw/IMG_20261104_200550.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 10,
+      "license": 1,
+      "file_name": "IMG_20261104_200610_jpg.rf.0716e1ba0be0f038ca406e5315f2c742.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200610.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200610_jpg.rf.0716e1ba0be0f038ca406e5315f2c742.jpg",
+        "raw_file": "Raw/IMG_20261104_200610.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 11,
+      "license": 1,
+      "file_name": "IMG_20261104_200546_jpg.rf.f4be8ea95165e1ca6c14b2f1894de794.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200546.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200546_jpg.rf.f4be8ea95165e1ca6c14b2f1894de794.jpg",
+        "raw_file": "Raw/IMG_20261104_200546.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 12,
+      "license": 1,
+      "file_name": "IMG_20261104_200534_jpg.rf.ddc07a2eb2a5bd1f4c6895e94dd8befd.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200534.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200534_jpg.rf.ddc07a2eb2a5bd1f4c6895e94dd8befd.jpg",
+        "raw_file": "Raw/IMG_20261104_200534.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 13,
+      "license": 1,
+      "file_name": "IMG_20261104_200716_jpg.rf.5d36d87863e7eccca3b971e159e450fa.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200716.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200716_jpg.rf.5d36d87863e7eccca3b971e159e450fa.jpg",
+        "raw_file": "Raw/IMG_20261104_200716.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 14,
+      "license": 1,
+      "file_name": "IMG_20261104_200344_jpg.rf.79daa0912d25b137a8c302d18888c9e8.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200344.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200344_jpg.rf.79daa0912d25b137a8c302d18888c9e8.jpg",
+        "raw_file": "Raw/IMG_20261104_200344.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 15,
+      "license": 1,
+      "file_name": "IMG_20261104_200339_jpg.rf.e08f03e8dfc88b2ac3b889cfcb29bcaa.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200339.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200339_jpg.rf.e08f03e8dfc88b2ac3b889cfcb29bcaa.jpg",
+        "raw_file": "Raw/IMG_20261104_200339.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 16,
+      "license": 1,
+      "file_name": "IMG_20261104_200600_jpg.rf.36b620262baf5a348b8bb6289c8d1cfa.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200600.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200600_jpg.rf.36b620262baf5a348b8bb6289c8d1cfa.jpg",
+        "raw_file": "Raw/IMG_20261104_200600.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 17,
+      "license": 1,
+      "file_name": "IMG_20261104_200515_jpg.rf.7bcf73d795d1e05bffccd971261da826.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200515.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200515_jpg.rf.7bcf73d795d1e05bffccd971261da826.jpg",
+        "raw_file": "Raw/IMG_20261104_200515.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 18,
+      "license": 1,
+      "file_name": "IMG_20261104_200540_jpg.rf.9339ecf82d9c9ec4eec6e9433111742d.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200540.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200540_jpg.rf.9339ecf82d9c9ec4eec6e9433111742d.jpg",
+        "raw_file": "Raw/IMG_20261104_200540.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 19,
+      "license": 1,
+      "file_name": "IMG_20261104_200713_jpg.rf.28cdeee1f3bd33ac1b5a182117d527ab.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200713.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200713_jpg.rf.28cdeee1f3bd33ac1b5a182117d527ab.jpg",
+        "raw_file": "Raw/IMG_20261104_200713.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 20,
+      "license": 1,
+      "file_name": "IMG_20261104_200731_jpg.rf.beaf7562d0459bff200212efe736b8b9.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200731.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200731_jpg.rf.beaf7562d0459bff200212efe736b8b9.jpg",
+        "raw_file": "Raw/IMG_20261104_200731.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 21,
+      "license": 1,
+      "file_name": "IMG_20261104_200709_jpg.rf.62184167bdd88b4280f93b7e25545d7b.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200709.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200709_jpg.rf.62184167bdd88b4280f93b7e25545d7b.jpg",
+        "raw_file": "Raw/IMG_20261104_200709.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 22,
+      "license": 1,
+      "file_name": "IMG_20261104_200448_jpg.rf.9c113a2cb0f6f1ce4ee59d436a70ea7a.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200448.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200448_jpg.rf.9c113a2cb0f6f1ce4ee59d436a70ea7a.jpg",
+        "raw_file": "Raw/IMG_20261104_200448.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 23,
+      "license": 1,
+      "file_name": "IMG_20261104_200707_jpg.rf.44407f50aeb54ffc7899d838eae10bf9.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200707.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200707_jpg.rf.44407f50aeb54ffc7899d838eae10bf9.jpg",
+        "raw_file": "Raw/IMG_20261104_200707.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 24,
+      "license": 1,
+      "file_name": "IMG_20261104_200349_jpg.rf.7741dc828422fbce787ffdd6a0bda02f.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200349.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200349_jpg.rf.7741dc828422fbce787ffdd6a0bda02f.jpg",
+        "raw_file": "Raw/IMG_20261104_200349.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 25,
+      "license": 1,
+      "file_name": "IMG_20261104_200428_jpg.rf.dc3946709fc2ea4b137759129b5de150.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200428.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200428_jpg.rf.dc3946709fc2ea4b137759129b5de150.jpg",
+        "raw_file": "Raw/IMG_20261104_200428.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 26,
+      "license": 1,
+      "file_name": "IMG_20261104_200419_jpg.rf.39a4c2fcac8a6362947cb96271f7f576.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200419.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200419_jpg.rf.39a4c2fcac8a6362947cb96271f7f576.jpg",
+        "raw_file": "Raw/IMG_20261104_200419.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 27,
+      "license": 1,
+      "file_name": "IMG_20261104_200724_jpg.rf.39cfd37a216aff78be2e07a4e4492262.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200724.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200724_jpg.rf.39cfd37a216aff78be2e07a4e4492262.jpg",
+        "raw_file": "Raw/IMG_20261104_200724.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 28,
+      "license": 1,
+      "file_name": "IMG_20261104_200538_jpg.rf.f4a363b319adc6cb0b03e5fbfa6adef1.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200538.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200538_jpg.rf.f4a363b319adc6cb0b03e5fbfa6adef1.jpg",
+        "raw_file": "Raw/IMG_20261104_200538.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 29,
+      "license": 1,
+      "file_name": "IMG_20261104_200718_jpg.rf.62324f743de1a377dd6a4ea2b716b3ae.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200718.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200718_jpg.rf.62324f743de1a377dd6a4ea2b716b3ae.jpg",
+        "raw_file": "Raw/IMG_20261104_200718.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 30,
+      "license": 1,
+      "file_name": "IMG_20261104_200355_jpg.rf.5f5328192b8713c46ee338766178ac46.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200355.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200355_jpg.rf.5f5328192b8713c46ee338766178ac46.jpg",
+        "raw_file": "Raw/IMG_20261104_200355.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 31,
+      "license": 1,
+      "file_name": "IMG_20261104_200451_jpg.rf.2402bc5e49005523ae908cc189afddad.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200451.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200451_jpg.rf.2402bc5e49005523ae908cc189afddad.jpg",
+        "raw_file": "Raw/IMG_20261104_200451.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 32,
+      "license": 1,
+      "file_name": "IMG_20261104_200728_jpg.rf.a9054b890004f002a2de7b73ac8185a5.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200728.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200728_jpg.rf.a9054b890004f002a2de7b73ac8185a5.jpg",
+        "raw_file": "Raw/IMG_20261104_200728.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 33,
+      "license": 1,
+      "file_name": "IMG_20261104_200432_jpg.rf.80219efc46afa16063c16c65ed30bc9b.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200432.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200432_jpg.rf.80219efc46afa16063c16c65ed30bc9b.jpg",
+        "raw_file": "Raw/IMG_20261104_200432.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 34,
+      "license": 1,
+      "file_name": "IMG_20261104_200616_jpg.rf.b3ba01ec8211c38b493b9c0fb3cf6818.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200616.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200616_jpg.rf.b3ba01ec8211c38b493b9c0fb3cf6818.jpg",
+        "raw_file": "Raw/IMG_20261104_200616.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 35,
+      "license": 1,
+      "file_name": "IMG_20261104_200511_jpg.rf.e70bee264a655ef79f53210b3d8eb086.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200511.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200511_jpg.rf.e70bee264a655ef79f53210b3d8eb086.jpg",
+        "raw_file": "Raw/IMG_20261104_200511.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 36,
+      "license": 1,
+      "file_name": "IMG_20261104_200457_jpg.rf.0557d6975abb91f852c4e81dbec86e85.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200457.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200457_jpg.rf.0557d6975abb91f852c4e81dbec86e85.jpg",
+        "raw_file": "Raw/IMG_20261104_200457.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 37,
+      "license": 1,
+      "file_name": "IMG_20261104_200558_jpg.rf.6ac9da8449e4424a96cf14bbb418936a.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200558.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200558_jpg.rf.6ac9da8449e4424a96cf14bbb418936a.jpg",
+        "raw_file": "Raw/IMG_20261104_200558.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 38,
+      "license": 1,
+      "file_name": "IMG_20261104_200434_jpg.rf.842de606c6e486d3472c22197a5226c3.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200434.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200434_jpg.rf.842de606c6e486d3472c22197a5226c3.jpg",
+        "raw_file": "Raw/IMG_20261104_200434.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 39,
+      "license": 1,
+      "file_name": "IMG_20261104_200702_jpg.rf.e59c302cade3eb46ca6ce3a0809f6e9f.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200702.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200702_jpg.rf.e59c302cade3eb46ca6ce3a0809f6e9f.jpg",
+        "raw_file": "Raw/IMG_20261104_200702.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 40,
+      "license": 1,
+      "file_name": "IMG_20261104_200409_jpg.rf.a8be96483ba054dd37743b2456f47db9.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200409.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200409_jpg.rf.a8be96483ba054dd37743b2456f47db9.jpg",
+        "raw_file": "Raw/IMG_20261104_200409.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 41,
+      "license": 1,
+      "file_name": "IMG_20261104_200425_jpg.rf.dcb79d092c73aec0132f3bfd0013f012.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200425.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200425_jpg.rf.dcb79d092c73aec0132f3bfd0013f012.jpg",
+        "raw_file": "Raw/IMG_20261104_200425.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 42,
+      "license": 1,
+      "file_name": "IMG_20261104_200734_jpg.rf.862222fb54b49c0ca78eac08f31861f0.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200734.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200734_jpg.rf.862222fb54b49c0ca78eac08f31861f0.jpg",
+        "raw_file": "Raw/IMG_20261104_200734.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 43,
+      "license": 1,
+      "file_name": "IMG_20261104_200604_jpg.rf.e47a4ff7bb828e3c29b23aac23bc8822.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200604.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200604_jpg.rf.e47a4ff7bb828e3c29b23aac23bc8822.jpg",
+        "raw_file": "Raw/IMG_20261104_200604.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 44,
+      "license": 1,
+      "file_name": "IMG_20261104_200521_jpg.rf.5f7ebf3c987a28e7c09ea6fc0bb4f02c.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200521.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200521_jpg.rf.5f7ebf3c987a28e7c09ea6fc0bb4f02c.jpg",
+        "raw_file": "Raw/IMG_20261104_200521.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 45,
+      "license": 1,
+      "file_name": "IMG_20261104_200552_jpg.rf.ede6a3e0696983772ebd164eb95db2af.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200552.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200552_jpg.rf.ede6a3e0696983772ebd164eb95db2af.jpg",
+        "raw_file": "Raw/IMG_20261104_200552.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 46,
+      "license": 1,
+      "file_name": "IMG_20261104_200417_jpg.rf.26b885a28685c742417e744337ae9e67.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200417.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200417_jpg.rf.26b885a28685c742417e744337ae9e67.jpg",
+        "raw_file": "Raw/IMG_20261104_200417.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 47,
+      "license": 1,
+      "file_name": "IMG_20261104_200721_jpg.rf.cc167a5b5101a8ef36d448e8d7a6e487.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200721.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200721_jpg.rf.cc167a5b5101a8ef36d448e8d7a6e487.jpg",
+        "raw_file": "Raw/IMG_20261104_200721.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 48,
+      "license": 1,
+      "file_name": "IMG_20261104_200414_jpg.rf.ede138681a81e20e6f6f57f978e6ac1d.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200414.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200414_jpg.rf.ede138681a81e20e6f6f57f978e6ac1d.jpg",
+        "raw_file": "Raw/IMG_20261104_200414.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    },
+    {
+      "id": 49,
+      "license": 1,
+      "file_name": "IMG_20261104_200403_jpg.rf.9fc36314599a2e91555375739d5dc5ba.jpg",
+      "height": 4080,
+      "width": 2296,
+      "date_captured": "2026-11-04T16:50:43+00:00",
+      "extra": {
+        "name": "IMG_20261104_200403.jpg"
+      },
+      "measure_it_source": {
+        "export_file": "train/IMG_20261104_200403_jpg.rf.9fc36314599a2e91555375739d5dc5ba.jpg",
+        "raw_file": "Raw/IMG_20261104_200403.jpg",
+        "coordinate_system": "stored_pixels_full_frame"
+      }
+    }
+  ],
+  "annotations": [
+    {
+      "id": 1,
+      "image_id": 0,
+      "category_id": 1,
+      "bbox": [
+        667.0,
+        972.0,
+        1023.0,
+        1958.0
+      ],
+      "iscrowd": 0,
+      "area": 1736082,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "SWTc2_3Ql30000000VLjLSXLg0m1_2Pf3jLSXLf6dg3ZI\\XLf6dg3ZI\\XLf6dg3ZI\\XLf6Sd3T40:F000`LeDkbL[;U]3`30c0]O00000[Me20009G000iL_^O^fLbc0bY3^\\O^fLbc0bY3^\\O^fLbc0bY3^\\O^fLbc0bY3^\\O^fLbc0ZV3T\\OPjLTg0PV3lXOPjLTg0PV3lXOPjL]g0gU3cXOYjL]g0gU3cXOYjL]g0gU3cXOYjL]g0bT3[200000000[Me20001O000lKT40008H000aN_10000000000WNi100000000WLi30009G000TOl0O100000000D<UMk200000000lIT600000000aN_10000000000^Mb2\\Od0000000O1UOk000000000]Oc000000000M3J6000000]Oc000000000^Ob000000000000000000000F:00000000G900000000000000000000G:O0000000O:G0000000H8000000000000000000000000000000000000000000F:000000000000000000000000000000000000000000000000000000000000000000000000000000000001O00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F000000000008H0000000000000000000000000000000000000000H800000000000000000000000000000000000000000000000000009G000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008H000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F0000000000000000000000000000000000000000000000000000000000000009G00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G00000000000000000000000000000000000000000000000000000000000000000001O00000000000000000000000000000000000G9000000009G00000009G00000000000000000000000000000000000000000000000000000000001O00000000000000000000000000000000000000000000000000000000000000000000000000000000000O10000000000000000000000000000000000H8000000000000000000000000000000F:000000000000000000G900000000000000000000F:00000000G90000000000G9000000000000000000F:0000000000^Ob000000000TOl0000009G0aL_3000000OH90XNh100000000UOk0000009F1hNX1VOj000000000fMZ20000000000aN_100000000oMQ200000000mMS20000000000XNh100000000XNh100000000oNQ1oNQ100000000D<cNf1G00000eM[200000000nMR20000000000XNh100000000WNi10:F00000eM[20000000000XNh1000000WN]eLe^OcZ3[a0i109G000XNh10000000000XNh100000000XNh1000:F0nMR2000009G0\\Md200000009YNfWLfKZh3Z4^100000c0SMZ20000000`^][2"
+      }
+    },
+    {
+      "id": 2,
+      "image_id": 1,
+      "category_id": 1,
+      "bbox": [
+        216.0,
+        1150.0,
+        1202.0,
+        2499.0
+      ],
+      "iscrowd": 0,
+      "area": 2884525,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "Pooj0;Uo3U1hIROd[Ln1\\c3RN]XL[1P2^1hd3WMXYLm2>LZf3WMXYLP7o^3[KceLeM^KP7o^3mNQbLSJPOP7o^3l8I1\\Fo@llLV2Mk<WS3o@llLld0TS3T[OllLld0TS3T[OllLld0hn2`_OXQMf`0bn2`8D00000\\HhTOP[MXk0Pe2l7H00000^Jb50:F00000bI^60008H00000mFg]NdmM1FTh1fR2kWNdmM1F]h1]R2bWNmmM1F]h1]R2bWNmmM1F]h1]R2bWNmmM1F]h1ok1bWNnTNho1Rk1XPNnTNho1Rk1XPNnTNio1Qk1WPNoTNio1Qk1WPNoTNio1Qj1[3QLo308H00000TOl00000000000TOl000000000Gc0F0000000F:00000000000000000000G900000000Gb0G0000000000000000000F:00000000000000000000G90000000001O00000000000000000F:00000000000000000000000000000000000007I3M0000000000000000000G9000000000000000000000000000001O00000000000000000000000000000000000000000000000000000000000000001O000000000000000000000000G900000000000000000000000000000000000000000000000000000000000000001O00000000000000000000000000000000009G000000000000000000000000001O0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O00000000000000000000000000000000000000000000000000000000000000000000000000000000000000G9000000000000000000000000000009G0000000:F0000000000000000000000000000000000000000000000000000000000000000000000000O100000000H8000000008H00000000000001O00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:00000000:F0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007I2N00000000000000000000000000000000000000000000000000G90000000000000000009G0000000000G90000000000000000009G00000000G900000000000000000000000000009G0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000H800000000000000000000000000000000000000000000000000F:00000000000009G0000000000000000000000000H8000000O1G900000000000000000000000:F00000G900000000000009G000000000000000G90000000000G900000000F:09G00000H80:F00000^Ob008H0000000oIW]NdmM`d1im1hYNXTNh1oMjd1_m1^YNbTNh1oMjd1_m1^YNbTNh1oMjd1_m1^YNbTNh1oMjd1_m1^YN[SNSl1fe1d:YGcgMWbNS6c0ZR2V]1cgMWbNS6c0ZR2V]1cgMWbNS6c0ZR2V]1cgMWbNS6c0ZR2V]1cgMWbNS6MZS2g[1c9XJ[_MTjNVc2Xn0R[MmWOh1kIVc2Xn0R[MmWOh1kIVc2Xn0R[MmWOh1kIVc2Xn0R[MmWOh1kIic2em0_ZM`XOh1kIic2[9bYMkGc0`1e0W:QP3^LgnLkGc0`1]_3e6P`LkGc0`1]_3e6P`LkGc0`1Sd3o1Z[LaLc0`1f`\\]3"
+      }
+    },
+    {
+      "id": 3,
+      "image_id": 2,
+      "category_id": 1,
+      "bbox": [
+        1401.0,
+        1243.0,
+        883.0,
+        1803.0
+      ],
+      "iscrowd": 0,
+      "area": 1458980,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "gj`^5^1Rn30000000RMX5fM000000000\\NW2oL^2000000m[LlDjc3];iLW3000009G0WNi10000000000XNh100000:F0RMn2nM]ZOWjLce0iU3]ZOWjLce0iU3]ZOWjLce0iU3]ZOWjLce0iU3R2]Oc0000009G0M3QNo100000000bK^40009G0eMUROQSMkm0ol2[200000000nMR200000000ZKf400000000`N`1000009nKbfN`aM^Y1`^2i300000000XNh100000000oMQ200000000WNi10000000000^Ob0000000]Oc000000009G00000000000G90000000G9000000000G9000000000000000000000000000000F:000000000000000000000000000009G00000000000H800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:00000000:F0000000:F00O1000000G900000000000000000000000000000000000000009G000000000000000000000000000000000000000000000000000000000000000000000009G0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O000009G0000000000000000000000000000000000000000O1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F00000000F:00000000000000000000:F0:F00000F:0000000000000000000000000000000000000000000000000000:F0000000000000000000000000000000000000000000000000000000000000000000000O100000000000000000000000000000000000000009G0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O1000000000000000000000000000009G000000000000000000G90000000000000000000000000000009G0000000000000000000000000:F00000000000G9000000000000000000009G000000000000000000000000000000000000000O10000000000000000000000000000000000000000000000009G00000000G90000000000000000000000000000000009G00000000000000000000000000000000000F:000:F00000000000000000000000M3J600000000000009G000\\Od0jLV3fKo6[Ga?R]OX^^1"
+      }
+    },
+    {
+      "id": 4,
+      "image_id": 3,
+      "category_id": 1,
+      "bbox": [
+        1000.0,
+        1692.0,
+        1174.0,
+        2196.0
+      ],
+      "iscrowd": 0,
+      "area": 2170094,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "]ocl3S1]n3j0VO0000000eL[30a0_O00000gM\\2M6J00000gMb2G0000000PNY2G000000000jNV100000000PNX2H0000000SOU1H000000000TMl2000000kNU100000000bN^109G0000000XNh100000000YNg108H00000nMR20000000000bN^100000000oMQ200000000aNh1G000000000bN^100000000`N`100000000bN^100000000oMQ20000000000nMR200000008YN_100000000bN^10000000000`N`100000000kNU100000000QMo20000000000aN`\\N[fMSd1eY2m[N[fMSd1eY2m[N[fMSd1eY2m[N[fMSd1eY2m[N[fMSd1lW2e200000000aN_10000000000jNV100000000jNV100000000XNh10000000000]Oc000000000WNi100000000TOl000000009G0TOl000000000]Oc000000000F:00000000G90000000000F:00000000G900000000F:00000000000000000000H80000000000000L4K50000000000000G90000000000000000000000000000000008H00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008H000000000000000000000000000000000000000000000000O1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G00000000000000000000000000000000000000000O100000000000000000000000000000000000000000000009G00000000000000000000000000O100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O1000000000000000000000000000000000000000000000000000000000000007I00000000I7000000O\\TN]lM]k1kS29G0000000000000000000000000000000000000000000000000O10000000000000000I7O100000000000000000000000000008H0000000000000000O100000000000000000000000000000000000000000000000:F000000000O1000000000000000000000000000000008HO10000000000000000000000000000000000000000000000000000O100000000000000000000000000000001O000000000000000O10008H000000000000001O0000000000000000000000000O1000000000000000000000000000000000000000000O10000000000008H0000000000000:F00000000F:000000000000000O1000000000000000000000000000000000000O10000000:F000000000000000000000000000O100000000000000000000007I000000000000000000000000O1000000000000000000000000000000O100000000000000000000000000000000O:G00000000000000000000000000000O10000000000000000000000000000O10000000000000000000000000000O100N2K5000000000000O10000000000000000000000000000O100000000000000H800000000O100000000I7000000O10:F000000000I70000O1000000000000O1I7000000O1I700000000I7N200000000M3C=00000000K5E;00000000I7B>A?L400O10000O1@`0@`0_Oa0I700000000@`0\\Od0\\Od0\\Od000O10000I7XOh0VOj0D<00000000YOg0POP1oNQ10000000000E;fNZ1F:00000000aN_1_Oa000000000[Ne1nMc`M]cNQ`2c\\1o_M]cNQ`2c\\1o_M]cNQ`2c\\1o_M]cNQ`2c\\1o_M]cNQ`2c\\1o_M]cNQ`2k[1V2QOo000000009fMQ2gMVZMljNje2TU1VZMljNje2TU1VZMljNje2TU1VZMljNje2TU1VZMjiNlf2cU1j10000000000XNh100000000lMT2nNR100000000TOl00:F0000000dKWQMYVOaP3gi0_oLYVOaP3gi0_oLYVOaP3gi0_oLYVOaP3gi0_oLYVOaP3Vh0U4@`0000000L4mLS30000000000\\Mm2G0000000\\Md200000000\\Mm2G000000000nMR20000000:\\MZ200000009oMh10000000:mMi10000000009YN^10000000U1_L\\20000000aXT?"
+      }
+    },
+    {
+      "id": 5,
+      "image_id": 4,
+      "category_id": 1,
+      "bbox": [
+        1351.0,
+        1955.0,
+        882.0,
+        1775.0
+      ],
+      "iscrowd": 0,
+      "area": 1453497,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "dYZX5Q4`g3YLiZLS5We3mJiZLS5We3mJiZLS5We3mJiZLS5We3mJiZLS5We3mJiZLe5Wc3Q4000000mZLTFbd3]:SKm400000:F0eM[2PNP2000008H000RKn40009G000oMQ20009G000nLR3_K\\QOgUMSQ1Yj2mnNgUMSQ1Yj2mnNgUMSQ1Yj2mnNgUMSQ1Yj2mnNgUMSQ1og2\\400O1000000WJfjN\\\\M31ZY1IYfN_c2<g\\M11cY1Xc2\\fNg\\M11cY1Xc2\\fNg\\M11cY1Xc2\\fNg\\M11cY1Pc2P2PMP300000000YKg40000000008lNl000000000]Oc000000000F:00000000000000000000G9000000000000000000000000000000F:000000000000000009G0000000000000000000G900000000000000000000000000000000000000000000000000000O10000000000000000000000000000000000000000000000000000000000000000000000000000000009G000000000000000000000000000000G9000000000000000O1000000000000000000000000000000000000000000000000000000000000000000000000000009G00000000G90000000000000000009F10000000000000000000000000000000000000000000]gM[YN[X2mf10000000000000000000000000000000000000000000000000G900000000009G0000O1000000000000000000000000000000000000000000000000000000000000000000000000000000O1000000000000000000000000000000000000000000000000000000000000000000000000O10000000000000000000000000000000000000000008H00000000000000000000H8O1000000000000000000000000000000000000H8000000008H000000000000O;F00000000000000000000000000000000000000000000000000000O100000000000000000000000000000000000000000VgMbYNbX2ff100000000000O10000000000000000000000000000000000000000000000O10000000000000000000000000000000000000000000000O1000000000000000000000000000000000000000000O10000000WgMbYN`X2gf1000000000000000000000O100000000000000000000000000000000000000O1000000000000000000000000000000000000O10000000000000000000000000000000000O10000000000000000000000000000000000O10000000000000000G900000000000000000PgMhYNhX2`f1000000000G90000000UgMdYNbX2ef10000000O100000000000000000000000000007I00000000000000000000O100000000000000000000000000H8000009G0O10000000000000000000000000000O100000000000000000:F0000000O1000000000009G00000000000O1000:F0000000J6M30000000009G00000000:F0O10000I709F10000000h1XN00000000m2SM00000H80]4cK00000O1JS3QM2000000miNTZMaR1^i200000O10Ig3WL90000PVOVQMZc0jn2oVOmVMPi0jo2H8C=aZOgiLYa0_X3Q\\O_hLac0oW3_\\OQhLYc0WX3f\\OjgLdb0fN\\]O`Y30jgLTb0\\Nm]O=O]Y30jgLh1c0m;mM\\B9O]Y30UlLg<ZJbCKH9Oh_3c<X`LfCGH9Ni_3d<W`LfCGH`b3X9i]LbG0^OGDdb3a8U]LTH`090[Okb3e2X]LT15bLI9jc3c0f]Lh1A\\MoN6dg3a1ZZLYNRNDVh3S1hZLYOWf3CmZL2Q_k7"
+      }
+    },
+    {
+      "id": 6,
+      "image_id": 5,
+      "category_id": 1,
+      "bbox": [
+        825.0,
+        126.0,
+        962.0,
+        1773.0
+      ],
+      "iscrowd": 0,
+      "area": 1584785,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "gehV3k5ei3000000:_LZKUZLSO1V6je3gJUZLSO1V6je3gJUZLSO1V6je3gJUZLSO1V6je3gJUZLSO1_6Zb3k5000000000c0dLi2oNQ100000000jLV300000:F0\\Md200000009G0dKdXOklLUk0US3kTOklLUk0US3kTOklLUk0US3kTOklLUk0US3kTOklLUk0TQ3TUOmnLcl0SQ3]SOmnLcl0SQ3]SOmnLcl0SQ3]SOmnLml0iP3SSOWoLml0cm2jROXSMjo0hl2VPOXSMjo0hl2VPOXSMjo0hl2VPOXSMjo0hl2VPOXSMjo0hl2VPOXSMjo0Yi2n400000000fKXkN^ZMOHdW1je2]hN^ZMOHdW1je2]hN^ZMOHdW1je2]hN^ZMOHdW1je2]hN^ZMOHdW1Wd2R3fMZeNd^Ml[1\\a2TdNd^Ml[1\\a2TdNd^Ml[1\\a2TdNd^MU\\1Sa2kcNm^MU\\1Sa2kcNm^MU\\1Y`2n100000000^Ob000000000\\Nd1dM\\20000000000C=TOl000000000@`000000000H800000000H8000000000009G000O1000000000000I70000000000000000000000000000G9000G90000000000000000000000000000000000000000000000000000000J6N2000000000000000000000009G0000000000000I70000000000000000000000000000000000000000000000O1008H0000000000000000000000000000000000000000000000000000000000007I000000000000000000000000000000I70000000000000000000000000000000000000000000000000000000000000000000000H8000000000000000000H8000000008H000000000000000000008H0:F00000000F:0000000000000007I0000000000000:F000000000000000I70000000000000000000000000000000000000000000000000000000F:000000000000000000000000000000:F00000000F:000000000000000000000000000000000000000000000000000007I001O00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F00000000000000000000000000000000000001O0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O000000000000000000000000000000000000000000008H000000001O000000000000000000G9001O00000000000000000000000000000000000000000000000009G000000000000000001O0G90002N6J0000000000000000000000000000000009G01O0000000000GmYNUgMSf1kX291O000000000000008H00000000H800000000000000000G9000000000001O00000009OH00000000000000000000000000000G901O000009G000000G9000000000000000000009G00000000000001O0000000000000000000000000000000000000000000000001O0000000000000000000H8000000009G00000000000001O0000000000000000000000000G90008H000000000000000000000000000000000000001O00000F:0008H000000000000000000008H0000000000000G901O8H000000000000000G901O7I00000000`0@000F:0005Kd0\\Of0ZOb0^O0h_NfaMZ_1Z^2f`NabM_^1_]2aaNScMHYNi]1d^2_bNScMHoNS]1n]2UcNScMInNi\\1c^2ScN_bM4nNi\\1c`2WcN]_Mi\\1c`2WcN]_Mi\\1ea2liNl]Mln0gb2aPOY]MUo0Xd2doNh[M\\P1fe2VnNZZMjQ1]g2_lNcXMaS1fi20b2kLc0jnNkVMQl0Ui2oSORZMjh0ne2VWORZM\\4jJRKYNm`0kl2e_ORZM\\4jJRKYN_3g1[7mk2oDYYMU5jJRKYN_3g1_6\\T3PKdkLRKYN_3g1_6YX3SGggLoNYN_3g1_6X_3TGh`Ll8Wf3gLn`Zo1"
+      }
+    },
+    {
+      "id": 7,
+      "image_id": 6,
+      "category_id": 1,
+      "bbox": [
+        490.0,
+        584.0,
+        1339.0,
+        2132.0
+      ],
+      "iscrowd": 0,
+      "area": 1850896,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "_TQm1U1[n30000000^O^1TO0000000ZSLiMik3T30000000008_O90000000m0SO00000000b0UO9000000000b0TO:0000000c0]O00000000c0TO9000000000b0^O00000000c0]O0000000^ZLnFfd3n90000000c0]O0000000000b0UO90000000c0]O00000O10c0]O0000000000c0]O00000000b0^O00000000b0^O0000000000c0]O00000000c0UO8000000PaLR@^^3``0000000000c0]O00000000c0\\O10000000c0]O0000000000b0^O0G900000c0]O00000000b0^O00000000m0SO0000000000b0^O00000000c0]O000000b0^O0000000000c0]O00000000c0]O00000000b0]O1H80000000c0]O00000000l0TO00000000c0]O0000000000c0]O00000000c0]O00000000b0^O000000009G00000000c0]O000F:000m0SO0000000000b0^O00000000c0]O00000000c0]O00000000:F0000000000l0TO00000000k0UO00000000:F0000000000l0TO0G900000c0]O00000000c0]O0000000000c0]O00000000l0TO00000000c0]O00000000c0]O00000000c0]O00000000c0]O0000000000c0]O00000000l0TO000G9000c0]O00000000009G00000000c0]O00000000c0]O00000000l0TO0000000000c0]O00000000c0]O00000000c0]O00000000009G0F:00000m0SO000000009G0000000000m0SO000000009G00000000c0]O0000000000b0^O00000000l0TO00000000:F0000000000l0TO000000009G0G900000c0]O00000000:F0000000000<Di0WO00000000c0]O00000000b0^O1O00000000b0^O0000000Fm0]O000000009G0000000000c0]O00000000m0SO00000000b0^O0000001O00a0_O00000000c0]O0000000Hb0F000000000000000000009G00000000:F00000000009G000000000000000000:F00000000000000000F:0000000008H0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G90000000000000000000000000000000000000000000000000000000000000H80000000F:000000000000000000000000000000000F:0000000000000000000000000000000000000H800000000000G90000000000000000000000000000000000000000000000000000F:0000000000000G9000000000000000000000000000000000000000000000G900000000000000000000000000000000000000000000000F:000000000000000000000000000000000F:00000000000000000000000000000000000000000000000000000000000001F9000000000000000G900000000000000000000000000000000000F:000000000000000000000000000000G900000000000000000000000000000000000000000009G00000G900000000000000000000000:F0000000000000000000000000000008H00000F:00000000000009G00000000:F000000009G00000000009G000000009G000G9000:F0000000000c0]O00000000k0UO00000000k0UO0000000000m0SO00000000T1lN00000000:F000F:00000c0]O00000000k0UO00000000l0TO00000000b0^O0000000000m0SO000G9000b0^O00000000b0^O00001O0000l0TO00000000c0]O00000000k0UO0000000000c0]O00000000l0TO000F:000b0^O0000001O00k0UO00000000m0SO00000000?A<D000000003Mi0WO0G900000c0]O00000000c0]O0000000000k0UO00000000m0lN7M300000l0TO00000000b0^O0000000000V1jN00000000c0]O00000000c0TO9000000000a0_O00000000m0SO00000000l0TO0000000000c0]O00000000c0]O00000000b0^O0000000000V1aN90000000b0^O00000000m0SO0000000000c0]O00000000c0]O00000000k0kN:0000000c0]O0000000000g0YO5K000000?A=C0000007I<D00000000`0@=C000000=C6J00000GR1WO3M00000000k0UO00000000m0SO000000009G0000000000c0]O0000000FV1TO00000000c0]O0000000000l0TO00000000m0SO00000000c0]O000000000Gl0]O00000000k0UO00000000l0TO0000000Fm0]O0000000000l0TO000000c0]O0000000Gl0]O000000000FW1SO00000000a0_O0000000GV1SO000000000Gl0]O0000000FV1TO000000c0jNc0000000000c[Rj1"
+      }
+    },
+    {
+      "id": 8,
+      "image_id": 7,
+      "category_id": 1,
+      "bbox": [
+        486.0,
+        2087.0,
+        885.0,
+        1835.0
+      ],
+      "iscrowd": 0,
+      "area": 1564271,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "_Pdl1>Ro3m0oJMkXLm0\\f3<ZXL;of3j0lWLLd`3ZMX_LFj4h7Y[3bHm_Lb2n1Z5g]3TH[`Ld4LX3i_3TH[`La=VZ3\\DWhLSNcMa=VZ3d60:F6bHd\\O\\RM\\c0dm2X700000000WLi3000004]G[QOoYMX2a1il0Td2oPO[ZMUU1ee2kjN[ZMUU1ee2kjN[ZMUU1cc2PjNo\\Mk0^OUU1cc2e4H0000000hJX5000000[Mn^NlfMRa1TY2f2O00000WNi10007I00000UOk001O00000F:0008H000G900000000G90001O000000000000000F:07I0000001O0000000000000000000G900000000000000000001O0000000000000000000000000000000F:000000000001O0000000000000000000000000:F000000000000000000F;O000000000000000000000000000000000000000000000000001O00000000000000000000000000000000000000000000000000001O00000000000000000000000000000000000000000000000000000000001O00000000000000000000000000000000000000000000000000000000000000001O0000000000000000000000000000000000000000000000000000000000000000000000001O000000000000000000000000000000000000000000000000000:F0000000000000000000000000001O0F:00000000000000000000:F000000000000000000000000000000000000000000000000000000000000000000000001O00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000I70000000000000000005K3M00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O00000000000000000000000000000000000000000000H800000000000000000000000000000000000000008H000000000000000000000000000000000000000000000000000000000000000000000000000000H800000000000000000000000000000000000000000000000000008H000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000H800000000000000000000000000000000000000008H0000000000000000000000000000000000000000000000O10000000009G00000000G9000000000000000000009G00000000G2700000000000000000000000000O1000000000000000000000009G0000000K5M30000000000000000000000000000H80000000000000000000:]O9000000000000000000H80000000009G000000000Ha0G0000000G900000000O;WO?00000000bMQ3hKe3jIf_MogNMOid2en0`[MoSO:eM^3HoKOid2Sb0c[M`^ON]O_1h1XNWNGj3a0kN:eM^3HoKOid2g`0W[MZ_Ol0b0^O]O_1h1XNWNGj3a0kN:eM^3HoKOXf2X?hYMi@l0b0^O]O_1h1XNWNGj3a0kN:eM^3HoKOXf2X?hYMi@l0b0^O]O_1h1XNWNGj3a0kN:eM]k2o>PTMi@l0b0^O]O_1h1XNWNGh1iS3a=_lLi@a^3S4^hSc3"
+      }
+    },
+    {
+      "id": 9,
+      "image_id": 8,
+      "category_id": 1,
+      "bbox": [
+        88.0,
+        975.0,
+        2180.0,
+        1280.0
+      ],
+      "iscrowd": 0,
+      "area": 2155965,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "b[P;l0h1\\9l`3dFT_L\\9l`3dFT_L\\9l`3dFT_L\\9l`3dFT_L\\9[V3g=^O0000000WOi0C=00000000Bg0B5000000Gc0F0000000Gb0G0000000000:F0000000G900000000000000000009]O:000000000000000000G9000000000000000000000000000000F:0000000000000000000000000000000000000000000000000000G90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:000000000000000000000000000000000000000G9000000001O000000000000000000000000000000000000000000000000000000000000000G90000000000000000000000000000000000000000000000000F:000000000000000000000F:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G900000000000G9000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:000000000F:000000000000000000:F0000000000000000000000000000000000000000F:0G90000000000000000000000000000000000000000000000000000000000000000000000000000000000O1000000000000000000000000000000G9000000000000000000000000000G90000000000000000000O100000000000000000000000000000000000000000000000000000000000000000000000000G9000000000000000000000000000001O00000000000000000000000000000000000000G900000000000G900000000O1000000000000000000000000000000000000000000000000000000000000H800000000000000000000000000O100000000000000000000000000000000000000000000000000000000000000000000000000000F:0000000000000000000000000000000G900O100000000000000000000000000000000000000000000000000000000000000000000H80000000000000000000000000000000000000000000000000000000000O10000000000000000000G90000000000000000000000000000000H8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:000000000F:00000000000000000000000000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000000000000000000000000000000000000G9000000000000000000000000000000000000000F:0000000000000000000009G000000000000000000000000000000G900000000000000000000000000000G900000000000000000000000000000000000000000000000000000000000000000000000000000000000F:00000000000000000000000000000Fd0F00000000000000000000F:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G90000000000000000000000000000000000000000000G9000000000000000000009G00000G90G9000000000000000000000000000000000000000000000000000000000000000000000000000000000G90000000000000000000000000000000000000000000F:000000000000000000000000000000000000000000000000000000000000000000000000:F000G9000000000000000F:0000000000000000000000000000000000000000000000000000000F:0000000000000000000000000000000000000000000000000000000000000000000000000000000G90H80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G90000000000000000000000000000000000000G9000000000000000000000000000000000F:0000000000001O00000000000000000000000000000000000000000000000000000M3I7000000000G90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G90000000000000000000000001O0000000000000000000000000000000000000000000000000000000G90000000000000000009G00000000000000000000G0900000009G0000000000000000000000000000G9000000000000000000000000000000000F:000000000000000000000000000F:00000000:F00000000000000000000F:00000000:F0G91O00000000000000000000000000000000000000000000000000000000000000000000000000000F:00000000000000000000000000000000000000000F:0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G9000000009^O900000000000000001O000000000000000000000000000000000000000000000000000000F:000000000000000000000000000G9000000000000000000000000000000000000000000000000000000000000F:00000000:F0000000000000000000000000000000000000000000:F0000000000000000000000000000000000000000000000000000000000009G000000000000000000000000000000:F000000000000000000009G00000000:F000000000000000F:09G0000000000c0]O00000000b0^O00000000l0TO0000000000Q2oM00000G90Q1oNc1]N00000000^1bN000F:00000m0SO00000000^1bN00000000h1XN0G90000000l0TO00000000^1bN00000000V1jN0G90000000Q2oM00000000V1jN00000000V1jN0F:00000k0UO0G90000000i1WN0F:00000Q2oM00000000c0TO9000000000^1oMc00000000nf]3"
+      }
+    },
+    {
+      "id": 10,
+      "image_id": 9,
+      "category_id": 1,
+      "bbox": [
+        9.0,
+        824.0,
+        2275.0,
+        1993.0
+      ],
+      "iscrowd": 0,
+      "area": 2390133,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "d\\U1e4kj30000000]OV1]O000000000TOU1G0000000F:00000000G90000000000Gc0F000O100^Ob000000000000000000009^O900000000F:0000000:]O900000000G90000000000F:00000009^O900000000F:0000000000G900000009]O:00000000G90000000000G9000000Hb0E1000000G90000000009]O:00000000]Oc000000000000000000000G900000000F:00000009^O90000000000F:00000009VOa0000000000000000000F:000000000:]O900000000F:00000009^O90000000000]Oc000000:F0F:00000000000000000000G9000009G0^Ob000000000000000000000G9000009G0F:00000000G90000000000F:00000000G900000:F0F:0000000000G9000000M3J60009G0G9O1000000H80000000:F00000000000F:00000000]Oc000000009G00000000000G900000000F:0000000:F0G900000000G9000009G0F:0000000000^Ob000000000G90000000000000009G000F:00000000]Oc000000000G90009G000H80000000000F:0009G0000000000000G90000000000F:000:F000]Oc000000000000000000000G900000000G90009G000G900000000000000000000G90:F00000000000000000F:09G0000000000000000000000000G9000:F0000000000000000009G000000000000000F:0000000000000:F0000000000000000000000000000009G0000000000000000000000000000009G0000000000000000000000000000000000000000:F0000000000000:F0009G00000000000000000000:F00000000000008H0000000000000009G0000000000000:F000000000000000:F00000000000009G0000000000000009G00000000000009G000000000000000:F000000000000000000000:F000009G000000000000000000000008H0009G00000000000000000000:F000:F000000000000000000009G00000000000009G000000000000000:F000:F000000000000000000000009G000009G000000000000000000000000000000:F09G000000000000000009G09G0000000000000000000000000:F00000000000009G000000000000000000:F00000009G0000000000000000000000000000009G09G000000000000000:F000000000000000000000:F00000009G0000000000000000000009G0000000:E10000000000:F000004L5K00000000000000000009G0000000:F000000000000000000000:F000000000000000009G000000000000000000000009G00000:F000000000009G000000000000000009G000000000000000000000:F00000009OH00000000000000000:F000000000000000000000:F00000009G0000000000000000000009G0000000:F00000000000000000000000000000091F000000000000000000009G0000000:F000000000000000000008H000000000:F0000000000000000000:OG000000000000000000000000000009OH0000000000000000000000000000:OG000000000000000000000000000009G000000000:F0000000000000000000:F0000000009G00000000000000000000:F00000009G0000000009G0000000000000000000:F0000000000000000000:F0000000009G00000000000000000009G0000000009G0000000000000000000:F0000000009G00000000000000000009G0000000009G00000000000000000009G0000000:F00000000000:F000009G000000000000000000000009G000000000000000:F0000000000000:F000009G000000000000000000000009G000000000000000:F00000000000009G000009G000000000000000000000009G00000000000000091GO0000000000000000008H0000000009G0000000000000000000000000000090G0000000000000000000:F000000000:F00000000000000000009G0000000009G00000000000000000000000000000:0F000000000000000000009G000009G00000000000O100000:F0:F0000000000000000000000000009G09G000000000000000000000000000:F00000000000:F00000009G00000000Gb0G0000000009G0000000009G00000000000000000009G000000000:F0000000000000000000:F000000009OH000000000000000000000000000000000000000:0F0000000000000000000000000000081G000001O000000000000000000000:F0000000090G0000000000000000003M6J0000000:F000000O10000000000009G0000000:F0000000000000000000090G0000000000000000000000000000091F000000000000000000000000000091F00000000000000000000000000000:F0000000009G0O100009G000000000000000000000:F0000000:F0000000000000000000009G00000009G000000000000000000000:F000000000000000:F000000000009G000000000000000008H00000000000:F000000000000000009G000000000009G0000000000000000^XM\\hNXg2nW10000000000009G000000000000000000000000000000:F00000000000000000000000000009G00000000000000000000000000008H2N00000000000000000000000000009G000000000000000000000000000F:0:F000000000000000000000000000G909G00000000000000000G900000000000:F0000000F:000000000009G00000G900000000000000000000F:00000000Gb0G0000000F:0000000000Gc0F0000000G900000000G90000000000Gb0G00000N2H8000000I7N200000000F:00000000G90:F00000000000000000F:00000000G909G00000F:00000000Gc0F000000000H800000000F:00000000G90000000000Fc0G00000000000000000Gc0F000000000F:00000000G900000000Fc0G000000000G900000000G900000000F:0000000009G0000000C=K5000000G90000000000Fd0F00000000000000000Gb0G0000000F:0000000000G900000000Gb0G0000000F:0000000000G900000009]O:00000000G90000000000000000000:\\O:00000000H80000000000F:000000Gb0G0000000G90000000000F:00000000G900000000Fd0F0000000000000000009^O900000000F:00000000G90000000009]O:00000000G900000000G9000000000:]O9000000I7N2000000F:00000000000000000009^O900000000F:0000000000G900000000F:0000000:]O900000000000000000000G900000009]O:00000000G90000000:]O900000000G900000009]O:0000000000G90000000:\\O:00000000G90000000009TOc00000000`o]1"
+      }
+    },
+    {
+      "id": 11,
+      "image_id": 10,
+      "category_id": 1,
+      "bbox": [
+        810.0,
+        2144.0,
+        761.0,
+        1602.0
+      ],
+      "iscrowd": 0,
+      "area": 1163929,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "aTnT3l0dn300000fA^6ffLbIZY3^6l`LQKT1k0YNoMF?W[3f5feLQKT1k0YNoMFc0U1^1GU1]O\\MHa0Sl2R5iTMQKT1k0YNoMFc0U1^1GU1]O\\MHU5_g2>]YMQKT1k0YNoMFc0U1^1GU1]O\\MHZ5^a2cI`cMf6nKQKT1k0YNoMFc0U1^1GU1]O\\MHZ5^a2d6o^MfDc1k0YNoMFc0U1^1GU1]O\\MHZ5^a2kc0j^MZXOc0U1]O\\MHZ5^a2gV106XOe0M0000007_Od0F0000000G900000009G1E:00000008H000000008H00000000000G900000000000001O0000000000009G000000000000000000000F:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F00000000F:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G9000000009G0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G90000000000000000009G0000000O10G90000000000000000009G000000000H800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F0000000000000000000000000000009G0000000G90:F000000009G00000000000000000000c0]O000H8O10[2eM00000000_1aN00000G900bfNn`M^R1Rf2000000_nN[YMWj0om2000000XUOhnLXg0hT3G9000000b\\O^kLTKbNd?`]3\\@`bL[?i]3e@WbL[?i]3e@WbL[?i]3e@WbL]3HaLOW:cc3iE]\\LW:cc3iE]\\Lf9Td3ZFl[Lf9Td3ZFl[La3h2QO[i3000000EUVUj2"
+      }
+    },
+    {
+      "id": 12,
+      "image_id": 11,
+      "category_id": 1,
+      "bbox": [
+        726.0,
+        880.0,
+        1449.0,
+        2477.0
+      ],
+      "iscrowd": 0,
+      "area": 2657389,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "dh]j2Q2_m30000000USL`NSk3X30000000m0aNb0000000000k0kN:0000000V1jN00000000U1bN9000000000[2[M:0000000l0TO0000O10b]LkCaa3R=000000000U1bN90000000V1jN00000000l0TO0000000000l0kN90000000_1aN00000000_1aN0000000000V1jN00000000U1bN90000000c0]O00000000V1jN00000000_1aN00000000V1jN00000000U1kN0F:0000000V1jN00000000l0TO00000000m0SO0000000000h1XN00000000m0SO00000000V1jN0000000000l0TO00000000_1aN00000000l0TO0G90000000U1kN00000000m0SO00000000l0TO9G000000002N^1bN00000000U1kN00000000l0TO00000000l0TO0000000000_1aN0000000G^1kN00000000V1jN0000000000l0TO00000000U1kN00000000V1jN0000000000T1lN00000000_1aN00000000U1kN0000000000U1kN00000000m0SO00000000Q2oM0000000000b0^O0000000F_1kN00000000U1kN0000000000k0UO00000000`1`N00000000T1lN00000000b0^O0000000000m0SO00000G90b0^O000000009G0000000000000000009G00000000:F00000000009G0000000000000000009G0000000000000000000F:0000000009G000000000000000000000000000000000000000000000000000Hb0F0000000000000000000000000000000000000000000000000000000000000000000000000000000FkeMY[NUZ2gd1:0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G90000000L4J6000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:00000000000G900000000000000000000000000000000000000000000000000000000000G9000000000000000000000000000000H800000000000000000000000000000000000000000F:000000000000000000000000000000000000000F:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000000000000000000000000000000000000G900000000000000000000000000000F:000000000000000000000000001O000000000000000000000000000000000000000000000000000000000000000000G90000000000000000000F:0000000000000000000000000000000000000000000000000F:00000000000000000000000000000000000000000000000000000000000000000000000G9000000000000000000000000000000000000000000000000000G900000000000000000000001O000000000000000G9000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009F1000000000000000000000000000000000000000:F000000000G900000000000000000009F100000000000000000009G000000009G00000000000000000000:F000000009G00000000c0]O0000000000k0UO00000000m0SO00000000l0TO0000000000U1kN00000000c0]O00000000k0UO0000000000c0]O00000000_1aN00000000b0^O0000000000c0]O00000000_1aN00000000b0^O00000G9000l0TO00000000c0]Ok0UO00000000m0SO00000000l0TO0000000000l0TO00000000l0TO00000000c0]O0000000000_1aN00000000k0UO00000000c0]O000000000Om0TO00000000V1jN00000000c0]O0000000000U1bN90000000l0TO00000000m0SO0O10000000U1kN00000000l0TO00000000c0]O00000000U1kN0000000000`1`N00000000a0_O00000000c0]O0000000000m0SO0000000GU1TO000000V1jN0000000000b0^O00000000l0TO00000000_1aN0000000000:F00000000T1lN00000000V1jN00000000m0SO00000000l0TO00000000U1kN0000000000U1kN00000000U1kN000000V1jN0O100000c0]O0G90000000k0UO00000000V1jN00000000l0TO00000O10l0TO00000000l0TO00000000k0UO0000000000c0UO800O100P_OfbLj?`^30000000b0^O0000000000l0TO00000000^1bN0G90000SCc^Lf;db3000000000b0^O00000000c0]O000H8000c0]O00000O100aFjZLd8Qf30000H80U1kN000O1G90l0TO0000000TJnVLZ5di3000000G90V1jN00000F:0b0^O00000C=ZMiSLn1ol300000000I[So>"
+      }
+    },
+    {
+      "id": 13,
+      "image_id": 12,
+      "category_id": 1,
+      "bbox": [
+        558.0,
+        796.0,
+        1242.0,
+        2467.0
+      ],
+      "iscrowd": 0,
+      "area": 2796239,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "bVbU2S4]k300000jLZLbZLf3^e3h3^O00000\\Md20:F0000000jLV3000000\\MhCPbLX<P^3d208H000\\Md2000:F000lKZ]O^kLfb0bT3T40009G0oMQ200000000YKg400000:F000`L`300000000ULk3000009G0VLj30000000000eM[200000000iLW300000:F0ULk300000000VNj1cN]10000000000nKR400000000[Ke40009G000lMT2mNS10000000000XNh100000000oMQ200000000jNV10000000000^Ob000000000G900000000G90000000000F:00000000G9000000000000000000M3I70000000000000000G9000000000000000000000000000000G9000000000000000000000009G0000000000000000000000000000G900000000000000000000000000000Gb0G00000000G90000000000000000000000000000000000000000000000000000000000000000000000009G00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008H00000000H80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008H0000000000000000000000000000000000000000Hb0F00000008H0000000000000000000000000000000F:000000000000000000000000000000:F0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O00000000000O1000000000000000000000000000000000000000000000000000000000000000000000000009G000000000000000000G9000000009G000000000000000000000000000000000000000000000000000000000000000000000009G0000001O0000000000000000000000F:0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F00000000F:0000000000000000000000000000000000000000000000000000:0F0000000000000000000000000000000000000F:0000000000:F000000000000000000000000000O1000000000000000000000F:0000000000:F000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G00000000000000000000G90000000000000000009G000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O0000000000000000000000000000000G900000000000000000000000000000000000000000000000000000000000000F:00000000000000000000000000000000000000G900000000000000000002N7I0000000F:00000000000000000000G900000000G90000000000G900000000G90000000:\\O:0000000000G900000000bN^100000009XL_3fIZ6kMU20000000000bK`lM]YNoV2ed1ojM[[NQU2ed1ojM[[NZU2\\d1fjMd[NZU2\\d1fjMd[N[U2[d1m2[Je5SKQ`MXfN1OSc2iY1l\\MXfN1OSc2iY1l\\MXfN1OSc2iY1l\\MXfN1OSc2iY1l\\MXfN1OSc2\\U1S^MmjNge2SU1YZMmjNge2SU1YZMmjNge2SU1YZMmjNge2SU1YZMmjNge2SU1YZMmjNge2mS1i3H0000000kIU6000000RMPPM\\VORP3bi0U3I00000ZKf409G1O000ZKhiLT@XV3l?o4G000RKeaLeDf0`2e]3k8eaLeD]b3[;c]LeDmb3k:S]LUEPc3h:P]LXEPc3T8`300000>B>^Io\\LIQc37T600000gZgm1"
+      }
+    },
+    {
+      "id": 14,
+      "image_id": 13,
+      "category_id": 1,
+      "bbox": [
+        262.0,
+        2470.0,
+        1941.0,
+        1093.0
+      ],
+      "iscrowd": 0,
+      "area": 1686563,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "bcfP1c0mn30000000TOT2hNi0WO0000000G90g1YN00000F:0d2\\M00000G90h1XN0000000G90h1XN00000F:0c0]Og1YN00000000^1bN00000G9000^1cNO0000000>Bb1^N00000000Y1gNP1PO000000000F_1kNa0_O00000000k0UO00000000a0_O1O000000006J3M0000003M6J000000009G0000001O00000000003M5K000000000000000G`0I2N0000000000000000000000000000000000000000:F0000000000000000000000000000000000000000000000000000000000000000000000000000000F;O0000000000000000000000000000000000000000000000000000000000000000000000G90000000001O00000000000000000000000000000000000000000000000000000000000000000000000001O0000000G9000000000000000000000000000000000000000G90000000000000000009G00000000H80000000000000000000000000000000000000000000000000000000000000000000000000F:0000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O0000000000000000000000000G91O0000000000000000000000000G9000000000000000000000000000000000000000000000000000000000000000000000000000000001O00000000000000000000000000000000000G900000F:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:000000000000000000000000000001O00000000000000G9000000000000000000000000000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000001O000000000000000000000000000000000000000000000G900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:0000000000000000000000000000000000000000000000000000000000000000000000000G9000000000000000000000000000000000000000000000000000000000000000000000000000000000G90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F0:0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000H8000000000000000000000G9000000000000000000000000000008H00000000000000000000000000000000000000M3J6000000000000000000000F:0000000000000000000000000000000000000G9000000000000000000009G00000000G9000000009G0000000000G9000000000000000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000000000000O100000000000000000000H80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O10G900000000009G000000000000000000G9000000000000000H8000000000000000000000000000000000000000000000000000000000000000000O1000000000000000000000000000000000000000H8N2000000000000000000000000000000000G9000000000000000000000000000000000000O10000000000000000000000000000000000000000000000000000000000000000000000000G9000000000000000000000000000000000000000000000000000000000000000000000000000000000000O10000000000000000000G9000000000000000G9000000O10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:0000000G90000000000000000000000000000000000000000000000000000000000000000000O10000000000000000000000000000000000000000000000000000000000H800O1000F:00000000:F00000000F:000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:0000000000000000000000000000000000000000000000000G9000000009G0000O100000O10000000H80000000000000000000000O10000000000000000000000000000000000000000000000000000000000000000000G90000000000000000000F:00000000000000000000000000000000000000000000000000000000000O10000000000000000000000000000000000000000000000000000F:0000000ZmL`SO\\R3jl00000000000000000000F:000000000000000000000:F00000000000000000000000000000000000000009G0000000O1000000000:F000000000000000000008H00000000:F000000009G0000000000:F000000b0^O00000000c0]O0000000G90U1kN00000000c0]O00000000c0]O0000O100l0TO00000O10h1XN00000000V1jN000000000d]OgcLaa0T]30000000l0TO00000000l0TO0000000I7Nn0TO0000000WA^`Ld=g`30000000^1bN00000000c0]O000000000WDT]Ld:Qd30000000c0]O00000000^1bN0G900000_1aN0000000`IkWLe5Pi3N2I7000U1kN000O1H800cKUULU4Sk30000^Ob00U1kN00000POWSLfNSo3000000000kZ_;"
+      }
+    },
+    {
+      "id": 15,
+      "image_id": 14,
+      "category_id": 1,
+      "bbox": [
+        373.0,
+        694.0,
+        1480.0,
+        2376.0
+      ],
+      "iscrowd": 0,
+      "area": 2353745,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "eU_^1c0mn30000000kNP2UO0000000_O^1QO20000000009G0000000]OV1]O0000000^O]1UO000000000Fm0]O00000000:F000000k0mN8000000000c0]O00000000c0SO:0000000l0TO000000009G000000O100c0TO90000000m0SO000000009G0000000000c0SO:00000b0^O00000000c0]O00000000009G00000000V1jN000000009G0G90000000b0^O00000000m0SO00000000c0]O000000000edLg\\O_Z3Ud000000009G00000000b0^O0000000000c0]O00000000l0TO00000000c0]O0F:00000c0]O0000000000:F00000000k0UO0000000djL_VOiT3Tj000G900000c0]O000000009G00000000m0SO00000000009G00000000c0]O00000000l0TO0000000000c0]O00000000:F000G9000k0UO0000000000c0]O00000000l0TO00000000c0]O00000000c0]O00000000c0]O000F:000c0]O00000000c0]O00000000009G00000000c0]O00000000l0TO0000000000c0]O00000000c0]O000000009G0000000000:F00000000c0]O00000000l0TO0000000000:F00000000b0^O00000000b0^O000G900000c0]O00000000c0]O00000000l0TO00000000c0]O0000000000c0]O00000000c0]O0F:00000l0TO0000000000:F00000000l0TO00000000:F0000000000b0^O000000009G00000000c0]O00000000009G00000000m0SO00000000c0]O0000000000l0TO000000009G00000000b0^O0G90000000k0UO2N0000009Gc0]O00000000l0TO000000009G000000000Fc0G00000000c0]O00000000c0]O0000000000c0]O00000000k0UO00000000l0TO0000000000:F00000000k0UO00000000c0]O000000000Hk0]O00000000b0^O00000000c0]O00000000009G00000000m0SO000000008H0000000000c0]O00000000c0]O0000000Fc0G00000000:F000000006J2N000000:F000000009G0000000000000000000000000000009G000000000G90000000000000000000:F0000000000000000000000000000000000000000000000000000000000000G90000000000000000000000000000000000000000000000000000000000000000000000000000000000F:0000000000000000000F:0000000000000000000000000000000000000000000000000000000000000G090000000000000000000000000000000000000000000000000000000000000G09000000000000000000000000000000000000000000000000000000000000000000000000F:0000000G900000000000000000000000000000000000000000000000000000000000000F280000000000000000000000000000000000O10000G90000000000000000000000000000000000000G900000000000G90000000000000000000000000000000000000000000000000000F:00000000000000000000000000000000000000000000000G90000000000000000000000000000000G9000000000000000000000000000G900000000000000000000000F:00000000000000000000000000000000000000000000000000000000000000G90000000000000000000000000000000000000000G9000000000000000000000000000000000009G00000000000000000000000F:00000:F0000000000000000000000000000009G00000000000000000000000G900000:F00000000008H000000000000000000:F000000009G0000000000c0]O00000000b0^O0F:00000l0TO0000000000l0TO00000000U1kN00000000l0TO0G90000000c0]O00000000l0TO00000000U1kN0000000000c0]O00000000b0^O00000000U1kN0000000000c0SO:0000000k0UO00000000V1jN0000000000c0]O00000000b0^O00000000l0lNb0F0000003Mi0WO0O10000000k0UO00000000V1jN00000000c0]O0000000000k0UO00000000`1`N0000000GT1UO000000000Od0]O00000000V1jN00000000l0TO0000000000c0]O00000000k0UO00000H80m0SO00000O1000l0TO00000000h0XO4L000000;Eb0^O0000000000k0UO000H8000l0TO00000000V1iN10000000l0TO0000000000m0SO00000000c0]O000G9000l0TO0000000000k0UO0000000On0SO00000000l0TO0000000000l0TO000000m0SO000H8000l0TO0000000000l0TO0O100000m0SO00000000k0UO00000G9000l0TO00000000c0]O00000000l0TO00000000V1iN1000000000c0]O000000U1kN00000H80l0TO0000000000m0SO00000000b0]O10000000m0SO0000000G90k0UO000000V1jN0000000G_1jN00O1000000c0]O00000000b0^O00000F:0m0SO0000000Gk0^O00000000l0TO0000000]OQ2bN000000000Gl0]O0000000SNYSLg0mm30000000]]Rg1"
+      }
+    },
+    {
+      "id": 16,
+      "image_id": 15,
+      "category_id": 1,
+      "bbox": [
+        705.0,
+        686.0,
+        1081.0,
+        2217.0
+      ],
+      "iscrowd": 0,
+      "area": 2269149,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "]jig2^1U11UOSOl2Hlc3T1SZL1UOSOl2Hlc3T1SZL1UOSOl2Hlc3T1SZL1UOSOl2Hlc3T1SZL1UOSOl2He1k1hY3`9faLZIZ^3f6faLZIZ^3f6faLZIZ^3f6faLZIc7cKgHn09iNQR3\\;\\mLh1:SD9iNUQ3ni0bnLYWO9iNUQ3ni0bnLYWO9iNUQ3ni0bnLYWO9iNUQ3gU1hoL[lNTOkN\\b2jT1`^M[lNTOkNSb2SU1i^MRlNTOkNSb2SU1i^MRlNTOkNSb2SU1i^MRlNTOkNSb2SU1i^MRlNTOkNSb2\\c1nGg0neMQ[NlW2Xe1ThMhZNlW2Xe1ThMhZNlW2Xe1ThMhZNlW2Xe1ThMhZNlW2Vn1nGQ1YO0000000HS1UO000000000Fc0G00000000:F0000000G90000000001O8H0000006J4L0000009]O:0000000000000000000:F000000009G0000000000000000000000000000000G90000000008H000000001O00000000000000000000000000000000000000009G000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G0000000000000000000000000000000000000000000000000000G90000000000000000000000000000000000000000000000000000000000000000000000000000000000F:000000000000000000000000000000000000000000000000000000000000:F00000000000000000000F:000000000000000000:F00000000000000000000000000000000000000000000000000000000000000000000000000F:00000000:F0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:0000000000000000000000000000000000000000000000000000:F00000000000000000000000000000000000000F:0000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G9000000000000000000009G000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000HekM[UN[T2ej180000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G9000000000000000000009G0000000000000000000000000000000000000000000000000000000G9000000000000000G90009G00000000000000000000000000000000000000000000000000000008H000000000000000000H800000000O100000000009G00000000G90000000000000009G000000000000000000000000000000:F0000000000000000009G00000000000000000000:F000G90000000000000009G000000009G000000009G0F:0000000^1bN00000000i3WL00000000W1iNQ4fK9000000000h3oKR2a^NmaMTO2O0S]1Q^2jcNmaMTO2O0S]1Q^2jcNmaMTO2O0S]1Q^2jcNmaMTO2O0S]1Q^2jcNmaMTO2O0j\\1jc2PN1WeNT\\MlY1lc2TfNT\\MlY1lc2TfNT\\MlY1lc2TfNT\\MlY1Yd2geNg[MYZ1Zj2^J0klNUWMeo0kh2[POUWMeo0kh2[POUWM[o0Ui2ePOkVM[o0el20k3UL0000000000h6XI000G900n_OPgLd9j\\3bBVcL^=j\\3bBVcL^=j\\3bBVcLT=T]3kBmbLg48k0k\\3jHjiLC\\Ic0OP7hd3]HY[Lc0OP7hd3]HY[Lc0OP7hd3]HY[Lc0OP7hd3]HY[Lc0Og6Qe3fHX`L`3le3000000cLh`]o1"
+      }
+    },
+    {
+      "id": 17,
+      "image_id": 16,
+      "category_id": 1,
+      "bbox": [
+        740.0,
+        1354.0,
+        774.0,
+        1614.0
+      ],
+      "iscrowd": 0,
+      "area": 1213790,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "\\nUl2P3c0cM[7c0kV3W5jaLVJ[7c0kV3W5jaLVJ[7c0kV3W5jaLVJ[7c0kV3W5jaLVJ[7c0kV3ad0aaLR\\OOjNU1e2\\P3ib0`nLh[OOjNU1e2b3ZMXg2_e0RTMh[OOjNU1e2b3ZMXg2_e0RTMh[OOjNU1e2b3ZMXg2_e0RTMh[OOjNU1e2b3ZMXg2nP1QTMbnNb0`0jj2aQ1dTMaPOm0XN\\OGHO0U2Rc2\\o0m\\MaPOm0XN\\OGHO0[4l`2Vm0S_MaPOm0XN\\OGHO0[4l`2Vm0S_MaPOm0XN\\OGHO0[4l`2Vm0S_MaPOm0XN\\OGHO0[4l`2SP1P`MlkN\\OGHO0[4l`2]Y10c0]O00000G90:F00000F:09G0000000000:F00000G900000000F:09G0000000000000000007I2N00000H8000000000000000000000000000000000000000000O100000000000000000000000000000000000001O0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008H000000000000000000000000000000H800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G00000000000000000000G9000000009G0000000000000000000000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000000000000000000000000000000000000000000000000G9000000009G000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000009G000000000000000000000000000000G9000000009G000000000000000O100000000000000000000009G000000000000000000000000000000G9000000000000000000000000000000000000000000000000000000000000000000000000000001O0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G900000000009G00000009G000000000000000000000000000000G90000000000000000000000000000000000000000000000000000F:0000000009G0000000000000000000G9000000000:F0000000Fc0G0000000000000000000^Ol0F0000000Gk0^O0000000VJfaMkiNlc2oMfYM_m0h0jRO]O80;Y2U1lc2oMfZMQ2HXNTOl08[2H_L`6j3eJ^1GRK]O80;Y2U1lc2oMfZMQ2HXNTOl08[2H_L`6j3eJ^1GRK]O80;Y2U1lc2oMfZMQ2HXNTOl08[2H_L`6j3eJ^1GRK]O80;Y2U1lc2oMfZMQ2HXNTOl08[2H_L`6j3eJ^1GRK]O80;Y2U1lc2oMfZMQ2HXNTOl08[2H_L`6j3eJ^1GRK]O80O`m2a1SSMXNTOl08[2H_L`6j3eJnMeZ]Q3"
+      }
+    },
+    {
+      "id": 18,
+      "image_id": 17,
+      "category_id": 1,
+      "bbox": [
+        905.0,
+        1037.0,
+        877.0,
+        1539.0
+      ],
+      "iscrowd": 0,
+      "area": 1008867,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "]of`3^1Rn30000000FV1TO0000000GV1SO0000000FU1UO000000000HQ2WN00000000T1lN00000000V1jN000000000G^1kN00000000V1jN00000000l0TO000000000i]LUDi`3Y=0000000m0SO00000000l0TO0000000000V1jN00000000V1jN00000000^1XN:000000000c0]O00000000_1aN00000000V1jN0000000000U1kN00000000V1jN00000000V1jN00000000l0TO0000000000`1`N00000000U1kN00000000m0SO000000000G^1kN00000000c0]O00000000`1`N0000000000l0TO00000000_1aN00000000l0TO0000000000m0SO00000000l0TO00000000U1kN0000000000V1jN00000000U1kN00000000m0SO00000000c0]O0000000000b0^O0000000000000000009G00000000009G000000000000000000000000000000:F0000000F:0000000000000000000009G0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G9000000000000000G9000000000000000000000000000000000000000000000000000000000000000000000000000F:00000000000000000G90000000000000000000000000000000000000000000000000000000000000000000000000000000000000G90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000G90000000000000000000000000000000000000F:00000000000000000000000F:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O00000000000000000000000000000G90000000000000009G0000000000000000000000000000009G000000000000000000000000000000:F000F:0009G0000000000:F000000009G00000000l0TO00000000U1kN0000000000^1bN00000000m0SO00000000V1jN000000000Ol0UO00000000Y1gN6B8000005KY1gN0000000000m0SO0O100000l0TO00000000U1kN0000000000l0TO00000000h1XN00000000l0TO0000000000l0TO00000000`1`N00000000l0jN:0000000U1kN0000000000g0YOh0XO00000000l0TO00000000m0SO0000000000U1kN00000000m0SO00000000^1bN0000000000c0]O000000_1aN0000000G_1jN0000000000l0TO00000000V1jN00000000U1kN000000000FV1TO00000000_1aN0000000GV1SO0000000000U1kN000000U1bN90000000c0SO:0000000l0kN9000000000]dmo1"
+      }
+    },
+    {
+      "id": 19,
+      "image_id": 18,
+      "category_id": 1,
+      "bbox": [
+        438.0,
+        1654.0,
+        1621.0,
+        2074.0
+      ],
+      "iscrowd": 0,
+      "area": 1778790,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "oZdf1P1`n3P1PO00000G90:F00000]Oc009G00000G909G0000000G909G00000G90:F00000F:00000000G900000000G906J3M000]Oc00000000000G900000000F:08H00000H80001O00000G909G00000F:00000000]Oc00000000000H8000000F:0009G000G90000000000F:00000000G9000:F000G900000000G90000000000G90009G000F:00000000G90000000000F:00000000^Ob0000000GmAU_LS>k`3900000000G9000:F000F:00000000G90000000000F:0008H000^Ob000000000G900000001O0F:0009G000G900000000G900000000F:0000000000H80009G0FQ]OSdLob0m[3:000000G90000000000F:0009G000G900000000]Oc00000000000H800000000F:000:F000G90000000000F:00000000G900000000F:0000000000G90008H0^O[XOYiLeg0gV3b0000000G90000000000F:0001O000G9000009G0F:00000000G90000000000^Ob00009G000F:00000000G9000:F00000G900000000F:00000000G90008H00000F:00000000G9000:F000G900000000G900000000F:00000000G9000009G000G900000000]Oc000000000F:0000000000G9000008H0F:00000000G90001O000G90000000000G90009G000G900000000F:0009G00000G900000000]Oc000000000F:0009G00000G900000000F:0009G000G900000000G900000000F:00000000]Oc00000000000G90006J4L0G900000000G900000000F:0008H00000^Ob000000000F:00000000000000000000G9000:F000F:00000000]Oc00000000000G900000000F:0008H000G:O000000000G900000000F:0009G000]Oc00000000000G909G00000F:00000000000000000000G900000000]Oc008H00000G900000000F:0000000000G900000000F:0:F00000G90000000000F:00000000G908H00000F:0000000000G900000000]Oc000000000Gb0G000000000F:00000000]Oc00000000009G000000000G900000000F:00000000Gb0G0000000G90000000000F:00000009TOc000000000G90000000000F:00000000G900000009TOc00000000000G900000000F:00000000]Oc000000000000000000000G900000008^O:0000000000G900000000F:00000000G90000000H80G900000000F:00000000G900000000F:0000000000G900000000F:00000G9OH90000000000F:00000000H8000H8000000000000000G9000G9000F:00000000G900000G900000000G9000F:000G90000000000G900000000G9000G9000^Ob00000000000H800000000F:00000000H800000000F:0000000000G900000000G900000000G90000000000^Ob000000000G900000000G900000000K5L4000000F:00000000G90000000000G90009G000G900000000^Ob00000000000G900000000F:00000000^Ob0000:F000G90000000000F:00000000G90009G000^Ob00000000000G900000000F:000:F000G90000000000G900000000G900000000F:0009G00000G900000000F:00000000H80000000000G900000000F:0009G000]Oc000000000000000000000^Ob0000:F000G900000000]Oc00000000000G90009G000F:00000000H80000000000]Oc0000:F000F:00000000G9000000000000000000N2@`000000000000009G000G900000000]Oc000000000F:00000:F000G900000000G90000O100H80000000000F:0009G000G900000000G900000000F:0000000000^Ob000000000G9000:F000F:0000000000G90009G000F:00000000G90000000000G900000000F:0009G000H80000000000F:000:F000G900000000]Oc00000000000F:00000000G900000000H80009F100G90000000000]Oc000000000G900000000F:0000000000G90:F00000F:00000000G90000000000H809G00000]Oc000000000F:0000000000G90:F00000F:00000000G909G0000000]Oc000000000H800000000F:0000000000G900000000F:0:F00000]Oc000000000G90000000000F:00000000G=L5K00000G90000000000G900O10000^Ok0G0000000000000000000]Oc000000000G900000000F:0000000000Gc0F0000000G900000000F:00000000M3J?G00000G9G9O10000J6M300000000G90:F00000F:00000000G900000000Gb0G000000000F:00000000G900000000F:0000000000]Om0F0000000G900000000F:0000000000G900000000Gb0G0000000G90000000000G900000000F:0000000:SOc00000000000G900000000F:00000009^O900000000G90000000000F:000000G900000000Fb0H000000000G900000000F:0000000:]O90000000000G900000000G900000009^O90000000000F:00000000G90000000:\\O:0000000000]Oc000000009^O90000000:\\O:00000000G90000000c0TO90000000b0kNc00000000_Y^m0"
+      }
+    },
+    {
+      "id": 20,
+      "image_id": 19,
+      "category_id": 1,
+      "bbox": [
+        420.0,
+        1326.0,
+        1415.0,
+        1669.0
+      ],
+      "iscrowd": 0,
+      "area": 1174999,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "[o[d19Wo30000000SOi1TO0000000Gb0G0000000FbMbSL^2^l3c0G00000H800000000G90:F00000F:0000000000G909G000000000000000F:0000000000G90:F00000F:00000000G90000000000F:00000000Ha0G00000G90000000000F:00000000G90:F00000F:00000000000009G00000G900000000F:09G0000000G900000000F:00000000G900000000000:F0000000]Oc00000001O0009G000G90000000000F:00000000G9000:F000F:0000000000G900000000F:0009G000G900000000000000000000G9000:F000F:0000000000G909G00000F:00000000G900000000F:09G00000Go^OSbLQa0m]39000000F:000001O0G90000000000000008H000H800000000F:0000000000G90009G000F:00000000G9000:F00000F:00000000G900000000000009G00000F:00000000G900000000G9000:F00000F:00000000G900000000F:0009G000000000000000G900000000F:000:F000G90000000000F:00000000G90009G000000000000000G900000000F:0:F000G90000000000F:0009G000G900000000F:0000000000000008H000]Oc00001O000G90000000000000009G000G900000000F:00000000G90009G00000F:00000000G9000:F000F:0000000000G900000000F:0009G000000000000000G9000:F000G900000000F:0000000000G900000000F:0009G000G90000000000F:0000000000000:F000G900000000F:0000000000G908H00000G90001O000F:0000000000G908H00000F:00000000000:F0000000G900000000F:00000000G909G0000000G900000000G900000000000000000000G900000000F:00000000G90000000000F:00000000G9000000000000000000F:0G90000000G900000000F:00000000G90000000000G90F:00000F:00000000G180000000000000000000F190000000GO:000000000F:00000000G090000000F0:000000000G090000000HO90000000F190000000GO:000000000F1900000000G90000000GO:000000000F:00000000G090000000F19000000000G090000000GO:0000000F190000000000F:0000000HO90000000F19000000000G090000000F:00000000G09000000000F0:0000000G0900000000F:0000000G090000000FndNV\\MkZ1Qd273000000G90000000H080000000000F:00000000G900000000F:000000000F:000000000G900000000F:0000000000G900000000F:00000000G90000000000G900000000G900000000000000000000G90000000:\\O:00000000G900000000F:0000000000G900000009]O:00000000G9000000000:F000000000G900000000F:0000000000G900000008^O:00000000000000000009^O900000000G9O100000:^O80000000000F:00000000G900000009^O900000000F:0000000000G90000000:\\O:00000000000000000000G9000009G0F:00000000G90000000000F:00000:F0G900000000000000000000G9000009G0F:00000000G90000000:F0F:00000000G900000000F:00000009G0G900000000F:000009G0G900000000000000000000G900000:F0F:00000000G900000009G0F:00000000G900000000F:0000000:F0H80000O100G900000000000000000000G9000009G0G900000000F:0000000000G900000:F0F:00000000G900000009G0F:000000000000000:F0G900000000F:0000000000G90009G000G9000000000000000000M3I7000000G9000009G0F:0000000000G900000000F:00000:F0G90000000000F:000009G0G900000000G90000000000F:00000:F0G9000008H0F:000000000000000001O0G9000009G0F:00000000G90000000000F:000001O0G9000008H0G900000000F][LgEcd3Y::000000G90001O7I2N00000000000G9000009G0G900000000F:00000009G0G900000000F:00000000G90000000:F0G900000000F:000009G00000000000G900000000FgVL]JYi3c5:000000G90000000:\\O:0000000000G900000009G000000000]Oc0000000000:F000000009^O900001O0:\\O:00000009G0]Oc000000i0WOaS[i1"
+      }
+    },
+    {
+      "id": 21,
+      "image_id": 20,
+      "category_id": 1,
+      "bbox": [
+        141.0,
+        777.0,
+        1323.0,
+        2088.0
+      ],
+      "iscrowd": 0,
+      "area": 1817813,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "dYda0i1gm30000000]Ol0G0001O0000]OU1^O0000000]Ol0G0000000TOl0000000]OiJmVLW5Si3m0F0000000UOk000000000]Oc009G00000]Oc00000000000TOl00:F00000F:00000000^Ob00000000000]Oc009G000TOlD\\]LT;db3l0000000]Oc00000000000]Oc000000000]Oc000000000UOk00000000000]Oc00:F00000TOl000000000]Oc00000000000]Oc000000000]Oc0000000UOk000000000]Oc00000000000]Oc000000000]Oc00009G000]Oc00000000000TOl000000000]Oc000000000UOk00000000000]Oc00009G000SOm000000000^Ob00000000000SOm000000000TOl000000000]Oc00000000000^Ob000000000TOl000000000]Oc000000000]Oc00000000000TOl00:F00000]Oc000000000TOl000O1000000UOk000000000]Oc000000000]Oc00000000000TOl000000000TOl009G00000^Ob00000000000]Oc000000000TOl000000000]Oc00000000000]Oc000000000TOl000000000^Ob00000000000SOW1F0000000TOl000000000^Ob000000000G90000000000SOm000000000TOl000000000^Ok0F100000000^Ob000000000]Oc000000000TOl00000000000UOk000000000]Oc000000000]Oc00000000000]Om0F0000000UOk000000000]Oc00000000000]Oc000000000TOl000000000^Ob00000000000]Oc000000009kNl000000000TOl000000000G90000000000^Ob000000000F:00000000G900000000000000000000F:00000000G9000000000:F0000000000000000000F:000000000000000000000000000000G90000000000000000000000000009G000000000000000000000000000000000000000000000000000000000000009G000000000000000000000000000000000000000000000000000009G00000000000000000:F000000000000000000000000000000000000000000000000000:F00000000000000000009G000000000000000000000000000000000000000009G00000000000000000000000000000:F00000000000000000000000000000000000O100000000000000000000000000:F00000009G00000000000000000000000000000000000000000000000000000000000009G0000000000000000000000000000000000000000:0F00000000000000000000000000000000000000009G0000000000000000000000000000000000000000000000000009G0000000000000000000000000000000000000000000000000000000000000000000000:F00000000000000000000000000000000000000000000000000008H000000000G900000000000000000000G9000000000000000000000000000000G900000000F:00000000G900000000]Oc00000000000G9000009^O900000000]Oc00000000000]Oc000000000]Oc000000000_Oa00000000000SOm00000000:SOc000000000G90000000000^Ob000000000jNV100000000G90000000000]Oc000000009kNl000000000^Ob000000000jNV10000000000]Oc000000000G900000000]Oc00000000000]Oc00000000:SOc000000000UOk00000000000]Oc000000000SOm000000000]Oc00000000000^Ob0000009G0SOm000000000]Oc00000000000]Oc000000000G900000000]Oc00000000000TOl000000000]Oc000000000]Oc000000:F0TOl00000000000]Oc000000000]Oc000000000]Oc00000000000TOl000000000SOm000000000]Oc00000000000^Ob000000000SOm0000009G0G90000000000]Oc000000000TOl000000000]Oc00000000000]Oc000000000]Oc000000000TOl000000:F000F:00000000]Oc000000000G900000000F:0000000000lNT10008H000SOm000000000]Oc000000000TOVgLR[OjX3nd0l0000000G900000000]Oc00000000000]Oc0000009G0TOl000000000^Ob00000000000SOm000000000]Oc000000000UOk00000000000]Oc0000:F000TOl000000000]Oc000000000^Ob000000000TOl000000000F:000009G0]Oc00000000000UOk000000000]Oc000000000]Oc00000000:F0^Ob000000000]Oc0000009G0TOl000000000UOSWLSKmh3m4k000000c0SO:0000000:jNl00000000008UOc01O00000loaW3"
+      }
+    },
+    {
+      "id": 22,
+      "image_id": 21,
+      "category_id": 1,
+      "bbox": [
+        719.0,
+        1550.0,
+        734.0,
+        1510.0
+      ],
+      "iscrowd": 0,
+      "area": 1051214,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "Q[bi2Z7:UJSf3k5mYLUJSf3k5mYLUJSf3k5mYLUJRf3l5nYLTJ`e3bd0`ZLXZObX3he0^gLXZObX3he0^gLXZObX3he0^gLXZObX3he0^gLXZOYX3Wk0]KW4iK00000000e4jPMlkNfi2TT1ZVM`lNOc0Rg2mR1oXM`lNOc0Rg2mR1oXM`lNOc0Rg2mR1oXM`lNOc0hf2WS1YYMVlNOc0hf2fT1XYMZkNhf2iZ1nK00000000b0^O00000000:F00000000009G00000000:F000G90000000000000009G00000000000000000000000000000000000000009G000000000000000F:000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O10G900000000009G0000000000000000000000000000000000000000000000000000000000000000000000000000000G9000000009G00000000000000000000000000000000000000000000000000G900000000000G9000000000000000009G000000000000000000000000000000G9000000009G00000000000000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G000000000000000000G90000000000000000000000000000000000000000000000000000000000000G90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G0000000000000000000000000000000000000000000000000000:F00000F:000000000008H00001O000000000000009G000000009G0000000000l0TO00000000P5PK00000G90^1bNU4kK0000000000Q5ioNhmL^OSOSi0US3_WOhmL^OSOSi0US3_WOhmL^OSOih0_S3iWO^mL^OSOih0_S3iWO^mL^Ob5Zb0TV30000G9UClbLZ7eb300000000F]4jC_YLOHe6if3\\I_YLOHe6if3\\I_YLOHe6if3\\I_YLOHe6if3\\I_YLOHS2e1E`k30000000aokX3"
+      }
+    },
+    {
+      "id": 23,
+      "image_id": 22,
+      "category_id": 1,
+      "bbox": [
+        411.0,
+        833.0,
+        1290.0,
+        2449.0
+      ],
+      "iscrowd": 0,
+      "area": 2659780,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "ebXc1h1hm30000000bNQ2]O0000000oMQ20c0]O00000oMQ20b0^O00000XNh109G0000000TOl0000000eM[2000:F000lNT100000000eM[20009G000eMe_OaeL[`0_Z3[2000000aN_1000009G0TOl00000000000eM[2000009oMi1O0000000oMQ20000000000WNi100000000WNi100000000kNU1000008H000XNh1000000dM\\200000000XNh10000000000XNh101O00000nMR200000000jNV1G900000000@`0gNY100000000XNh100000000XNh100000000nMR20000000000nMR200000000bN^100000000jNV10000000000VNj1mNbTNmmMek1SR2[TNmmMok1iQ2QTNWnMok1iQ2QTNWnMok1iQ2QTNPnMVl1oo1f200000000WNi10000000000kNU100000000oMQ200000000TOl00000000000XNh100000000oMQ200000000]Oc00000000000]Oc000000000H800000000F:00000000000000000000G9000000000000000000G9000000000000000000000000000000F:000000000000000000000000000000000000000000000000000000000000000000000000G90000000000000000000000000000000000000000000000000000000000000000000000009G00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F0000000000000000000000000000000000000000000000000000000000000009G0000000000000000000000000000000000000000000000000000G90000000000000000000000000000081G000000000000000000G90000000000000000000000000000000000000000000000000000000000009G0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G000000000000000000000:F0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F00000000F:0000000000:F000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008H0000000000000000000000000000G900000000000000000000000000000000000000000:F000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G0000000009G0000000000000000000000000000000000000000000000000G9000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:00000000000000000000000000000000000000G9000000000:F000000000G900O100000000000000H800000000000000000000F:00000000G90000000000]Oc000000000^Ob000000000]Oc00000000000oMQ200000000eN[1hNX100000000\\Md200000009G0oMQ200000000]Mc2TOl000000000oMQ200000000`N`10000000000jLV300000000WOi0QOo000000000`L`30000000000^Lb309G00000nMR200000000kNU10000000000VLj300000000WNi10:F00000iLW30000000000[Me209G00000dM\\2000000oM_hLS\\OaW3mc0Q200000000TOl00:F00000oMQ200000000jNV109G000mKicLmDW\\3S;S4000:F000oMQ20009G0oMP[LbIPe3^6Q2000b0^O0\\Md20000000l0TO0XNh100000T1lN[dQZ2"
+      }
+    },
+    {
+      "id": 24,
+      "image_id": 23,
+      "category_id": 1,
+      "bbox": [
+        594.0,
+        703.0,
+        1087.0,
+        2246.0
+      ],
+      "iscrowd": 0,
+      "area": 2325242,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "`boY2d4c0oKhf3\\6XYLdIhf3\\6XYLdIhf3\\6XYLdIhf3\\6XYLdI_5b5lLTJoT3Sd0QkLm[O\\T3fd0dkLZ[O\\T3fd0dkLZ[O\\T3fd0dkLZ[O\\T3fd0ckLiDoj2lg000G9000f4ZK000H80^1bNY:SYMi_NoY2W`1QfMi_Nl0nMdW2Yb1`gMi_Nl0nMZW2cb1jgM__Nl0nMZW2db1igM^_Nm0nMZW2db1igM^_Nm0nMZW2gf10T6lI00000000_2aMd1SN90000000l0jN:0000000000000000000b0^O0000000Gc0F000000009G00000000000000000000:F0000000F:00000000000000000009G0000000000000000000000000000009G0000000000000000000000000000000000001O000000000000000000000000000000000000000000008H000000000G9000000009G0000000000000000000000000000000000000001OG9000000000000000000000000000000000000000000000000000G90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O000000000000000000000000000000000000000000000000F:0000000000000000000000000000000000000000000000000000:F00000000000000000000F:000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F0000000000F:00000000000000000000000000000000000000000000000000000000000000000000000O10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O000000000000009G000000000000000000000000000000000000000000000000000000000000009G0000000000000000000000000000:F000000000000000000009G000G90000000000000:F00000000009G000000009G0F:000009G0000000000c0]O00000000l2TM0QRNWPNnk1RP2RTNnoMnk1RP2RTNnoMnk1RP2RTNnoMnk1aP2cSN_oM]l1ZU2`L0000000000d3\\LT5lJ0000000Fh2bMY4gK00000G90k3ULY2gM0000000000e7klNVmL0OUi0kR3kVOVmL0OUi0kR3kVOVmL0Omh0SS3SWOnlL0Omh0SS3SWOnlL0Omh0\\]3RH000]Oc000e_OaeLOmKT;Xc3lDh\\LT;Xc3lDh\\LT;Xc3lDh\\Lj:bc3VE^\\LS2[2g3if300000000VM`l_\\2"
+      }
+    },
+    {
+      "id": 25,
+      "image_id": 24,
+      "category_id": 1,
+      "bbox": [
+        846.0,
+        1159.0,
+        771.0,
+        1548.0
+      ],
+      "iscrowd": 0,
+      "area": 1006732,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "[X]Y3h1hm30000000nMd2^O000000000XN[2]O0000000WNR2G00000TO_GiZLa8We3l000000000RMn20:F00000kNU100000000dM\\209G0000000aN_100000000nMR200000000`N`10000000000_La300000000WNi10:F00000oMQ20000O100bN^10000000000nMR200000000UOk0dM\\oNnTMbQ1Rk2^nNnTMbQ1Rk2^nNnTMbQ1Rk2^nNnTMbQ1Rk2^nNnTMbQ1Yi2W30000000000fMZ200000000eM[200000000]Oc00000000000^Ob000000000F:00000000^Ob000000000000000000000G90000000009G000000000F:00000000000000000000000000000G9000000000G900000009G00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:000000000000000000000000000000000000000000000000000000000000000:F0000000000000000000000000000000000000000F:00000000000000000000000000000000000000000000000000000000000000000000000Gc0F0000000009G00000000G900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G0000000001O00000000000000000000000000000000000000000000000000000000000000000000000000000000G90O100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F000000000000000F:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G]`Ne`Mc_1[_29000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O00000000000000000F:000000000000000000G90000000000F:00000F:0]Oc000000:F0000000000000G900000F:0^Ob000000000mKX`MbgNd`2^X1\\_MbgNd`2^X1\\_MbgNd`2^X1\\_MbgNd`2^X1\\_MbgNn`2TX1R_MlgNn`2`U1k50000O100bN^1mMWWM_mNih2aR1WWM_mNih2aR1WWM_mNih2aR1WWM_mNih2aR1WWMilN_i2kn0WVMXQOE0lm2hn0_RMXQOE0lm2hn0_RMXQOE0lm2hn0_RMXQOE0lm2hn0_RMXQOE0lm2hn0_RMXQOE0lm2bm0W300000000oJboLhWO0FWR3bh0imLhWO0FWR3bh0imLhWO0FWR3bh0imLhWO0FWR3bh0imLhWO0FWR3[e0llLk[OkW3Ud0UhLk[OkW3Ud0UhLk[OkW3Ud0UhLk[OkW3Vd0ThLj[OlW3fb0W300000000XNgeLY^OYZ3ga0h109G000nMR200000000aN_100000:F000eM[20009G0hJ_`LaJa_3_5X5000000XNh10000000k0SMjULjNVj3V1R200000XV`d2"
+      }
+    },
+    {
+      "id": 26,
+      "image_id": 25,
+      "category_id": 1,
+      "bbox": [
+        967.0,
+        1204.0,
+        556.0,
+        1082.0
+      ],
+      "iscrowd": 0,
+      "area": 535617,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "al^h3d5li3000000000nM[2G0000000RMn200000000WNS2F000000000hLX300000000YNg100000000dM\\200000000oMZ2G000000000[Me200000000iLPWOcmL[k0]R3eTOcmL[k0]R3eTOcmL[k0]R3eTOcmL[k0]R3eTOcmL[k0eP3d20000000000bN^100000000]Oc000000000000000000000G9000000000000000000F:0000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F0000000000000000000000000000000000000000F:000000000009G0000000:F00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O000:F000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O1G90000000000000000000000000009G00000O10G90H80000000000000002N7I0F:00000000G900000000SOm000000000nMR20000000000eM[2000:F000^Lb300000000lKT40000000000fMZ20009G000WNi1000000cKU`LUIk_3k6]4000009G0oMQ2000009G0SMm200000W3iLlbVP3"
+      }
+    },
+    {
+      "id": 27,
+      "image_id": 26,
+      "category_id": 1,
+      "bbox": [
+        406.0,
+        332.0,
+        1588.0,
+        3243.0
+      ],
+      "iscrowd": 0,
+      "area": 4936642,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "lbdb18:;j00VOOOW2]h3_MdWL;j00VOOOd2l0]O\\c3eMi[L;j00VOOOd2l0]1\\a3eKi]L;j00VOOOd2l0]1P]3fKTbLi31aLj00VOOOd2l0]1P]3fKTbLh:l0bIP]3fKTbL``0l]3`_OTbLRa0eS3k_OelLOFl1T3XMlLRa0eS3k_OelLOFVg0eS3kXOelLOFVg0eS3kXOelLOFVg0eS3kXOelLOFhg0SS3YXOWmLOFQh0aR3YXO`mL^i0`R3bVO`mL^i0`R3bVO`mL^i0`R3bVO`mL^i0km2oUOPSM0UO26a0J^i0km2oUOPSM0UOXm0km2hROPSM0UOXm0km2hROPSM0UOXm0c^2UROQdMV6d2]JcK0UOXm0c^2UROQdMZ]1h[2fbNXdM[]1g[2ebNYdM[]1g[2ebNYdM\\]1`Z2]405K=C00000_Lk^NnfMnb1kU2V\\NQkMb0UO:Onb1kU2V\\NQkMb0UO:Onb1kU2V\\NQkMb0UO:Onb1kU2V\\NQkMb0UO:Onb1kU2V\\NQkMQg1Qm1fXN]RNl0Fkm1Wk1XQNSUN1a09_Oc0FQn1Qk1RQNYUN1a09_Oc0FQn1Qk1RQNYUN1a09_Oc0FQn1Qk1RQNYUN1a09_Oc0FQn1Qk1RQNYUN1;iQ2Ub1XPN`]Nb0G:Oio1bb1[oMh]Nb0G:Oio1bb1[oMh]Nb0G:Oio1bb1[oMh]Nb0G:Oio1bb1[oMh]Nb0G:Oio1bb1[oMh]Nb0G:Oio1ga1`:cIZhMPeNfW2gV1VdMYkNT4PNfW2gV1VdMYkNT4PNfW2gV1VdMYkNT4PNfW2gV1VdMYkNWb2gT1i]MgiNic2\\U1d3eM[2^Nl1F0000000Ce0_NY10000000000F:@`000000001^Oa0000009G0G90000000000C=L4000000O1G90009G0000000000000N2J600000000G90000000000000000000000O10000J6N2000000000000000000000009G000H800000000000000O100G9000000000000000000000000000000000000000000H800000000000001O000O1000000000000000000000009G000000000000000G90000000000000000000000000000000000O101O000000000000000000000000000000000000000000000000000000000000000000000000000000000O100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O10000000000000000000000000000000001O0000000000000000000000000000000000000000000000000000000000F:000000000000000000000O10000000:F000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G900000000009G0000000000000000000000000O1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G0000000000000000000000000000000000000000G9000000000000000000000000000000000000000001O00000000000000000000000000000000000000000000000O100000000000000000000000000000000:F00000000000000000000000000000000O10000000000000000000000000000000000000F:000000000000000000:F0000000000000000000G900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G0000000000000000000000000000000000000000000000000000000O100000000000000000000000000000000000001O000000F:00000000000000000000:F00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G9000000000000000000000000000000000000000000000000009G000000000000000000G^kLdUObT3\\j09000000000000000000000000000000000000000000000000009G00000000000000000000000000000000001O00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008H000000000000000000000000000000G9000000000\\UO]kL[j0lT3001O000G90000000000000000000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000F:000000000000000000000000000001O000000000000000000000000000000000000000000000000000000000000000000000009G000000000000000000000000000001O0000000G90000000000000000000000000000009G00000000000000000000000000000000000000000000000001O000000000000000000000F:00000000:F00000000F:000000000000000000000000000000000001O00000000000000000000000000000000000000000000000O1000000:F0000000000000001O00000000000000000000000000000000000000000O101O8H000000000000000000001O00000G900000000000000000000000000000000O10000000000000000000001O00000000000000000000000:F00O1000000G900000000000000000001O0000000000000000000000000000000O1000002N6J00000000001O000000000000000000000000009_O800O1000000000000000000000001O000000000000000000007I1O0000000G9000000000000000001O8H0000000000000000009^O900O10000000000000008H001O000K5M30000000009G0000000Fb0H000000009G00001O0G908H000000007I:F00000G90b0^O00000000;D`0A000H800000f0ZOS1mNX1^Nj1`Ni1WN=C000^_M]gNoY2kX1QfMUgNVO\\OlU2_Y1njMUgNVO\\Oj31Zi1d[1`QNodN\\1\\Oj31Zi1k^1YnMhaNc4\\Oj31Zi1bc1SoM]\\Nc71Qi1Xj1fQNhUNZn1`Q2WLh1TVNglMSM8Fe0j>WO]e0US2PoNglMSM8Fk1Z2jN`1EmKd0Z2]OVR1fR2PoNglMSM8Fk1Z2jN`1EmKd0Z2]OVR1fR2PoNglMSM8Fk1Z2jN`1EmKd0Z2]OdQ1XS2boNUlMSM8Fk1Z2jN`1EmKd0Z2]OdQ1h[2enNbdM`1EmKd0f1X3d0ULmj0Ug2nSOn\\MU1mKmj0Ug2nSOn\\MU1mKmj0Ug2nSOn\\MU1mKcj0_g2XTOd\\MU1mK[j0gg2`TO\\\\MU1mK]MZ2fi0^e2]VOY^M5nN^i0ji2bVOVVM^i0ji2bVOVVMQ9^JUH1l<[o2nAVVMd2dKaNkN0O1001h;_P3RC^YMU1SF0O1001e8NgHQ[3cNQeL0O1001[88QIgZ3cNQeL0O1001U1a0dM`11WNd20NgZ3cNQeL0OWOZ4McLFU11WNd20N^c3gMV]LFU11WNd20N^c3gMU]LGV10WNd20mN_d3hNT\\LGV10WNc2lf3fMgYLGV10ah33U_`U1"
+      }
+    },
+    {
+      "id": 28,
+      "image_id": 27,
+      "category_id": 1,
+      "bbox": [
+        79.0,
+        238.0,
+        2059.0,
+        987.0
+      ],
+      "iscrowd": 0,
+      "area": 1923683,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "kik9l0bk3R3iMW2XOh0000l0TO000iNW1bN^1jNV1QOY1F000ZMZCbbLf<k\\3mCUcLS<k\\3mCUcL\\<b\\3dCUcLe<k\\3ZCVcLf<j\\3ZC[aL]OY1Y=[]3mCebLS<Q]3WDobLR<R\\3dDecLe;h[3nD[cLTM;n=g[3SFYdLm9U[3eFkdL[9dZ3VG\\eLj8UZ3eGeeLa8kY3j6B>B>Cf0ZO=C=D<E;Df0\\O:M3000000N2E;M3000009G000000000O10000000000000000000:E10000000000000000L4E;H8O1000000000WVOPlLRh0PT3cWO[lL]h0eS3WWOglLih0YS3lVORmLTi0mR3kVOPmLZi0iR3mVOTmLVi0lR3jVOTmLVi0lR3jVOTmLVi0lR3RWOllLnh0TS3RWOklLoh0US3QWO_lL[i0aS3eVOSlLgi0mS3n008E3F:F:O10000O100L4M300000000O10000000000000000000000O100000000000000000000M3J6000000000000000000O10000000000000000000000O10000000000000000000000OH900000000000000000000000O10000000000000000000000O1000000000000000000000000O100000000000000000000000000O100000000000000000000000000O100000000000000000000000000O100000000000000000000000000O10000000000000000000000000000O1000000000000000000000000000000O1000000000000000000000000000000O10009G000000000000000000000000000O100000000000000000000000000000000O10000000G90000000000000000000000000O1000000000000000000000000000000000000O1000000000000000000000000000008H0000000O1000000000H8000000000000000000000000000O100000000000000000O100000000000000000000000O:G000000000000000000G9000000000000000000009G0O1000000000000000G900000000009G00000000000000000O1000000000000000000000G9000000000000000000000000000O1000000000000000000000000000000000000000000000000000000O10000000000000000000000000000000000000009G00000000000000000O10000000000000000000000000000000000000000000000000000000000000000O1000000000000000000000000000000000000000000000000000G900000000000000000O100000000000000000000000000000009G0000000000000000009G0000000000000000000000000O10000000000000000000000000000000000000000000000000000000000000000000G900000000000000000000000O1000000000000000000000000000000000000000000000008H0000000000000000000000000000000000000000000000000000000000000O100000000000000000000000000000000000000000000000000000000000000000000000000000000000G90000000000000000000000000000000000000000000000000000000000009F10000000000000000000G90000000000000000000000000000000000000000000000000000000000000000000000000000000000009G00000000G9000000000000000000000000000000000000000000000000009G00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G9000000000000000000000000000O109G00000000000000000000G90000000000000000000000000000009G0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O00000006J4L0000000000000000000000000000F:0000000000000000000000000000000000000000G900000000009G0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000H8000000008H0000000000000000000000000000000000000000000000001O01O00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O0000000000000000000000000000000000000G900000000009G000000000000000000000000000000000000000000000000GjnLXROVQ3hm09000000000001O0000000000000009G00000000000000000000000000000000000000000000000000000000000000:F00000000000001O000000000000000000008H1O000000G9000000000000000000000000000000000000001O8H000000000000000000000000000000001O0000000000000000000000000000000000GTROnnLlm0RQ3900000000001O000000000000000F:00000000:F0000000000000000000000000000000000000001O00000000000000000000000000000000000000000000000000000G9000001O0000000000000000000000000000000:F000000000000000000000001O000009G00000000000000000000000000000000000009G00000000000000000000000000001O00000000000000000000000000000000000G9000000000001O00000F:0000000000000G91O00001O7I0000000000001O0000000000000000000000000000000000000000000:GO00000000000000000000000000000000000000001O00000000000000000000000000000000000000001O0000000000000000000F:00000000001O0001O0000000000000000000000000000HhROXnLXm0hQ38000000000009G0000010O000005K3M00000000001O0000000000000000000000000000000F:01O0000000000000000000000000000001O0000000000000000008H000000HnRORnL\\m0dQ381O0000006J1O00001O2N6J00000000000000001OG90000001O000000HfROZnLZm0fQ3N:01O000000000000000000000000000:GO000000000000000000000000001O000000000000000000000000001O0000000000000FQnLSSOoQ3ml0:0000000001O0000000000000000000000001O00000000000000000000004L4L000000000000001O0000000001O00G9000003M6J0000000000000000000G:O0000007I00001O00000F:00000008H001O00006A:O00001O3M4L000000002\\Om0E4L000F:01O<D=C=C=^Nc1B?A?A`0PLWfLYAZZ3V>R4gB\\`Lb3L]OZ`3_Le`LY3KcJOg3U`3iMo`Lo2mNaK^2Y1[^3A[aLd2lMbL[f34n\\LU2gLgMXl3n0hSLRO[n30Sgdc0"
+      }
+    },
+    {
+      "id": 29,
+      "image_id": 28,
+      "category_id": 1,
+      "bbox": [
+        398.0,
+        1196.0,
+        1604.0,
+        1966.0
+      ],
+      "iscrowd": 0,
+      "area": 1600770,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "X]da1=So3[1eN0000000G909G00000F:0c0]O00000G90000000000]Oc00:F00000G909G00000G90000000000Ga0H0000000F:000001O0G9000000F:09G0000000G900000000F:00000000G909G0000000G900000000G900000000G90000000000F:0:F00000G900000000F:09G000000000000000GfE\\[LZ:dd39000000F:0000000000G9000:F000^Ob000000000000009G00000G900000000F:00000000G9000:F000F:0000000000G900000000F:09G00000G900000000F:00000000G90009G000H80000000000F:00000000]Oc00000000000000:F00000G900000000F:00000000G90009G00000F:00000000G900000000G9000:F000F:0000000000G900000000F:0008H0G90000000000F:00000001F9000009G0F:0000000000G91O000000G90003M6J0F:0000000000G900000000F:0000000000000:F00000G900000000]Oc000000000F:0009G00000G900000000G9000000000000000000F:0009G00000]Oc00000000000000:F000G90000000000]Oc000000000F:0009G000G900000000000000000000G9000:F0F:0000000000]Oc000000000G900000000F:000008H1O00000000000G900000000F:0009G00000G900000000G90009G000F:00000000G90000000000F:000:F000G900000000F:0000000000G90009G000F:00000000G90000000000G900000000F:0009G000G90000000000F:00000000]Oc00000000000000:F00000G900000000F:00000000G90009G000G90000000000F:0009G000G900000000F:09G0000000G900000000F:00000000G90:F0000000G900000000G900000000000000000000G909G00000]Oc000000000F:0000000000G90:F00000F:00000000G900000000000000000000]Oc009G00000G900000000000000000000F:08H00000G900000000F:0000000000G90:F00000]Oc000000000F:00000000000000000000G900000000Ha0G000000000F:00000000]Oc000000000000000000000G900000000F190000000G900000000F:0000000000^Ob000000000F:000000000F:000000000H800000000F280000000G90000000000F190000000G900000000F0:00000000G090000000FGc00000000G0900001O000GO:0000000G900000000F19000000000GO:0000000G09000000FiYN[gMme1oX2:000000G180000O1000G090000000GFc00000000G900000000000G90000000F0:0000000G090000000000H80000000F0:0000000G090000000000F:0000000F1900000000F:0000000000G900000000G90000000HO90000000000G900000000F:000000000000000000]Oc00000000000G900000000G900000000G900000003M6J000000000F:00000000G90000000000G900000000F:000000M3@`000000009G000000000H800000000F:0000000009G000000000]Oc000000000^Ob00000000:\\O:0000000000G900000000F:00000009G00000000000H800000000F:0000000:]O90000000000F:00000000G900000000G90000000009]O:00000000000000000:]O90000000000F:00000000G900000000F:0000000009^O900000000G900000000G9000009G0G90000000000F:00000000G900000:F0F:0000000000G9000009G0F:00000000G90000000000F:00000:F0G900000000G90000000000F:000009G0G900000000F:0000000000G900000000G900O10:F0H800000000000000000000]Oc0000009G0G900000000F:0000000000G9000009G00000000000F;O000000000TOl0000008H00000000000F:0000000000G90001O000G90008H000F:0000000000G9000:F000F:00000000000000000000G90009G000]Oc00000000000000:F000]Oc00000000000G900000000F:0000000000000009G000G900000000F:000000O1H800000:F0F:00000000H800000000000000000000F:000009G0^Ob000000000F:0000000000G9000:F000F:00000000000000000000G90009G000F:00000000G900000000]Oc0000009G0000000000000G900000000F:00000:F000G9000000F:00000000G900000009G00000000000]Oc000000000000000000000F:00000:F0G900000000G90000000000G90009G000G900000000F:0000000000G9000:F0F:00000000G900000000F:00000009G0G900000000G900000000F:0000000:F00000000000G900000000F:0000000000]Oc0000009_O800000000F:000000000000000009G0G900000000G90000000000F:00000:F0]Oc000000000G9000009G00000000000FYVLkJgi3U5:00000:]O900000000F:0000000009_O80000000:]O900000009]O:0000000009TOc0000004LcjaT1"
+      }
+    },
+    {
+      "id": 30,
+      "image_id": 29,
+      "category_id": 1,
+      "bbox": [
+        267.0,
+        845.0,
+        1789.0,
+        884.0
+      ],
+      "iscrowd": 0,
+      "area": 1517861,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "WlXQ1X29dN\\g3j5dXLVJ\\g3j5dXLVJ\\g3j5dXLVJ\\g3j5dXLVJ\\g3j5dXLVJW5UOd\\3[=F:00000Z7fH0G900000_1aN0G9O10000ShLoXO[W3cg000H8000:F000000009G000F:00000:F0000000000000000009G000G900000000000000000000000009G0000000000000000000000000000000000000000000000000000:F0F:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O1000000000000000000000000000000000000000000000000000000009G00000000G90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O1000000000000000000000000000000000000000000000000000000000000000000000000H800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008H0000000000H8000000O19G00000000000000000000000000000000000000000000000000000000000009G000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000000000000000000000000000000O100000000000000000000000000000000000000000000000000000000000000000000000000000009G0000000000000000000000000000000000000000G90000000000000000000G9000000009G000000000000000000000000000000G90000000000000000000000000000009G000000000000000000000000000000G90000000000000000000000000000000000000000000000000000000000000000000000009G00000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000000000000000009G000000000000000000000000000000G901O00000000000000000000000000000000000000000000000009G00000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000009G00000000000000000G9000000009G000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000H8000000000000000G9000000009G00000000000009G0000000000G9000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G9000000000000000000000000000000000009G00000000000000000000G900000000000000000000000000000000000000000000000000000008H1O000000G900000000009G000000000000000000G900000000009G000000000000000F:00000000000G900000:F000000000000000000000009G00000000000000000000G900000F:09G0000000000000000000000000000000000000000000000000:F00000000F:0000004L6J0H8000000009G00000F:00000000:F0000000000000G900000F:000000000009G0000000000G9000000000000000000000000000000000000000000000000000000000:F0000000000F:000000000000000000:F0000000000F:000000000000000000000000000000000000000000000000:F00000000000000000000G900000000000000000000000000000000000000000000000000000000000000:F00000000000000000000000000000000000000000000000000F:0000000000000001O00000000000000000000000:F0000000000000000000000000000000000000000F:00000000000000000000000000000000000000000000000000000000000000:F00000000F:00000000000000000000:F000000F:000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O0000000000000000000000000000F:0000000000000000000000000000000000000000000000000000000000000000000000000000000GckL_UO]T3aj09001O000000000000000000000000000:F000000000000000000000000000000000000000G900000000000000000009G000000000F:0000000000000000G909G0000000Fd0F0000000G900000000F:09G0000000Gk0^O1O000aGigLeBm3d1ZT3g;igLeBe`3m;[_LSDe`3c0XbL[6SMRIe`3c0ihLJbFCe`3c0i<0c0]O`Ykm0"
+      }
+    },
+    {
+      "id": 31,
+      "image_id": 30,
+      "category_id": 1,
+      "bbox": [
+        660.0,
+        777.0,
+        927.0,
+        1939.0
+      ],
+      "iscrowd": 0,
+      "area": 1632061,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "mkWb2T2\\m3T1jSLSO9O_c3n0X\\LSO9O_c3n0X\\LSO9O_c3n0X\\LSO9OaS3[NckLEl0k?GVB9OPl2oMkRM9h1]4aN[Kl0eh0V\\2WXOmbM]OG0U1GkNb0m7]OTH9h1]4aN[Kl0nh0m[2nWOVcM]OG0U1GkNb0m7]OTH9h1]4aN[Kl0nh0m[2nWOVcM]OG0U1GkNb0m7]OTH9h1]4aN[Kl0nh0m[2nWOVcM]OG0U1GkNb0m7]OTH9h1]4aN[Kl0nh0m[2nWOVcM]OG0U1GkNb0m7]OTH9h1QP1Z[2cPOVcM]OG0U1GkNb0e4ZV1RW2\\SOZdMVn0\\[2PROddMPn0\\[2PROddMPn0\\[2PROddMPn0\\[2PROddMWn0cZ2g;aM\\2000008H1kNT10000000:F0]Oc000000000]Oc0000009G0G90000000000G900000:F000000000F:00000000000000000009^O900000000000000000000000000000:F000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G00000000G900000000000000000009G0000000009G000000000000000000000000000000000000000000000000000000000000:F00000000000000000G900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G0000000008H0000000000000000000000000000000G90000000000000000000000000000000000000000000000000:GO0000000000000000000000000000000000000000000000000009G0000000008H000000000000000000000000000000H80000000000000000008H00000000H8000000000000000000000000000000000000000000000000000:F00000000000000000000000000000000000000000000000000000000000000000000000000000000000F:000000000000000000000000000009G0000000000000000000000000000000000000000000000000000000000000000000000:F0:F000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G0000000000000000000F:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G09G0000000000000000000000000000000000000000000000000000G9000000009G00000000G9O1000009G00000000G90000000000000000000000000000000000000000:F0000000000000000000000000000000000000000000000000000000000000000000000008H000000000000000000000000000000000000001O00000000000000000000000000000000000000000000000000009G00000000000000000000000000000000000000000000000000009G00000000000000000000000000000000000000:F000000009G00000000000000000000:F000000009G0000000000c0]O00000000b0^O00000000g1YN00001O0000n0ROY4gK00000000R2jM4K500000m2SM_1aN0000000000V3jL0000000Fi1aN00000000b3^LQ2oM0000000000R2nM00000000m2SM00000G90Q5oJ0000000000a3_L00000F:0^1bN00000G9VE__Le6fd30000000g1YN000000000]Ok3hL0000000]MeaVh2"
+      }
+    },
+    {
+      "id": 32,
+      "image_id": 31,
+      "category_id": 1,
+      "bbox": [
+        542.0,
+        676.0,
+        1260.0,
+        2542.0
+      ],
+      "iscrowd": 0,
+      "area": 2885659,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "cY`S2_3Ql30000000Gc2fM0000000]O[2XN00000000d2SM90000000_1XN90000O10Q2oM0000000000[2]M8000000lbLn_OjZ3\\b00000000[2eM0F:0000000i1WN0000000YkLkWOSR3ij000G9000U1kN0000000000n2RM000F:000n2RM00000000Q2oM000000000bVMQlN[g2RV10000G90[2eM00000000i1WN00000000[2eM0000000000c2]M;E0000007IX1hN00000000i1WN0000000000Z2fM00000000R2nM00000000_1aN001O000000m2SM00000000?Ao0QO00000000d2\\M0000000000^1bN00000000W3iL00000000[2\\M9000000000U1kN00000000R1nNo0QO00000000U1kN00000000009G00000000c0]O000000009G000000:F00000000008H00000000:F000000000000000000009G000000000000000000000000000000:F000000000000000009G000000000000000000000000000000000000000000G90000000009G00000009G0000000000G900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G00000000G9000000000000000000000G90000000000000000000000000000000000000000000000000000000000000000000000000000000000F:0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000H8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G9000000009G00000000000000000000G90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O0000000G9000000000000000000000000000F:000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:000000000000000000000000000000000000000000000000000000000000000001O000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G9000000000000000000000000000000000000000000000000000000000000000000000000000000000:F0O1000000000000000000G900000000000000000000000009G00000000000000000000000000000O1000000000009G0H8000000000000000:F0000000000000F:000008H00000000:F0000000000000G900000c0]O000000009G0F:00000b0^O0G90000000^1bN00000000T2lMg6fHb7QI?S\\N[hMSOcNk]1RY2RcN[hMSOn2`Y1gT2]gN[hMSOn2`Y1gT2]gN[hMSOn2WY1PU2fgNRhMSOn2WY1k_20e6omN[UMmJaNSd0`Q3jYOiQMS2gLSd0`Q3jYOiQMS2gLSd0`Q3jYOiQMS2gLac0RR3\\ZOWQMS2gLac0RR3\\ZOWQMS2gLZ2Z5dK^J_:kc3aEU\\L_:kc3aEU\\L_:kc3aEU\\L\\5nh3aJcl]m1"
+      }
+    },
+    {
+      "id": 33,
+      "image_id": 32,
+      "category_id": 1,
+      "bbox": [
+        85.0,
+        1139.0,
+        1481.0,
+        2144.0
+      ],
+      "iscrowd": 0,
+      "area": 1882280,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "o`e:h1hm30000000^Ob00c0]O00000]Oc009G00000G90:F0000000]Oc000000000^Ob008H00000G901O00000F:0009G000G900000000]Oc00000000000^Ob008H1O000]Oc000000000G90000000000]Oc0000000^O_FU[La9kd3b009G000TOl000000000F:0000000000]Oc000000000^Ob000000000G9000:F00000]Oc000000000]Oc0000000G90000000000F:00000000^Ob00009G000^Ob00000000000]Oc000000000F:00000000]Oc00000000000G900000000^Ob0000000G9000001O000]Oc0000009G0]Oc000000000]Oc000000000F:0000000000G9000009G0^Ob000000000G90000000000F:000000]Oc000000000]Oc000000:F000G900000000]Oc000000000G90000000000^Ob000000000]Oc000000000F:000009G000^Ob000000000]Oc0000000F:00000000TOl00000000000]Oc000000000G90000000:]O90000000000]Oc000000000]Oc000000000G90000000000]Oc000000000G9000009G0]Oc00000000000F:00000000TOl0000000]Oc00000000000G900000000TOl000000000G90000000000]Oc000000000F:00000009UOb000000000]Oc00000000:F0]Oc000000000F:00000000]Oc00000000000G900000000]Oc0000009G0]Oc00000000000G900000000]Oc000000000^Ob000000:F000]Oc000000000]Oc000000000G90000000000]Oc000000000F:00000000^Ob00000000000]Oc000000000]Oc0000009G0F:00000000^Ob00000000000G900000000]Oc000000000G9000:F00000]Oc000000000]Oc0000F:000]Oc0000:F00000G900000000^Ob000000000]Oc00009G00000]Oc000000000]Oc000000000]Oc00000000000G9000:F000F:00000000^Ob000000000G90000000000TOl000000000F:00000000]Oc00000000000G909G00000^Ob000000000F:0000000000G900000000G900000000F:0000000000G9000000000008H00000F:00000000000000000000G9000000000001O00000000000000000G9000000000000000000000000000000000000000008G2O0000000000000000009G000000000000000000000000000000:F00000000000000000000000000000000000000000000000:F000000000000000000000009G000000000000000009G0000000000000000000000000000000000000000000:F000000000000000:F000000000000000000000000000000000000000000000000000090G0000000000000000000000000000000000000000000000000:F000000000000000000000G9000000000000000000000000000000F:000008H0000000000000G90000000000000000F:0000000000H8000000000000000009]O:0000000000G900000000G900000000F:0000000000^Ob000000000]Oc00000000:]O90000000000bN^100000000F:00000009^O900000000G90000000000G900000000F:00000000^Ob00000000:F0^Ob0000000F:00000000]Oc00000000000G900000000^Ob000000009^O90000000000SOm000000000G900000000G90000000000G900000000]Oc00000000:SOc000000000G90000000000TOl000000000G900000000F:0000000000G900000008cNU100000000G90000000000]Oc000000000UOk000000000F:000000000:SOc000000000]Oc000000000G90000000000]Oc000000009_O800000000F:0000000000G900000000F:00000000G900000000]Oc000000009G0TOl000000000TOl000000000G90000000000]Oc000000:F0]Oc000000000G90000000000jNV100000000F:00000000G900000009G0F:00000000G900000000G90000000000]Oc000000000^Ob000000000]Oc00000000000F:00000:F0^Ob000000000]Oc000000000F:0000000000]Oc000000000G9000009G0]Oc00000000000]Oc000000000G900000000F:0000000000G900000:F0]Oc000000000F:0000000000^Ob000000000]Oc0000009G0F:0000000000]Oc000000000]Oc000000000^Ob000000000F:0000000000]Oc0000:F000]Oc000000000G90000000000TOl000000000F:00000000]Oc0000009G000G900000000]Oc000000000F:00000000^Ob000000000]Oc000000000F:00000009G0]Oc000000000^Ob000000000G90000000000]Oc000000:F0]Oc000000000]Oc0000009G0G90000000000]Oc000000000]Oc000000000]Oc00000000000]Oc000000:F0G9000000^Ob00000000009TOc000000000]Oc000000009^O90000000000F:000003M6WOc0000004L6XOb000000007J1[Oc0000009G_Ukj2"
+      }
+    },
+    {
+      "id": 34,
+      "image_id": 33,
+      "category_id": 1,
+      "bbox": [
+        867.0,
+        1149.0,
+        772.0,
+        1475.0
+      ],
+      "iscrowd": 0,
+      "area": 1067123,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "`kP\\3l0dn30000000_GT4^]LlKbb3b:oM00000hLX30:F00000[H_B[hLab0eW3_]O[hLjb0\\W3V]OdhLjb0\\W3V]OdhLjb0\\W3V]OdhLjb0\\W3V]OdhLjb0QR3P8YIQTOSTMOG:T1F11jNTm0mk2lRO]TMOG:T1F11jNTm0mk2lRO]TMOG:T1F11jNTm0mk2lRO]TMOG:T1F11jNTm0mk2lRO]TMOG:T1F11jNTm0^h2d9G0000000mKS40000000000]Om0F0000000H800000000F:0000000009G000000000G9000000000000000000000000000000F:000000000000000000000000000000000000000009G0000000G900000001O000000000000F:0000000000000000000000000000000000000000000000000000000000000000000000:F000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009]O:0000000000:F0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:00000000:F000000000000000000000000000G900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O10000000000000000000000000000G9000000009G0000000000G90000000000000000009G000000000000000000000000000000000000000000000000000000000000000000000000F:00000000000000000000:F000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:000009G0000000000000000000000000000000000000000000000000000000000000000000000000000000000:F0000000000000000009G00000000000000000000:F00000000a0_O0G900000R2nM0mfNhZMnW1Xe2RhNhZMnW1Xe2RhNhZMnW1Xe2RhNhZMnW1Ye2QhNgZMoW1]f20W3_L:0000000Q4oKj1fQOnoLbi0RP3^VOnoLbi0RP3^VOnoLbi0RP3^VOnoLbi0RP3^VOnoLbi0aV3_L000000000Gf4cK0000000Fd5fJ0000000Ge4dK000000000FT4VL0000000YLlVLhNSn30000000aZga2"
+      }
+    },
+    {
+      "id": 35,
+      "image_id": 34,
+      "category_id": 1,
+      "bbox": [
+        299.0,
+        769.0,
+        849.0,
+        1694.0
+      ],
+      "iscrowd": 0,
+      "area": 1322223,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "\\YXU1P1ki3e4L40000000d2TM8N20000o\\LZGX_3_<I7N2000i3WL0I7N200000Y5gJ0H8O10h1XN00000000R2mhLoVOn0SOVQ3ni0lmLoVOn0SOVQ3ni0lmLoVOn0SOlP3Xj0VnLeVOn0SOlP3Xj0VnLeVOn0SOlP3Xj0VnLeVOn0SOlP3dn0aN0000000^QMYRO[k2nP10000000l5TJ00000G90d2\\M0000000000k3ULk0UO00000000\\2dM00000000l0TO0000000000b0^O00000000:F000000000000000000009G00000000000L4K502N8H09G00000000000000000000G9000000009G00O1000000000009G0000000000000000000000000000000000000000000000000000000000000000000G90000000X[NaeM_d1hZ20000000000000000000G9000000009G0000000000000000000001O0000000000000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000G9000000000000000000000000000000000000000000000000000000000000000009G000000000000000000000000000000000000000000000000000000O1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G90000000000000000009G0000000000000000000000000000000000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000000000000000009G000000000000000000G9000000000000000000000000000000000000000009G000000000000000000000000000000000000000000000000000000000000:F0000000000000000000000000000008H00000000000000000000:\\O:00000009G0000000000c0]O00000000U1kN00000000m2SM00000000W5`J9000000000i3WL00000000W3TlN[RM08gm0gm2YROQRM08gm0gm2YROQRM08gm0gm2YROQRM08gm0gm2YROQRM08gm0QU3ZK0000000000Y5^J90000000m5iI:0000000g4PK9000000000m5kI80000000Yjk^4"
+      }
+    },
+    {
+      "id": 36,
+      "image_id": 35,
+      "category_id": 1,
+      "bbox": [
+        514.0,
+        416.0,
+        1335.0,
+        2430.0
+      ],
+      "iscrowd": 0,
+      "area": 2936312,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "WaRP2h1hm3000000000XNd2TO00000aNXLVWLh3jh3R2]O00000oMQ209G0000000aN_10:F00000WNi108H000oMRD``Lo;__3Q2000000nMR20009G00000WNi10009G000YNg100000000WNi10000000000WNi1000:F000[Me200000000YNg10000000000jNV10009G000[Me200000000jNV10000000000oMQ200000000nMR200000000cN]1\\Od009G0000000jNV100000000oMQ200000000dM\\200000000\\Md20000000000UOk000000000oMQ200000000aN_10000000000cN]1iNW100000000TOl000000000\\Md20000000000oMQ200000000fMZ200000000TOl00000000000bN^100000000fMZ200000000kNU1VOj0O100000000VOj000000000UOk000000000F:000001O000H800000000F:000000000000000000H800000009G00000000000F:000000000000000000000000000000G90001O000000000000000000000000000000000000000000000H80000000000000008H000000000000000000000000001O000000000000000000000O1000000000000000000000000G9000000000000000000000000000G90000000000000000000000000000000000000000000000000000000000002N7I00000000000000000000000000000000000000000000000000000O10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G90000000000000000000000000000009G00000000G9000000009G000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F00000000000000000000000000000000000000000000000000F:0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:000000000000000000:F00000000000000000000F:00000000:F00000000000000000000000000000000000000000000000000000001O0O1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O000000000009G000000000000000000000G90000000000000000000000000000000000000000000000001O00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O1000000000001O0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O0000000000000000000000000000000000000000000000000000000000G9000000009G000000000000000000000000000000000000001O000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O000000008H00000000000000000000000G9000000000000000000000001O5K4L00000000000F:0000000000000008H1O00000000000000008H000G9000000000000000:F000F:0008H000G900000:F00000000=C5K0G90001OQ1oN0F;O000000g0YOo1QNd2\\Mh3XLa3dTN_jMge1aU2ZZNjkMSOm0^a1bS2__NakMSOm0^a1bS2__NakMSOm0^a1bS2__NakMSOm0^a1RW2b^NnhM^a1R]2VMW7SIP8PHQ3cPOjoL^i0VP3bVOjoL^i0VP3bVOjoLlh0hP3TWOXoLlh0hP3TWOXoL^;aNa0o]3eFQbL[9o]3eFQbL[9o]3eFQbL[9o]3eFQbLh8b^3XG^aLa2a1YJ_Nl2b^3jNSkLZN[Fl2jj3TMVULl2jj3TMVULl2jj3TMVUL^2hZfg1"
+      }
+    },
+    {
+      "id": 37,
+      "image_id": 36,
+      "category_id": 1,
+      "bbox": [
+        82.0,
+        722.0,
+        2158.0,
+        2115.0
+      ],
+      "iscrowd": 0,
+      "area": 2130638,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "\\iX:l0dn3000000000GV1SO0000000]Ol0G0000000Fd0F000000000H`0H0000000Fc0G00000000:F0000000G90000000009G0000000F:00000000000:F0000000G90000000009G000000000Gc0F000000009G0000000F:000000000:F000000000G900000000Fc0G000000009G0000000G900000000000:F00000F:09G00000000000000000G90:F00000000000000000Fc0G0000000G9000000000:F000000000G90000000009G0000000Gb0G0000000000001O000G908H000000000000000F:09G0000000000:F00000G909G00000000000000000F:0:F000000000000000G909G00000000000000000F:0:F00000G?J3M00000000000000000Gc0F0000000000000000000Fc0G000000009G00000G90:F000000009G0000000F:00000000000:F00000G900000000000009G00000F:00000000000:F0000000G909G00000F:000000000009G0000000G909G000000000000000G909G00000000000000000F:0:F000000009G0000000G90:F0000000000000F:05K4L000G90000000000000:F00000G909G00000000000O10000H800000000000:F00000F:09G00000000000000000G909G00000000:F0000000G900000000F:09G00000000000000000000:F00000G908H00000F:0:F00000000000000000G909G000000000000000F:0:F00000000009G00000G9000000000009G0000000F:000000M3J60:F000000009G00000G90000000000000:F000F:0009G000000000000000G9000:F000000009G00000F:000000000009G00000G900000000F:09G000000000000000000009G00000G90000000000F:0:F000000000000000G900000000000009G00000G900000000000000000000F:000000000000000000G90:F00000000000000000F:00000000000000000000H8000000000000000000F:00000000000000000000G900000000F:00000000000F:0000000G90000000000000000000H8000000000G900000000F0:00000000000000000000G90000000G9000000000G90000000F:0F:00000G900000000000G90000000F:00000000G90F:000000000000000000000000001E:0G900000G900000000000F:00000000000000000HO9000O100GO:0000000000000000000G090000000000000000000F1900000000F:0000000G901O00000000000000000F1900000000000000000GO:000000000F190000000G9000000000F:000000000G9000000000G90000000000000000000GO:00000O1HO90000000000000000000F:000000000H80000000GO:000000000000000000Gj[MXeNlc2R[19000000000000000000F1900000000000000000GO:00000000G9000000000F:00000000000000000G090000000000F:0000000G900000000G090000000000000000000F190000000000000000000G0900000000000000000F19000000000GO:00000000000000000F190000000H800000000000F:0000000G9000000000G90000000000000000000F0:0000000000000000000G0900000000G90000000F:0000000000GO:000000000000000F:0G900000000000000000H80F:00000000000000000F:0G900000G900000000000F:00000000000000000G90G900000F:0F:00000000000000000G90G9000000000000000G90G90000000000F:00000G900000000000H80000000F:00000000000F:000GZeNh[MfZ1Xd2900000000F:000G90000000000000G9000F:000000000000000H8000G90000000000000F:000F:0000000000G9000G900000000000000000000F:000G9000G9000F:000000000000000F:000G90000000000000H8000F:0000000000000F:00000G90000000000000G900000F:000000000000000000G90G90000000000F:00000F:00000000G90G90000000000G900000G900000000000G900000F:0000000000000F:00000G9000000000000000000F:0G900000G90F:00000000000000000000H800000F:0G900000G90000000000000F:00000F:00000000000G900000G90000000000G0\\eNf[MdZ1Zd29000000000000000F:00000000000000000000G090000000000000000000F:000000000F:0000000G900000000000000000000F:00000000000000000000G900000000F:00000000000000000000G9000000000000000000G900000000000000000000F:0000000:F000000000000000000000G9000000F:00000000G909G00000000000000000Fd0F0000000000000000000Gb0G00000000000000000F:0000000005K5K0000008_O:O00000000000000000Ga0H000000000F:0000000:F000000000G90000000009G00000000:\\O:000000000000000000Ha0G00000000000000000F:0:F00000000000000000Gb0G0000000F:000000000009G001O000G9000000000008H00000000000000000Gb0G0000000F:0000000009G1O0000009^O90000000000000000F:0:F00000000000000000Gb0G0000000000000000000Fd0F00000000000000000G909G00000000000000000Fc0G00000000009G0000000H8000000G909G00000000000000000F:0:F000000000000000G909G00000000000000000Fa0I3M000000000000000G909G0000000F:000000000:F00000G900000000000009G00000F:0:F00000000000000000G908H000000000000000H80009G000000000000000F:0:F0000000000000G9000009G000F:0000000000000:F000000005K4L000G900000000F:0:F00000000000000000G909G0000000000000F:000000000000000:F000G90009G000000000000000H80009G000F:0000000000000009G000G90009G00000000000Fb^LbB^a3^=:00000000000009G1O0G900000000000009G000F:00000:F0000000000000G90009G000F:001O0000000000000000G9000:F00000000009G0G90000000000000009G0F:00000000000000000:F0G90000000000000009G000F:000:F00000000000G9000008H0000000000000F:00000:GO0000000000G900000009G00000000000F:00000:F00000000000G]VLeJci3[59000009G000000000G900000009G00000000:F0F:00000000G900000009G00000000:F0G9000009TO\\SLZNdl3f1c000000^jm6"
+      }
+    },
+    {
+      "id": 38,
+      "image_id": 37,
+      "category_id": 1,
+      "bbox": [
+        621.0,
+        833.0,
+        1132.0,
+        2338.0
+      ],
+      "iscrowd": 0,
+      "area": 2542227,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "ZS]]29^1i3Yh3WLgWLi3Yh3WLgWLi3Yh3WLgWLi3i]3fM^eL^OdKnNW25nNi3i]3fM^eL^OdKSO0U8[^3ZIQfL^OdKSO0U8kP3UHi[MU1hG^OdKSO0U8kP3UH\\RMc0jLO_1l0]O_1_3fMdKSO0U8kP3UH\\RMc0jLO_1l0]OT8kNYNSQ3UH\\RMc0jLO_1l0]Oc`0no2o]O\\RMc0jLO_1l0]Oc`0Qj2o]OSUMf7`0mH@O_1l0]Oc`0Qj2o]OSUMiR1mj2WmNSUMiR1mj2WmNSUMSS1cj2mlN]UMSS1cj2mlN]UMSS1[g2U4jG\\kNj`MZY1V_2ffNj`MZY1V_2ffNj`MmY1c^2SfN]aMmY1c^2SfN]aMmY1[[2h6[Ih^N_lMkc1aS2U\\N_lMkc1aS2U\\N_lMkc1aS2U\\N_lMkc1aS2U\\N_lMkc1in1j8mN[1H000000000iLa3F0000000UOk000000000]Oc00000000000F:00000000Gb0G0000000G900000000000000000000Gb0G000000000000000000000000000G9000000000000000000000000000000F:0000000000000000000000000000000:F00000000000000000000000000000G9000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G0000000000000000000000000000000F:0000000000000000000000000000000000000000:F0000000000000000000000000000000000000000000000000000000000000G90000000000000000000000000000009G0000000000000000000000000000G9000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F00000000000000000000000000000000000009G000000000000000000000000000000000000000000000000000000000000000000000000:F00000000F:000000000000000000000000000000000000000000:F000000000000000000F:0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G000000000G90000000000000000000000000000009G000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G9000000000000000000009G0000000000000000000000000000000000000000G9000000009G000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G90000000000000000009G0000000000000000000009G000000000000000000000000000000000000000G90000001O0000000000000F:000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:00000000000000000000000000000000000000000000000009G00000000000G90000000000000000000000000000F:0000000000000000000:]O9000000000000000000O1H8000008B7K4000000G90000000000G900000009oNh0L400000:\\O:bI^6_Ma20000000000mKS4XI`gMZcNc2hLVV2i^1`gMWaN9X3Q2hLiV2V^1mfMjaN9X3Q2hLiV2V^1mfMjaN9X3Q2hLiV2V^1mfMjaN9X3Q2eLlV2Y^1jfMjaNT`2fP1k_MeTOch2Sk0]WMlTOdh2Tk0\\WMlTOdh2Tk0\\WMlTOdh2Tk0\\WMlTOdh2Wc0i=0c0]O000RFZjLRJfU3n5jQMbBVn2^=T;oA\\^Lj;da3VDS_L`3]OSM3P4]a3]KS_L`3]OSM[g3]OXYL`3]OSM[g3]OXYL`3]OSMSi3m2mVLSMfYfS2"
+      }
+    },
+    {
+      "id": 39,
+      "image_id": 38,
+      "category_id": 1,
+      "bbox": [
+        708.0,
+        602.0,
+        927.0,
+        1636.0
+      ],
+      "iscrowd": 0,
+      "area": 1389301,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "llVh2l0dn30000000WNZ5_L0000000gJc5F000000000ULT4G0000000UMU3kMX]OoeLgc0QZ3Y\\OoeLgc0QZ3Y\\OoeLgc0QZ3Y\\OoeLgc0QZ3Y\\OoeLPd0kV3i3000000000:hLn200000000[Ke4SMZROPTMfm0Pl2ZROPTMfm0Pl2ZROPTMfm0Pl2ZROPTMfm0Pl2m2aN_100000009G0WJlkNP]MW1WNRT1id2gjNP]MW1WNRT1id2gjNP]MW1WNRT1id2gjNP]MW1WNRT1id2gjNP]MW1WNRT1f`2ekNc_MkNG`50PP1f`2ekNc_MkNG`50PP1f`2ekNc_MkNG`50PP1f`2ekNc_MkNG`50PP1f`2ekNc_MkNG`50PP1T`2Y90000000000kNU100000000^Ob000000000F:00000009G00000000000G900000000G90000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000000000000000009G00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:0000000000000000000000000000000000000000000000000000:F000000000000000000F:0000000000:F000000000000000000F:0000000000:F0000000000000000000000000000000000000000000000000000000000000000000000000000000000F:00000000:F000000000000000000009G00000000G90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:00000000:F000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G00000000000000000000G900000000000000000000001O0000000000000000000000000000000000000000000000000000000000000000008H000000000000000000000000000009HO0000000G90000000000000000000000000000000009G00000000000000000000000000000000000000009G000O100000000000000000000000:]O900000009F1000000000:F000000008H00000000U1kNh1XN0000000G^3kL0000000000h3XL1O000000?Ai4WK00000G90n2RM0000000000U1kNl0UTOdlLji0\\S3VVOdlLji0\\S3VVOdlLji0\\S3VVOdlLji0\\S3VVOdlLji0cV3nM0G900000R4nK000O100000?Ac1UN80000000P5fJ:0000000[2\\M9000000000n2ULm00000000fhWb2"
+      }
+    },
+    {
+      "id": 40,
+      "image_id": 39,
+      "category_id": 1,
+      "bbox": [
+        1026.0,
+        871.0,
+        860.0,
+        1799.0
+      ],
+      "iscrowd": 0,
+      "area": 1500406,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "RTio3U1eg3c0SZLc2me3]MSZLc2me3]MSZLc2me3]MSZLc2Ze3Z>m]Ln]OZR3Rb0fmLn]OZR3Rb0fmLn]OZR3Rb0fmLn]OZR3Rb0fmLn]OQR3Tn0RkLaTOaNQMPj2^n0_WMaTOaNQMPj2^n0_WMaTOaNQMPj2^n0_WMaTOaNQMPj2^n0_WMaTOaNQMPj2^n0_WMaTOaNQMgi2S`1jD0000000Fa3iL0000000Hk0]O0000000000c0]O0000000Fb0H000000009G0000000000:F0000000G90000000000000000000009G0000000000000000000000000000:F000000000F:000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000H8000000008H0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O0000000000G9000000000000000000000000000000000000000000000000000000000O1000000000000000000000000000000000009G000000000000000000000000000000000000000000000000000000000000G9000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O0000000000000000000000000000000000000O100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:000000000000000000000000000000:F0000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:000009G0000000000000000000000000000000000000000:F0000000000000000000000000G90009G0000000000000F:0002N8H0000005K>B000G90008H000G905KZ1b]NecMjN:HP1_]1Q[2ocNecMjN:H^1[4XNhS1[\\2[iNecMjN:H^1[4XNfM:jR1[\\2clN[cMjN:H^1[4XNfM:jR1[\\2clN[cMjN:H^1[4XNfM:jR1[\\2clN[cMjN:H^1[4XNfM:jR1Qb2[oNe]MkM:jR1Pi2PkNPWMPU1_P3dBhoL_]O^i30000000XWob1"
+      }
+    },
+    {
+      "id": 41,
+      "image_id": 40,
+      "category_id": 1,
+      "bbox": [
+        526.0,
+        1813.0,
+        905.0,
+        1842.0
+      ],
+      "iscrowd": 0,
+      "area": 1524181,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "ecbQ2V1Zn30o\\L1f]2g1ZWM]NPd0KPGT1c\\2d0]XMV19U2S:mJd0T1c\\2d0]XMV19T:T2nBc8T1c\\2d0]XMV19_c0X5gZORb2d0]XMV19ck0ga2W]OY^Mme0c^2o?aM;E00000]Oc00k0UO00000F:000b0^O000H80009G00000F:09G000000000000000G90009G0000000000000000000000000G90009G000000000000000000000000000000000000000000000000000000000F:09G000000000000000000000000000000G91O0000000000000000000000000000000000003M5K000000000000000O1000000000000000000000001O000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000H80000000000000000000G900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G9000000000000000000001O000000000000000000000F:000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G9000000000000000000000000000000000000000000000000000000000000009G0000000000000000000000000000000000000000000000000G9000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:00000000000000000000:F00000000000000000000000000000000000000000000000000F:000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O10000000000H8000000000000000000000000000000000:F00000000000000000000000000000000000000000000000000009G0000000000000000000000000000:F000000000000000000009G00000000:F00000F:0009G00ofMkYNgX2_f10000l0TO00000000i1WN0000000000R2nM0F:00000\\2dM00000000e2[M0000000000_1aN00000000n2RM00O1000`iN\\YMTT1Pi2000000000R2nM00000000h1XN000G9000W3iL0000000000_1aN0000000WTOZnLhi0gS300M3J60d2\\M00000000c2]M0000000000h1XN000G900R]OmfL_?b\\30000000^1bN0000000F:0Q2oM00000H8ZFS]Li6je3000000]Od2oM000000000^Ob2PN0000000UNQWc[3"
+      }
+    },
+    {
+      "id": 42,
+      "image_id": 41,
+      "category_id": 1,
+      "bbox": [
+        957.0,
+        1204.0,
+        561.0,
+        1072.0
+      ],
+      "iscrowd": 0,
+      "area": 524908,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "\\UWg3V1Zn30000000_Lj3G0000000ULU4F000000000WNi100000000aNh1G0000000RMcCg`L_>Y_3aAg`L_>Y_3aAg`L_>Y_3aAg`L_>Y_3aAg`L_>Y_3aAg`L_>X]3m200000000SOW1F0000000mKS400000000aN_10000000000oMQ200000000lLT3M3000000jNV10000000000UOk000000000F:00000000Gb0G0000000000000000000F:0000000000000000000000000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000009G0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F000006J4L000000000000000000000000000000000000000000000000000000000000000F:000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G000000000000000000000000000000000000000000000000000000000000000009G0000000000000000000000000000000000000000000000000000000000000000000000000000000000G900000000000000000000000001O00000000000000000000000F:000000000000000000000000000000G900000000]Oc00000000000]Oc000000000nMR200000000hLX3000:F000nMR20000000000hLX300000000iLW30008H000hLX30000000001iNV10009G0`Le^LkH[a3U7`30009G0fMZ20000000:F0\\Md200000b2^Mg`jP3"
+      }
+    },
+    {
+      "id": 43,
+      "image_id": 42,
+      "category_id": 1,
+      "bbox": [
+        666.0,
+        1428.0,
+        837.0,
+        1297.0
+      ],
+      "iscrowd": 0,
+      "area": 715013,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "cRPc2l0dn3000000000^OU1]O0000000]Om0F0000000TOl00000000000TOU1G0000000SOm00000001O]Oc000000000]Oc000000000TOl00:F00000]Oc00000000000TOl000000000]Oc000000000]Oc000000000TOl009G0000000^Ob000000000TOl000000000F:0000000000TOl000000000SOm009G00000G90000000000]Oc000000000TOl0000000]Oc00000000000]Oc000000000jNV100000000]Oc00000000000TOl000000000TOl0000:F000]Oc00000000000]Oc000000000TOl000000000F:00000000]Oc00000000000TOl000000000]Oc009G00000]Oc00000000000UOk000000000@`0C=00000000^Ob00000000000]Oc000000000SOW1F0000000]Oc00000000000^Ob000000000jNV100000000^Ob00000000000TOl000000000]Oc000000000SOm000000000G90000000000]Oc0000000000000000000G9000000000009G0000000G900000000000000000000000000000000000000000000000000000:F0O1000000000000000000000000000000000000000000000000000000000009G000000000000000000000000000000000000000000000000000000000:F00000000000:F00000000000000000000000000000000000000000000000009G00000000000000000000000000000000000000000000000000009OH0000000000000000000000000000000000000000000000000000000000000000000000009G0000000:F00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G900000000000000000009_O8000000000000000000F:0000000000G900000000F:0000000:]O900000000K5B>000000M3XOh000000000SOm00000000000G900000000]Oc000000009TOc00000000000G900000000TOl000000000TOl00000000000F:00000000TOl000000000]Oc00000000000G900000:F0jNV100000000]Oc000000000G90000000000^Ob0000009G0]Oc000000000F:0000000000TOl000000000TOl000000000]Oc00000000000]Oc000000000]Oc000000000]Oc00000000000TOl000000000]Oc000000000]Oc00000000:F0]Oc000000000]Oc000000000]Oc000000000^Ob00000000000F:000009G0]Oc000000000]Oc00000000000TOl000000000TOl000000000]Oc00000000000]Oc000000000]Oc0000000]Oc00000000000TOl000000009TOc000000000^Ob00000000000TOl00000000:\\O:00000000TOl00000000000]Oc000000009TOc000000000]Oc000000:F0TOl000000009G0kNU100000>BgQfR3"
+      }
+    },
+    {
+      "id": 44,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        14.0,
+        2059.0,
+        11.0,
+        9.0
+      ],
+      "iscrowd": 0,
+      "area": 99,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "[ii19Wo30000000000000000000U`fj8"
+      }
+    },
+    {
+      "id": 45,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        30.0,
+        2059.0,
+        6.0,
+        18.0
+      ],
+      "iscrowd": 0,
+      "area": 108,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "[ai3b0nn3000000000eeZi8"
+      }
+    },
+    {
+      "id": 46,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        14.0,
+        2077.0,
+        27.0,
+        56.0
+      ],
+      "iscrowd": 0,
+      "area": 635,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "iji1l0dn30000000000000000000]O^ObRLOgm31YRLOgm31YRLOgm31YRLOgm31YRLOgm3:c0000000000G9000000f0ZOmffh8"
+      }
+    },
+    {
+      "id": 47,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        40.0,
+        2059.0,
+        32.0,
+        93.0
+      ],
+      "iscrowd": 0,
+      "area": 1997,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "m\\Q5f0jn3`0@00000^O^1TO00000000009G00000009TO^SLXNbl3h1^SLXNbl3h1^SLXNbl3h1^SLXNbl3h1^SLXNYl3h1PTLXNPl3h1PTLXNPl3h1PTLXNPl3h1PTLXNPl3h1PTLXNkl3:_1000000000jVkd8"
+      }
+    },
+    {
+      "id": 48,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        61.0,
+        1993.0,
+        27.0,
+        28.0
+      ],
+      "iscrowd": 0,
+      "area": 398,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "iod79Wo3000000000000000000000000000000c0]O00000000G9000000000gakb8"
+      }
+    },
+    {
+      "id": 49,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        119.0,
+        2162.0,
+        5.0,
+        9.0
+      ],
+      "iscrowd": 0,
+      "area": 45,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "RXl>9Wo30000000^n[^8"
+      }
+    },
+    {
+      "id": 50,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        124.0,
+        2171.0,
+        5.0,
+        10.0
+      ],
+      "iscrowd": 0,
+      "area": 50,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "kU`?:Vo30000000ePh]8"
+      }
+    },
+    {
+      "id": 51,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        293.0,
+        1561.0,
+        26.0,
+        29.0
+      ],
+      "iscrowd": 0,
+      "area": 694,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "Yn`T1m0cn300000000000000000000000000000000000000F:000000000gbSf7"
+      }
+    },
+    {
+      "id": 52,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        281.0,
+        1805.0,
+        43.0,
+        66.0
+      ],
+      "iscrowd": 0,
+      "area": 1423,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "f]QS19Wo30000000000000000000F190000000TOOPRL:Pn3FPRL:Pn3FPRL:Pn3FPRL:Pn3FPRL:Pn3FPRL:fm3V1G0000000G9000000000000000000009aNV10000000Z]_e7"
+      }
+    },
+    {
+      "id": 53,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        356.0,
+        1693.0,
+        9.0,
+        9.0
+      ],
+      "iscrowd": 0,
+      "area": 81,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "mR\\\\19Wo3000000000000000cU\\`7"
+      }
+    },
+    {
+      "id": 54,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        435.0,
+        1748.0,
+        5.0,
+        10.0
+      ],
+      "iscrowd": 0,
+      "area": 43,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "TmVf1:Vo3000000IcYQW7"
+      }
+    },
+    {
+      "id": 55,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        449.0,
+        1748.0,
+        6.0,
+        10.0
+      ],
+      "iscrowd": 0,
+      "area": 60,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "Tfng1:Vo3000000000l`UU7"
+      }
+    },
+    {
+      "id": 56,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        457.0,
+        1262.0,
+        21.0,
+        27.0
+      ],
+      "iscrowd": 0,
+      "area": 427,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "XSnh19Wo3000000008H0000000F:00000000000000000000b[ZR7"
+      }
+    },
+    {
+      "id": 57,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        505.0,
+        1159.0,
+        5.0,
+        10.0
+      ],
+      "iscrowd": 0,
+      "area": 50,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "gWmn1:Vo30000000inZn6"
+      }
+    },
+    {
+      "id": 58,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        530.0,
+        1262.0,
+        11.0,
+        9.0
+      ],
+      "iscrowd": 0,
+      "area": 99,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "^nPR29Wo30000000000000000000R[_j6"
+      }
+    },
+    {
+      "id": 59,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        562.0,
+        1318.0,
+        5.0,
+        9.0
+      ],
+      "iscrowd": 0,
+      "area": 45,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "V`PV29Wo30000000ZfWg6"
+      }
+    },
+    {
+      "id": 60,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        594.0,
+        1261.0,
+        4.0,
+        10.0
+      ],
+      "iscrowd": 0,
+      "area": 40,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "]noY2:Vo300000cW\\c6"
+      }
+    },
+    {
+      "id": 61,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        609.0,
+        1299.0,
+        5.0,
+        9.0
+      ],
+      "iscrowd": 0,
+      "area": 45,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "Shk[29Wo30000000]^\\a6"
+      }
+    },
+    {
+      "id": 62,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        646.0,
+        1271.0,
+        11.0,
+        18.0
+      ],
+      "iscrowd": 0,
+      "area": 198,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "gT_`2b0nn30000000000000000000iTQ\\6"
+      }
+    },
+    {
+      "id": 63,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        604.0,
+        1205.0,
+        69.0,
+        84.0
+      ],
+      "iscrowd": 0,
+      "area": 2564,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "]iW[2:Vo30000000Gb0G00000009G00000000000000000000Gb0G00000000000000000^O99000000000SO:c00000000000000000000000000000000000000000G90000000c0SO:000000000X^QZ6"
+      }
+    },
+    {
+      "id": 64,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        678.0,
+        1299.0,
+        5.0,
+        9.0
+      ],
+      "iscrowd": 0,
+      "area": 45,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "ce^d29Wo30000000m`iX6"
+      }
+    },
+    {
+      "id": 65,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        673.0,
+        1271.0,
+        10.0,
+        18.0
+      ],
+      "iscrowd": 0,
+      "area": 90,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "`gjc29Wo30000000G090000000iaiX6"
+      }
+    },
+    {
+      "id": 66,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        22.0,
+        879.0,
+        1916.0,
+        2422.0
+      ],
+      "iscrowd": 0,
+      "area": 2432230,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "T\\j2l0dn30000000]O^1UO00000^ORNbSLn1^l3l0F0000000F:09G00000G90:F00000F:0000000000G909G00000G909G00000F:0:F00000H800000000FbIbWL^6^h3:000000G900000000F:08H00001O0]Oc000000000G909G00000G91O000000000000000000F:00000001F908H0000000F:000000]Oc000000000G9000:F000000000000000]Oc0000000000000001O0000G90009G000F:00000000]Oc00:F00000000000000000G9000000F:00000000G90009G00000]Oc000000000H800000000F:0000000000G900000000]Oc00009G000F:0000000000G9000000FT^OPcLla0P]3:000000G900000:F000G900000000G900000000G90009G00000F:00000000]Oc0000:F0000000000000G90000000000F:0009G000G9000000G90000000000]Oc000000000F:00000000H800000:F000F:00000000G900000000F:0000000000G900000000G9000009G0F:0000000000G9000000F`UOdkL`j0\\T3:000000]Oc000000:F0G90000000000F:00000000G9000009G0G90000000000^Ob000000000F:00000000G9000009G000F:00000000G900000000F:0000000000G9000009G0G9000000F:0000000000G900000000F:0001O008_O90000000000]Oc000000000F:00000:F0G900000000G90000000000XNnlNhVM\\S1Xi2dlNhVM\\S1Xi2dlNhVM\\S1Xi2dlNhVMeS1oh2[lNQWMeS1oh2^1000000009G00000000000000000:F0G900000000nMljN^YM^U1bf2bjN^YM^U1bf2bjN^YM^U1bf2bjN^YM^U1bf2bjN^YM^U1bf2bjN^YM^U1kf2PjNUYMYV1kf2giNUYMYV1kf2giNUYMYV1kf2giNUYMYV1kf2giNUYMYV1kf2V1000009G0000000000000G900000000F:000000000000000000000000000:B4A?000000G90000000000G9000009G0F:000000000000000000G90000000000F:000009G0G900000000F:00000:F000G900000000F:00000000G90000000000G9000008H0F:00000000G90000000000G900000:F0G900000000F:0000000000G900000000F:000009G0G900000000G90000000000]Oc000000000F:00000000G9000:F00000F:00000000G90009G000F:0000000000G900000000G9000:F000F:0000000000G900000000G90009G000]Oc00000000000G900000000F:00000000G90000000000G90009G000]Oc000000000F:00000000000009G00000]Oc000000000G900000000G90000000000G909G00000G900000000F:0000000000G90:F00000F:00000000G909G0000000F:00000000G900000000F:0000000000H80:F00000G900000000F:0000000000G909G00000F:00000000G900000000F:0000000000]Oc000000000H809G00000G90000000000F:00000000G900000000F:0000000000G900000000Fc0G0000000G900000000J6M3000000G900000000G90000000000F:00000000]Oc000000000G900000000F:0000000000H800000000F:00000000G90000000000G90G900000F:00000000G90000000000F190000000H800000000F:0000000000G090000000F:00000000GO:000000000G900000000F1900000000F:000000000H080000000F0:00000000G90000000G09000000000F0:00000000H800000000F:0000000G90G9000000F:00000000G90000000000^Ob000000000G900000000F:0000000000G900000000F:00000000^Ob00000000000G900000000F:00000000G900000000000000000000]Oc000000000H800000000F:0000000000G900000009]O:00000000G90000000000^Ob0000000000000000:F0G90000000000]Oc0000009G0F:00000000G90000000000F:000000N2J6000000F:000000000:]O900000000G900000000F:00000000^Ob00000000009^O900000000F:00000000G90000000009TOc0000000000000000000G90000000009UOb000000000F:00000000G90000000000F:00000009TOc000000000G90000000:F0G900000000G900000000G90000000000F:000009G0]Oc000000000G900000000000000000000]Oc000000:F0G900000000F:0000000000H8000009G0F:00000000G90000000000F:00000:F0G900000000]Oc00000000000G9000009G0F:00000000000000000000]Oc00000000000000009G0]Oc000000000H800O1000000G90009G000G900000000G90000000000F:00000000G900000000F:000009G000G900000000F:000:F000000000000000G90009G000]Oc000000000G90000000000F:000:F000]Oc000000000G90000000000F:0009G000G900000000]Oc000000000G90000000000F:00000000G900000000F:00000:F000G900000000F:09G00000^Ob00000000000G900000000G900000000F:000:F00000G900000000F:00000000]Oc00009G000000000000000G900000000]Oc00009G00000G900000000]Oc000000000F:09G00000000000000000G900000000F:09G00000G90000000000]Oc0000000G900000000F:0000000000G900000000F:0:F00000G90000000000]Oc009G00000F:00000000G90000000000G90:F00000F:00000000G900000000F:0009G00000G900000000^Ob000000000000000000000F:0:F00000G9000000]Oc00000000000G90009G000F:00000000G90000000000F:00000000G900000000F:0009G00000G900000000G900000000F:000:F00000G9000000^OlaLh_OT^3X`0b009G0000000000000F:0000000000G900000000F:00000000G900000:F000TOl000000000F:0000000000000009G000G9000000F:0000001OG90000000:F0F:00000000^Ob000000000F:000009G000]Oc0000000000000000000]Oc000000000HPZLPGPf3P98000:F0F:00000000G9000009G0G90000000000F:00000000G9000009G0F:0000000000]Oc000000:F0H8000000F:0000000008_O90000000:]O900000009TOc000000002N8^O:000008H;`NU1000006J]Ra\\1"
+      }
+    },
+    {
+      "id": 67,
+      "image_id": 44,
+      "category_id": 1,
+      "bbox": [
+        313.0,
+        2228.0,
+        6.0,
+        9.0
+      ],
+      "iscrowd": 0,
+      "area": 54,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "TYQW19Wo3000000000lmRf7"
+      }
+    },
+    {
+      "id": 68,
+      "image_id": 44,
+      "category_id": 1,
+      "bbox": [
+        1686.0,
+        1495.0,
+        11.0,
+        10.0
+      ],
+      "iscrowd": 0,
+      "area": 110,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "gSoa6:Vo30000000000000000000iUaZ2"
+      }
+    },
+    {
+      "id": 69,
+      "image_id": 44,
+      "category_id": 1,
+      "bbox": [
+        1686.0,
+        1449.0,
+        16.0,
+        37.0
+      ],
+      "iscrowd": 0,
+      "area": 452,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "YRoa6U1[n30000000000000000000c0TO90000000TYmY2"
+      }
+    },
+    {
+      "id": 70,
+      "image_id": 44,
+      "category_id": 1,
+      "bbox": [
+        15.0,
+        629.0,
+        2211.0,
+        2403.0
+      ],
+      "iscrowd": 0,
+      "area": 2532487,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "YPm1b0nn3000000000TO_1]O0000000]Om0F0000O10G90000000000Fm0]O000000009G000000:]O90000000009G000000009G000000000000000000:SOc0000000000b0^O000000009^O900000000F:000000000:F00000000000000009G0G900000000000000000:]O9000000O:G00000000009G00000000:^O800000000000000000008H0O1000000G90000000:]O900000000000000000000G900000c0]O000000009G0F:0000000:F000000009G0G9000000000000000009G000000000000000000:\\O:0000000008H00000000:]O900000009G00000000000F:000000000000000:F0G9000000000000000009G0F:000000000000000000000000000c0]O0G9000009G00000000:F0H800000009G0000000000000O10009G0G90000000000000009G0G900000:F00000000009G0F:00000:F00000000000G900000009G0000000000000000009G0F:00000000000000000:F000000009G0G900000:F000000009G000F:000:F000000008H000G900000000000000000000G9000:F00000000009G000G90009G00000000:F000G90000000000000009G00000000000F:0000000:F00000000000G90009G0000000000:F000F:0009G00000000:F000G90009G000000000000000000009G000F:00000000G9000000000000000:F000000009G0000000000:F000G90008H0000000000000G900000:F0000009G00000G9000000000000000000F:000c0]O000000009G000G9000000000000000:F000000009G000F:000000000000000:F000G90009G0000000000000F:00000:F000000009G00000000:F000H8000009G0000000000000G90009G000000000000000F:000:F000000009G00000000:F00000G9000000000009G00000F:0000000000000:F000G90009G0000000000000G900000:F0000000000000G90009G00000000009G000F:000:F000000009G000G900000:F0000000000000000009G000G9000000000000000:F000F:0009G0000000000:F0000000000000H80009G0000000000000F:000009G000G9000:F000000009G0000000000000F:00000:F000000009G00000000009G000000009G00000000000G900000000000000000:F000000009G000000000000000000009G00000000:F00000000009G000000000000000000:F000000009G00000000000000000000:F000000009G000000000009G0000000:F000000009G00000000009G000000000:F0000000000000000000:F000000009OH0000000:F000000000091F000000009G000001O9G0000000091F000000009G0000000:F000000009OH00000000091F000000009G0000000:F000000000091F000000009G0000000:F000000000009G000000009G00000009G0000000000:0F000000081G0000000:OG00000000091F000000000000000009OH000000000000000000:0F000000090G0000000:0F00000000090G0000000:F0000000082F00000000009G0000000000000000091F000000000:OG00000009G0000000008H000000000:0F000000090G0000000:F000000000:F0000000008H00000000:OG00000000000000000009:]O00000009G00000000:0F0000000009OH0000000000000002N81G0000000000:F00000b0^O09G00000000:F00000009G09G000000000000000:F0:F00000009G09G00000000000000090G0000000:OG000000000000000000090G000000091F00000000090G0000000:F000000000:F0000000009OH0000000:0F00000009G000000000090G00000000:F00000009G000000000090G000000009G0000000:F000000000090G0000000:F0000000009G000000091F000000009G000000000:F0000000:OG000000003M6J00000009G000000090G00000000090G0000000:F0000000009G00000000091F0000000:F0000000009G0000000009G00000000:OG00000009G000000000000000000090G000000009G0000000:F000000000009G00000000:F00000009G000000000009G00000000:F000000000000000000009G00000000:F000000009G00000000009G00000000:F000000000000000000009G000000009G000000009G00000000000000000000:F000000000000000G909G0000000000:F000000009G00000F:00000000000009G00000G900000000000:F0000000F:09G00000000:F00000000000000000G909G00000000:F00000F:00000000000009G00000G90:F000000009G00000H8O1000000000008H000K6K409G000000000000000G909G00000000:F00000000000000000F:09G00000000:F00000G900000000000009G00000F:0:F000000009G0000000G900000000F:09G00000000:F000000009G0000000G90:F0000000000000000009G0000000G90:F000000000000000F:09G00000000000000000H80c0]O000000000000000F:0009G000G9000:F000000009G000000000000000F:000:F000000000000000G90009G0000005K4L000F:09G00000000000000000G90:F000000009G00000G900000000000009G00000F:0:F00000000000000000G909G00000000:F00000F:00000000000009G000I7N20:F000000009G000000000000000G9000:F000000009G000O1H8000000000009G00000F:0:F000000009G0000000G900000000000:F00000G909G0000000000:F000000000000000F:09G00000000000000000G90:F00000F:09G00000000008H000G900000000000:F00000000009G00000F:0:F000000000000000G909G0000000000:F000000000000000F:09G0000000G90:F000000009G00000000000000000Gb0G0000000Fd0F00000000000000000H809G00000000:F000000000O1000000G909G000000009G00000000000000000Gb0G0000000Fd0F000000009G0000000000000000000Gb0G0000000Fd0F00000000000000000L4K>G00000000:F000000009G0000000G900000000Fd0F000000009G0000000000000000000Gb0G000000009G000000000F:00000000Gb0G00000000:F000000009G0000000G9O10000000:F000000009G000000000G9000000000:F0000000Fc0G000000000Ha0G0000000000000O109_O80000000009]O:0000000:F000000009^O900000000N<^O8000000]Ol0G0000000TOh1TO00000000Qcd8"
+      }
+    },
+    {
+      "id": 71,
+      "image_id": 45,
+      "category_id": 1,
+      "bbox": [
+        130.0,
+        823.0,
+        2081.0,
+        1751.0
+      ],
+      "iscrowd": 0,
+      "area": 1836071,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "e^W`0U1[n3000000000]OU1^O0000000Fm0]O0000000G9000000000:\\O:00000009UOb0000000000000000009^O900000000Gc0F0000000F:00000000G90000000000Fc0G0000000G900000000F:0000000000Gc0F0000000F:00000000G90000000009^O900000000G900000000G90000000009]O:00000000G900000000F:0000000009G000000000]Oc00000000:]O900000000G90000000000F:00000009^O900000000F:0000000000H8000009G0F:00000000G900000000000000000:F0]Oc0000000000000000000G900000009]O:00000000G90000000000F:0000000:]O900000000G900000009^O90000000000F:00000000G900000:F0G90000000000F:00000000G900000000F:00000008H0G900000000G900000:F0G90000000000F:00000000G9000009G0000000000000G900000000F:000009G0G90000000000F:00000000G9000:F000G900000000G9000009G000F:00000000G900000000G900000:F000F:000000000000000000G9000009G000F:000000K5M3000000F:0000000:F0G900000000F:00000000G9000009G0000000000000G9000:F000F:000000000000000000000000000000H80009G000000000000000F:00000000000009G000000000000000000009G0000000000000000000000000000009G000000000000000000000000000000:F00000000000000000000000000009G00000000000O100000000000000000:F000:F00000000000000000000000009G0009G0000000000000:F000000000000000:F00000000000009G0009G00000000000000000000000009G09G000000000000000000000000000:F00000000000009G0000000000000009G09G00000000000000000:F00000000000:F000000000000000009G000000000009G00000000000000000:F00000000000000009G000:F00000000000000000000000000008H0000000:F000000000000000000000:F00000009G000000000009G0000000000000009G00000000000009G00000:F00000000000000000000000:F000009G000000000000000000000009G00000:F000000000000000000009G0:F0000000000000000000000000000000000000:NH000000000000000000:F0000000009G00000000000000000009G000000000:F000000000:F00000009G00000000000000000000000000000090G00000000000000000000000000000:OG0000000000000000000000000000091F000000000000000000008H00000000000000000:F00000000000:F00000009G00000000000000000009G000000000:F00000000000000000000000000000:OG00000000000000000009G000000000:F00000000000000000000000000000:OG000000000000000009G000000000009G000000000000000008H00000000000:F0000000:F0000000000000000000009G00000009G000000000:F000000000000000000009G0000000:F0000000000000000009G00000000000:F00000000000000000:F000000000009G000000000000000009G00000000000:F00000000000000000:F09G0000000000000000000000000008H09G0000000000000000000000000009G0:F000000000000000000000000000:F000000000009G000009G00000000000000000000000:F000000000000000:F08H00000000000000000000:F000009G00000000000000000000:F000000000009G00000000000000000000:F0009G00000000000000000000:F09G0000000000000000000000000009G09G0000000000000000000000000009G0:F0000000000000009G09G0000000000000000000000000009G0:F000000000000000000009G00000000000000000:F0000000000000000009G0:F0000000000000000000000000000009G0000000:F0000000000000000009G000O1000000:F0000000:F09G00000000000000009G0000000009G0000000000000000000:F0000000000000000000000000009G09G0000000:F000000000000000000000:F00000009G0000000000000000000009G0000000:F0000000000000000009G0:FO100000000000000000YSM`mN^l2iR10000000000000000:F00000000000:F0000000000000000000000000000090G00000000000000000000000000000:OG000000000000000009G000000000000000000000:F000009G000000000000000000000000000000:NH000000000000000000000000000009G000000000000000000000000000000:F0000000000000000000000000000009^O9000000000000000000000000000009G0000001O00000000000I7M300000008H0000000G9000001O6J3M000000000G9000000000000000009]O:0000000000H800000009]O:00000000G900000000000000000000F:0000000:]O90000000000F:00000009^O900000000G90000000000F:00000000G90000000:\\O:000000000000000005K4YOc0000000000000000000G90000000:F0F:000000H800000000G90000000009]O:000000000000000000G90000000000F:0000000:]O900000009]O:0000000000G900000000F:00000000G900000009G0G900000000F:000000000000000:F0G90000000000F:000009G0G9000000F:0000000000G90000000:]O900000000G900000000000000000000G900000000F:00000009G0G900000:F0F:00000000G90000000000F:00000000G9000009G00000000000F:0000000:]O900000000G900000000F:0000000009^O9000000000000000000G9000000O100H8000009G0F:00000000G90000000000F:00000:]O900000000000000000009^O900000000F:00000000G90000000000F:0000000:]O900000000F:00000009G0G90000000000000000G900000009^O90000000000G90001O000F:00000008_O90000000000F:0000000:]O900000000F:00000009G000000009TOc00000000c0TO9000000000il`:"
+      }
+    },
+    {
+      "id": 72,
+      "image_id": 46,
+      "category_id": 1,
+      "bbox": [
+        573.0,
+        1139.0,
+        1061.0,
+        2032.0
+      ],
+      "iscrowd": 0,
+      "area": 1912968,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "hl]W29Wo30SQLm2]k3SMcTLm2]k3SMcTLm2]k3SMcTLm2Tk3l009G00000aNoKcVLm4]i3SKcVL`5jh3`JVWL`5jh3`JVWL`5jh3`JVWL`5jh3`JVWL`5lc3a50c0]O000^Ob000000000dM\\21O09G00000WNi100000000kNU10009G0XNn^OReLRa0nZ3h100000000iLW300000000WNi10009G000aN_1000000oM^UOemLIT1ij0WQ3^UOemLQl0[R3oSOemLQl0[R3oSOemLQl0[R3oSOemLQl0[R3oSOemLQl0UQ3h100000000kNU100000000mMS200000:F000RMn200000000TOl000000000dMljNcXMmV1]g2SiNcXMmV1]g2SiNcXMmV1]g2SiNcXMmV1]g2SiNcXMmV1]g2SiNcXMmV1ee2SiN[ZMeX1ee2[gN[ZMeX1ee2[gN[ZMeX1ee2[gN[ZMeX1ee2[gN[ZMeX1Se2U100000000SMm2[Oe00000000000bN^100000000WNi100000000fMZ20000000000WNi100000000kNU100O10000TMl200000000gNY1J609G00000D<_Oa000000000^Ob000000000^Ob00000000000F:0000000000000000G900000000000000000000F:0000000000000000000000000000000000000000G9000000000000000000000000000000000000000000F:00000000000000000000000000000000000000000000000000000000000000000000000009G000000000000000000000000000000000000000000000000000000000000000000000000G900000000001O0000000000000000000000000000000000000:F00000000000000000000000000000008H000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G0000000000000000000000000000000000000000000000000000000000000000000000000000000000G9000000000000000000000000000000000000000000000000000091F000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G0000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:0000000000000001O0000000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000F:000000000000000000000000000000Ha0G000000000G900000000F:00000000]Oc000000000]Oc00000000000UOU1F0000000XNh1nKfjMm[N[W2Sd1ehMm[N[W2Sd1ehMm[N[W2Sd1ehMm[N[W2Sd1ehMm[N[W2i`1[5hKX400000009G0nLR3jMg[MPiN^d2PW1b[MPiN^d2PW1b[MPiN^d2PW1b[MPiN^d2PW1b[MjhNdd2PQ1Q80008H000nLR3SNm1000:F000nHdlLi[OR1Z4ZR3m?dlLi[OcY3Wd0]fLi[OlY3nc0TfLR\\OlY3nc0TfLR\\OlY3Q>h6000c0]O0dKg_LbIX`3^6]400000:bIUZLc2ke3]M\\ZLfMZj3Z2fULfMZj3Z2fULfMZj3Z2fULfMVn3LoY\\b2"
+      }
+    },
+    {
+      "id": 73,
+      "image_id": 47,
+      "category_id": 1,
+      "bbox": [
+        104.0,
+        2620.0,
+        2073.0,
+        1037.0
+      ],
+      "iscrowd": 0,
+      "area": 2034314,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "]bQ=5[o3\\1dNV1mE<naLe0Q]3n1\\`LaNU_3`3j^L`LDYLZY3e0ekLo;QKUDaX3]5mfL^6b0lDjW3Rb0WhLc^OSW3]a0mhLW_O_V3`a0jhLh^OQV3je00000000008_O90000000?WO<N001O002F?I000000000G900000000F:000000000001O00000G9000000000000000008^O:00000001O6J;E000000009G0000000G9000000000000000001O1O7I000000000000000000000000000000001O000000000000000000000000000000000000001O00000000000000000000000000000000000000000010O000000000000000000000000000000000000000001O00000000000000000000000000000000000000000000001O00000FnQOVoLRn0jP3:0000000000000000000000000000000000000001O000000000:F0000000000000000000000000000000000000000F;O000000000000000000000000000000000000000000000000000000001O000000000000000000000000000000000000000000000000000000000000001O000000000000000000000000000000000000000000000000000000000000000000001O0000000000000000000000000000000000000000000000000000000000000000000001O0001O0000000000000000000000000000000000000000000000000000000000000000000000000000000000001O000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G900000000000000000001O000000000001O000000000000000000000000000000000000000000000000000000000000000000000000000000009G00000000000000000000000000000000000000000000000000000000000000000000000000G9000000009G0000000001O000000000000000000000000000000000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009G00000000G900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001O0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F:000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000:F00000000000000000000F:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008H0000000000000000000000000000H80000000000000000000000000000000000000000000000O10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O1000000000000000000000000000000000000000000000000000G900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O10000000000000000000000000000000000000000000000000000000O1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G9000000008H000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O1H800000000008H00000000000000000000000000000000000000000000000000000000000000000O100000000000O100000000000000000000000000000000H80000000000000000000000O100000000000000000000000000000000000000000000000000000000000000000000000000000000O10000009G00000000G90000000000000000008H00000000H80000000G9000000000000000O10000000000000000000000000000000000000000000000000000000000000000O1000000000000000000000000000000000000000000000000000000000000O:G000000000000000000000000000000000000O1H8000000000000000O100000000000000000000000O1000000000000000000000000000O1000000000000000000000000000000000000000000000000O10000000000000000000000000000000000000000000009F1000000000000000000000000000000000000000000O100000000000000000000000009G000000000000000O10000000000000:^O8O1000000000000000008H000O10000000000000:F000000009_O800000000O1000000000:]O90000000c0]O000000008H000000000QUOXmLmh0jT30000000Y2gM0G900000m0SO00000U^OofLW=e]30000G900[AVcLd:k`3000000dCg]LP;ec3000000nE^]LV7^e3J6D<00\\InYLj3Rf3gJ][Lg2iMXOdi3KYWL5gh3kNYXLf0`k3YOg0XOQif>"
+      }
+    },
+    {
+      "id": 74,
+      "image_id": 48,
+      "category_id": 1,
+      "bbox": [
+        355.0,
+        149.0,
+        979.0,
+        1834.0
+      ],
+      "iscrowd": 0,
+      "area": 1670699,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "lTX\\19Wo30000000SOn2SMSMUULm2kj3SMUULm2kj3SMUULm2kj3SMUULm2kj3k3`Ga50000000009TJc5UOk000000:F0nMR2000008H0lIT6[KaTOaQMk0P2dj0_l2aTOaQMk0P2dj0_l2aTOaQMk0P2dj0_l2aTOaQMk0P2dj0_l2aTOaQMk0P2dj0_l2aTOaQMk0OTO11Ohk0Zk2oSOkUM0TOc2GeM11Ohk0Zk2oSOkUM0TOc2GeM11Ohk0Zk2oSOkUM0TOc2GeM11Ohk0Zk2oSOkUM0TOc2GeM11Ohk0Zk2oSOkUM0TOoP1ej2P3K50:F000L4RMn2nMR2\\Nm1]NZ1lNT1POP1J60000000009kNl0WOi0XOh0[OR^N`cMVb1]\\2m]NccMSb1]\\2m]NccMSb1]\\2m]NccMSb1]\\2l]NdcMTb1Z\\2b0\\Od0^Ob0_Oa0000000O1K5@`0E;0000000000H8000:F000I7O1000000M3K5000000000000000000K5M3O100000000000000L4M300O100000000000000J6N20000000000O10000000000000000I7000000O10000000000000000000000000000000000O109G0000000000000000000000000000G9000H8O10000008H0000000000000000000000000000G900000000000000000000000000000000O10000000000000000000000000000000000000000O1000000000000000000000000000000000000000000O10009G0000000000000000000000000000G900000000000O1000000000000000000000000000000000000000000000000O10000000000000000000000000000000000000000000000000000O100000000000000000000000000000000000000000000000000000000O100000000000000000000000000000000000000000000000000000000000000O100000000000000000000000000000000000000000000000F:0000000000000000000O1000000000000000000000000000000000000000000000000000000000000000000000000000000O100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O100000000000000I7000000000000000000007I000000000000000000000000000000000000000:F0000000H800000000000F:0000000000000000000000000000000000000000000000000000000000000000000000000000000O100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000O100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G900000H80000000000000000000000000000000000000000000000009G0000000000000009G0000000000G90000000000000000009G000000000000000000000000000000G9000000000007I000000000000000000001O0000000G900000008H000000000000000000008^O:000000000000000008H000000001F`0I00000000a0_O00000000Q2eM<N0000000Gd0E[4eKl1UdNm]MYN]Oc0NlT1hb2XlNm]MYN]Oc01iT1eb2[lNm]MYN]Oc01iT1eb2[lNm]MYN]Oc01iT1eb2[lNm]MYN]Oc01iT1ai2^OX7mjNbQM:ZM_i0TQ3WVObQM:ZM_i0TQ3WVObQM:ZMlh0gQ3jVOoPM:ZMlh0gQ3jVOoPM:ZMlh0RY3gLl2TM0]Oc00000000`:U^OnXLX6Rg3hIcYLG^OO0l00Ghh3GjWLG^OO0l00Ghh3GjWLG^OO0l00Ghh3GjWLG^OO0l00G`j3^O`ULO0l00GaUkg3"
+      }
+    },
+    {
+      "id": 75,
+      "image_id": 49,
+      "category_id": 1,
+      "bbox": [
+        1254.0,
+        184.0,
+        971.0,
+        1781.0
+      ],
+      "iscrowd": 0,
+      "area": 1563721,
+      "segmentation": {
+        "size": [
+          4080,
+          2296
+        ],
+        "counts": "cSVl4\\2Tm3000000000\\MW3]O0000000aNR2]O0000000nM[2G0000000iLkHS^LU7ma3W3000000oMQ200000000RMn20c0]O00000fMZ20000000000oMQ209G000XNPYOPkLPg0PU3h1000000XNh1000:F00000SMm200000000aL_300000000XNh100000000fM\\nNhVMdQ1Xi2Z20009G0TMl200000000PNP200000000UMUgNQ_MkX1o`2k2000000RNn1000000QMScN[cMm\\1e\\2o2000000nN[^NYdMea1g[2R100001OVOj0000000Hg[NYeMYd1gZ2800000000G900000000I7000:F0000000000000H8000000000000000000H80000000000000000000000000000HUZNkfMke1UY2800000000000000000000000000001O0000000000000000000000000000G900000000000000001O09G00000000000000000000000000000000000000000000000000000000000000000000000000000001O8H00000000000000000000000000000000000000001O0000000000000000GdYN^gM\\f1bX2900000000001O000000000G9000000009G00000000000000000000G9000000009G000000000001O0000000000008H00000000000000000000001O000000000000004L3M0000001O000000000000000000000000000000H81O000000000000000000000000000000000000008H000000000000000000000000000000000000001O000000000000000000000000000000000000000000000000001O00000000000000000000000000000000000000000000001O000000000000000000000000000000000:F0000000001O00000000000000000000000000000F:0000000000:GO0000000F:000000000000000000:F0000000001O000000000000000000000000000000000000001O00000000000000000000004L4L1O0000000000000000H8000000000000000000000000001O00000000000000000000000000000000001O0000000000000000000000000001O0001O00000000008H0000000000001O000000000000000000000000000008IO0000000000000000000000000000001O0000000000000000000H8000000017H000000001O000000000000000001O000000000000000000000000001O0008H0000000000000000000001O000000000000000000000000001O00000000000000007I1O00000000000000IYZNefMge1[Y270000000000001G80000000000000000000001O0000000000000000000000001O00000000000000000000008H0000000009G000001O00000000000000000000001O00000000000000000000001O000000000000000000001O000000000000000000001O0000000000000000001O000000000000000000001O0000000000007I001O0000000G9000000000001O0000000000002N6J00001O0000000000000G90001O007I0000000000001O00008H0F:00000006J2N0000003M5B9000001O8^Od0F4L001O000000:F:F:F;\\Od0E;E;gbNf_MfZ1f`2ndNi_MYZ1n`2ZeNb_MVZ1j`2^eNW_MaZ1Wa2QeNi^MoZ1da2ddN\\^M\\[1lb2TOl005Ka0_Oa0_Ob0^Oc0^JTYMXmNOO1c0Yi2aQ1gVMmmNOO1c0oi2kP1QVMcnNO00b0gj2b4ZUMae00[UOO00b0ak2h3dUMi<a2iB[LTLO00b0]l2l2hTMe=lW3\\AThLe02h8lX3bEQgLf1d0UMbN]Oi0a8WZ3PHjeLm2d0UMbN]OY2i1nN\\1P\\39WdLUMbN]OY2i1Ra3i0S^LQNbN]OY2i1Uc3fNP\\L4bN]OY2i1ne3jNiWL]OY2i1bj30hfi8"
+      }
+    }
+  ],
+  "measure_it_preprocessing": {
+    "coordinate_system": "stored_pixels_full_frame",
+    "calibration_sha256": "9ad192f78238887e413df81262b2f276140de9d7c4c5558f1cf4783114cb2b29",
+    "frozen_split": "train",
+    "manual_review_status": "passed",
+    "all_source_instances_retained": true,
+    "reviewed_by": "user",
+    "reviewed_at_utc": "2026-11-05T06:49:35.561935+00:00",
+    "review_approval_file": "../review_approval.json"
+  }
+}

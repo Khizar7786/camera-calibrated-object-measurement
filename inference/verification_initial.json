@@ -1,0 +1,46 @@
+{
+  "verified_at_utc": "2026-11-05T10:41:37.143909+00:00",
+  "reference_type": "paper_square",
+  "reference_width_mm": 50.0,
+  "reference_height_mm": 50.0,
+  "measurement_source": "User confirmed millimetre ruler readings",
+  "tests_passed": 87,
+  "test_duration_seconds": 5.787,
+  "test_command": ".venv\\Scripts\\python.exe -m unittest discover -s tests -v",
+  "known_projective_contour_test": "75 x 160 mm recovered with a 27-degree in-plane rotation and non-affine perspective transform; passed",
+  "synthetic_positive_pipeline_test": "Plain square detector plus stub mask predictor; success, correctly sized full-frame overlay, mask-based metric rectangle; not physical accuracy evidence",
+  "cases": {
+    "object_missing_verified": {
+      "status": "object_not_found",
+      "width_mm": null,
+      "height_mm": null,
+      "detection_confidence": null,
+      "undistortion_applied": true,
+      "overlay_size": [
+        2296,
+        4080
+      ],
+      "result_path": "inference\\runs\\object_missing_verified\\result.json",
+      "input_provenance": "Synthetic blank scene; real frozen network",
+      "source_hashes_match_current": true
+    },
+    "reference_missing_verified": {
+      "status": "reference_not_found",
+      "width_mm": null,
+      "height_mm": null,
+      "detection_confidence": 0.9962199330329895,
+      "undistortion_applied": true,
+      "overlay_size": [
+        2296,
+        4080
+      ],
+      "result_path": "inference\\runs\\reference_missing_verified\\result.json",
+      "input_provenance": "Unassigned original capture IMG_20261104_200608.jpg, outside frozen train/valid/test; real frozen network",
+      "source_hashes_match_current": true
+    }
+  },
+  "physical_accuracy_validation": "not_run",
+  "new_real_camera_image_with_paper_reference": "not supplied in this task",
+  "dataset_test_images_used_for_development": false,
+  "development_record": "inference/runs/reference_missing is an earlier no-reference run before the corner-array memory-layout fix; use the two *_verified cases for current-code evidence."
+}

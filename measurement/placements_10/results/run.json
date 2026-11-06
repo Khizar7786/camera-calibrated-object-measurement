@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "manifest": "measurement\\placements_10\\manifest.json",
+  "manifest_sha256": "449ffd17640ad18bc534ada676ade08cee638232fb098974ff04c23b46ce2545",
+  "completed_at_utc": "2026-11-06T11:11:27.446342+00:00",
+  "evaluation_source_sha256": "7504cee47773dadd80eae8a39092c4b3b122a005e98a5f719ce9b474af8fc467",
+  "device": "cuda",
+  "command": "\"C:\\Users\\mkhiz\\OneDrive\\Desktop\\Measure it\\.venv\\Scripts\\python.exe\" -m measurement.evaluate_placements --manifest measurement/placements_10/manifest.json --output measurement/placements_10/results --device cuda",
+  "checkpoint_sha256": "f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39",
+  "threshold_or_model_changes": false,
+  "summary": "summary.json"
+}

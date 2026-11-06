@@ -3,3 +3,26 @@
 *.md text eol=lf
 dataset/splits/*.txt text eol=lf
 dataset/*/_annotations.coco.json -text
+dataset/README.roboflow.txt -text whitespace=cr-at-eol,-blank-at-eof
+dataset/Raw/** -text
+dataset/train/** -text whitespace=cr-at-eol,-blank-at-eof
+dataset/valid/** -text whitespace=cr-at-eol,-blank-at-eof
+dataset/test/** -text whitespace=cr-at-eol,-blank-at-eof
+dataset/corrected/** -text whitespace=cr-at-eol,-blank-at-eof
+calibration/results/** -text whitespace=cr-at-eol,-blank-at-eof
+preprocessing/geometry.json -text whitespace=cr-at-eol,-blank-at-eof
+models/*.py -text
+models/*.json -text whitespace=cr-at-eol,-blank-at-eof
+models/runs/** -text whitespace=cr-at-eol,-blank-at-eof
+models/evaluations/** -text whitespace=cr-at-eol,-blank-at-eof
+inference/*.py -text
+inference/*.json -text whitespace=cr-at-eol,-blank-at-eof
+inference/runs/** -text whitespace=cr-at-eol,-blank-at-eof
+measurement/*.py -text
+measurement/*.json -text whitespace=cr-at-eol,-blank-at-eof
+measurement/placements_10/** -text whitespace=cr-at-eol,-blank-at-eof
+# Preserve the frozen raw PowerShell stderr stream, including its whitespace.
+measurement/placements_10/preflight_tests.txt -text -whitespace
+tests/test_measurement_evaluation.py -text
+measurement/paired_undistortion_10/** -text whitespace=cr-at-eol,-blank-at-eof
+tests/test_undistortion_comparison.py -text

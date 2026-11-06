@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "manifest_sha256": "81143cec0788746f8426c713a9e60231c3094eb12928984821dc4becd29e0826",
+  "baseline_manifest_sha256": "449ffd17640ad18bc534ada676ade08cee638232fb098974ff04c23b46ce2545",
+  "completed_at_utc": "2026-11-06T11:55:21.681559+00:00",
+  "command": "\"C:\\Users\\mkhiz\\OneDrive\\Desktop\\Measure it\\.venv\\Scripts\\python.exe\" -m measurement.compare_undistortion --manifest measurement/paired_undistortion_10/manifest.json --output measurement/paired_undistortion_10/results --device cuda",
+  "effective_configuration_sha256": "60a5672a97877469f7ecf172adfeb6f7967245e813d5979b08c8f7471dedd9c5",
+  "checkpoint_sha256": "f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39",
+  "device": "cuda",
+  "model_or_threshold_changes": false,
+  "modes_run_afresh": true,
+  "shared_conversion": "measurement.planar.measure_mask_contour_mm"
+}

@@ -1,0 +1,1 @@
+{"status": "success", "width_mm": 85.4737548828125, "height_mm": 173.5478515625, "detection_confidence": 0.9961829781532288, "failure_reason": null}

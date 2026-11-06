@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "export": {
+    "size": [
+      432,
+      432
+    ],
+    "resize": "stretch",
+    "crop_xywh": null,
+    "rotation_cw_degrees": 0,
+    "source": "Original Roboflow README: auto-orient and full-frame stretch to 432 x 432; automated raw/export comparisons confirm no material crop or quarter-turn"
+  },
+  "camera_frame_rotations": {
+    "2296x4080": {
+      "rotation_cw_degrees": 0,
+      "source": "Already in the stored-pixel geometry of the portrait calibration"
+    },
+    "4080x2296": {
+      "rotation_cw_degrees": 90,
+      "source": "User explicitly confirmed 90 degrees clockwise into the calibrated portrait camera frame on 2026-11-05"
+    }
+  },
+  "verification": {
+    "max_rgb_rmse": 12.0,
+    "min_rgb_correlation": 0.97
+  },
+  "overrides": {}
+}

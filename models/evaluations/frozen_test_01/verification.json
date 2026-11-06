@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-11-05T10:13:39.845258+00:00",
+  "exact_committed_test_images": 7,
+  "test_ground_truth_instances": 7,
+  "scored_predictions": 7,
+  "frozen_checkpoint_sha256": "f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39",
+  "frozen_split_sha256": "542bf7ec62522c86877d99707d6111e98dd516c4ff10f342d054ac77f34a8da1",
+  "checkpoint_split_and_source_hashes_unchanged": true,
+  "mask_iou_independently_recomputed_from_decoded_RLEs": true,
+  "mean_gt_mask_iou": 0.9675172243597181,
+  "saved_scored_predictions_reproduce_official_COCO_mask_AP": true,
+  "unit_tests_passed": 76,
+  "unit_test_duration_seconds": 6.307,
+  "unit_test_command": ".venv\\Scripts\\python.exe -m unittest discover -s tests -v",
+  "synthetic_low_score_AP_retention_and_zero_for_missed_GT_check": "passed",
+  "actual_predictions_below_operating_score_cutoff": 0,
+  "test_based_configuration_changes": []
+}

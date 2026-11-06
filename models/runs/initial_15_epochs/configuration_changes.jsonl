@@ -1,0 +1,1 @@
+{"epoch_completed": 5, "field": "learning_rate", "before": 0.0025, "after": 0.00025, "reason": "Predeclared StepLR schedule; no test evidence"}

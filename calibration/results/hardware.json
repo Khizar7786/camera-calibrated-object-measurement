@@ -1,0 +1,13 @@
+{
+    "cpu":  [
+                "12th Gen Intel(R) Core(TM) i7-12650H"
+            ],
+    "total_physical_memory_bytes":  16831713280,
+    "gpu":  [
+                "Intel(R) UHD Graphics",
+                "NVIDIA GeForce RTX 3050 Ti Laptop GPU"
+            ],
+    "os_caption":  "Microsoft Windows 11 Home",
+    "os_version":  "10.0.26300",
+    "source":  "Windows CIM, recorded for calibration evidence on 2026-11-05"
+}

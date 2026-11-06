@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+models/pretrained/
+models/runs/**/*.pt
+models/runs/**/*.pth
+models/runs/**/*.pending
+inference/runs/
+inference/diagnostics/

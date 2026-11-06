@@ -1,0 +1,23 @@
+{
+  "verified_at_utc": "2026-11-05T09:58:52.124806+00:00",
+  "status": "passed",
+  "checkpoint": "models\\runs\\initial_15_epochs\\checkpoint_best.pt",
+  "sha256": "f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39",
+  "checkpoint_bytes": 176220108,
+  "load": "torch.load(weights_only=True,map_location=cpu), offline build_model(pretrained=False), strict state_dict load",
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "box_classes": 2,
+  "mask_classes": 2,
+  "checkpoint_configuration_matches_saved_run": true,
+  "runtime_source_hashes_match": true,
+  "real_optimizer_steps_logged": 400,
+  "completed_epochs": 8,
+  "all_step_losses_finite": true,
+  "earliest_maximum_validation_AP_epoch": 2,
+  "approved_train_valid_artifacts_rechecked": 227,
+  "frozen_train_valid_lists_unchanged": true,
+  "test_data_used": false,
+  "unit_tests_passed": 72,
+  "note": "No inference or test evaluation performed in this checkpoint-integrity check."
+}
