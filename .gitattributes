@@ -10,6 +10,7 @@ dataset/valid/** -text whitespace=cr-at-eol,-blank-at-eof
 dataset/test/** -text whitespace=cr-at-eol,-blank-at-eof
 dataset/corrected/** -text whitespace=cr-at-eol,-blank-at-eof
 calibration/results/** -text whitespace=cr-at-eol,-blank-at-eof
+calibration/camera.py -text
 preprocessing/geometry.json -text whitespace=cr-at-eol,-blank-at-eof
 models/*.py -text
 models/*.json -text whitespace=cr-at-eol,-blank-at-eof
