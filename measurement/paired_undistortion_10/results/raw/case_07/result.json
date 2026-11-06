@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "status": "reference_not_found",
+  "width_mm": null,
+  "height_mm": null,
+  "detection_confidence": 0.9938668608665466,
+  "confidence_definition": "Calculator detection score; not dimensional accuracy",
+  "failure_reason": "No isolated bright unmarked square boundary passed the configured checks",
+  "reference": {
+    "type": "paper_square",
+    "width_mm": 50.0,
+    "height_mm": 50.0,
+    "physically_measured": true,
+    "measurement_source": "User confirmed 50 x 50 mm outer edges measured with a millimetre ruler on 2026-11-05",
+    "edge_definition": "Actual outer boundary of the flat unmarked paper square",
+    "plane_assumption": "Paper square and measured calculator outline must be in the same plane",
+    "detection": {
+      "max_detection_dimension": 1600,
+      "canny_low": 50,
+      "canny_high": 150,
+      "region_thresholds": [
+        140,
+        160,
+        180,
+        200,
+        220,
+        240
+      ],
+      "polygon_epsilon_fraction": 0.02,
+      "min_area_fraction": 0.0005,
+      "max_area_fraction": 0.2,
+      "max_side_ratio": 1.5,
+      "max_angle_cosine": 0.35,
+      "min_inside_gray": 140,
+      "max_inside_gray_std": 30,
+      "min_inside_outside_contrast": 15
+    },
+    "status": "not_found",
+    "coordinate_system": "raw_distorted_full_frame",
+    "candidate_count": 0,
+    "detection_preview_size": [
+      900,
+      1600
+    ],
+    "generated_contours": {
+      "canny": 860,
+      "intensity_threshold_140": 568,
+      "intensity_threshold_160": 581,
+      "intensity_threshold_180": 519,
+      "intensity_threshold_200": 337,
+      "intensity_threshold_220": 80,
+      "intensity_threshold_240": 13
+    },
+    "rejected_contour_counts": {
+      "not_convex_quadrilateral": 2656,
+      "area": 298,
+      "side_ratio": 4
+    },
+    "corner_order": "Clockwise TL, TR, BR, BL; cyclic square rotations are equivalent",
+    "corner_refinement": "Full raw-image cornerSubPix, win=5, iterations=30, epsilon=0.01",
+    "failure_reason": "No isolated bright unmarked square boundary passed the configured checks",
+    "corners_raw_px": null
+  },
+  "checkpoint": {
+    "path": "C:\\Users\\mkhiz\\OneDrive\\Desktop\\Measure it\\models\\runs\\initial_15_epochs\\checkpoint_best.pt",
+    "sha256": "f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39",
+    "epoch": 2,
+    "training_configuration_sha256": "608889254f59b167ea258d83290e648d106cfb60b58fd495b2b98a7fd963040d",
+    "classes": [
+      "background",
+      "calculator"
+    ],
+    "versions_at_training": {
+      "torch": "2.7.1+cu126",
+      "torchvision": "0.22.1+cu126"
+    },
+    "loaded": true
+  },
+  "outputs": {
+    "raw_frame": "raw_frame.jpg",
+    "mask": "mask.png",
+    "overlay": "overlay.jpg"
+  },
+  "input": {
+    "path": "measurement\\placements_10\\inputs\\IMG_20261106_155143.jpg.jpeg",
+    "sha256": "5b48fbc1d2e66de7aaf1417dddf6a29bdeaf35c8f317cfee914a10949febd0d0",
+    "stored_size": [
+      2296,
+      4080
+    ],
+    "exif_camera_model": "23021RAAEG",
+    "camera_frame_rotation_cw": 0,
+    "camera_frame_size": [
+      2296,
+      4080
+    ],
+    "capture_condition": "Same Redmi Note 12 lens, locked focus/zoom, uncropped original stored pixels; same-size crop/changed focus cannot be proven from shape alone"
+  },
+  "undistortion_applied": false,
+  "coordinate_system": "raw_distorted_full_frame",
+  "experimental_only": true,
+  "experiment": "Deliberate undistortion bypass; not normal inference or a replacement calibration",
+  "started_at_utc": "2026-11-06T11:54:06.406286+00:00",
+  "configuration": {
+    "path": "inference\\config.json",
+    "file_sha256": "42429a62c08f51e8b7c856565fa932c5c9781c0464c35cc79fe30f00e5217d9a",
+    "effective_sha256": "60a5672a97877469f7ecf172adfeb6f7967245e813d5979b08c8f7471dedd9c5"
+  },
+  "calibration": {
+    "path": "C:\\Users\\mkhiz\\OneDrive\\Desktop\\Measure it\\calibration\\results\\camera.json",
+    "sha256": "9ad192f78238887e413df81262b2f276140de9d7c4c5558f1cf4783114cb2b29",
+    "image_size": [
+      2296,
+      4080
+    ],
+    "use": "Geometry validation only; remap deliberately bypassed"
+  },
+  "model_transform": {
+    "input_size": [
+      512,
+      910
+    ],
+    "aspect_preserving": true,
+    "score_cutoff": 0.5,
+    "mask_probability_threshold": 0.5,
+    "selection": "Highest-score calculator instance at frozen operating cutoff",
+    "mask_restoration": "Threshold at model-input coordinates, then INTER_NEAREST_EXACT to raw full frame",
+    "selected_output_index": 0,
+    "raw_size": [
+      2296,
+      4080
+    ],
+    "coordinate_system": "raw_distorted_full_frame"
+  },
+  "completed_at_utc": "2026-11-06T11:54:11.044199+00:00"
+}

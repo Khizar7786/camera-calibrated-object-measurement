@@ -1,0 +1,51 @@
+{
+  "verified_at_utc": "2026-11-06T12:01:46.714147+00:00",
+  "mode_runs_verified": 20,
+  "all_prior_placement_artifacts_preserved": true,
+  "corrected_controls_exactly_match_prior_results_and_masks": [
+    "case_01",
+    "case_02",
+    "case_03",
+    "case_04",
+    "case_05",
+    "case_06",
+    "case_07",
+    "case_08",
+    "case_09",
+    "case_10"
+  ],
+  "raw_and_corrected_effective_configuration_identical": true,
+  "checkpoint_sha256": "f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39",
+  "own_frame_geometry_reconstructed_from_each_saved_mask_and_reference": true,
+  "independent_decimal_errors_and_all_summary_statistics_match": true,
+  "paired_valid_ids": [
+    "case_01",
+    "case_02",
+    "case_04",
+    "case_05",
+    "case_06",
+    "case_08",
+    "case_09"
+  ],
+  "paired_valid_count": 7,
+  "paired_mae_change_skipping_correction_mm": {
+    "width": 1.7527879987444217,
+    "height": 2.313448224748886
+  },
+  "different_mask_file_ids": [
+    "case_01",
+    "case_02",
+    "case_03",
+    "case_04",
+    "case_05",
+    "case_06",
+    "case_07",
+    "case_08",
+    "case_09",
+    "case_10"
+  ],
+  "mask_file_difference_interpretation": "Different frame pixels; not an aligned-mask IoU or attribution to semantic segmentation alone",
+  "all_source_configuration_input_and_output_hashes_verified": true,
+  "tests_passed_before_inference": 100,
+  "verification_command": ".venv\\Scripts\\python.exe -m measurement.paired_undistortion_10.verify_results"
+}

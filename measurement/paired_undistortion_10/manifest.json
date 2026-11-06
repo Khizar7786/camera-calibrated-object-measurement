@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "declared_before_comparison_at_utc": "2026-11-06T11:50:42.821295+00:00",
+  "experiment": "Paired end-to-end undistortion ablation; both modes run afresh",
+  "baseline_manifest": "measurement/placements_10/manifest.json",
+  "baseline_manifest_sha256": "449ffd17640ad18bc534ada676ade08cee638232fb098974ff04c23b46ce2545",
+  "baseline_all_artifacts_checksum_file": "measurement/placements_10/SHA256SUMS.json",
+  "baseline_all_artifacts_checksum_file_sha256": "e116161a5a1ccda7b1a211646481080026a1af449e328ecca719ef70e8b8d904",
+  "source_commit_before_experiment": "f8191d12a0a8c014b603f988f90baae6dc3fccd6",
+  "source_sha256": {
+    "inference/config.json": "42429a62c08f51e8b7c856565fa932c5c9781c0464c35cc79fe30f00e5217d9a",
+    "inference/measure.py": "514f2c2cbc1fd506461d95f506053302aeae16c31c5c15cbd611c9c16b041b04",
+    "inference/reference.py": "ceadcf49d11ff1d11bf601f18a46e123a8f975fcd6c98d0140a293f2dcf67b34",
+    "calibration/camera.py": "e9a72a7d537956fe6e2fc73150e168650e070a83af27856bcf5e5ecd06c047a6",
+    "calibration/results/camera.json": "9ad192f78238887e413df81262b2f276140de9d7c4c5558f1cf4783114cb2b29",
+    "measurement/planar.py": "44904a8493a72f7dc80856e670c90eaba3fa98752c956a8cc656678624440244",
+    "models/model.py": "19d2a6e3fc2c1b89b288aac57f68a8c147885a9285ac5fcaae2e242f2300738a",
+    "models/data.py": "7bbf736c6dd0fe12e6b9ecdc13f6ef62f26f095eebd06cc207197a679ed42842",
+    "models/train.py": "cca144b46b0492f7d19ac5aa063f7920fd3b718638b00a2bc50525aaf48a704f",
+    "models/runs/initial_15_epochs/configuration.json": "608889254f59b167ea258d83290e648d106cfb60b58fd495b2b98a7fd963040d",
+    "dataset/splits/SHA256SUMS.txt": "59cf57f0d000e3fcad64aaa19652bf583754152fe77c3a083e2a67cfaa64a003",
+    "dataset/splits/test.txt": "542bf7ec62522c86877d99707d6111e98dd516c4ff10f342d054ac77f34a8da1",
+    "dataset/splits/train.txt": "597b9aad54e23703147cd0d2050e4f5d96f14d6f1e52efedba5ce50150133212",
+    "dataset/splits/valid.txt": "f7a9562dc2624c8d7b01ed2ff9ace8f95903b52ebc3b0126b4820e78dd4f4573",
+    "measurement/evaluate_placements.py": "7504cee47773dadd80eae8a39092c4b3b122a005e98a5f719ce9b474af8fc467",
+    "tests/test_measurement_evaluation.py": "bfd7921f68bcbc93b97ffaaf3360883604f61a49b74a8da2e47c27c80367fe98",
+    "measurement/raw_inference.py": "654e9638a7ab11658f9a8a86bd719fb9f360edcb277c316645e93df61afb7b2f",
+    "measurement/compare_undistortion.py": "7ac463aa7749097ef98f2b954cf0a92cd2034abc6f8423f5c333b518031ed505",
+    "tests/test_undistortion_comparison.py": "9c054a99002c12fdac5eb8ea9ec50056724b000229a757629d667e6a202f4ab5"
+  },
+  "checkpoint_sha256": "f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39",
+  "inference_configuration": "inference/config.json",
+  "inference_configuration_sha256": "42429a62c08f51e8b7c856565fa932c5c9781c0464c35cc79fe30f00e5217d9a",
+  "hand_readings": "measurement/placements_10/hand_readings.csv",
+  "hand_readings_sha256": "b6b7dcfabca9db685a3161a50e1b6eccaa18ba17b9949766d9a4599e184c7b03",
+  "calculator_hand_width_mm": 70,
+  "calculator_hand_height_mm": 160,
+  "reference_width_mm": 50,
+  "reference_height_mm": 50,
+  "mode_order_per_image": [
+    "corrected",
+    "raw"
+  ],
+  "modes": {
+    "corrected": "Unchanged normal inference.measure CLI; full-frame saved-calibration remap P=K; fresh segmentation/corners/geometry",
+    "raw": "Separate measurement.raw_inference CLI with required --experimental-skip-undistortion; geometry validation and explicit orientation retained; fresh segmentation/corners/geometry in distorted pixels"
+  },
+  "controlled_settings": {
+    "same_original_file_for_each_pair": true,
+    "same_frozen_checkpoint": true,
+    "same_inference_configuration": true,
+    "same_reference_detector_settings": true,
+    "same_model_score_and_mask_thresholds": [
+      0.5,
+      0.5
+    ],
+    "same_aspect_preserving_target_and_max_size": [
+      512,
+      960
+    ],
+    "same_metric_conversion": "measurement.planar.measure_mask_contour_mm",
+    "seed": 42,
+    "device": "cuda",
+    "no_corrected_corners_or_masks_reused_for_raw": true,
+    "no_post_hoc_tuning_or_data_edits": true
+  },
+  "analysis_predeclared": {
+    "primary_comparison": "Paired-valid scenes only, raw absolute error minus corrected absolute error separately for width and height",
+    "delta_sign": "Positive means skipping undistortion made error larger; negative means skipping improved it",
+    "secondary_statistics": "Each mode all-valid summaries with own accepted/refused counts; paired summaries with identical IDs; mean/median/worst absolute and percentage errors",
+    "refusal_policy": "Retain every supplied scene. Missing dimensions/errors and unpaired deltas are null/blank, never zero.",
+    "scope": "Same physical calculator; nine new scenes plus the earlier reused demo; not product generalization",
+    "interpretation": "End-to-end input change can alter segmentation, corner detection and refusal coverage as well as projection; not a geometric-scale-only causal estimate"
+  },
+  "preflight_tests": {
+    "passed": 100,
+    "duration_seconds": 8.274,
+    "log": "preflight_tests.txt",
+    "sha256": "f7ff858d560d0c386ff0222a8d8cffa3f02455db1f476546a0a45e45a2b1b291"
+  }
+}

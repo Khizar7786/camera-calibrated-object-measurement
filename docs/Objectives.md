@@ -1,6 +1,6 @@
 # Measure It - Objectives
 
-**Status:** portrait camera calibration measured and joint dataset correction generated on 2026-11-05. The user approved all 72 corrected images and 100 instances on 2026-11-05; Mask R-CNN fine-tuning completed with validation-only checkpoint selection; the frozen seven-image mask evaluation is complete; the one-image measurement CLI is implemented; one real referenced-photo execution is recorded; the supplied ten-scene accuracy experiment is complete with 9 accepted / 1 refused and MO-1 not met. The supplied set includes nine new scenes and one reused demo. Original objective targets are unchanged.
+**Status:** portrait camera calibration measured and joint dataset correction generated on 2026-11-05. The user approved all 72 corrected images and 100 instances on 2026-11-05; Mask R-CNN fine-tuning completed with validation-only checkpoint selection; the frozen seven-image mask evaluation is complete; the one-image measurement CLI is implemented; one real referenced-photo execution is recorded; the supplied ten-scene accuracy experiment is complete with 9 accepted / 1 refused and MO-1 not met. The supplied set includes nine new scenes and one reused demo. Paired raw/corrected evaluation is also complete: 7 jointly valid scenes, with skipping increasing paired width/height MAE by 1.752788 / 2.313448 mm and mixed per-scene effects. Original objective targets are unchanged.
 
 **Branch:** `dev-test01`. **Units:** millimetres for physical dimensions; pixels for reprojection error.
 
@@ -102,7 +102,7 @@ W/H below mean shorter/longer side. Values are rounded for display; the CSV reta
 
 **Coverage: 9 accepted / 1 refused / 10 supplied (90%).** Every statistic above has denominator **9 accepted width values or 9 accepted height values**. Case_07 (`IMG_20261106_155143.jpg.jpeg`) was refused with `reference_not_found`, because no isolated bright unmarked square boundary passed the configured checks; calculator confidence was 0.993914. Its numeric dimensions remain null and its CSV errors are blank. The nine genuinely new scenes contain **8 accepted / 1 refused**; their supplementary accepted-only MAE is **12.015330 mm width / 11.007627 mm height**, denominator 8 per dimension.
 
-**MO-1 verdict: Not met.** Both MAEs exceed 3 mm, worst dimensional errors exceed 8 mm, one supplied scene lacks a measurement, and only nine scenes are genuinely new. All nine accepted outputs overestimate both confirmed ruler dimensions. Confidence does not establish scale accuracy. Possible mask-boundary, reference-scale/corner and physical-plane/flatness effects are not isolated by this experiment. No settings were changed to improve these figures. The paired raw-versus-undistorted comparison remains **Not run**.
+**MO-1 verdict: Not met.** Both MAEs exceed 3 mm, worst dimensional errors exceed 8 mm, one supplied scene lacks a measurement, and only nine scenes are genuinely new. All nine accepted outputs overestimate both confirmed ruler dimensions. Confidence does not establish scale accuracy. Possible mask-boundary, reference-scale/corner and physical-plane/flatness effects are not isolated by this experiment. No settings were changed to improve these figures. The paired raw-versus-undistorted comparison is completed below, with mode-specific coverage and a seven-scene paired estimate.
 
 ## 3. MO-2 - Calibration fit quality
 
@@ -261,15 +261,93 @@ The supplied desktop `calc.jpg.jpeg` initially failed paper detection. Inspectio
 
 This records execution success on one supplied scene. Paper/calculator-outline coplanarity is not verified, and the placement experiment had not run at that stage. Its subsequent results above report MO-1 **Not met**; one-photo execution success does not establish accuracy.
 
-### Raw versus undistorted measurement
+### Raw versus undistorted measurement - completed 2026-11-06
 
-Use the **same 10 original accuracy scenes**, ruler readings, frozen checkpoint and measurement settings for both modes. In each mode, detect the reference corners and calculate the contour geometry in that mode's own image coordinates. Normal inference always applies undistortion; bypassing it is a labelled comparison experiment.
+The same ten original accuracy scenes and pre-recorded **70 x 160 mm calculator / 50 x 50 mm paper** readings were run afresh through both modes. The [comparison declaration](../measurement/paired_undistortion_10/manifest.json) freezes the same checkpoint, effective configuration, 0.5 score/mask thresholds, aspect-preserving 512/960 sizing, seed 42 and detector/conversion settings. Normal inference remains unchanged and always undistorts. A separately labelled experimental raw CLI requires `--experimental-skip-undistortion`. Raw reference corners and raw mask contours are detected afresh in raw pixels; corrected corners/masks are not reused. Both invoke the exact same metric-contour conversion before rectangle fitting.
 
-For every scene, show hand width/height, raw predicted width/height, corrected predicted width/height, absolute and percentage errors, detection confidence and success/failure reason. Then show raw/corrected mean, median and worst errors side by side, with accepted counts and paired-valid count. Save all inputs and outputs under `measurement/` and link them here.
+```powershell
+.venv\Scripts\python.exe -m measurement.compare_undistortion --manifest measurement/paired_undistortion_10/manifest.json --output measurement/paired_undistortion_10/results --device cuda
+```
 
-Report the observed difference honestly, including negligible or worse corrected results. This is an end-to-end comparison: undistortion may also change segmentation and reference detection, so the difference cannot automatically be attributed solely to scale geometry.
+[Full report](../measurement/paired_undistortion_10/README.md), [20-row mode CSV](../measurement/paired_undistortion_10/results/per_mode.csv), [10-row paired CSV](../measurement/paired_undistortion_10/results/paired.csv), [summary](../measurement/paired_undistortion_10/results/summary.json), [exact commands](../measurement/paired_undistortion_10/results/commands.txt), [verification](../measurement/paired_undistortion_10/verification.json) and [paired overlays](../measurement/paired_undistortion_10/paired_overlay_contact_sheet.jpg) preserve every input reference, output, error and refusal. The prior accuracy run and original source photos remain byte-identical. All ten corrected results, scores and masks exactly reproduce that prior run. **100 tests pass**.
 
-**Results/table/raw outputs: Not run.**
+The set repeats one physical calculator, with **nine new scenes plus the earlier reused demo (case_01)**. The seven paired-valid accuracy scenes include that demo; these are not the separate seven-image segmentation test split. Camera/plane conditions are user-confirmed, not independently measured.
+
+W/H are shorter/longer dimensions. Refusals and unpaired deltas are missing, never zero. Delta means **raw absolute error minus corrected absolute error**; positive means skipping worsened error. Tables round for display; CSV/JSON retain full precision.
+
+| Scene / original | Hand W / H (mm) | Corrected W / H (mm) | Raw W / H (mm) | Confidence C / R | Paired valid | Refusal reason |
+| --- | ---: | ---: | ---: | ---: | --- | --- |
+| [case_01 (reused demo)](../measurement/placements_10/inputs/calc.jpg.jpeg) | 70 / 160 | [80.466 / 170.600; success](../measurement/paired_undistortion_10/results/corrected/case_01/result.json) | [80.872 / 174.823; success](../measurement/paired_undistortion_10/results/raw/case_01/result.json) | 0.995488 / 0.995532 | Yes | None |
+| [case_02](../measurement/placements_10/inputs/IMG_20261106_155037.jpg.jpeg) | 70 / 160 | [85.474 / 173.548; success](../measurement/paired_undistortion_10/results/corrected/case_02/result.json) | [86.657 / 175.673; success](../measurement/paired_undistortion_10/results/raw/case_02/result.json) | 0.996183 / 0.996047 | Yes | None |
+| [case_03](../measurement/placements_10/inputs/IMG_20261106_155047.jpg.jpeg) | 70 / 160 | [73.780 / 162.841; success](../measurement/paired_undistortion_10/results/corrected/case_03/result.json) | [missing; reference_not_found](../measurement/paired_undistortion_10/results/raw/case_03/result.json) | 0.994135 / 0.994413 | No | raw: Multiple plausible paper squares; reference is ambiguous |
+| [case_04](../measurement/placements_10/inputs/IMG_20261106_155109.jpg.jpeg) | 70 / 160 | [83.244 / 169.978; success](../measurement/paired_undistortion_10/results/corrected/case_04/result.json) | [80.165 / 166.869; success](../measurement/paired_undistortion_10/results/raw/case_04/result.json) | 0.996307 / 0.996198 | Yes | None |
+| [case_05](../measurement/placements_10/inputs/IMG_20261106_155117.jpg.jpeg) | 70 / 160 | [86.165 / 176.596; success](../measurement/paired_undistortion_10/results/corrected/case_05/result.json) | [83.229 / 172.005; success](../measurement/paired_undistortion_10/results/raw/case_05/result.json) | 0.996455 / 0.996496 | Yes | None |
+| [case_06](../measurement/placements_10/inputs/IMG_20261106_155128.jpg.jpeg) | 70 / 160 | [87.837 / 178.859; success](../measurement/paired_undistortion_10/results/corrected/case_06/result.json) | [88.487 / 179.628; success](../measurement/paired_undistortion_10/results/raw/case_06/result.json) | 0.991796 / 0.992108 | Yes | None |
+| [case_07](../measurement/placements_10/inputs/IMG_20261106_155143.jpg.jpeg) | 70 / 160 | [missing; reference_not_found](../measurement/paired_undistortion_10/results/corrected/case_07/result.json) | [missing; reference_not_found](../measurement/paired_undistortion_10/results/raw/case_07/result.json) | 0.993914 / 0.993867 | No | corrected: No isolated bright unmarked square boundary passed the configured checks; raw: No isolated bright unmarked square boundary passed the configured checks |
+| [case_08](../measurement/placements_10/inputs/IMG_20261106_155147.jpg.jpeg) | 70 / 160 | [84.820 / 171.404; success](../measurement/paired_undistortion_10/results/corrected/case_08/result.json) | [97.647 / 185.033; success](../measurement/paired_undistortion_10/results/raw/case_08/result.json) | 0.996336 / 0.996286 | Yes | None |
+| [case_09](../measurement/placements_10/inputs/IMG_20261106_155827.jpg.jpeg) | 70 / 160 | [75.220 / 168.353; success](../measurement/paired_undistortion_10/results/corrected/case_09/result.json) | [78.439 / 171.502; success](../measurement/paired_undistortion_10/results/raw/case_09/result.json) | 0.995801 / 0.996708 | Yes | None |
+| [case_10](../measurement/placements_10/inputs/IMG_20261106_155829.jpg.jpeg) | 70 / 160 | [79.583 / 166.482; success](../measurement/paired_undistortion_10/results/corrected/case_10/result.json) | [missing; reference_not_found](../measurement/paired_undistortion_10/results/raw/case_10/result.json) | 0.994820 / 0.995056 | No | raw: No isolated bright unmarked square boundary passed the configured checks |
+
+| Scene | Corrected absolute W / H error (mm) | Raw absolute W / H error (mm) | Corrected W / H error (%) | Raw W / H error (%) | Raw minus corrected absolute W / H error (mm) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| case_01 | 10.466 / 10.600 | 10.872 / 14.823 | 14.952 / 6.625 | 15.531 / 9.264 | 0.405 / 4.223 |
+| case_02 | 15.474 / 13.548 | 16.657 / 15.673 | 22.105 / 8.467 | 23.796 / 9.795 | 1.183 / 2.125 |
+| case_03 | 3.780 / 2.841 | missing | 5.400 / 1.776 | missing | missing |
+| case_04 | 13.244 / 9.978 | 10.165 / 6.869 | 18.920 / 6.236 | 14.522 / 4.293 | -3.078 / -3.109 |
+| case_05 | 16.165 / 16.596 | 13.229 / 12.005 | 23.093 / 10.372 | 18.898 / 7.503 | -2.936 / -4.591 |
+| case_06 | 17.837 / 18.859 | 18.487 / 19.628 | 25.481 / 11.787 | 26.410 / 12.268 | 0.650 / 0.770 |
+| case_07 | missing | missing | missing | missing | missing |
+| case_08 | 14.820 / 11.404 | 27.647 / 25.033 | 21.172 / 7.128 | 39.496 / 15.645 | 12.827 / 13.628 |
+| case_09 | 5.220 / 8.353 | 8.439 / 11.502 | 7.457 / 5.221 | 12.055 / 7.189 | 3.219 / 3.149 |
+| case_10 | 9.583 / 6.482 | missing | 13.690 / 4.051 | missing | missing |
+
+#### All-valid statistics, each mode's own accepted denominator
+
+Corrected **9 accepted / 1 refused (90%)**; raw **7 accepted / 3 refused (70%)**, from the same ten supplied scenes. Raw refuses case_03 as ambiguous, and cases 07 and 10 because no paper candidate passes; corrected refuses case_07. These statistics use different accepted sets, so their mean difference is not the primary paired effect.
+
+| Statistic | Corrected width | Raw width | Corrected height | Raw height |
+| --- | ---: | ---: | ---: | ---: |
+| Accepted denominator per dimension | 9 | 7 | 9 | 7 |
+| MAE (mm) | 11.843224 | 15.070784 | 10.962348 | 15.076059 |
+| Mean percentage error (%) | 16.918891 | 21.529692 | 6.851468 | 9.422537 |
+| Median absolute error (mm) | 13.243668 | 13.228676 | 10.600113 | 14.822754 |
+| Median percentage error (%) | 18.919525 | 18.898108 | 6.625071 | 9.264221 |
+| Worst absolute error (mm) | 17.836929 | 27.647324 | 18.858841 | 25.032730 |
+| Worst percentage error (%) | 25.481328 | 39.496177 | 11.786776 | 15.645456 |
+
+#### Paired-valid statistics, identical seven scenes
+
+Paired IDs: **01, 02, 04, 05, 06, 08, 09**. Denominator **7 per dimension per mode**, with paired coverage **7/10 supplied scenes**. Unpaired scenes remain in the tables and refusal counts.
+
+| Statistic | Corrected width | Raw width | Corrected height | Raw height |
+| --- | ---: | ---: | ---: | ---: |
+| Accepted denominator per dimension | 7 | 7 | 7 | 7 |
+| MAE (mm) | 13.317996 | 15.070784 | 12.762610 | 15.076059 |
+| Mean percentage error (%) | 19.025709 | 21.529692 | 7.976631 | 9.422537 |
+| Median absolute error (mm) | 14.820351 | 13.228676 | 11.404297 | 14.822754 |
+| Median percentage error (%) | 21.171929 | 18.898108 | 7.127686 | 9.264221 |
+| Worst absolute error (mm) | 17.836929 | 27.647324 | 18.858841 | 25.032730 |
+| Worst percentage error (%) | 25.481328 | 39.496177 | 11.786776 | 15.645456 |
+
+| Paired error-change statistic (raw minus corrected) | Width | Height |
+| --- | ---: | ---: |
+| Mean change (mm) | 1.752788 | 2.313448 |
+| Median change (mm) | 0.649925 | 2.124695 |
+| Minimum change (mm) | -3.078323 | -4.591156 |
+| Maximum change (mm) | 12.826973 | 13.628433 |
+| Mean percentage-error change (percentage points) | 2.503983 | 1.445905 |
+| Scenes worse when skipping | 5 | 5 |
+| Scenes better when skipping | 2 | 2 |
+
+**Measured effect of skipping:** paired width MAE rises **13.317996 -> 15.070784 mm**, a **+1.752788 mm** change; height MAE rises **12.762610 -> 15.076059 mm**, a **+2.313448 mm** change. Mean percentage error increases **2.503983 width / 1.445905 height percentage points**. Optional pooled MAE over **14 paired dimensions** rises **13.040303 -> 15.073421 mm (+2.033118 mm)**; it is not a per-dimension result.
+
+**Mixed effects:** skipping improves cases **04 and 05** in both dimensions and worsens the other five pairs. Raw paired median width absolute error is lower (**13.228676 mm raw / 14.820351 mm corrected**) despite its higher mean. Case_08 has the largest raw-minus-corrected worsening (**+12.826973 mm width / +13.628433 mm height**) and is retained. Both modes miss the accuracy target; normal corrected MO-1 remains **Not met**.
+
+This is an **end-to-end comparison**: segmentation, corner detection/refinement and refusal coverage can change with the input. All raw/corrected mask files differ in their respective pixel frames; that is not an aligned-mask accuracy metric or an isolated segmentation contribution. The experiment does not apportion the error change between geometric scale, mask boundary and reference-corner effects. No data or settings were edited to force an improvement. Ruler/plane/flatness/thickness limitations and the one-calculator/reused-demo scope remain.
+
+Verified numerical reference for an answer in your own words, without reading notes; recording completion remains unverified:
+
+> On the seven accuracy scenes measured by both modes, skipping undistortion increased width MAE from 13.318 to 15.071 mm, a worsening of 1.753 mm, and height MAE from 12.763 to 15.076 mm, a worsening of 2.313 mm. Corrected mode measured 9 of 10 supplied scenes; raw mode measured 7 of 10. The effect was mixed: skipping improved both dimensions in cases 04 and 05, but worsened them in the other five pairs. This is an end-to-end result: segmentation and reference detection also change, so I cannot attribute the entire difference to geometric scale.
 
 ## 5. Reporting boundaries
 

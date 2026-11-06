@@ -1,0 +1,10 @@
+test_bypass_requires_explicit_acknowledgement_and_normal_rejects_flag (test_undistortion_comparison.UndistortionComparisonTests.test_bypass_requires_explicit_acknowledgement_and_normal_rejects_flag) ... ok
+test_different_coverage_uses_intersection_not_unpaired_means_for_change (test_undistortion_comparison.UndistortionComparisonTests.test_different_coverage_uses_intersection_not_unpaired_means_for_change) ... ok
+test_no_valid_pair_gives_missing_changes_and_zero_pooled_denominator (test_undistortion_comparison.UndistortionComparisonTests.test_no_valid_pair_gives_missing_changes_and_zero_pooled_denominator) ... ok
+test_pair_rejects_different_inputs_or_hand_readings (test_undistortion_comparison.UndistortionComparisonTests.test_pair_rejects_different_inputs_or_hand_readings) ... ok
+test_raw_detector_and_segmenter_receive_same_unremapped_frame_and_raw_geometry (test_undistortion_comparison.UndistortionComparisonTests.test_raw_detector_and_segmenter_receive_same_unremapped_frame_and_raw_geometry) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.291s
+
+OK

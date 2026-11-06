@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "status": "success",
+  "width_mm": 97.64732360839844,
+  "height_mm": 185.03273010253906,
+  "detection_confidence": 0.9962855577468872,
+  "confidence_definition": "Calculator detection score; not dimensional accuracy",
+  "failure_reason": null,
+  "reference": {
+    "type": "paper_square",
+    "width_mm": 50.0,
+    "height_mm": 50.0,
+    "physically_measured": true,
+    "measurement_source": "User confirmed 50 x 50 mm outer edges measured with a millimetre ruler on 2026-11-05",
+    "edge_definition": "Actual outer boundary of the flat unmarked paper square",
+    "plane_assumption": "Paper square and measured calculator outline must be in the same plane",
+    "detection": {
+      "max_detection_dimension": 1600,
+      "canny_low": 50,
+      "canny_high": 150,
+      "region_thresholds": [
+        140,
+        160,
+        180,
+        200,
+        220,
+        240
+      ],
+      "polygon_epsilon_fraction": 0.02,
+      "min_area_fraction": 0.0005,
+      "max_area_fraction": 0.2,
+      "max_side_ratio": 1.5,
+      "max_angle_cosine": 0.35,
+      "min_inside_gray": 140,
+      "max_inside_gray_std": 30,
+      "min_inside_outside_contrast": 15
+    },
+    "status": "found",
+    "coordinate_system": "raw_distorted_full_frame",
+    "candidate_count": 1,
+    "detection_preview_size": [
+      900,
+      1600
+    ],
+    "generated_contours": {
+      "canny": 631,
+      "intensity_threshold_140": 341,
+      "intensity_threshold_160": 321,
+      "intensity_threshold_180": 235,
+      "intensity_threshold_200": 73,
+      "intensity_threshold_220": 12,
+      "intensity_threshold_240": 8
+    },
+    "rejected_contour_counts": {
+      "not_convex_quadrilateral": 1492,
+      "area": 126,
+      "side_ratio": 1
+    },
+    "corner_order": "Clockwise TL, TR, BR, BL; cyclic square rotations are equivalent",
+    "corner_refinement": "Full raw-image cornerSubPix, win=5, iterations=30, epsilon=0.01",
+    "failure_reason": null,
+    "candidate_mean_gray": 202.24069649211998,
+    "candidate_gray_std": 6.640889966367612,
+    "candidate_inside_outside_contrast": 65.24069649211998,
+    "candidate_generation_method": "canny",
+    "candidate_photometric_quality": 8.538363564883873,
+    "corners_raw_px": [
+      [
+        1108.4405517578125,
+        2585.800537109375
+      ],
+      [
+        1514.5538330078125,
+        2920.36376953125
+      ],
+      [
+        1175.3306884765625,
+        3315.265869140625
+      ],
+      [
+        781.41552734375,
+        2966.425048828125
+      ]
+    ]
+  },
+  "checkpoint": {
+    "path": "C:\\Users\\mkhiz\\OneDrive\\Desktop\\Measure it\\models\\runs\\initial_15_epochs\\checkpoint_best.pt",
+    "sha256": "f46337538e462e09c5438a7c7d0aa675538a5ae819573d3ed3b84a96a0043a39",
+    "epoch": 2,
+    "training_configuration_sha256": "608889254f59b167ea258d83290e648d106cfb60b58fd495b2b98a7fd963040d",
+    "classes": [
+      "background",
+      "calculator"
+    ],
+    "versions_at_training": {
+      "torch": "2.7.1+cu126",
+      "torchvision": "0.22.1+cu126"
+    },
+    "loaded": true
+  },
+  "outputs": {
+    "raw_frame": "raw_frame.jpg",
+    "geometry": "geometry.json",
+    "mask": "mask.png",
+    "overlay": "overlay.jpg"
+  },
+  "input": {
+    "path": "measurement\\placements_10\\inputs\\IMG_20261106_155147.jpg.jpeg",
+    "sha256": "a85836db2febfa87b943ed2dea5913715a6113913dc84cd88a7a5c6f39882354",
+    "stored_size": [
+      2296,
+      4080
+    ],
+    "exif_camera_model": "23021RAAEG",
+    "camera_frame_rotation_cw": 0,
+    "camera_frame_size": [
+      2296,
+      4080
+    ],
+    "capture_condition": "Same Redmi Note 12 lens, locked focus/zoom, uncropped original stored pixels; same-size crop/changed focus cannot be proven from shape alone"
+  },
+  "undistortion_applied": false,
+  "coordinate_system": "raw_distorted_full_frame",
+  "experimental_only": true,
+  "experiment": "Deliberate undistortion bypass; not normal inference or a replacement calibration",
+  "started_at_utc": "2026-11-06T11:54:29.291997+00:00",
+  "configuration": {
+    "path": "inference\\config.json",
+    "file_sha256": "42429a62c08f51e8b7c856565fa932c5c9781c0464c35cc79fe30f00e5217d9a",
+    "effective_sha256": "60a5672a97877469f7ecf172adfeb6f7967245e813d5979b08c8f7471dedd9c5"
+  },
+  "calibration": {
+    "path": "C:\\Users\\mkhiz\\OneDrive\\Desktop\\Measure it\\calibration\\results\\camera.json",
+    "sha256": "9ad192f78238887e413df81262b2f276140de9d7c4c5558f1cf4783114cb2b29",
+    "image_size": [
+      2296,
+      4080
+    ],
+    "use": "Geometry validation only; remap deliberately bypassed"
+  },
+  "model_transform": {
+    "input_size": [
+      512,
+      910
+    ],
+    "aspect_preserving": true,
+    "score_cutoff": 0.5,
+    "mask_probability_threshold": 0.5,
+    "selection": "Highest-score calculator instance at frozen operating cutoff",
+    "mask_restoration": "Threshold at model-input coordinates, then INTER_NEAREST_EXACT to raw full frame",
+    "selected_output_index": 0,
+    "raw_size": [
+      2296,
+      4080
+    ],
+    "coordinate_system": "raw_distorted_full_frame"
+  },
+  "metric_geometry": {
+    "width_mm": 97.64732360839844,
+    "height_mm": 185.03273010253906,
+    "reference_corners_mm": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        50.0,
+        0.0
+      ],
+      [
+        50.0,
+        50.0
+      ],
+      [
+        0.0,
+        50.0
+      ]
+    ],
+    "rectangle_mm": [
+      [
+        -155.4826202392578,
+        -5.987001419067383
+      ],
+      [
+        -82.86297607421875,
+        -176.1736602783203
+      ],
+      [
+        6.9496307373046875,
+        -137.85009765625
+      ],
+      [
+        -65.67001342773438,
+        32.33656311035156
+      ]
+    ],
+    "conversion_function": "measurement.planar.measure_mask_contour_mm",
+    "width_definition": "shorter metric rectangle side",
+    "height_definition": "longer metric rectangle side",
+    "homography_raw_pixels_to_mm": [
+      [
+        0.09119692485714447,
+        0.07835458742061338,
+        -303.69570394447453
+      ],
+      [
+        -0.07727671596831286,
+        0.09380319666012363,
+        -156.89971062037552
+      ],
+      [
+        6.564178400984433e-05,
+        5.670489107325079e-05,
+        1.0
+      ]
+    ],
+    "rectangle_raw_px": [
+      [
+        49.108473180711094,
+        1643.1265454483314
+      ],
+      [
+        1583.2899560619715,
+        816.6994730142932
+      ],
+      [
+        2068.935438211037,
+        1576.5495338589776
+      ],
+      [
+        415.5940448895387,
+        2416.3884239503523
+      ]
+    ],
+    "coordinate_system": "raw_distorted_full_frame"
+  },
+  "completed_at_utc": "2026-11-06T11:54:33.881680+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\Users\\mkhiz\\OneDrive\\Desktop\\Measure it\\.venv\\Scripts\\python.exe",
+    "-m",
+    "inference.measure",
+    "measurement\\placements_10\\inputs\\IMG_20261106_155143.jpg.jpeg",
+    "--config",
+    "inference/config.json",
+    "--output",
+    "measurement\\paired_undistortion_10\\results\\corrected\\case_07",
+    "--device",
+    "cuda"
+  ],
+  "returncode": 2
+}

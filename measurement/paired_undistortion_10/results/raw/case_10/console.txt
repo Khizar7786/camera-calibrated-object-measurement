@@ -1,0 +1,1 @@
+{"experimental_only": true, "undistortion_applied": false, "coordinate_system": "raw_distorted_full_frame", "status": "reference_not_found", "width_mm": null, "height_mm": null, "detection_confidence": 0.9950562715530396, "failure_reason": "No isolated bright unmarked square boundary passed the configured checks"}

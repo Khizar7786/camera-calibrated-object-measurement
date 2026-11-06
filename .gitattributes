@@ -24,3 +24,5 @@ measurement/placements_10/** -text whitespace=cr-at-eol,-blank-at-eof
 # Preserve the frozen raw PowerShell stderr stream, including its whitespace.
 measurement/placements_10/preflight_tests.txt -text -whitespace
 tests/test_measurement_evaluation.py -text
+measurement/paired_undistortion_10/** -text whitespace=cr-at-eol,-blank-at-eof
+tests/test_undistortion_comparison.py -text

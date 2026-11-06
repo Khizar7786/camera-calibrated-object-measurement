@@ -1,0 +1,1 @@
+{"experimental_only": true, "undistortion_applied": false, "coordinate_system": "raw_distorted_full_frame", "status": "success", "width_mm": 97.64732360839844, "height_mm": 185.03273010253906, "detection_confidence": 0.9962855577468872, "failure_reason": null}

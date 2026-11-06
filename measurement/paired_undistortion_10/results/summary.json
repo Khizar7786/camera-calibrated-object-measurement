@@ -1,0 +1,159 @@
+{
+  "supplied_scene_count": 10,
+  "paired_valid_count": 7,
+  "paired_valid_ids": [
+    "case_01",
+    "case_02",
+    "case_04",
+    "case_05",
+    "case_06",
+    "case_08",
+    "case_09"
+  ],
+  "unpaired_ids": [
+    "case_03",
+    "case_07",
+    "case_10"
+  ],
+  "all_valid_per_mode": {
+    "corrected": {
+      "scene_count": 10,
+      "accepted_count": 9,
+      "refused_count": 1,
+      "coverage": 0.9,
+      "dimensions": {
+        "width": {
+          "accepted_dimension_count": 9,
+          "mae_mm": 11.843223571777344,
+          "median_absolute_error_mm": 13.243667602539062,
+          "worst_absolute_error_mm": 17.836929321289062,
+          "mean_percentage_error": 16.918890816824778,
+          "median_percentage_error": 18.919525146484375,
+          "worst_percentage_error": 25.481327601841517
+        },
+        "height": {
+          "accepted_dimension_count": 9,
+          "mae_mm": 10.962348090277779,
+          "median_absolute_error_mm": 10.600112915039062,
+          "worst_absolute_error_mm": 18.858840942382812,
+          "mean_percentage_error": 6.851467556423611,
+          "median_percentage_error": 6.625070571899414,
+          "worst_percentage_error": 11.786775588989258
+        }
+      }
+    },
+    "raw": {
+      "scene_count": 10,
+      "accepted_count": 7,
+      "refused_count": 3,
+      "coverage": 0.7,
+      "dimensions": {
+        "width": {
+          "accepted_dimension_count": 7,
+          "mae_mm": 15.070784432547432,
+          "median_absolute_error_mm": 13.228675842285156,
+          "worst_absolute_error_mm": 27.647323608398438,
+          "mean_percentage_error": 21.529692046496333,
+          "median_percentage_error": 18.898108346121653,
+          "worst_percentage_error": 39.49617658342634
+        },
+        "height": {
+          "accepted_dimension_count": 7,
+          "mae_mm": 15.076058523995536,
+          "median_absolute_error_mm": 14.82275390625,
+          "worst_absolute_error_mm": 25.032730102539062,
+          "mean_percentage_error": 9.42253657749721,
+          "median_percentage_error": 9.26422119140625,
+          "worst_percentage_error": 15.645456314086914
+        }
+      }
+    }
+  },
+  "paired_valid_only": {
+    "corrected": {
+      "scene_count": 7,
+      "accepted_count": 7,
+      "refused_count": 0,
+      "coverage": 1.0,
+      "dimensions": {
+        "width": {
+          "accepted_dimension_count": 7,
+          "mae_mm": 13.317996433803014,
+          "median_absolute_error_mm": 14.820350646972656,
+          "worst_absolute_error_mm": 17.836929321289062,
+          "mean_percentage_error": 19.02570919114716,
+          "median_percentage_error": 21.171929495675222,
+          "worst_percentage_error": 25.481327601841517
+        },
+        "height": {
+          "accepted_dimension_count": 7,
+          "mae_mm": 12.762610299246651,
+          "median_absolute_error_mm": 11.404296875,
+          "worst_absolute_error_mm": 18.858840942382812,
+          "mean_percentage_error": 7.976631437029157,
+          "median_percentage_error": 7.127685546875,
+          "worst_percentage_error": 11.786775588989258
+        }
+      }
+    },
+    "raw": {
+      "scene_count": 7,
+      "accepted_count": 7,
+      "refused_count": 0,
+      "coverage": 1.0,
+      "dimensions": {
+        "width": {
+          "accepted_dimension_count": 7,
+          "mae_mm": 15.070784432547432,
+          "median_absolute_error_mm": 13.228675842285156,
+          "worst_absolute_error_mm": 27.647323608398438,
+          "mean_percentage_error": 21.529692046496333,
+          "median_percentage_error": 18.898108346121653,
+          "worst_percentage_error": 39.49617658342634
+        },
+        "height": {
+          "accepted_dimension_count": 7,
+          "mae_mm": 15.076058523995536,
+          "median_absolute_error_mm": 14.82275390625,
+          "worst_absolute_error_mm": 25.032730102539062,
+          "mean_percentage_error": 9.42253657749721,
+          "median_percentage_error": 9.26422119140625,
+          "worst_percentage_error": 15.645456314086914
+        }
+      }
+    }
+  },
+  "paired_error_changes": {
+    "width": {
+      "paired_dimension_count": 7,
+      "mean_absolute_error_change_raw_minus_corrected_mm": 1.7527879987444197,
+      "median_absolute_error_change_raw_minus_corrected_mm": 0.6499252319335938,
+      "minimum_absolute_error_change_mm": -3.0783233642578125,
+      "maximum_absolute_error_change_mm": 12.826972961425781,
+      "mean_percentage_error_change_points": 2.5039828553491716,
+      "skipping_worse_count": 5,
+      "skipping_better_count": 2,
+      "effectively_equal_count": 0
+    },
+    "height": {
+      "paired_dimension_count": 7,
+      "mean_absolute_error_change_raw_minus_corrected_mm": 2.313448224748884,
+      "median_absolute_error_change_raw_minus_corrected_mm": 2.12469482421875,
+      "minimum_absolute_error_change_mm": -4.591156005859375,
+      "maximum_absolute_error_change_mm": 13.628433227539062,
+      "mean_percentage_error_change_points": 1.4459051404680525,
+      "skipping_worse_count": 5,
+      "skipping_better_count": 2,
+      "effectively_equal_count": 0
+    }
+  },
+  "delta_sign": "raw absolute error minus corrected absolute error; positive means skipping worsened error",
+  "error_denominators": "Per-mode statistics use that mode's accepted count; paired statistics use identical jointly accepted IDs. Refusals are missing, never zero.",
+  "pooled_paired_dimensions": {
+    "label": "Optional pooled MAE over width and height, not a per-dimension MAE",
+    "dimension_count": 14,
+    "corrected_mae_mm": 13.040303366524833,
+    "raw_mae_mm": 15.073421478271484,
+    "raw_minus_corrected_mae_mm": 2.033118111746651
+  }
+}
